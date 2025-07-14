@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "Hex",
+            "names": {
+                "english": "Hex"
+            },
+            "descriptions": {
+                "english": "Apply [Conductor_hex] [effect0.status0.power].<br>Add a random <b>Torment</b> to your hand."
+            },
+            "rarity": "starter",
+            "class": "ClassBanished",
+            "card_art": "@HexArt",
+            "targets_room": true,
+            "targetless": false,
+            "cost": 1,
+            "effects": [
+                "@HexApplyHex",
+                "@AddRandomTorment"
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "HexApplyHex",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": {
+                        "id": "@hex",
+                        "mod_reference": "Conductor"
+                    },
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "HexArt",
+            "path": "textures/HexArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "HexArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@HexArt"
+                }
+            }
+        }
+    ]
+}

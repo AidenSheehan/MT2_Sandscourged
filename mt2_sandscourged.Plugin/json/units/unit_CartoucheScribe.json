@@ -1,0 +1,107 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "SpawnCartoucheScribe",
+        "names": {
+            "english": "Cartouche Scribe"
+        },
+        "card_art": "@CartoucheScribe",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "class": "ClassBanished",
+        "targets_room": true,
+        "effects": [{
+            "id": "@SpawnCartoucheScribe"
+        }],
+        "lore_tooltips": [{
+            "english": "Flavour Text"
+        }],
+        "pools": [
+            "UnitsAllBanner"
+        ]
+    }],
+    "characters": [{
+        "id": "CartoucheScribe",
+        "size": 2,
+        "attack_damage": 25,
+        "health": 25,
+        "names": {
+            "english": "Cartouche Scribe"
+        },
+        "character_art": "@CartoucheScribeCharacterArt",
+        "subtypes": [
+            "SubtypesData_BannerUnit",
+            "@Sub_Remembered"
+        ],
+        "triggers": ["@CartoucheScribeSummonTrigger", "@CartoucheScribeAccursedTrigger"]
+    }],
+    "character_triggers": [{
+        "id": "CartoucheScribeSummonTrigger",
+        "descriptions": {
+            "english": "Shuffle a <b>Vexation</b> into your draw pile."
+        },
+        "trigger": "on_spawn",
+        "effects": ["@ShuffleVexationSingle"]
+    },
+    {
+        "id": "CartoucheScribeAccursedTrigger",
+        "descriptions": {
+            "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]."
+        },
+        "trigger": {
+            "id": "@Accursed",
+            "mod_reference": "Conductor"
+        },
+        "effects": [{
+            "id": "@CartoucheScribeGainStats"
+        }]
+    }],
+    "effects": [{
+            "id": "SpawnCartoucheScribe",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@CartoucheScribe"
+        },
+        {
+            "id": "CartoucheScribeGainStats",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "self",
+            "target_team": "none",
+            "param_upgrade": "@CartoucheScribeFiveAttackFiveHealth"
+        }
+    ],
+    "upgrades": [{
+        "id": "CartoucheScribeFiveAttackFiveHealth",
+        "bonus_damage": 5,
+        "bonus_hp": 5
+    }],
+    "sprites": [{
+            "id": "CartoucheScribe",
+            "path": "textures/CartoucheScribeCardArt.png"
+        },
+        {
+            "id": "CartoucheScribeCharacterArt",
+            "path": "textures/CartoucheScribeCharacterArt.png"
+        }
+    ],
+    "game_objects": [{
+            "id": "CartoucheScribe",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@CartoucheScribe"
+                }
+            }
+        },
+        {
+            "id": "CartoucheScribeCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@CartoucheScribeCharacterArt"
+                }
+            }
+        }
+    ]
+}

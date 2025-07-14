@@ -43,7 +43,36 @@ namespace mt2_sandscourged.Plugin
                     //   the project only copies json files in the json folder and not in subdirectories.
                     c.AddMergedJsonFile(
                         "json/plugin.json",
-                        "json/global.json"
+                        "json/global.json",
+                        // Champions
+
+                        // Units
+                        "json/units/unit_OverseerEternal.json",
+                        "json/units/unit_Scarab.json",
+                        "json/units/unit_GildedScarab.json",
+                        "json/units/unit_JewelledScarab.json",
+                        "json/units/unit_ScarabSwarm.json",
+                        "json/units/unit_Wretch.json",
+                        "json/units/unit_CartoucheScribe.json",
+
+                        // Spells
+                        "json/spells/card_Pitfall.json",
+                        "json/spells/card_OblivionSands.json",
+                        "json/spells/card_Sandstorm.json",
+                        "json/spells/card_Reverence.json",
+                        "json/spells/card_InMemoriam.json",
+                        "json/spells/card_TormentA.json",
+                        "json/spells/card_TormentB.json",
+                        "json/spells/card_TormentC.json",
+                        "json/spells/card_TormentD.json",
+                        "json/spells/card_TormentE.json",
+                        "json/spells/card_Dessicate.json",
+                        "json/spells/card_Efface.json",
+                        "json/spells/card_Hex.json",
+                        // Scourges and Blights
+                        "json/scourges/card_Vexation.json",
+                        //Debug
+                        "json/spells/card_TestTorment.json"
                     );
                 }
             );

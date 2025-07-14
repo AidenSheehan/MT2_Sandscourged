@@ -1,0 +1,110 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "SpawnOverseerEternal",
+        "names": {
+            "english": "Overseer Eternal"
+        },
+        "card_art": "@OverseerEternal",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "class": "ClassBanished",
+        "targets_room": true,
+        "effects": [{
+            "id": "@SpawnOverseerEternal"
+        }],
+        "lore_tooltips": [{
+            "english": "Flavour Text"
+        }],
+        "pools": [
+            "UnitsAllBanner"
+        ]
+    }],
+    "characters": [{
+        "id": "OverseerEternal",
+        "size": 3,
+        "attack_damage": 15,
+        "health": 40,
+        "names": {
+            "english": "Overseer Eternal"
+        },
+        "character_art": "@OverseerEternalCharacterArt",
+        "subtypes": [
+            "SubtypesData_BannerUnit",
+            "@Sub_Remembered"
+        ],
+        "triggers": [{
+            "id": "@OverseerEternalTrigger"
+        }]
+    }],
+    "character_triggers": [{
+        "id": "OverseerEternalTrigger",
+        "descriptions": {
+            "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+        },
+        "trigger": "on_any_unit_death_on_floor",
+        "effects": [{
+            "id": "@OverseerEternalGainAttack"
+        },
+        {
+            "id": "@OverseerEternalGainLifesteal"
+        }]
+    }],
+    "effects": [{
+            "id": "SpawnOverseerEternal",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@OverseerEternal"
+        },
+        {
+            "id": "OverseerEternalGainAttack",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "self",
+            "target_team": "none",
+            "param_upgrade": "@OverseerEternalOneAttack"
+        },
+        {
+            "id": "OverseerEternalGainLifesteal",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "target_team": "none",
+            "param_status_effects": [{
+                "status": "lifesteal",
+                "count": 1
+            }]
+        }
+    ],
+    "upgrades": [{
+        "id": "OverseerEternalOneAttack",
+        "bonus_damage": 1
+    }],
+    "sprites": [{
+            "id": "OverseerEternal",
+            "path": "textures/OverseerEternalCardArt.png"
+        },
+        {
+            "id": "OverseerEternalCharacterArt",
+            "path": "textures/OverseerEternalCharacterArt.png"
+        }
+    ],
+    "game_objects": [{
+            "id": "OverseerEternal",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@OverseerEternal"
+                }
+            }
+        },
+        {
+            "id": "OverseerEternalCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@OverseerEternalCharacterArt"
+                }
+            }
+        }
+    ]
+}

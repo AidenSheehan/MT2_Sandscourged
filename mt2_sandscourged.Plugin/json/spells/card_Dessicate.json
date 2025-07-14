@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "Dessicate",
+        "names": {
+            "english": "Dessicate"
+        },
+        "descriptions": {
+            "english": "Deal [effect0.power] damage to enemy units.<br>Shuffle a <b>Vexation</b> into your draw pile."
+        },
+        "rarity": "uncommon",
+        "class": "ClassBanished",
+        "card_art": "@DessicateArt",
+        "targets_room": true,
+        "targetless": true,
+        "pools": [
+            "MegaPool"
+        ],
+        "cost": 2,
+        "traits": [{
+            "id": "@DessicateOffering"
+        }],
+        "effects": [
+            {
+                "id":"@DessicateDamage"
+            },
+            {
+                "id": "@ShuffleVexationSingle"
+            }
+        ]
+    }],
+    "traits": [{
+        "id": "DessicateOffering",
+        "name": "CardTraitTreasure"
+    }],
+    "effects": [
+        {
+            "id": "DessicateDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_int": 20
+        }
+    ],
+    "sprites": [{
+        "id": "DessicateArt",
+        "path": "textures/DessicateArt.png"
+    }],
+    "game_objects": [{
+        "id": "DessicateArt",
+        "type": "card_art",
+        "extensions": {
+            "card_art": {
+                "sprite": "@DessicateArt"
+            }
+        }
+    }]
+}

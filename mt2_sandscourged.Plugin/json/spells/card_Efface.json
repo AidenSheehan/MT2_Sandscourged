@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "Efface",
+        "names": {
+            "english": "Efface"
+        },
+        "descriptions": {
+            "english": "Deal [effect0.power] damage.<br>Shuffle a <b>Vexation</b> into your draw pile."
+        },
+        "rarity": "common",
+        "class": "ClassBanished",
+        "card_art": "@EffaceArt",
+        "targets_room": true,
+        "targetless": false,
+        "pools": [
+            "MegaPool"
+        ],
+        "cost": 1,
+        "traits": [{
+            "id": "@EffaceAttuned"
+        }],
+        "effects": [
+            {
+                "id":"@EffaceDamage"
+            },
+            {
+                "id": "@ShuffleVexationSingle"
+            }
+        ]
+    }],
+    "traits": [{
+        "id": "EffaceAttuned",
+        "name": "CardTraitStrongerMagicPower"
+    }],
+    "effects": [
+        {
+            "id": "EffaceDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_int": 30
+        }
+    ],
+    "sprites": [{
+        "id": "EffaceArt",
+        "path": "textures/EffaceArt.png"
+    }],
+    "game_objects": [{
+        "id": "EffaceArt",
+        "type": "card_art",
+        "extensions": {
+            "card_art": {
+                "sprite": "@EffaceArt"
+            }
+        }
+    }]
+}

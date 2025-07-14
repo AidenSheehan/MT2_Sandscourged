@@ -1,0 +1,68 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "Sandstorm",
+        "names": {
+            "english": "Sandstorm"
+        },
+        "descriptions": {
+            "english": "Deal [effect0.power] damage to enemy units and Apply [meleeweakness] [effect1.status0.power]."
+        },
+        "rarity": "uncommon",
+        "class": "ClassBanished",
+        "card_art": "@SandstormArt",
+        "targets_room": true,
+        "targetless": true,
+        "pools": [
+            "MegaPool"
+        ],
+        "cost": 3,
+        "traits": [{
+            "id": "@SandstormOffering"
+        }],
+        "effects": [
+            {
+                "id":"@SandstormDealDamage"
+            },
+                        {
+                "id":"@SandstormApplyMeleeWeakness"
+            }
+        ]
+    }],
+    "traits": [{
+        "id": "SandstormOffering",
+        "name": "CardTraitTreasure"
+    }],
+    "effects": [
+        {
+            "id": "SandstormDealDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_int": 5
+        },
+        {
+            "id": "SandstormApplyMeleeWeakness",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [{
+                "status": "melee weakness",
+                "count": 1
+            }]
+        }
+    ],
+    "sprites": [{
+        "id": "SandstormArt",
+        "path": "textures/SandstormArt.png"
+    }],
+    "game_objects": [{
+        "id": "SandstormArt",
+        "type": "card_art",
+        "extensions": {
+            "card_art": {
+                "sprite": "@SandstormArt"
+            }
+        }
+    }]
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "TestTorment",
+        "names": {
+            "english": "Test Torment"
+        },
+        "descriptions": {
+            "english": "Add a random <b>Torment</b> to your hand."
+        },
+        "rarity": "common",
+        "class": "ClassBanished",
+        "card_art": "@TestTormentArt",
+        "targets_room": true,
+        "targetless": true,
+        "cost": 1,
+        "effects": [
+            {
+                "id":"@AddRandomTorment"
+            }
+        ]
+    }],
+    "sprites": [{
+        "id": "TestTormentArt",
+        "path": "textures/TestTormentArt.png"
+    }],
+    "game_objects": [{
+        "id": "TestTormentArt",
+        "type": "card_art",
+        "extensions": {
+            "card_art": {
+                "sprite": "@TestTormentArt"
+            }
+        }
+    }]
+}

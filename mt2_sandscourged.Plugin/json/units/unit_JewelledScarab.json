@@ -1,0 +1,127 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnJewelledScarab",
+            "names": {
+                "english": "Jewelled Scarab"
+            },
+            "card_art": "@JewelledScarab",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "uncommon",
+            "class": "ClassBanished",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnJewelledScarab"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "JewelledScarab",
+            "size": 1,
+            "attack_damage": 3,
+            "health": 1,
+            "names": {
+                "english": "Jewelled Scarab"
+            },
+            "character_art": "@JewelledScarabCharacterArt",
+            "subtypes": [
+                "@Sub_Scarab"
+            ],
+            "triggers": [
+                {
+                    "id": "@JewelledScarabTrigger"
+                }
+            ],
+            "starting_status_effects": [
+                {
+                    "status": "lifesteal",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "JewelledScarabTrigger",
+            "descriptions": {
+                "english": "Apply +[effect0.upgrade.bonusdamage][attack], +[effect0.upgrade.bonushp][health], and [lifesteal] [effect1.status0.power] to friendly units."
+            },
+            "trigger": "on_death",
+            "effects": [
+                {
+                    "id": "@JewelledScarabGiveStats"
+                },
+                {
+                    "id": "@JewelledScarabApplyLifesteal"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnJewelledScarab",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@JewelledScarab"
+        },
+        {
+            "id": "JewelledScarabGiveStats",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@ScarabThreeAttackOneHealth"
+        },
+        {
+            "id": "JewelledScarabApplyLifesteal",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_status_effects": [
+                {
+                    "status": "lifesteal",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "JewelledScarab",
+            "path": "textures/JewelledScarabCardArt.png"
+        },
+        {
+            "id": "JewelledScarabCharacterArt",
+            "path": "textures/JewelledScarabCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "JewelledScarab",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@JewelledScarab"
+                }
+            }
+        },
+        {
+            "id": "JewelledScarabCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@JewelledScarabCharacterArt"
+                }
+            }
+        }
+    ]
+}

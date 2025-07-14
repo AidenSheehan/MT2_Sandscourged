@@ -13,7 +13,7 @@
                 "english": "Deal [effect0.power] damage",
                 "french": "Inflige <nobr>[effect0.power] DGT</nobr>"
             },
-            "card_art": "@Gasoline",
+            "card_art": "@GasolineArt",
             "effects": [
                 {
                     "id": "@DealFiveDamage"
@@ -28,15 +28,19 @@
     ],
     "sprites": [
         {
-            "id": "Gasoline",
+            "id": "GasolineArt",
             "path": "textures/gas.png"
         }
     ],
     "game_objects": [
         {
-            "id": "Gasoline",
+            "id": "GasolineArt",
             "type": "card_art",
-            "sprite": "@Gasoline"
+            "extensions": {
+                "card_art": {
+                    "sprite": "@GasolineArt"
+                }
+            }
         }
     ],
     "effects": [
@@ -46,6 +50,74 @@
             "target_mode": "drop_target_character",
             "target_team": "both",
             "param_int": 5
+        },
+        {
+            "id": "AddRandomTorment",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "param_int": 3,
+            "param_int_2": 1,
+            "param_card_pool": "@TormentPool"
+        },
+        {
+            "id": "ShuffleVexationSingle",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "target_team": "none",
+            "param_card_pool": "@VexationOnlyPool",
+            "param_int": 7,
+            "param_int_2": 1
+        }
+    ],
+    "card_pools": [
+        {
+            "id": "TormentPool",
+            "cards": [
+                "@TormentA",
+                "@TormentB",
+                "@TormentC",
+                "@TormentD",
+                "@TormentE"
+            ]
+        },
+        {
+            "id": "VexationOnlyPool",
+            "cards": [
+                "@Vexation"
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "TormentEphemeralTrait",
+            "name": "CardTraitEphemeral"
+        }
+    ],
+    "subtypes": [
+        {
+            "id": "Sub_Scarab",
+            "names": {
+                "english": "Scarab"
+            }
+        },
+        {
+            "id": "Sub_Forgotten",
+            "names": {
+                "english": "Forgotten"
+            }
+        },
+        {
+            "id": "Sub_Remembered",
+            "names": {
+                "english": "Remembered"
+            }
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "ScarabThreeAttackOneHealth",
+            "bonus_damage": 3,
+            "bonus_hp": 1
         }
     ]
 }

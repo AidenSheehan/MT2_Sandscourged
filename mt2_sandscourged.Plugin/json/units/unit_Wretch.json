@@ -1,0 +1,99 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnWretch",
+            "names": {
+                "english": "Wretch"
+            },
+            "card_art": "@Wretch",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "common",
+            "class": "ClassBanished",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnWretch"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "Wretch",
+            "size": 1,
+            "attack_damage": 5,
+            "health": 5,
+            "names": {
+                "english": "Wretch"
+            },
+            "character_art": "@WretchCharacterArt",
+            "subtypes": [
+                "@Sub_Forgotten"
+            ],
+            "triggers": [
+                {
+                    "id": "@WretchTrigger"
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "WretchTrigger",
+            "descriptions": {
+                "english": "Add a random <b>Torment</b> to your hand."
+            },
+            "trigger": "post_combat",
+            "effects": [
+                {
+                    "id": "@AddRandomTorment"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnWretch",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@Wretch"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Wretch",
+            "path": "textures/WretchCardArt.png"
+        },
+        {
+            "id": "WretchCharacterArt",
+            "path": "textures/WretchCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Wretch",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Wretch"
+                }
+            }
+        },
+        {
+            "id": "WretchCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@WretchCharacterArt"
+                }
+            }
+        }
+    ]
+}

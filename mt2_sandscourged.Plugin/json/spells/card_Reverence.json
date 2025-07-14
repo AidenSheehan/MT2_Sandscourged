@@ -1,0 +1,87 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "localization_terms": [
+    {
+      "key": "CardTraitReverenceUpgrade_CurrentScaling_CardText",
+      "texts": {
+        "english": "<nobr><i>(+{0} [attack] and +{1} [health])</i></nobr>"
+      }
+    }
+  ],
+    "cards": [
+        {
+            "id": "Reverence",
+            "names": {
+                "english": "Reverence"
+            },
+            "descriptions": {
+                "english": "Discard your hand. Apply +[trait0.power][attack] and +[trait0.secondarypower][health] to friendly units per card discarded."
+            },
+            "rarity": "uncommon",
+            "class": "ClassBanished",
+            "card_art": "@ReverenceArt",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 3,
+            "traits": [
+                {
+                    "id": "@ReverenceTrait"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@ReverenceDiscardHand"
+                },
+                {
+                    "id": "@ReverenceApplyUpgrade"
+                }
+            ]
+        }
+    ],
+    "traits": [{
+            "id": "ReverenceTrait",
+            "name": "CardTraitReverenceUpgrade",
+            "param_int": 3,
+            "param_int_2": 1
+        }],
+    "effects": [
+        {
+            "id": "ReverenceDiscardHand",
+            "name": "CardEffectDiscardHand"
+        },
+        {
+            "id": "ReverenceApplyUpgrade",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@ReverenceUpgrade"
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "ReverenceUpgrade",
+            "bonus_damage": 0,
+            "bonus_health": 0
+        }
+    ],
+    "sprites": [
+        {
+            "id": "ReverenceArt",
+            "path": "textures/ReverenceArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "ReverenceArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@ReverenceArt"
+                }
+            }
+        }
+    ]
+}

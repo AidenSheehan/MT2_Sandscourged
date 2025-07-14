@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "OblivionSands",
+        "names": {
+            "english": "Oblivion Sands"
+        },
+        "descriptions": {
+            "english": "Apply [corruption] [effect0.status0.power]."
+        },
+        "rarity": "common",
+        "class": "ClassBanished",
+        "card_art": "@OblivionSandsArt",
+        "targets_room": true,
+        "targetless": false,
+        "pools": [
+            "MegaPool"
+        ],
+        "cost": 1,
+        "traits": [{
+            "id": "@OblivionSandsConsume"
+        }],
+        "effects": [
+            {
+                "id":"@OblivionSandsApplyCorruption"
+            }
+        ]
+    }],
+    "traits": [{
+        "id": "OblivionSandsConsume",
+        "name": "CardTraitExhaustState"
+    }],
+    "effects": [
+        {
+            "id": "OblivionSandsApplyCorruption",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [{
+                "status": "corruption",
+                "count": 10
+            }]
+        }
+    ],
+    "sprites": [{
+        "id": "OblivionSandsArt",
+        "path": "textures/OblivionSandsArt.png"
+    }],
+    "game_objects": [{
+        "id": "OblivionSandsArt",
+        "type": "card_art",
+        "extensions": {
+            "card_art": {
+                "sprite": "@OblivionSandsArt"
+            }
+        }
+    }]
+}

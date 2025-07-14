@@ -1,0 +1,66 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "Vexation",
+            "names": {
+                "english": "Vexation"
+            },
+            "descriptions": {
+                "english": "Add a random <b>Torment</b> to your hand."
+            },
+            "rarity": "common",
+            "card_type": "junk",
+            "card_art": "@VexationArt",
+            "targets_room": true,
+            "targetless": true,
+            "cost": 1,
+            "effects": [
+                {
+                    "id": "@AddRandomTorment"
+                }
+            ],
+            "triggers": ["@VexationDamageOnUnplayed"]
+        }
+    ],
+    "card_triggers": [
+        {
+            "id": "VexationDamageOnUnplayed",
+            "trigger": "on_unplayed_negative",
+            "descriptions": {
+                "english": "Your Pyre takes [effect0.power] damage."
+            },
+            "effects": [
+                {
+                    "id": "@VexationDamage"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "VexationDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "pyre",
+            "target_team": "both",
+            "param_int": 1
+        }
+    ],
+    "sprites": [
+        {
+            "id": "VexationArt",
+            "path": "textures/VexationArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "VexationArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@VexationArt"
+                }
+            }
+        }
+    ]
+}

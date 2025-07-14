@@ -16,10 +16,11 @@
     </PackageReference>
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
     <PackageReference Include="TrainworksReloaded.Base" Version="0.4.0" />
+    <PackageReference Include="Conductor" Version="0.1.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="json/*.json">
+    <None Update="json/**/*.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="textures/**">

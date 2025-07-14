@@ -1,0 +1,106 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnScarab",
+            "names": {
+                "english": "Scarab"
+            },
+            "card_art": "@Scarab",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "starter",
+            "class": "ClassBanished",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnScarab"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "Scarab",
+            "size": 1,
+            "attack_damage": 3,
+            "health": 1,
+            "names": {
+                "english": "Scarab"
+            },
+            "character_art": "@ScarabCharacterArt",
+            "subtypes": [
+                "@Sub_Scarab"
+            ],
+            "triggers": [
+                {
+                    "id": "@ScarabTrigger"
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "ScarabTrigger",
+            "descriptions": {
+                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+            },
+            "trigger": "on_death",
+            "effects": [
+                {
+                    "id": "@ScarabGiveStats"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnScarab",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@Scarab"
+        },
+        {
+            "id": "ScarabGiveStats",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@ScarabThreeAttackOneHealth"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Scarab",
+            "path": "textures/ScarabCardArt.png"
+        },
+        {
+            "id": "ScarabCharacterArt",
+            "path": "textures/ScarabCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Scarab",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Scarab"
+                }
+            }
+        },
+        {
+            "id": "ScarabCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@ScarabCharacterArt"
+                }
+            }
+        }
+    ]
+}
