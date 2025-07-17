@@ -9,7 +9,7 @@
             "english": "Apply [mute] [effect0.status0.power]."
         },
         "rarity": "common",
-        "class": "ClassBanished",
+        "class": "@ClassSandscourged",
         "card_art": "@TormentBArt",
         "targets_room": true,
         "targetless": false,

@@ -1,0 +1,218 @@
+{
+    "classes": [
+        {
+            "id": "ClassSandscourged",
+            "titles": {
+                "english": "The Sandscourged"
+            },
+            "descriptions": {
+                "english": "Clan description."
+            },
+            "subclass_descriptions": {
+                "english": "Subclass description"
+            },
+            "icons": {
+                "small": "@ClanLogo_32",
+                "medium": "@ClanLogo_56",
+                "large": "@ClanLogo_92_Stroke1",
+                "silhouette": "@ClanLogo_Silhouette"
+            },
+            "card_style": "pyreborne",
+            "ui_color": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5
+            },
+            "ui_color_dark": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+            },
+            "ui_gradient": [
+                {
+                    "time": 0.0,
+                    "color": {
+                        "r": 1.0
+                    }
+                },
+                {
+                    "time": 1.0,
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.5,
+                        "b": 0.5
+                    }
+                }
+            ],
+            "champions": [
+                {
+                    "id": "PharaohChampion",
+                    "card_data": "@SpawnPharaoh",
+                    "starter_card": "@SpawnReveredScarab",
+                    "upgrade_tree": [
+                        [
+                            "@upg_SwarmLord1",
+                            "@upg_SwarmLord2",
+                            "@upg_SwarmLord3"
+                        ],
+                        [
+                            "@upg_Pearlescent1",
+                            "@upg_Pearlescent2",
+                            "@upg_Pearlescent3"
+                        ],
+                        [
+                            "@upg_SoulTender1",
+                            "@upg_SoulTender2",
+                            "@upg_SoulTender3"
+                        ]
+                    ],
+                    "icon": "@icon_Pharaoh",
+                    "portrait": "@icon_Pharaoh"
+                }
+            ],
+            "is_crew": false
+        }
+    ],
+    "map_nodes": [
+        {
+            "id": "RewardNodeUnitPackSandscourged",
+            "type": "reward",
+            "map_icon": "@ClanLogo_32",
+            "minimap_icon": "@ClanLogo_32",
+            "prefab": "@SandscourgedMapIcon",
+            "titles": {
+                "english": "Sandscourged Banner"
+            },
+            "descriptions": {
+                "english": "Hire a Sandscourged Unit"
+            },
+            "pools": [
+                "RandomChosenMainClassUnit",
+                "RandomChosenSubClassUnit"
+            ],
+            "is_banner_node": true,
+            "extensions": [
+                {
+                    "reward": {
+                        "class": "@ClassSandscourged",
+                        "rewards": [
+                            {
+                                "id": "@SandscourgedBannerReward"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "card_pools": [
+        {
+            "id": "SandscourgedBannerCardPool",
+            "cards": [
+                "@SpawnCartoucheScribe",
+                "@SpawnEgoUltimus",
+                "@SpawnEssenceRevoker",
+                "@SpawnForgottenHulk",
+                "@SpawnInfestedMummy",
+                "@SpawnOverseerEternal",
+                "@SpawnPriestOfLostThoughts",
+                "@SpawnScourgedHollow",
+                "@SpawnSphinxHierarch"
+            ]
+        }
+    ],
+    "rewards": [
+        {
+            "id": "SandscourgedBannerReward",
+            "type": "draft",
+            "costs": [
+                100
+            ],
+            "extensions": [
+                {
+                    "draft": {
+                        "draft_pool": "@SandscourgedBannerCardPool",
+                        "class_type": "main|subclass|nonclass",
+                        "draft_options_count": 2,
+                        "rarity_floor": "uncommon",
+                        "ignore_relic_rarity_override": true,
+                        "is_service_merchant_reward": true
+                    }
+                }
+            ]
+        }
+    ],
+    "subtypes": [
+        {
+            "id": "Sub_Scarab",
+            "names": {
+                "english": "Scarab"
+            }
+        },
+        {
+            "id": "Sub_Forgotten",
+            "names": {
+                "english": "Forgotten"
+            }
+        },
+        {
+            "id": "Sub_Remembered",
+            "names": {
+                "english": "Remembered"
+            }
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "SandscourgedMapIcon",
+            "type": "map_node_icon",
+            "extensions": {
+                "map_node_icon": {
+                    "disabled_sprite": "@Sandscourged_Disabled",
+                    "enabled_sprite": "@Sandscourged_Enabled",
+                    "frozen_sprite": "@Sandscourged_Frozen",
+                    "visited_sprite_disabled": "@Sandscourged_VisitedDisabled",
+                    "visited_sprite_enabled": "@Sandscourged_VisitedDisabled"
+                }
+            }
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Sandscourged_Disabled",
+            "path": "textures/ClanAssets/Sandscourged_Disabled.png"
+        },
+        {
+            "id": "Sandscourged_Enabled",
+            "path": "textures/ClanAssets/Sandscourged_Enabled.png"
+        },
+        {
+            "id": "Sandscourged_Frozen",
+            "path": "textures/ClanAssets/Sandscourged_Frozen.png"
+        },
+        {
+            "id": "Sandscourged_VisitedDisabled",
+            "path": "textures/ClanAssets/Sandscourged_VisitedDisabled.png"
+        },
+        {
+            "id": "ClanLogo_32",
+            "path": "textures/ClanAssets/ClanLogo_32.png"
+        },
+        {
+            "id": "ClanLogo_56",
+            "path": "textures/ClanAssets/ClanLogo_56.png"
+        },
+        {
+            "id": "ClanLogo_92_Stroke1",
+            "path": "textures/ClanAssets/ClanLogo_92_Stroke1.png"
+        },
+        {
+            "id": "ClanLogo_Silhouette",
+            "path": "textures/ClanAssets/ClanLogo_Silhouette.png"
+        },
+        {
+            "id": "icon_Pharaoh",
+            "path": "textures/icon_Pharaoh.png"
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnForgottenHulk",
+            "names": {
+                "english": "Forgotten Hulk"
+            },
+            "card_art": "@ForgottenHulk",
+            "cost": 2,
+            "card_type": "monster",
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "targets_room": true,
+            "pools": [
+                "UnitsAllBanner"
+            ],
+            "effects": [
+                {
+                    "id": "@SpawnForgottenHulk"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "ForgottenHulk",
+            "size": 3,
+            "attack_damage": 0,
+            "health": 45,
+            "names": {
+                "english": "Forgotten Hulk"
+            },
+            "character_art": "@ForgottenHulkCharacterArt",
+            "subtypes": [
+                "@Sub_Forgotten"
+            ],
+            "triggers": [
+                {
+                    "id": "@ForgottenHulkRevengeTrigger"
+                },
+                {
+                    "id": "@ForgottenHulkAccursedTrigger"
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "ForgottenHulkRevengeTrigger",
+            "descriptions": {
+                "english": "Apply [corruption] [effect0.status0.power] to the attacker."
+            },
+            "trigger": "on_hit",
+            "effects": [
+                {
+                    "id": "@ForgottenHulkApplyCorruption"
+                }
+            ]
+        },
+        {
+            "id": "ForgottenHulkAccursedTrigger",
+            "descriptions": {
+                "english": "Gain [undying] [effect0.status0.power]."
+            },
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "effects": [
+                {
+                    "id": "@ForgottenHulkGainReanimate"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnForgottenHulk",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@ForgottenHulk"
+        },
+        {
+            "id": "ForgottenHulkApplyCorruption",
+            "name": "CardEffectAddStatusEffect",
+            "target_team": "heroes",
+            "target_mode": "room",
+            "param_status_effects": [
+                {
+                    "status": "corruption",
+                    "count": 3
+                }
+            ]
+        },
+        {
+            "id": "ForgottenHulkGainReanimate",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "undying",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "ForgottenHulk",
+            "path": "textures/ForgottenHulkCardArt.png"
+        },
+        {
+            "id": "ForgottenHulkCharacterArt",
+            "path": "textures/ForgottenHulkCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "ForgottenHulk",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@ForgottenHulk"
+                }
+            }
+        },
+        {
+            "id": "ForgottenHulkCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@ForgottenHulkCharacterArt"
+                }
+            }
+        }
+    ]
+}

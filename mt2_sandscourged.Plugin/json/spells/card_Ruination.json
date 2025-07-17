@@ -1,0 +1,67 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "Ruination",
+            "names": {
+                "english": "Ruination"
+            },
+            "descriptions": {
+                "english": "Costs -[trait0.power][ember] for each friendly unit death this battle.<br>Deal [effect0.power] damage."
+            },
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "card_art": "@RuinationArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 6,
+            "traits": [
+                "@RuinationReduceCostTrait"
+            ],
+            "effects": [
+                {
+                    "id": "@RuinationDamage"
+                }
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "RuinationReduceCostTrait",
+            "name": "CardTraitScalingReduceCost",
+            "param_tracked_value": "any_monster_death",
+            "param_entry_duration": "this_battle",
+            "param_int": 1,
+            "effect_text_suppressed": true
+        }
+    ],
+    "effects": [
+        {
+            "id": "RuinationDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_int": 100
+        }
+    ],
+    "sprites": [
+        {
+            "id": "RuinationArt",
+            "path": "textures/RuinationArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "RuinationArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@RuinationArt"
+                }
+            }
+        }
+    ]
+}

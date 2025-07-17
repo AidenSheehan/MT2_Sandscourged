@@ -1,38 +1,34 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "InMemoriam",
-        "names": {
-            "english": "In Memoriam"
-        },
-        "descriptions": {
-            "english": "Deal damage to enemy units equal to [attack] of the sacrificed unit."
-        },
-        "rarity": "common",
-        "class": "ClassBanished",
-        "card_art": "@InMemoriamArt",
-        "targets_room": true,
-        "targetless": false,
-        "pools": [
-            "MegaPool"
-        ],
-        "cost": 1,
-        "traits": [
-            {
-                "id": "@InMemoriamSacrificeTrait"
-            }
-        ],
-        "effects": [
-            {
-                "id":"@InMemoriamSacrifice"
-            }
-        ]
-    }],
-    "traits": [
+    "cards": [
         {
-            "id": "InMemoriamSacrificeTrait",
-            "name": "CardTraitScalingAddDamage",
-            "param_tracked_value": "last_sacrificed_monster_stats"
+            "id": "InMemoriam",
+            "names": {
+                "english": "In Memoriam"
+            },
+            "descriptions": {
+                "english": "Apply [corruption] [effect1.status0.power] and [mute] [effect2.status0.power] to enemy units."
+            },
+            "rarity": "common",
+            "class": "@ClassSandscourged",
+            "card_art": "@InMemoriamArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 1,
+            "effects": [
+                {
+                    "id": "@InMemoriamSacrifice"
+                },
+                {
+                    "id": "@InMemoriamApplyCorruption"
+                },
+                {
+                    "id": "@InMemoriamApplyMute"
+                }
+            ]
         }
     ],
     "effects": [
@@ -43,24 +39,45 @@
             "target_team": "monsters"
         },
         {
-            "id": "InMemoriamDamage",
-            "name": "CardEffectDamage",
+            "id": "InMemoriamApplyCorruption",
+            "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
-            "target_team": "heroes"
-            
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": "corruption",
+                    "count": 6
+                }
+            ]
+        },
+        {
+            "id": "InMemoriamApplyMute",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": "muted",
+                    "count": 1
+                }
+            ]
         }
     ],
-    "sprites": [{
-        "id": "InMemoriamArt",
-        "path": "textures/InMemoriamArt.png"
-    }],
-    "game_objects": [{
-        "id": "InMemoriamArt",
-        "type": "card_art",
-        "extensions": {
-            "card_art": {
-                "sprite": "@InMemoriamArt"
+    "sprites": [
+        {
+            "id": "InMemoriamArt",
+            "path": "textures/InMemoriamArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "InMemoriamArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@InMemoriamArt"
+                }
             }
         }
-    }]
+    ]
 }

@@ -1,0 +1,107 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "SpawnScourgedHollow",
+        "names": {
+            "english": "Scourged Hollow"
+        },
+        "card_art": "@ScourgedHollow",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "class": "@ClassSandscourged",
+        "targets_room": true,
+        "effects": [{
+            "id": "@SpawnScourgedHollow"
+        }],
+        "lore_tooltips": [{
+            "english": "Flavour Text"
+        }],
+        "pools": [
+            "UnitsAllBanner"
+        ]
+    }],
+    "characters": [{
+        "id": "ScourgedHollow",
+        "size": 2,
+        "attack_damage": 25,
+        "health": 25,
+        "names": {
+            "english": "Scourged Hollow"
+        },
+        "character_art": "@ScourgedHollowCharacterArt",
+        "subtypes": [
+            "SubtypesData_BannerUnit",
+            "@Sub_Forgotten"
+        ],
+        "triggers": ["@ScourgedHollowSummonTrigger", "@ScourgedHollowAccursedTrigger"]
+    }],
+    "character_triggers": [{
+        "id": "ScourgedHollowSummonTrigger",
+        "descriptions": {
+            "english": "Shuffle a <b>Vexation</b> into your draw pile."
+        },
+        "trigger": "on_spawn",
+        "effects": ["@ShuffleVexationSingle"]
+    },
+    {
+        "id": "ScourgedHollowAccursedTrigger",
+        "descriptions": {
+            "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]."
+        },
+        "trigger": {
+            "id": "@Accursed",
+            "mod_reference": "Conductor"
+        },
+        "effects": [{
+            "id": "@ScourgedHollowGainStats"
+        }]
+    }],
+    "effects": [{
+            "id": "SpawnScourgedHollow",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@ScourgedHollow"
+        },
+        {
+            "id": "ScourgedHollowGainStats",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "self",
+            "target_team": "none",
+            "param_upgrade": "@ScourgedHollowFiveAttackFiveHealth"
+        }
+    ],
+    "upgrades": [{
+        "id": "ScourgedHollowFiveAttackFiveHealth",
+        "bonus_damage": 5,
+        "bonus_hp": 5
+    }],
+    "sprites": [{
+            "id": "ScourgedHollow",
+            "path": "textures/ScourgedHollowCardArt.png"
+        },
+        {
+            "id": "ScourgedHollowCharacterArt",
+            "path": "textures/ScourgedHollowCharacterArt.png"
+        }
+    ],
+    "game_objects": [{
+            "id": "ScourgedHollow",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@ScourgedHollow"
+                }
+            }
+        },
+        {
+            "id": "ScourgedHollowCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@ScourgedHollowCharacterArt"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,162 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnEssenceRevoker",
+            "names": {
+                "english": "Essence Revoker"
+            },
+            "card_art": "@EssenceRevoker",
+            "cost": 2,
+            "card_type": "monster",
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnEssenceRevoker"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ],
+            "pools": [
+                "UnitsAllBanner"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "EssenceRevoker",
+            "size": 2,
+            "attack_damage": 30,
+            "health": 10,
+            "names": {
+                "english": "Essence Revoker"
+            },
+            "character_art": "@EssenceRevokerCharacterArt",
+            "subtypes": [
+                "SubtypesData_BannerUnit",
+                "@Sub_Remembered"
+            ],
+            "triggers": [
+                "@EssenceRevokerIncantTrigger",
+                "@EssenceRevokerActionTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "EssenceRevokerIncantTrigger",
+            "descriptions": {
+                "english": "Gain [soul] [effect0.status0.power]."
+            },
+            "trigger": "card_spell_played",
+            "effects": [
+                "@EssenceRevokerGainSoul"
+            ]
+        },
+        {
+            "id": "EssenceRevokerActionTrigger",
+            "descriptions": {
+                "english": "Spend [soul] [effect0.status0.power_unmodified] to gain [multistrike] [effect2.status0.power]."
+            },
+            "trigger": "on_turn_begin",
+            "effects": [
+                "@EssenceRevokerCheckSouls",
+                "@EssenceRevokerRemoveSouls",
+                "@EssenceRevokerGainMultistrike"
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnEssenceRevoker",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@EssenceRevoker"
+        },
+        {
+            "id": "EssenceRevokerGainSoul",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "EssenceRevokerCheckSouls",
+            "name": {
+                "id": "@CardEffectRequireStatusThreshold",
+                "mod_reference": "Conductor"
+            },
+            "target_mode": "self",
+            "should_test": true,
+            "should_cancel_subsequent_effects_if_test_fails": true,
+            "param_bool": true,
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 4
+                }
+            ]
+        },
+        {
+            "id": "EssenceRevokerRemoveSouls",
+            "name": "CardEffectRemoveStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 4
+                }
+            ]
+        },
+        {
+            "id": "EssenceRevokerGainMultistrike",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "multistrike",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "EssenceRevoker",
+            "path": "textures/EssenceRevokerCardArt.png"
+        },
+        {
+            "id": "EssenceRevokerCharacterArt",
+            "path": "textures/EssenceRevokerCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "EssenceRevoker",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@EssenceRevoker"
+                }
+            }
+        },
+        {
+            "id": "EssenceRevokerCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@EssenceRevokerCharacterArt"
+                }
+            }
+        }
+    ]
+}

@@ -9,7 +9,7 @@
         "cost": 1,
         "card_type": "monster",
         "rarity": "uncommon",
-        "class": "ClassBanished",
+        "class": "@ClassSandscourged",
         "targets_room": true,
         "effects": [{
             "id": "@SpawnOverseerEternal"
@@ -24,8 +24,8 @@
     "characters": [{
         "id": "OverseerEternal",
         "size": 3,
-        "attack_damage": 15,
-        "health": 40,
+        "attack_damage": 10,
+        "health": 35,
         "names": {
             "english": "Overseer Eternal"
         },

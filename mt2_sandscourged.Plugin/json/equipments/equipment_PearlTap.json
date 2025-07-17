@@ -1,0 +1,91 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "PearlTap",
+            "names": {
+                "english": "Pearl Tap"
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Lore stuff."
+                }
+            ],
+            "card_type": "equipment",
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@PearlTap",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool",
+                "RoomAndEquipmentMerchant_EquipmentPool"
+            ],
+            "cost": 1,
+            "effects": [
+                "@Equip_PearlTap"
+            ]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "upg_PearlTap",
+            "bonus_damage": 0,
+            "bonus_hp": 5,
+            "trigger_upgrades": [
+                "@PearlExtinguishTrigger",
+                "@PearlResolveTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "PearlExtinguishTrigger",
+            "descriptions": {
+                "english": "Add a random <b>Torment</b> to your hand."
+            },
+            "trigger": "on_death",
+            "effects": ["@AddRandomTorment"]
+        },
+        {
+            "id": "PearlResolveTrigger",
+            "descriptions": {
+                "english": "Trigger <b>extinguish</b> without killing the unit."
+            },
+            "trigger": "post_combat",
+            "effects": ["@PearlTriggerExtinguishEffect"]
+        }
+    ],
+    "effects": [
+        {
+            "id": "Equip_PearlTap",
+            "name": "CardEffectAttachEquipment",
+            "target_mode": "drop_target_character",
+            "target_team": "monsters",
+            "param_upgrade": "@upg_PearlTap"
+        },
+        {
+            "id": "PearlTriggerExtinguishEffect",
+            "name": "CardEffectPlayUnitTrigger",
+            "target_mode": "self",
+            "param_trigger": "on_death"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PearlTapArt",
+            "path": "textures/PearlTapArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "PearlTapArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@PearlTapArt"
+                }
+            }
+        }
+    ]
+}

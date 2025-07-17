@@ -9,7 +9,7 @@
             "english": "Apply [corruption] [effect0.status0.power]."
         },
         "rarity": "common",
-        "class": "ClassBanished",
+        "class": "@ClassSandscourged",
         "card_art": "@TormentAArt",
         "targets_room": true,
         "targetless": false,

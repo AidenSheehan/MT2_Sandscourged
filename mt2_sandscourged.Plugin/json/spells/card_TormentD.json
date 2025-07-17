@@ -9,7 +9,7 @@
             "english": "Apply [spellweakness] [effect0.status0.power]."
         },
         "rarity": "common",
-        "class": "ClassBanished",
+        "class": "@ClassSandscourged",
         "card_art": "@TormentDArt",
         "targets_room": true,
         "targetless": false,

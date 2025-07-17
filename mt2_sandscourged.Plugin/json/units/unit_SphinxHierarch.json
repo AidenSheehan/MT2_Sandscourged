@@ -1,0 +1,123 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnSphinxHierarch",
+            "names": {
+                "english": "Sphinx Hierarch"
+            },
+            "card_art": "@SphinxHierarch",
+            "cost": 2,
+            "card_type": "monster",
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnSphinxHierarch"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ],
+            "pools": [
+                "UnitsAllBanner"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "SphinxHierarch",
+            "size": 2,
+            "attack_damage": 10,
+            "health": 10,
+            "names": {
+                "english": "Sphinx Hierarch"
+            },
+            "character_art": "@SphinxHierarchCharacterArt",
+            "subtypes": [
+                "SubtypesData_BannerUnit",
+                "@Sub_Remembered"
+            ],
+            "triggers": [
+                {
+                    "id": "@SphinxHierarchTrigger"
+                }
+            ],
+            "starting_status_effects": [
+                {
+                    "status": "multistrike",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "SphinxHierarchTrigger",
+            "descriptions": {
+                "english": "Apply [Conductor_hex] [effect0.status0.power] to the attacked unit."
+            },
+            "trigger": "on_attacking",
+            "effects": [
+                {
+                    "id": "@SphinxHierarchApplyHex"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnSphinxHierarch",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@SphinxHierarch"
+        },
+        {
+            "id": "SphinxHierarchApplyHex",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "last_attacked_character",
+            "param_status_effects": [
+                {
+                    "status": {
+                        "id": "@hex",
+                        "mod_reference": "Conductor"
+                    },
+                    "count": 2
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "SphinxHierarch",
+            "path": "textures/SphinxHierarchCardArt.png"
+        },
+        {
+            "id": "SphinxHierarchCharacterArt",
+            "path": "textures/SphinxHierarchCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "SphinxHierarch",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@SphinxHierarch"
+                }
+            }
+        },
+        {
+            "id": "SphinxHierarchCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@SphinxHierarchCharacterArt"
+                }
+            }
+        }
+    ]
+}

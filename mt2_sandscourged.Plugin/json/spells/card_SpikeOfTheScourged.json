@@ -1,0 +1,103 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpikeOfTheScourged",
+            "names": {
+                "english": "Spike of the Scourged"
+            },
+            "descriptions": {
+                "english": "Apply [trait1.statusmultiplier][x] [Conductor_hex].<br>Add [x] random <b>Torments</b> to your hand."
+            },
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "card_art": "@SpikeOfTheScourgedArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost_type": "x",
+            "traits": [
+                {
+                    "id": "@SpikeOfTheScourgedConsume"
+                },
+                {
+                    "id": "@SpikeOfTheScourgedScaleHex"
+                },
+                {
+                    "id": "@SpikeOfTheScourgedScaleCards"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@SpikeOfTheScourgedApplyHex"
+                }
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "SpikeOfTheScourgedConsume",
+            "name": "CardTraitExhaustState"
+        },
+        {
+            "id": "SpikeOfTheScourgedScaleHex",
+            "name": "CardTraitScalingAddStatusEffect",
+            "param_tracked_value": "played_cost",
+            "param_int": 1,
+            "effect_text_suppressed": true,
+            "param_status_effects": [
+                {
+                    "status": {
+                        "id": "@hex",
+                        "mod_reference": "Conductor"
+                    },
+                    "count": 0
+                }
+            ]
+        },
+        {
+            "id": "SpikeOfTheScourgedScaleCards",
+            "name": "@CardTraitScalingAddBattleCardToHandFromPool",
+            "param_card_pool": "@TormentPool",
+            "param_tracked_value": "played_cost",
+            "param_entry_duration": "this_turn",
+            "param_int": 1
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpikeOfTheScourgedApplyHex",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": {
+                        "id": "@hex",
+                        "mod_reference": "Conductor"
+                    },
+                    "count": 0
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "SpikeOfTheScourgedArt",
+            "path": "textures/SpikeOfTheScourgedArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "SpikeOfTheScourgedArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@SpikeOfTheScourgedArt"
+                }
+            }
+        }
+    ]
+}

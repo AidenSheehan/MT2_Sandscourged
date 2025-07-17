@@ -1,0 +1,63 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "MemorySyphon",
+            "names": {
+                "english": "Memory Syphon"
+            },
+            "descriptions": {
+                "english": "Shuffle 2 <b>Vexations</b> into your draw pile.<br>Draw [effect2.power] cards."
+            },
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@MemorySyphonArt",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 0,
+            "traits": [
+                {
+                    "id": "@Consume"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@ShuffleVexationSingle"
+                },
+                {
+                    "id": "@ShuffleVexationSingle"
+                },
+                {
+                    "id": "@MemorySyphonDrawTwo"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "MemorySyphonDrawTwo",
+            "name": "CardEffectDraw",
+            "param_int": 2
+        }
+    ],
+    "sprites": [
+        {
+            "id": "MemorySyphonArt",
+            "path": "textures/MemorySyphonArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "MemorySyphonArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@MemorySyphonArt"
+                }
+            }
+        }
+    ]
+}

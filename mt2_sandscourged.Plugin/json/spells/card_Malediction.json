@@ -1,0 +1,72 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "Malediction",
+            "names": {
+                "english": "Malediction"
+            },
+            "descriptions": {
+                "english": "Apply [Conductor_hex] [effect0.status0.power] to enemy units.<br>Add a random <b>Torment</b> to your hand."
+            },
+            "rarity": "common",
+            "class": "@ClassSandscourged",
+            "card_art": "@MaledictionArt",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 2,
+            "traits": [
+                {
+                    "id": "@MaledictionOffering"
+                }
+            ],
+            "effects": [
+                "@MaledictionApplyHex",
+                "@AddRandomTorment"
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "MaledictionOffering",
+            "name": "CardTraitTreasure"
+        }
+    ],
+    "effects": [
+        {
+            "id": "MaledictionApplyHex",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": {
+                        "id": "@hex",
+                        "mod_reference": "Conductor"
+                    },
+                    "count": 2
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "MaledictionArt",
+            "path": "textures/MaledictionArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "MaledictionArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@MaledictionArt"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "GravenRite",
+            "names": {
+                "english": "Graven Rite"
+            },
+            "descriptions": {
+                "english": "Apply [trait0.power][x] [undying].<br>Deal [effect1.power] damage."
+            },
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "card_art": "@GravenRiteArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost_type": "x",
+            "traits": [
+                {
+                    "id": "@GravenRiteScaleReanimate"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@GravenRiteApplyReanimate"
+                },
+                {
+                    "id": "@GravenRiteDealDamage"
+                }
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "GravenRiteScaleReanimate",
+            "name": "CardTraitScalingAddStatusEffect",
+            "param_tracked_value": "played_cost",
+            "param_int": 1,
+            "param_status_effects": [
+                {
+                    "status": "undying",
+                    "count": 0
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "GravenRiteApplyReanimate",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": "undying",
+                    "count": 0
+                }
+            ]
+        },
+        {
+            "id": "GravenRiteDealDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "last_targeted_characters",
+            "target_team": "both",
+            "param_int": 5
+        }
+    ],
+    "sprites": [
+        {
+            "id": "GravenRiteArt",
+            "path": "textures/GravenRiteArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "GravenRiteArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@GravenRiteArt"
+                }
+            }
+        }
+    ]
+}

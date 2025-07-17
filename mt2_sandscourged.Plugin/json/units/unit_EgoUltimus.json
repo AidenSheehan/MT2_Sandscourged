@@ -1,0 +1,127 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnEgoUltimus",
+            "names": {
+                "english": "Ego Ultimus"
+            },
+            "card_art": "@EgoUltimus",
+            "cost": 3,
+            "card_type": "monster",
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnEgoUltimus"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ],
+            "pools": [
+                "UnitsAllBanner"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "EgoUltimus",
+            "size": 2,
+            "attack_damage": 30,
+            "health": 30,
+            "names": {
+                "english": "Ego Ultimus"
+            },
+            "character_art": "@EgoUltimusCharacterArt",
+            "subtypes": [
+                "SubtypesData_BannerUnit",
+                "@Sub_Remembered"
+            ],
+            "triggers": [
+                "@EgoUltimusAccursedTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "EgoUltimusAccursedTrigger",
+            "descriptions": {
+                "english": "Apply this unit's [attack], [health], and status effects to the front friendly unit. It attacks immediately, then dies."
+            },
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "effects": [
+                {
+                    "id": "@EgoUltimusApplyStatsAndStatusEffects"
+                },
+                {
+                    "id": "@EgoUltimusAttackImmediately"
+                },
+                {
+                    "id": "@EgoUltimusDie"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnEgoUltimus",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@EgoUltimus"
+        },
+        {
+            "id": "EgoUltimusApplyStatsAndStatusEffects",
+            "name": "CardEffectAddStatsAndStatusEffectsFromSelf",
+            "target_mode": "front_in_room",
+            "target_team": "monsters"
+        },
+        {
+            "id": "EgoUltimusAttackImmediately",
+            "name": "CardEffectAttackWithUnit",
+            "target_mode": "front_in_room",
+            "target_team": "monsters"
+        },
+        {
+            "id": "EgoUltimusDie",
+            "name": "CardEffectKill",
+            "target_mode": "last_attacker_character"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "EgoUltimus",
+            "path": "textures/EgoUltimusCardArt.png"
+        },
+        {
+            "id": "EgoUltimusCharacterArt",
+            "path": "textures/EgoUltimusCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "EgoUltimus",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@EgoUltimus"
+                }
+            }
+        },
+        {
+            "id": "EgoUltimusCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@EgoUltimusCharacterArt"
+                }
+            }
+        }
+    ]
+}
