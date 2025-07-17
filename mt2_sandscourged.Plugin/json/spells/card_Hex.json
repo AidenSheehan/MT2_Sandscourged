@@ -10,7 +10,7 @@
                 "english": "Apply [Conductor_hex] [effect0.status0.power].<br>Add a random <b>Torment</b> to your hand."
             },
             "rarity": "starter",
-            "class": "ClassBanished",
+            "class": "@ClassSandscourged",
             "card_art": "@HexArt",
             "targets_room": true,
             "targetless": false,

@@ -9,7 +9,7 @@
             "english": "Apply [sap] [effect0.status0.power]."
         },
         "rarity": "common",
-        "class": "ClassBanished",
+        "class": "@ClassSandscourged",
         "card_art": "@TormentCArt",
         "targets_room": true,
         "targetless": false,
@@ -31,7 +31,7 @@
             "target_team": "both",
             "param_status_effects": [{
                 "status": "debuff",
-                "count": 2
+                "count": 1
             }]
         }
     ],

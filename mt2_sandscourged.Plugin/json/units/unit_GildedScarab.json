@@ -10,8 +10,11 @@
             "cost": 1,
             "card_type": "monster",
             "rarity": "common",
-            "class": "ClassBanished",
+            "class": "@ClassSandscourged",
             "targets_room": true,
+            "pools": [
+                "MegaPool"
+            ],
             "effects": [
                 {
                     "id": "@SpawnGildedScarab"

@@ -10,7 +10,10 @@
             "cost": 1,
             "card_type": "monster",
             "rarity": "uncommon",
-            "class": "ClassBanished",
+            "class": "@ClassSandscourged",
+            "pools": [
+                "MegaPool"
+            ],
             "targets_room": true,
             "effects": [
                 {

@@ -1,0 +1,89 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpearOfTheDeserted",
+            "names": {
+                "english": "Spear of the Deserted"
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Lore stuff."
+                }
+            ],
+            "card_type": "equipment",
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@SpearOfTheDeserted",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool",
+                "RoomAndEquipmentMerchant_EquipmentPool"
+            ],
+            "cost": 2,
+            "effects": [
+                "@Equip_SpearOfTheDeserted"
+            ]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "upg_SpearOfTheDeserted",
+            "bonus_damage": 15,
+            "bonus_hp": 0,
+            "trigger_upgrades": [
+                "@SpearAccursedTrigger"
+            ]
+        },
+        {
+            "id": "SpearAttackUpgrade",
+            "bonus_damage": 5
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "SpearAccursedTrigger",
+            "descriptions": {
+                "english": "+[effect0.upgrade.bonusdamage][attack]"
+            },
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "effects": ["@SpearBuffDamage"]
+        }
+    ],
+    "effects": [
+        {
+            "id": "Equip_SpearOfTheDeserted",
+            "name": "CardEffectAttachEquipment",
+            "target_mode": "drop_target_character",
+            "target_team": "monsters",
+            "param_upgrade": "@upg_SpearOfTheDeserted"
+        },
+        {
+            "id": "SpearBuffDamage",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "self",
+            "param_upgrade": "@SpearAttackUpgrade"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "SpearOfTheDesertedArt",
+            "path": "textures/SpearOfTheDesertedArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "SpearOfTheDesertedArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@SpearOfTheDesertedArt"
+                }
+            }
+        }
+    ]
+}

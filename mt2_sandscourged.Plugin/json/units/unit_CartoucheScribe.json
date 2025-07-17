@@ -8,8 +8,8 @@
         "card_art": "@CartoucheScribe",
         "cost": 1,
         "card_type": "monster",
-        "rarity": "uncommon",
-        "class": "ClassBanished",
+        "rarity": "rare",
+        "class": "@ClassSandscourged",
         "targets_room": true,
         "effects": [{
             "id": "@SpawnCartoucheScribe"
@@ -20,12 +20,28 @@
         "pools": [
             "UnitsAllBanner"
         ]
+    },
+    {
+        "id": "CartoucheScribeAbility",
+        "names": {
+            "english": "Inscribe"
+        },
+        "descriptions": {
+            "english": "Apply [meleeweakness] [effect0.status0.power] and [spellweakness] [effect1.status0.power]."
+        },
+        "card_art": "@CartoucheScribe",
+        "is_an_ability": true,
+        "cooldown": 2,
+        "targetless": false,
+        "targets_room": true,
+        "card_type": "spell",
+        "effects": ["@CartoucheScribeApplyMeleeWeakness", "@CartoucheScribeApplySpellWeakness"]
     }],
     "characters": [{
         "id": "CartoucheScribe",
         "size": 2,
-        "attack_damage": 25,
-        "health": 25,
+        "attack_damage": 10,
+        "health": 5,
         "names": {
             "english": "Cartouche Scribe"
         },
@@ -34,28 +50,7 @@
             "SubtypesData_BannerUnit",
             "@Sub_Remembered"
         ],
-        "triggers": ["@CartoucheScribeSummonTrigger", "@CartoucheScribeAccursedTrigger"]
-    }],
-    "character_triggers": [{
-        "id": "CartoucheScribeSummonTrigger",
-        "descriptions": {
-            "english": "Shuffle a <b>Vexation</b> into your draw pile."
-        },
-        "trigger": "on_spawn",
-        "effects": ["@ShuffleVexationSingle"]
-    },
-    {
-        "id": "CartoucheScribeAccursedTrigger",
-        "descriptions": {
-            "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]."
-        },
-        "trigger": {
-            "id": "@Accursed",
-            "mod_reference": "Conductor"
-        },
-        "effects": [{
-            "id": "@CartoucheScribeGainStats"
-        }]
+        "ability": "@CartoucheScribeAbility"
     }],
     "effects": [{
             "id": "SpawnCartoucheScribe",
@@ -64,18 +59,30 @@
             "param_character": "@CartoucheScribe"
         },
         {
-            "id": "CartoucheScribeGainStats",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
-            "target_mode": "self",
-            "target_team": "none",
-            "param_upgrade": "@CartoucheScribeFiveAttackFiveHealth"
+            "id": "CartoucheScribeApplyMeleeWeakness",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": "melee weakness",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "CartoucheScribeApplySpellWeakness",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "last_targeted_characters",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": "spell weakness",
+                    "count": 1
+                }
+            ]
         }
     ],
-    "upgrades": [{
-        "id": "CartoucheScribeFiveAttackFiveHealth",
-        "bonus_damage": 5,
-        "bonus_hp": 5
-    }],
     "sprites": [{
             "id": "CartoucheScribe",
             "path": "textures/CartoucheScribeCardArt.png"

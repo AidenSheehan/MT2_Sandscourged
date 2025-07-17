@@ -1,0 +1,73 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "Jinx",
+            "names": {
+                "english": "Jinx"
+            },
+            "descriptions": {
+                "english": "Apply [Conductor_hex] [effect0.status0.power].<br>Discard a random card."
+            },
+            "rarity": "common",
+            "class": "@ClassSandscourged",
+            "card_art": "@JinxArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 1,
+            "effects": [
+                "@JinxApplyHex",
+                "@JinxDiscard"
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "JinxConsume",
+            "name": "CardTraitExhaustState"
+        }
+    ],
+    "effects": [
+        {
+            "id": "JinxApplyHex",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": {
+                        "id": "@hex",
+                        "mod_reference": "Conductor"
+                    },
+                    "count": 3
+                }
+            ]
+        },
+        {
+            "id": "JinxDiscard",
+            "name": "CardEffectRandomDiscard",
+            "use_int_range": false,
+            "param_int": 1
+        }
+    ],
+    "sprites": [
+        {
+            "id": "JinxArt",
+            "path": "textures/JinxArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "JinxArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@JinxArt"
+                }
+            }
+        }
+    ]
+}

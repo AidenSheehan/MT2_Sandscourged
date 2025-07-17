@@ -9,7 +9,7 @@
             "english": "[descend] a unit, then deal [effect1.power] damage to it."
         },
         "rarity": "uncommon",
-        "class": "ClassBanished",
+        "class": "@ClassSandscourged",
         "card_art": "@PitfallArt",
         "targets_room": true,
         "targetless": false,

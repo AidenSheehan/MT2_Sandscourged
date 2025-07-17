@@ -9,7 +9,7 @@
             "english": "Deal [effect0.power] damage to enemy units.<br>Shuffle a <b>Vexation</b> into your draw pile."
         },
         "rarity": "uncommon",
-        "class": "ClassBanished",
+        "class": "@ClassSandscourged",
         "card_art": "@DessicateArt",
         "targets_room": true,
         "targetless": true,

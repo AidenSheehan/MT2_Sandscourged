@@ -1,0 +1,134 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnPriestOfLostThoughts",
+            "names": {
+                "english": "Priest of Lost Thoughts"
+            },
+            "card_art": "@PriestOfLostThoughts",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnPriestOfLostThoughts"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ],
+            "pools": [
+                "UnitsAllBanner"
+            ]
+        },
+        {
+            "id": "PriestOfLostThoughtsAbility",
+            "names": {
+                "english": "Condemn"
+            },
+            "descriptions": {
+                "english": "Discard your hand.<br>Apply [undying] [effect1.status0.power] to the front friendly unit for every two cards discarded."
+            },
+            "card_art": "@PriestOfLostThoughts",
+            "is_an_ability": true,
+            "cooldown": 3,
+            "targetless": true,
+            "targets_room": false,
+            "card_type": "spell",
+            "traits": [{
+                "id": "@PriestOfLostThoughtsStatusTrait"
+            }],
+            "effects": [
+                {
+                    "id": "@PriestOfLostThoughtsDiscardHand"
+                },
+                {
+                    "id": "@PriestOfLostThoughtsApplyReanimate"
+                }
+            ]
+        }
+    ],
+    "traits": [{
+        "id": "PriestOfLostThoughtsStatusTrait",
+        "name": {
+            "id": "@CardTraitDiscardHandCount",
+            "mod_reference": "mt2_sandscourged.Plugin"
+        }
+    }],
+    "characters": [
+        {
+            "id": "PriestOfLostThoughts",
+            "size": 2,
+            "attack_damage": 10,
+            "health": 10,
+            "names": {
+                "english": "Priest of Lost Thoughts"
+            },
+            "character_art": "@PriestOfLostThoughtsCharacterArt",
+            "subtypes": [
+                "SubtypesData_BannerUnit",
+                "@Sub_Remembered"
+            ],
+            "ability": "@PriestOfLostThoughtsAbility"
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnPriestOfLostThoughts",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@PriestOfLostThoughts"
+        },
+        {
+            "id": "PriestOfLostThoughtsDiscardHand",
+            "name": "CardEffectDiscardHand"
+        },
+        {
+            "id": "PriestOfLostThoughtsApplyReanimate",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "front_in_room",
+            "target_team": "monsters",
+            "param_status_effects": [
+                {
+                    "status": "undying",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PriestOfLostThoughts",
+            "path": "textures/PriestOfLostThoughtsCardArt.png"
+        },
+        {
+            "id": "PriestOfLostThoughtsCharacterArt",
+            "path": "textures/PriestOfLostThoughtsCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "PriestOfLostThoughts",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@PriestOfLostThoughts"
+                }
+            }
+        },
+        {
+            "id": "PriestOfLostThoughtsCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@PriestOfLostThoughtsCharacterArt"
+                }
+            }
+        }
+    ]
+}

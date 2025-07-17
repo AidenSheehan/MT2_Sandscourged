@@ -18,7 +18,7 @@
                 "english": "Discard your hand. Apply +[trait0.power][attack] and +[trait0.secondarypower][health] to friendly units per card discarded."
             },
             "rarity": "uncommon",
-            "class": "ClassBanished",
+            "class": "@ClassSandscourged",
             "card_art": "@ReverenceArt",
             "targets_room": true,
             "targetless": true,
@@ -43,7 +43,10 @@
     ],
     "traits": [{
             "id": "ReverenceTrait",
-            "name": "CardTraitReverenceUpgrade",
+            "name": {
+                "id": "@CardTraitDiscardHandCount",
+                "mod_reference": "mt2_sandscourged.Plugin"
+            },
             "param_int": 3,
             "param_int_2": 1
         }],

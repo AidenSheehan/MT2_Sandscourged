@@ -2,19 +2,19 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "SpawnScarab",
+            "id": "SpawnReveredScarab",
             "names": {
-                "english": "Scarab"
+                "english": "Revered Scarab"
             },
-            "card_art": "@Scarab",
+            "card_art": "@ReveredScarab",
             "cost": 1,
             "card_type": "monster",
             "rarity": "starter",
-            "class": "ClassBanished",
+            "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
                 {
-                    "id": "@SpawnScarab"
+                    "id": "@SpawnReveredScarab"
                 }
             ],
             "lore_tooltips": [
@@ -26,47 +26,47 @@
     ],
     "characters": [
         {
-            "id": "Scarab",
+            "id": "ReveredScarab",
             "size": 1,
             "attack_damage": 3,
             "health": 1,
             "names": {
-                "english": "Scarab"
+                "english": "Revered Scarab"
             },
-            "character_art": "@ScarabCharacterArt",
+            "character_art": "@ReveredScarabCharacterArt",
             "subtypes": [
                 "@Sub_Scarab"
             ],
             "triggers": [
                 {
-                    "id": "@ScarabTrigger"
+                    "id": "@ReveredScarabTrigger"
                 }
             ]
         }
     ],
     "character_triggers": [
         {
-            "id": "ScarabTrigger",
+            "id": "ReveredScarabTrigger",
             "descriptions": {
                 "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
             },
             "trigger": "on_death",
             "effects": [
                 {
-                    "id": "@ScarabGiveStats"
+                    "id": "@ReveredScarabGiveStats"
                 }
             ]
         }
     ],
     "effects": [
         {
-            "id": "SpawnScarab",
+            "id": "SpawnReveredScarab",
             "name": "CardEffectSpawnMonster",
             "target_mode": "room",
-            "param_character": "@Scarab"
+            "param_character": "@ReveredScarab"
         },
         {
-            "id": "ScarabGiveStats",
+            "id": "ReveredScarabGiveStats",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
@@ -75,30 +75,30 @@
     ],
     "sprites": [
         {
-            "id": "Scarab",
-            "path": "textures/ScarabCardArt.png"
+            "id": "ReveredScarab",
+            "path": "textures/ReveredScarabCardArt.png"
         },
         {
-            "id": "ScarabCharacterArt",
-            "path": "textures/ScarabCharacterArt.png"
+            "id": "ReveredScarabCharacterArt",
+            "path": "textures/ReveredScarabCharacterArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "Scarab",
+            "id": "ReveredScarab",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@Scarab"
+                    "sprite": "@ReveredScarab"
                 }
             }
         },
         {
-            "id": "ScarabCharacterArt",
+            "id": "ReveredScarabCharacterArt",
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@ScarabCharacterArt"
+                    "sprite": "@ReveredScarabCharacterArt"
                 }
             }
         }
