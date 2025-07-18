@@ -1,0 +1,107 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "TomeOfOblivion",
+            "names": {
+                "english": "Tome of Oblivion"
+            },
+            "descriptions": {
+                "english": "Add <b>Ability: Ultimate Sacrifice</b> to a friendly unit."
+            },
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "card_art": "@TomeOfOblivionArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 2,
+            "traits": [
+                {
+                    "id": "@TomeOfOblivionConsume"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@TomeOfOblivionAddAbility"
+                }
+            ]
+        },
+      {
+            "id": "UltimateSacrifice",
+            "names": {
+                "english": "Ultimate Sacrifice"
+            },
+            "descriptions": {
+                "english": "Deal [effect0.power] damage to enemy units, then purge this unit."
+            },
+            "is_an_ability": true,
+            "cooldown": 1,
+            "card_type": "spell",
+            "card_art": "@TomeOfOblivion",
+            "targetless": true,
+            "effects": [
+                "@UltimateSacrificeAddPurge",
+                "@UltimateSacrificeSacrifice",
+                "@UltimateSacrificeDealDamage"
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "TomeOfOblivionConsume",
+            "name": "CardTraitExhaustState"
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "TomeOfOblivionUpgrade",
+            "ability_upgrade": "@UltimateSacrifice"
+        }
+    ],
+    "effects": [
+        {
+            "id": "TomeOfOblivionAddAbility",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "drop_target_character",
+            "target_team": "monsters",
+            "param_upgrade": "@TomeOfOblivionUpgrade"
+        },
+        {
+            "id": "UltimateSacrificeAddPurge",
+            "name": "CardEffectPurgeUnitOnDeath",
+            "target_mode": "self"
+        },
+        {
+            "id": "UltimateSacrificeSacrifice",
+            "name": "CardEffectSacrifice",
+            "target_mode": "self"
+        },
+        {
+            "id": "UltimateSacrificeDealDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_int": 100
+        }
+    ],
+    "sprites": [
+        {
+            "id": "TomeOfOblivionArt",
+            "path": "textures/TomeOfOblivionArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "TomeOfOblivionArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@TomeOfOblivionArt"
+                }
+            }
+        }
+    ]
+}
