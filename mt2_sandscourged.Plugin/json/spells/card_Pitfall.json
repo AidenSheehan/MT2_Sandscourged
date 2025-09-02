@@ -6,7 +6,7 @@
             "english": "Pitfall"
         },
         "descriptions": {
-            "english": "[descend] a unit, then deal [effect1.power] damage to it."
+            "english": "[descend]. Deal [effect1.power] damage."
         },
         "rarity": "uncommon",
         "class": "@ClassSandscourged",

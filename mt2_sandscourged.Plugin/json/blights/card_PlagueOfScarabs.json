@@ -1,0 +1,72 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "PlagueOfScarabs",
+            "names": {
+                "english": "Plague of Scarabs"
+            },
+            "descriptions": {
+                "english": "Add [effect0.secondarypower] <b>Revered Scarab</b> cards to your hand and apply <b>0</b>[ember] and [ephemeral]."
+            },
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@PlagueOfScarabsArt",
+            "card_type": "blight",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 1,
+            "effects": [
+                {
+                    "id": "@PlagueOfScarabsAddCards"
+                }
+            ],
+            "triggers": ["@VexationDamageOnUnplayed"]
+        }
+    ],
+    "effects": [
+        {
+            "id": "PlagueOfScarabsAddCards",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "target_team": "none",
+            "param_card_pool": "@ReveredScarabOnlyPool",
+            "param_int": 3,
+            "param_int_2": 3,
+            "param_upgrade": "@ScarabCostReductionAndEphemeral"
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "ScarabCostReductionAndEphemeral",
+            "cost_reduction": 99,
+            "trait_upgrades": ["@ScarabEphemeral"]
+        }
+    ],
+    "traits": [
+        {
+            "id": "ScarabEphemeral",
+            "name": "CardTraitEphemeral"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PlagueOfScarabsArt",
+            "path": "textures/PlagueOfScarabsArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "PlagueOfScarabsArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@PlagueOfScarabsArt"
+                }
+            }
+        }
+    ]
+}

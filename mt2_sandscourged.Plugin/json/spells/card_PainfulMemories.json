@@ -1,0 +1,67 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "PainfulMemories",
+            "names": {
+                "english": "Painful Memories"
+            },
+            "descriptions": {
+                "english": "Shuffle [effect2.power] <b>Vexations</b> into your draw pile. Draw [effect2.power]."
+            },
+            "lore_tooltips": {
+                "english": "Long long ago, Seraph quelled an uprising that had the potential to destroy his dominion. To make sure it would never happen again, he exiled the dissidents from Heaven, erased all record of their existence, and forbade mention of their name. Now they have returned, warped and vengeful."
+            },
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@PainfulMemoriesArt",
+            "card_type": "spell",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 0,
+            "traits": [
+                {
+                    "id": "@Consume"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@ShuffleVexationSingle"
+                },
+                {
+                    "id": "@ShuffleVexationSingle"
+                },
+                {
+                    "id": "@PainfulMemoriesDraw"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "PainfulMemoriesDraw",
+            "name": "CardEffectDraw",
+            "param_int": 2
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PainfulMemoriesArt",
+            "path": "textures/PainfulMemoriesArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "PainfulMemoriesArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@PainfulMemoriesArt"
+                }
+            }
+        }
+    ]
+}

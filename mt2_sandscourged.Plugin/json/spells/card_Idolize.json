@@ -1,0 +1,102 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "Idolize",
+            "names": {
+                "english": "Idolize"
+            },
+            "descriptions": {
+                "english": "Apply [soul] [effect0.status0.power] to a unit. It gains [attack] and [health] equal to the amount of [soul] it has."
+            },
+            "lore_tooltips": {
+                "english": "The Ur-Pharaoh demands adulation and offerings from its subjects. Gifts of names, stolen from the Forgotten, are treasured above all else."
+            },
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "unlock_level": 9,
+            "card_art": "@IdolizeArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 1,
+            "traits": [
+                {
+                    "id": "@TraitIdolize"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@IdolizeApplySoul"
+                },
+                {
+                    "id": "@IdolizeApplyStats"
+                }
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "TraitIdolize",
+            "name": {
+                "id": "@CardTraitStatusEffectUpgradeMultiplier",
+                "mod_reference": "mt2_sandscourged.Plugin"
+            },
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 0
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "IdolizeApplySoul",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 4
+                }
+            ]
+        },
+        {
+            "id": "IdolizeApplyStats",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "last_targeted_characters",
+            "target_team": "both",
+            "param_upgrade": {
+                "id": "@IdolizeStatsUpgrade"
+            }
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "IdolizeStatsUpgrade",
+            "bonus_damage": 1,
+            "bonus_hp": 1
+        }
+    ],
+    "sprites": [
+        {
+            "id": "IdolizeArt",
+            "path": "textures/IdolizeArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "IdolizeArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@IdolizeArt"
+                }
+            }
+        }
+    ]
+}

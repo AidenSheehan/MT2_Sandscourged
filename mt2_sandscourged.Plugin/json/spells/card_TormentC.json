@@ -1,51 +1,62 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "TormentC",
-        "names": {
-            "english": "Torment"
-        },
-        "descriptions": {
-            "english": "Apply [sap] [effect0.status0.power]."
-        },
-        "rarity": "common",
-        "class": "@ClassSandscourged",
-        "card_art": "@TormentCArt",
-        "targets_room": true,
-        "targetless": false,
-        "cost": 0,
-        "traits": [{
-            "id": "@TormentEphemeralTrait"
-        }],
-        "effects": [
-            {
-                "id":"@TormentCApplySap"
-            }
-        ]
-    }],
+    "cards": [
+        {
+            "id": "TormentC",
+            "names": {
+                "english": "Torment"
+            },
+            "descriptions": {
+                "english": "Apply [sap] [effect0.status0.power]."
+            },
+            "rarity": "common",
+            "class": "@ClassSandscourged",
+            "card_art": "@TormentCArt",
+            "hide_in_logbook": true,
+            "targets_room": true,
+            "targetless": false,
+            "cost": 0,
+            "traits": [
+                {
+                    "id": "@TormentEphemeralTrait"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@TormentCApplySap"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "id": "TormentCApplySap",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
             "target_team": "both",
-            "param_status_effects": [{
-                "status": "debuff",
-                "count": 1
-            }]
+            "param_status_effects": [
+                {
+                    "status": "debuff",
+                    "count": 1
+                }
+            ]
         }
     ],
-    "sprites": [{
-        "id": "TormentCArt",
-        "path": "textures/TormentCArt.png"
-    }],
-    "game_objects": [{
-        "id": "TormentCArt",
-        "type": "card_art",
-        "extensions": {
-            "card_art": {
-                "sprite": "@TormentCArt"
+    "sprites": [
+        {
+            "id": "TormentCArt",
+            "path": "textures/TormentCArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "TormentCArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@TormentCArt"
+                }
             }
         }
-    }]
+    ]
 }

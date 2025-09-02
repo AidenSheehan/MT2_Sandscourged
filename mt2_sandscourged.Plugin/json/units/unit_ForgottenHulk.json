@@ -6,11 +6,17 @@
             "names": {
                 "english": "Forgotten Hulk"
             },
+            "lore_tooltips": [
+                {
+                    "english": "However mighty this creature once was, now it is reduced to a warped mass of flesh and sinew."
+                }
+            ],
             "card_art": "@ForgottenHulk",
             "cost": 2,
             "card_type": "monster",
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
+            "unlock_level": 4,
             "targets_room": true,
             "pools": [
                 "UnitsAllBanner"
@@ -18,11 +24,6 @@
             "effects": [
                 {
                     "id": "@SpawnForgottenHulk"
-                }
-            ],
-            "lore_tooltips": [
-                {
-                    "english": "Flavour Text"
                 }
             ]
         }
@@ -32,13 +33,14 @@
             "id": "ForgottenHulk",
             "size": 3,
             "attack_damage": 0,
-            "health": 45,
+            "health": 40,
             "names": {
                 "english": "Forgotten Hulk"
             },
             "character_art": "@ForgottenHulkCharacterArt",
             "subtypes": [
-                "@Sub_Forgotten"
+                "@Sub_Forgotten",
+                "SubtypesData_BannerUnit"
             ],
             "triggers": [
                 {
@@ -89,12 +91,11 @@
         {
             "id": "ForgottenHulkApplyCorruption",
             "name": "CardEffectAddStatusEffect",
-            "target_team": "heroes",
-            "target_mode": "room",
+            "target_mode": "last_attacker_character",
             "param_status_effects": [
                 {
                     "status": "corruption",
-                    "count": 3
+                    "count": 5
                 }
             ]
         },
@@ -136,6 +137,18 @@
             "extensions": {
                 "character_art": {
                     "sprite": "@ForgottenHulkCharacterArt"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 1.2,
+                        "y": 1.2,
+                        "z": 1.2
+                    }
                 }
             }
         }

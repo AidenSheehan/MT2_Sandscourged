@@ -45,31 +45,35 @@ namespace mt2_sandscourged.Plugin
                     c.AddMergedJsonFile(
                         "json/plugin.json",
                         "json/global.json",
+
                         // Class stuff
                         "json/class.json",
+
                         // Champions
                         "json/champions/champion_Pharaoh.json",
+                        "json/champions/champion_Vizier.json",
+
                         // Units
                         "json/units/unit_OverseerEternal.json",
                         "json/units/unit_ReveredScarab.json",
                         "json/units/unit_GildedScarab.json",
-                        "json/units/unit_JewelledScarab.json",
+                        "json/units/unit_CursedScarab.json",
                         "json/units/unit_ScarabSwarm.json",
                         "json/units/unit_Wretch.json",
-                        "json/units/unit_ScourgedHollow.json",
-                        "json/units/unit_CartoucheScribe.json",
+                        "json/units/unit_PearlHost.json",
                         "json/units/unit_SphinxHierarch.json",
                         "json/units/unit_InfestedMummy.json",
                         "json/units/unit_ForgottenHulk.json",
                         "json/units/unit_PriestOfLostThoughts.json",
                         "json/units/unit_EssenceRevoker.json",
-                        "json/units/unit_EgoUltimus.json",
+                        "json/units/unit_SuperiorEgo.json",
+                        "json/units/unit_CartoucheScribe.json",
 
                         // Spells
                         "json/spells/card_Pitfall.json",
                         "json/spells/card_OblivionSands.json",
                         "json/spells/card_Sandstorm.json",
-                        "json/spells/card_Reverence.json",
+                        "json/spells/card_Rancor.json",
                         "json/spells/card_InMemoriam.json",
                         "json/spells/card_TormentA.json",
                         "json/spells/card_TormentB.json",
@@ -81,23 +85,53 @@ namespace mt2_sandscourged.Plugin
                         "json/spells/card_Hex.json",
                         "json/spells/card_Jinx.json",
                         "json/spells/card_Malediction.json",
-                        "json/spells/card_PlagueOfScarabs.json",
                         "json/spells/card_SpikeOfTheScourged.json",
-                        "json/spells/card_LastWords.json",
-                        "json/spells/card_Cripple.json",
+                        "json/spells/card_Idolize.json",
+                        "json/spells/card_BlessedVenom.json",
                         "json/spells/card_Ruination.json",
-                        "json/spells/card_MemorySyphon.json",
                         "json/spells/card_GravenRite.json",
-                        "json/spells/card_Relinquish.json",
+                        "json/spells/card_ForgottenTome.json",
+                        "json/spells/card_SelectiveMemory.json",
+                        "json/spells/card_PainfulMemories.json",
 
                         // Equipment
-                        "json/equipments/equipment_Needle.json",
+                        "json/equipments/equipment_ViziersImplements.json",
                         "json/equipments/equipment_PearlTap.json",
                         "json/equipments/equipment_SpearOfTheDeserted.json",
+                        "json/equipments/equipment_CorruptedSceptre.json",
+
                         // Rooms
-                        // Scourges and Blights
-                        "json/scourges/card_Vexation.json"
-                    //Debug
+                        "json/rooms/room_CursedPassage.json",
+                        "json/rooms/room_ScarabPit.json",
+
+                        //Blights
+                        "json/blights/card_PlagueOfScarabs.json",
+                        "json/blights/card_PlagueOfWoe.json",
+
+                        // Scourges
+                        "json/scourges/card_Vexation.json",
+
+                        // Relics
+                        "json/relics/relic_WornHourglass.json",
+                        "json/relics/relic_CarnelianMask.json",
+                        "json/relics/relic_CursedTablet.json",
+                        "json/relics/relic_BrokenSeal.json",
+                        "json/relics/relic_EvokingFlute.json",
+                        "json/relics/relic_OblivionCrook.json",
+                        "json/relics/relic_ShiningPearl.json",
+                        "json/relics/relic_TwistedReed.json",
+                        "json/relics/relic_CanopicJar.json",
+                        "json/relics/relic_PolishedIdol.json",
+                        "json/relics/relic_SandBowl.json",
+
+                        // Enhancers
+                        "json/enhancers/enhancer_Scarabstone.json",
+
+                        // Status Effects
+                        "json/status_effects/hex.json",
+
+                        // Card Effects
+                        "json/card_effects/PurgeCardFromHand.json"
                     );
                 }
             );
@@ -114,8 +148,8 @@ namespace mt2_sandscourged.Plugin
 );
 
             // Uncomment if you need harmony patches, if you are writing your own custom effects.
-            //var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
-            //harmony.PatchAll();
+            var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
+            harmony.PatchAll();
         }
     }
 }

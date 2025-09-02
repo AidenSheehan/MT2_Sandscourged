@@ -1,0 +1,105 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "CorruptedSceptre",
+            "names": {
+                "english": "Corrupted Sceptre"
+            },
+            "lore_tooltips": [
+                {
+                    "english": "This curious sceptre bears faded glyphs that seems to predate even the Ur-Pharaoh. They show a bird perched atop a man, with the man's words drowned out by the bird's song. Whoever this man was, he has been long forgotten."
+                }
+            ],
+            "card_type": "equipment",
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "unlock_level": 3,
+            "card_art": "@CorruptedSceptreArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool",
+                "RoomAndEquipmentMerchant_EquipmentPool"
+            ],
+            "cost": 3,
+            "effects": [
+                "@Equip_CorruptedSceptre"
+            ]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "upg_CorruptedSceptre",
+            "bonus_damage": 0,
+            "bonus_hp": 15,
+            "trigger_upgrades": [
+                "@CorruptedSceptreHarvestTrigger"
+            ],
+            "icon": "@CorruptedSceptreArt"
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "CorruptedSceptreHarvestTrigger",
+            "descriptions": {
+                "english": "Apply [corruption] [effect0.status0.power] to enemy units, then double the amount of [corruption] they have."
+            },
+            "trigger": "on_any_unit_death_on_floor",
+            "effects": [
+                "@CorruptedSceptreApplyCorruption",
+                "@CorruptedSceptreDoubleCorruption"
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "Equip_CorruptedSceptre",
+            "name": "CardEffectAttachEquipment",
+            "target_mode": "drop_target_character",
+            "target_team": "monsters",
+            "param_upgrade": "@upg_CorruptedSceptre"
+        },
+        {
+            "id": "CorruptedSceptreApplyCorruption",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": "corruption",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "CorruptedSceptreDoubleCorruption",
+            "name": "CardEffectMultiplyStatusEffect",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": "corruption",
+                    "count": 2
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "CorruptedSceptreArt",
+            "path": "textures/CorruptedSceptreArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "CorruptedSceptreArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@CorruptedSceptreArt"
+                }
+            }
+        }
+    ]
+}

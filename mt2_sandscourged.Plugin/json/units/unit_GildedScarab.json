@@ -31,14 +31,20 @@
         {
             "id": "GildedScarab",
             "size": 1,
-            "attack_damage": 6,
-            "health": 2,
+            "attack_damage": 3,
+            "health": 1,
             "names": {
                 "english": "Gilded Scarab"
             },
             "character_art": "@GildedScarabCharacterArt",
             "subtypes": [
                 "@Sub_Scarab"
+            ],
+            "starting_status_effects": [
+                {
+                    "status": "undying",
+                    "count": 1
+                }
             ],
             "triggers": [
                 {
@@ -73,14 +79,7 @@
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@GildedScarabSixAttackTwoHealth"
-        }
-    ],
-    "upgrades": [
-        {
-            "id": "GildedScarabSixAttackTwoHealth",
-            "bonus_damage": 6,
-            "bonus_hp": 2
+            "param_upgrade": "@ScarabThreeAttackOneHealth"
         }
     ],
     "sprites": [

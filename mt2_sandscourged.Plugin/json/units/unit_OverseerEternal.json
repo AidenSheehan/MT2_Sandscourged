@@ -23,16 +23,16 @@
     }],
     "characters": [{
         "id": "OverseerEternal",
-        "size": 3,
+        "size": 2,
         "attack_damage": 10,
-        "health": 35,
+        "health": 30,
         "names": {
             "english": "Overseer Eternal"
         },
         "character_art": "@OverseerEternalCharacterArt",
         "subtypes": [
             "SubtypesData_BannerUnit",
-            "@Sub_Remembered"
+            "@Sub_Ego"
         ],
         "triggers": [{
             "id": "@OverseerEternalTrigger"

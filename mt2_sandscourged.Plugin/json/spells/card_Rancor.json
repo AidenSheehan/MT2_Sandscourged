@@ -1,0 +1,87 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "localization_terms": [
+        {
+            "key": "CardTraitRancorUpgrade_CurrentScaling_CardText",
+            "texts": {
+                "english": "<nobr><i>(+{0} [attack] and +{1} [health])</i></nobr>"
+            }
+        }
+    ],
+    "cards": [
+        {
+            "id": "Rancor",
+            "names": {
+                "english": "Rancor"
+            },
+            "descriptions": {
+                "english": "Apply [rage] [effect0.status0.power] to friendly units for each card in your hand. Discard your hand."
+            },
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@RancorArt",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 2,
+            "traits": [
+                {
+                    "id": "@RancorTrait"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@RancorApplyRage"
+                },
+                {
+                    "id": "@RancorDiscardHand"
+                }
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "RancorTrait",
+            "name": "@CardTraitScalingByHandCount",
+            "param_int": 1,
+            "param_int_2": 1
+        }
+    ],
+    "effects": [
+        {
+            "id": "RancorApplyRage",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_status_effects": [
+                {
+                    "status": "buff",
+                    "count": 2
+                }
+            ]
+        },
+        {
+            "id": "RancorDiscardHand",
+            "name": "CardEffectDiscardHand"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "RancorArt",
+            "path": "textures/RancorArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "RancorArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@RancorArt"
+                }
+            }
+        }
+    ]
+}

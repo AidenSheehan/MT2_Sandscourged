@@ -6,7 +6,7 @@
             "english": "Efface"
         },
         "descriptions": {
-            "english": "Deal [effect0.power] damage.<br>Shuffle a <b>Vexation</b> into your draw pile."
+            "english": "Deal [effect0.power] damage. Shuffle a <b>Vexation</b> into your draw pile."
         },
         "rarity": "common",
         "class": "@ClassSandscourged",
@@ -39,7 +39,7 @@
             "name": "CardEffectDamage",
             "target_mode": "drop_target_character",
             "target_team": "both",
-            "param_int": 30
+            "param_int": 25
         }
     ],
     "sprites": [{

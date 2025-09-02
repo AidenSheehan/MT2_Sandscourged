@@ -7,27 +7,25 @@
                 "english": "Jinx"
             },
             "descriptions": {
-                "english": "Apply [Conductor_hex] [effect0.status0.power].<br>Discard a random card."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. Discard a random card."
+            },
+            "lore_tooltips": {
+                "english": "Strange magic seems to be vested in the very words engraved into stone cartouches the Egos recite from."
             },
             "rarity": "common",
             "class": "@ClassSandscourged",
             "card_art": "@JinxArt",
+            "unlock_level": 2,
             "targets_room": true,
             "targetless": false,
             "pools": [
                 "MegaPool"
             ],
-            "cost": 1,
+            "cost": 0,
             "effects": [
                 "@JinxApplyHex",
                 "@JinxDiscard"
             ]
-        }
-    ],
-    "traits": [
-        {
-            "id": "JinxConsume",
-            "name": "CardTraitExhaustState"
         }
     ],
     "effects": [
@@ -38,11 +36,8 @@
             "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": {
-                        "id": "@hex",
-                        "mod_reference": "Conductor"
-                    },
-                    "count": 3
+                    "status": "@hex",
+                    "count": 2
                 }
             ]
         },

@@ -30,10 +30,10 @@
         {
             "id": "SwarmLord1Ability",
             "names": {
-                "english": "Swarm"
+                "english": "Glorify"
             },
             "descriptions": {
-                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units."
+                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [corruption] [effect2.status0.power] per [soul] to enemy units."
             },
             "card_art": "@Pharaoh",
             "is_an_ability": true,
@@ -43,16 +43,17 @@
             "card_type": "spell",
             "effects": [
                 "@SwarmLordSacrificeScarab",
-                "@SwarmLord1GiveStats"
+                "@SwarmLord1GiveStats",
+                "@SwarmLord1ApplyCorruption"
             ]
         },
         {
             "id": "SwarmLord2Ability",
             "names": {
-                "english": "Swarm II"
+                "english": "Glorify II"
             },
             "descriptions": {
-                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units."
+                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [corruption] [effect2.status0.power] per [soul] to enemy units."
             },
             "card_art": "@Pharaoh",
             "is_an_ability": true,
@@ -62,16 +63,17 @@
             "card_type": "spell",
             "effects": [
                 "@SwarmLordSacrificeScarab",
-                "@SwarmLord2GiveStats"
+                "@SwarmLord2GiveStats",
+                "@SwarmLord2ApplyCorruption"
             ]
         },
         {
             "id": "SwarmLord3Ability",
             "names": {
-                "english": "Swarm III"
+                "english": "Glorify III"
             },
             "descriptions": {
-                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units."
+                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [corruption] [effect2.status0.power] per [soul] to enemy units."
             },
             "card_art": "@Pharaoh",
             "is_an_ability": true,
@@ -81,7 +83,8 @@
             "card_type": "spell",
             "effects": [
                 "@SwarmLordSacrificeScarab",
-                "@SwarmLord3GiveStats"
+                "@SwarmLord3GiveStats",
+                "@SwarmLord3ApplyCorruption"
             ]
         }
     ],
@@ -94,8 +97,8 @@
             "character_art": "@PharaohCharacterArt",
             "chatter": "@CTR_Pharaoh",
             "size": 2,
-            "attack_damage": 20,
-            "health": 20,
+            "attack_damage": 15,
+            "health": 15,
             "death_type": "large",
             "subtypes": [
                 "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
@@ -118,17 +121,14 @@
         {
             "id": "upg_SwarmLord1",
             "titles": {
-                "english": "Swarm Lord I"
+                "english": "Swarm Lord"
             },
             "descriptions": {
                 "english": "Why do i need this"
             },
             "bonus_damage": 0,
             "bonus_hp": 0,
-            "ability_upgrade": "@SwarmLord1Ability",
-            "trigger_upgrades": [
-                "@SwarmLord1Trigger"
-            ]
+            "ability_upgrade": "@SwarmLord1Ability"
         },
         {
             "id": "upg_SwarmLord2",
@@ -140,10 +140,7 @@
             },
             "bonus_damage": 5,
             "bonus_hp": 5,
-            "ability_upgrade": "@SwarmLord2Ability",
-            "trigger_upgrades": [
-                "@SwarmLord2Trigger"
-            ]
+            "ability_upgrade": "@SwarmLord2Ability"
         },
         {
             "id": "upg_SwarmLord3",
@@ -155,30 +152,27 @@
             },
             "bonus_damage": 15,
             "bonus_hp": 15,
-            "ability_upgrade": "@SwarmLord3Ability",
-            "trigger_upgrades": [
-                "@SwarmLord3Trigger"
-            ]
+            "ability_upgrade": "@SwarmLord3Ability"
         },
         {
-            "id": "SwarmLordThreeAttackOneHealth",
+            "id": "SwarmLord1Buff",
             "bonus_damage": 3,
             "bonus_hp": 1
         },
         {
-            "id": "SwarmLordSixAttackTwoHealth",
+            "id": "SwarmLord2Buff",
             "bonus_damage": 6,
             "bonus_hp": 2
         },
         {
-            "id": "SwarmLordNineAttackThreeHealth",
-            "bonus_damage": 9,
-            "bonus_hp": 3
+            "id": "SwarmLord3Buff",
+            "bonus_damage": 12,
+            "bonus_hp": 4
         },
         {
             "id": "upg_Pearlescent1",
             "titles": {
-                "english": "Pearlescent I"
+                "english": "Pearlescent"
             },
             "descriptions": {
                 "english": "wow its pearls"
@@ -186,8 +180,8 @@
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
-            "bonus_damage": 0,
-            "bonus_hp": 0,
+            "bonus_damage": 5,
+            "bonus_hp": 5,
             "status_effect_upgrades": [
                 {
                     "status": "trample",
@@ -209,8 +203,8 @@
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
-            "bonus_damage": 15,
-            "bonus_hp": 15,
+            "bonus_damage": 20,
+            "bonus_hp": 20,
             "status_effect_upgrades": [
                 {
                     "status": "trample",
@@ -232,8 +226,8 @@
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
-            "bonus_damage": 40,
-            "bonus_hp": 40,
+            "bonus_damage": 45,
+            "bonus_hp": 45,
             "status_effect_upgrades": [
                 {
                     "status": "trample",
@@ -262,13 +256,13 @@
         {
             "id": "upg_SoulTender1",
             "titles": {
-                "english": "Soul Tender I"
+                "english": "Soul Tender"
             },
             "descriptions": {
                 "english": "what a tender soul"
             },
-            "bonus_damage": 5,
-            "bonus_hp": 0,
+            "bonus_damage": 0,
+            "bonus_hp": 15,
             "trigger_upgrades": [
                 "@SoulTender1Trigger"
             ]
@@ -282,7 +276,7 @@
                 "english": "what a tenderer soul"
             },
             "bonus_damage": 15,
-            "bonus_hp": 0,
+            "bonus_hp": 15,
             "trigger_upgrades": [
                 "@SoulTender2Trigger"
             ]
@@ -296,9 +290,27 @@
                 "english": "what a tenderist soul"
             },
             "bonus_damage": 30,
-            "bonus_hp": 0,
+            "bonus_hp": 30,
             "trigger_upgrades": [
                 "@SoulTender3Trigger"
+            ]
+        },
+        {
+            "id": "SoulTender1DeadUpgrade",
+            "bonus_damage": 10
+        },
+        {
+            "id": "SoulTender2DeadUpgrade",
+            "bonus_damage": 20
+        },
+        {
+            "id": "SoulTender3DeadUpgrade",
+            "bonus_damage": 20,
+            "status_effect_upgrades": [
+                {
+                    "status": "undying",
+                    "count": 1
+                }
             ]
         }
     ],
@@ -387,37 +399,37 @@
         {
             "id": "SoulTender1Trigger",
             "descriptions": {
-                "english": "Spend [soul] [effect0.status0.power_unmodified] to apply [undying] [effect2.status0.power] to the front friendly unit."
+                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to give dead friendly units +[effect2.upgrade.bonusdamage][attack] permanently."
             },
-            "trigger": "post_combat",
+            "trigger": "on_encounter_complete",
             "effects": [
-                "@SoulTenderCheckSoul",
-                "@SoulTenderRemoveSoul",
-                "@SoulTender1AddReanimate"
+                "@SoulTender1CheckSouls",
+                "@SoulTender1RemoveSouls",
+                "@SoulTender1AddUpgrade"
             ]
         },
         {
             "id": "SoulTender2Trigger",
             "descriptions": {
-                "english": "Spend [soul] [effect0.status0.power_unmodified] to apply [undying] [effect2.status0.power] to the front friendly unit."
+                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to give dead friendly units +[effect2.upgrade.bonusdamage][attack] permanently."
             },
-            "trigger": "post_combat",
+            "trigger": "on_encounter_complete",
             "effects": [
-                "@SoulTenderCheckSoul",
-                "@SoulTenderRemoveSoul",
-                "@SoulTender2AddReanimate"
+                "@SoulTender2CheckSouls",
+                "@SoulTender2RemoveSouls",
+                "@SoulTender2AddUpgrade"
             ]
         },
         {
             "id": "SoulTender3Trigger",
             "descriptions": {
-                "english": "Spend [soul] [effect0.status0.power_unmodified] to apply [undying] [effect2.status0.power] to the front friendly unit."
+                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to give dead friendly units +[effect2.upgrade.bonusdamage][attack] and [undying] [effect2.upgrade.status0.power] permanently."
             },
-            "trigger": "post_combat",
+            "trigger": "on_encounter_complete",
             "effects": [
-                "@SoulTenderCheckSoul",
-                "@SoulTenderRemoveSoul",
-                "@SoulTender3AddReanimate"
+                "@SoulTender3CheckSouls",
+                "@SoulTender3RemoveSouls",
+                "@SoulTender3AddUpgrade"
             ]
         }
     ],
@@ -565,7 +577,7 @@
             ]
         },
         {
-            "id": "SoulTenderCheckSoul",
+            "id": "SoulTender1CheckSouls",
             "name": {
                 "id": "@CardEffectRequireStatusThreshold",
                 "mod_reference": "Conductor"
@@ -577,56 +589,97 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 5
+                    "count": 6
                 }
             ]
         },
         {
-            "id": "SoulTenderRemoveSoul",
+            "id": "SoulTender2CheckSouls",
+            "name": {
+                "id": "@CardEffectRequireStatusThreshold",
+                "mod_reference": "Conductor"
+            },
+            "target_mode": "self",
+            "should_test": true,
+            "should_cancel_subsequent_effects_if_test_fails": true,
+            "param_bool": true,
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 10
+                }
+            ]
+        },
+        {
+            "id": "SoulTender3CheckSouls",
+            "name": {
+                "id": "@CardEffectRequireStatusThreshold",
+                "mod_reference": "Conductor"
+            },
+            "target_mode": "self",
+            "should_test": true,
+            "should_cancel_subsequent_effects_if_test_fails": true,
+            "param_bool": true,
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 15
+                }
+            ]
+        },
+        {
+            "id": "SoulTender1RemoveSouls",
             "name": "CardEffectRemoveStatusEffect",
             "target_mode": "self",
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 5
+                    "count": 6
                 }
             ]
         },
         {
-            "id": "SoulTender1AddReanimate",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "front_in_room",
-            "target_team": "monsters",
+            "id": "SoulTender2RemoveSouls",
+            "name": "CardEffectRemoveStatusEffect",
+            "target_mode": "self",
             "param_status_effects": [
                 {
-                    "status": "undying",
-                    "count": 1
+                    "status": "captured_soul",
+                    "count": 10
                 }
             ]
         },
         {
-            "id": "SoulTender2AddReanimate",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "front_in_room",
-            "target_team": "monsters",
+            "id": "SoulTender3RemoveSouls",
+            "name": "CardEffectRemoveStatusEffect",
+            "target_mode": "self",
             "param_status_effects": [
                 {
-                    "status": "undying",
-                    "count": 2
+                    "status": "captured_soul",
+                    "count": 15
                 }
             ]
         },
         {
-            "id": "SoulTender3AddReanimate",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "front_in_room",
+            "id": "SoulTender1AddUpgrade",
+            "name": "@CardEffectAddUpgradeToDeadUnits",
             "target_team": "monsters",
-            "param_status_effects": [
-                {
-                    "status": "undying",
-                    "count": 3
-                }
-            ]
+            "param_upgrade": "@SoulTender1DeadUpgrade",
+            "param_int": 2
+        },
+        {
+            "id": "SoulTender2AddUpgrade",
+            "name": "@CardEffectAddUpgradeToDeadUnits",
+            "target_team": "monsters",
+            "param_upgrade": "@SoulTender2DeadUpgrade",
+            "param_int": 2
+        },
+        {
+            "id": "SoulTender3AddUpgrade",
+            "name": "@CardEffectAddUpgradeToDeadUnits",
+            "target_team": "monsters",
+            "param_upgrade": "@SoulTender3DeadUpgrade",
+            "param_int": 2
         },
         {
             "id": "SwarmLordSacrificeScarab",
@@ -640,26 +693,27 @@
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@SwarmLordThreeAttackOneHealth"
+            "param_upgrade": "@SwarmLord1Buff"
         },
         {
             "id": "SwarmLord2GiveStats",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@SwarmLordSixAttackTwoHealth"
+            "param_upgrade": "@SwarmLord2Buff"
         },
         {
             "id": "SwarmLord3GiveStats",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@SwarmLordNineAttackThreeHealth"
+            "param_upgrade": "@SwarmLord3Buff"
         },
         {
             "id": "SwarmLord1ApplyCorruption",
             "name": "CardEffectAddStatusEffect",
-            "target_mode": "last_attacked_character",
+            "target_mode": "room",
+            "target_team": "heroes",
             "use_status_effect_multiplier": "true",
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
@@ -672,7 +726,8 @@
         {
             "id": "SwarmLord2ApplyCorruption",
             "name": "CardEffectAddStatusEffect",
-            "target_mode": "last_attacked_character",
+            "target_mode": "room",
+            "target_team": "heroes",
             "use_status_effect_multiplier": "true",
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
@@ -685,13 +740,14 @@
         {
             "id": "SwarmLord3ApplyCorruption",
             "name": "CardEffectAddStatusEffect",
-            "target_mode": "last_attacked_character",
+            "target_mode": "room",
+            "target_team": "heroes",
             "use_status_effect_multiplier": "true",
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
                 {
                     "status": "corruption",
-                    "count": 3
+                    "count": 4
                 }
             ]
         }
@@ -764,7 +820,7 @@
                     "english": "Why do you look so strange?"
                 },
                 {
-                    "english": "We shall reclaim what was taken from us"
+                    "english": "We shall reclaim what was taken from us."
                 },
                 {
                     "english": "The pearl will grow grander still."

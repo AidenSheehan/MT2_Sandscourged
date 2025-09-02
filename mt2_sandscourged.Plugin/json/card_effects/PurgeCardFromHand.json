@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "localization_terms": [
+        {
+            "key": "PurgeCardFromHandKey",
+            "texts": {
+                "english": "Choose a card to purge."
+            }
+        },
+        {
+            "key": "PurgeCardFromHandActionKey",
+            "texts": {
+                "english": "Purge"
+            }
+        }
+    ]
+}

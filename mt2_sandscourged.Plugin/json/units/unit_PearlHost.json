@@ -1,0 +1,127 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnPearlHost",
+            "names": {
+                "english": "Pearl Host"
+            },
+            "card_art": "@PearlHost",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnPearlHost"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Pearl tapping is said to be an excruciating affair for the host. As the pearl grows larger, so does the torment endured. In their agony, hosts lash out violently, quite unlike their otherwise placid nature."
+                }
+            ],
+            "pools": [
+                "UnitsAllBanner"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "PearlHost",
+            "size": 2,
+            "attack_damage": 20,
+            "health": 20,
+            "names": {
+                "english": "Pearl Host"
+            },
+            "character_art": "@PearlHostCharacterArt",
+            "subtypes": [
+                "SubtypesData_BannerUnit",
+                "@Sub_Forgotten"
+            ],
+            "triggers": [
+                "@PearlHostSummonTrigger",
+                "@PearlHostAccursedTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "PearlHostSummonTrigger",
+            "descriptions": {
+                "english": "Shuffle a <b>Vexation</b> into your draw pile."
+            },
+            "trigger": "on_spawn",
+            "effects": [
+                "@ShuffleVexationSingle"
+            ]
+        },
+        {
+            "id": "PearlHostAccursedTrigger",
+            "descriptions": {
+                "english": "Gain [rage] [effect0.status0.power]."
+            },
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "effects": [
+                {
+                    "id": "@PearlHostGainRage"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnPearlHost",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@PearlHost"
+        },
+        {
+            "id": "PearlHostGainRage",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "target_team": "monsters",
+            "param_status_effects": [
+                {
+                    "status": "buff",
+                    "count": 4
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PearlHost",
+            "path": "textures/PearlHostCardArt.png"
+        },
+        {
+            "id": "PearlHostCharacterArt",
+            "path": "textures/PearlHostCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "PearlHost",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@PearlHost"
+                }
+            }
+        },
+        {
+            "id": "PearlHostCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@PearlHostCharacterArt"
+                }
+            }
+        }
+    ]
+}

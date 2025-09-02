@@ -1,0 +1,596 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/schemas/cards.json",
+    "cards": [
+        {
+            "id": "SpawnVizier",
+            "names": {
+                "english": "Vizier Izketri"
+            },
+            "card_art": "@Vizier",
+            "cost": 0,
+            "card_type": "monster",
+            "rarity": "champion",
+            "class": "@ClassSandscourged",
+            "unlock_level": 5,
+            "targets_room": true,
+            "targetless": false,
+            "effects": [
+                "@SpawnVizier"
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Lore stuff"
+                }
+            ]
+        },
+        {
+            "id": "Curator1Ability",
+            "names": {
+                "english": "Obliterate"
+            },
+            "descriptions": {
+                "english": "Deal damage equal to [trait0.power] times the number of cards in your hand.<br>Discard your hand."
+            },
+            "card_art": "@Vizier",
+            "is_an_ability": true,
+            "cooldown": 2,
+            "targetless": false,
+            "targets_room": true,
+            "card_type": "spell",
+            "traits": [
+                "@Curator1AbilityTrait"
+            ],
+            "effects": [
+                "@CuratorDealDamage",
+                "@CuratorDiscardHand"
+            ]
+        },
+        {
+            "id": "Curator2Ability",
+            "names": {
+                "english": "Obliterate II"
+            },
+            "descriptions": {
+                "english": "Deal damage equal to [trait0.power] times the number of cards in your hand.<br>Discard your hand."
+            },
+            "card_art": "@Vizier",
+            "is_an_ability": true,
+            "cooldown": 2,
+            "targetless": false,
+            "targets_room": true,
+            "card_type": "spell",
+            "traits": [
+                "@Curator2AbilityTrait"
+            ],
+            "effects": [
+                "@CuratorDealDamage",
+                "@CuratorDiscardHand"
+            ]
+        },
+        {
+            "id": "Curator3Ability",
+            "names": {
+                "english": "Obliterate III"
+            },
+            "descriptions": {
+                "english": "Deal damage equal to [trait0.power] times the number of cards in your hand.<br>Discard your hand."
+            },
+            "card_art": "@Vizier",
+            "is_an_ability": true,
+            "cooldown": 2,
+            "targetless": false,
+            "targets_room": true,
+            "card_type": "spell",
+            "traits": [
+                "@Curator3AbilityTrait"
+            ],
+            "effects": [
+                "@CuratorDealDamage",
+                "@CuratorDiscardHand"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "Vizier",
+            "names": {
+                "english": "Vizier Izketri"
+            },
+            "character_art": "@VizierCharacterArt",
+            "chatter": "@CTR_Vizier",
+            "size": 2,
+            "attack_damage": 10,
+            "health": 10,
+            "subtypes": [
+                "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+            ]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "upg_FirstBlessed1",
+            "titles": {
+                "english": "First Blessed"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 15,
+            "bonus_hp": 0,
+            "trigger_upgrades": [
+                "@FirstBlessed1SummonTrigger",
+                "@FirstBlessed1AccursedTrigger"
+            ]
+        },
+        {
+            "id": "upg_FirstBlessed2",
+            "titles": {
+                "english": "First Blessed II"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 15,
+            "bonus_hp": 20,
+            "trigger_upgrades": [
+                "@FirstBlessed2SummonTrigger",
+                "@FirstBlessed2AccursedTrigger"
+            ]
+        },
+        {
+            "id": "upg_FirstBlessed3",
+            "titles": {
+                "english": "First Blessed III"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 15,
+            "bonus_hp": 20,
+            "status_effect_upgrades": [
+                {
+                    "status": "multistrike",
+                    "count": 1
+                }
+            ],
+            "trigger_upgrades": [
+                "@FirstBlessed3SummonTrigger",
+                "@FirstBlessed3AccursedTrigger"
+            ]
+        },
+        {
+            "id": "FirstBlessed1AccursedUprade",
+            "bonus_damage": 2
+        },
+        {
+            "id": "FirstBlessed2AccursedUprade",
+            "bonus_damage": 3
+        },
+        {
+            "id": "FirstBlessed3AccursedUprade",
+            "bonus_damage": 4
+        },
+        {
+            "id": "upg_EvilEye1",
+            "titles": {
+                "english": "Evil Eye"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 5,
+            "trigger_upgrades": [
+                "@EvilEyeResolveTrigger"
+            ]
+        },
+        {
+            "id": "upg_EvilEye2",
+            "titles": {
+                "english": "Evil Eye II"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 10,
+            "trigger_upgrades": [
+                "@EvilEyeResolveTrigger",
+                "@EvilEye2EnchantTrigger"
+            ]
+        },
+        {
+            "id": "upg_EvilEye3",
+            "titles": {
+                "english": "Evil Eye III"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 30,
+            "trigger_upgrades": [
+                "@EvilEyeResolveTrigger",
+                "@EvilEye3EnchantTrigger"
+            ]
+        },
+        {
+            "id": "upg_Curator1",
+            "titles": {
+                "english": "Curator"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 10,
+            "ability_upgrade": "@Curator1Ability"
+        },
+        {
+            "id": "upg_Curator2",
+            "titles": {
+                "english": "Curator"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 10,
+            "ability_upgrade": "@Curator2Ability",
+            "trigger_upgrades": [
+                "@Curator2SlayTrigger"
+            ]
+        },
+        {
+            "id": "upg_Curator3",
+            "titles": {
+                "english": "Curator"
+            },
+            "descriptions": {
+                "english": "Why do i need this"
+            },
+            "bonus_damage": 30,
+            "bonus_hp": 30,
+            "ability_upgrade": "@Curator3Ability",
+            "trigger_upgrades": [
+                "@Curator3SlayTrigger"
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "Curator1AbilityTrait",
+            "name": "@CardTraitScalingByHandCount",
+            "param_int": 10,
+            "param_int_2": 1
+        },
+        {
+            "id": "Curator2AbilityTrait",
+            "name": "@CardTraitScalingByHandCount",
+            "param_int": 20,
+            "param_int_2": 1
+        },
+        {
+            "id": "Curator3AbilityTrait",
+            "name": "@CardTraitScalingByHandCount",
+            "param_int": 40,
+            "param_int_2": 1
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "FirstBlessed1SummonTrigger",
+            "trigger": "on_spawn",
+            "descriptions": {
+                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile."
+            },
+            "effects": [
+                "@FirstBlessed1AddVexations"
+            ]
+        },
+        {
+            "id": "FirstBlessed2SummonTrigger",
+            "trigger": "on_spawn",
+            "descriptions": {
+                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile."
+            },
+            "effects": [
+                "@FirstBlessed2AddVexations"
+            ]
+        },
+        {
+            "id": "FirstBlessed3SummonTrigger",
+            "trigger": "on_spawn",
+            "descriptions": {
+                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile."
+            },
+            "effects": [
+                "@FirstBlessed3AddVexations"
+            ]
+        },
+        {
+            "id": "FirstBlessed1AccursedTrigger",
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "descriptions": {
+                "english": "+[effect0.upgrade.bonusdamage][attack] permanently."
+            },
+            "effects": [
+                "@FirstBlessed1GainStats"
+            ]
+        },
+        {
+            "id": "FirstBlessed2AccursedTrigger",
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "descriptions": {
+                "english": "+[effect0.upgrade.bonusdamage][attack] permanently."
+            },
+            "effects": [
+                "@FirstBlessed2GainStats"
+            ]
+        },
+        {
+            "id": "FirstBlessed3AccursedTrigger",
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "descriptions": {
+                "english": "+[effect0.upgrade.bonusdamage][attack] permanently."
+            },
+            "effects": [
+                "@FirstBlessed3GainStats"
+            ]
+        },
+        {
+            "id": "EvilEyeResolveTrigger",
+            "trigger": "post_combat",
+            "descriptions": {
+                "english": "Add [effect0.secondarypower] random <b>Torments</b> to your hand."
+            },
+            "effects": [
+                "@EvilEyeAddTorments"
+            ]
+        },
+        {
+            "id": "EvilEye2EnchantTrigger",
+            "trigger": "after_spawn_enchant",
+            "descriptions": {
+                "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [effect0.status0.power]."
+            },
+            "effects": [
+                "@EvilEye2EnchantEffect"
+            ]
+        },
+        {
+            "id": "EvilEye3EnchantTrigger",
+            "trigger": "after_spawn_enchant",
+            "descriptions": {
+                "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [effect0.status0.power]."
+            },
+            "effects": [
+                "@EvilEye3EnchantEffect"
+            ]
+        },
+        {
+            "id": "Curator2SlayTrigger",
+            "trigger": "on_kill",
+            "descriptions": {
+                "english": "Draw +[effect0.power] next turn."
+            },
+            "effects": [
+                "@Curator2Draw"
+            ]
+        },
+        {
+            "id": "Curator3SlayTrigger",
+            "trigger": "on_kill",
+            "descriptions": {
+                "english": "Draw +[effect0.power] next turn."
+            },
+            "effects": [
+                "@Curator3Draw"
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnVizier",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "target_card_type": "spell",
+            "param_character": "@Vizier"
+        },
+        {
+            "id": "FirstBlessed1AddVexations",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "target_team": "none",
+            "param_card_pool": "@VexationOnlyPool",
+            "param_int": 7,
+            "param_int_2": 2
+        },
+        {
+            "id": "FirstBlessed2AddVexations",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "target_team": "none",
+            "param_card_pool": "@VexationOnlyPool",
+            "param_int": 7,
+            "param_int_2": 3
+        },
+        {
+            "id": "FirstBlessed3AddVexations",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "target_team": "none",
+            "param_card_pool": "@VexationOnlyPool",
+            "param_int": 7,
+            "param_int_2": 4
+        },
+        {
+            "id": "FirstBlessed1GainStats",
+            "name": "CardEffectAddCardUpgradeToUnits",
+            "target_mode": "self",
+            "param_upgrade": "@FirstBlessed1AccursedUprade",
+            "param_bool": true,
+            "param_int": 0,
+            "param_int_2": 1,
+            "param_int_3": 2
+        },
+        {
+            "id": "FirstBlessed2GainStats",
+            "name": "CardEffectAddCardUpgradeToUnits",
+            "target_mode": "self",
+            "param_upgrade": "@FirstBlessed2AccursedUprade",
+            "param_bool": true,
+            "param_int": 0,
+            "param_int_2": 1,
+            "param_int_3": 2
+        },
+        {
+            "id": "FirstBlessed3GainStats",
+            "name": "CardEffectAddCardUpgradeToUnits",
+            "target_mode": "self",
+            "param_upgrade": "@FirstBlessed3AccursedUprade",
+            "param_bool": true,
+            "param_int": 0,
+            "param_int_2": 1,
+            "param_int_3": 2
+        },
+        {
+            "id": "EvilEyeAddTorments",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "param_int": 3,
+            "param_int_2": 2,
+            "param_card_pool": "@TormentPool"
+        },
+        {
+            "id": "EvilEye2EnchantEffect",
+            "name": "CardEffectEnchant",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": "@hex",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "EvilEye3EnchantEffect",
+            "name": "CardEffectEnchant",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": "@hex",
+                    "count": 2
+                }
+            ]
+        },
+        {
+            "id": "CuratorDiscardHand",
+            "name": "CardEffectDiscardHand"
+        },
+        {
+            "id": "CuratorDealDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_int": 0
+        },
+        {
+            "id": "Curator2Draw",
+            "name": "CardEffectDrawAdditionalNextTurn",
+            "param_int": 1
+        },
+        {
+            "id": "Curator3Draw",
+            "name": "CardEffectDrawAdditionalNextTurn",
+            "param_int": 2
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Vizier",
+            "path": "textures/VizierCardArt.png"
+        },
+        {
+            "id": "VizierCharacterArt",
+            "path": "textures/VizierCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Vizier",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Vizier"
+                }
+            }
+        },
+        {
+            "id": "VizierCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@VizierCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 1.3,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5,
+                            "z": 1.5
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "chatter": [
+        {
+            "id": "CTR_Vizier",
+            "gender": "female",
+            "added_expressions": [
+                {
+                    "english": "For the Scourged!."
+                },
+                {
+                    "english": "Our revenge will be cruel and enduring."
+                },
+                {
+                    "english": "This \"train\" is fascinating. I must study when we're done with here."
+                }
+            ],
+            "idle_expressions": [
+                {
+                    "english": "I'm so sick of sand."
+                },
+                {
+                    "english": "*Chants*"
+                },
+                {
+                    "english": "I'll make hosts of every one of you!"
+                },
+                {
+                    "english": "Oblivion awaits you."
+                },
+                {
+                    "english": "What do you mean I'm not allowed to curse? That's my job!"
+                }
+            ]
+        }
+    ]
+}

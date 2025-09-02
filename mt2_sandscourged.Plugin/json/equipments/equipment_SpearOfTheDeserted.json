@@ -14,7 +14,7 @@
             "card_type": "equipment",
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
-            "card_art": "@SpearOfTheDeserted",
+            "card_art": "@SpearOfTheDesertedArt",
             "targets_room": true,
             "targetless": false,
             "pools": [
@@ -30,28 +30,25 @@
     "upgrades": [
         {
             "id": "upg_SpearOfTheDeserted",
-            "bonus_damage": 15,
+            "bonus_damage": 10,
             "bonus_hp": 0,
             "trigger_upgrades": [
                 "@SpearAccursedTrigger"
-            ]
-        },
-        {
-            "id": "SpearAttackUpgrade",
-            "bonus_damage": 5
+            ],
+            "icon": "@SpearOfTheDesertedArt"
         }
     ],
     "character_triggers": [
         {
             "id": "SpearAccursedTrigger",
             "descriptions": {
-                "english": "+[effect0.upgrade.bonusdamage][attack]"
+                "english": "Gain [rage] [effect0.status0.power]."
             },
             "trigger": {
                 "id": "@Accursed",
                 "mod_reference": "Conductor"
             },
-            "effects": ["@SpearBuffDamage"]
+            "effects": ["@SpearGainRage"]
         }
     ],
     "effects": [
@@ -63,10 +60,16 @@
             "param_upgrade": "@upg_SpearOfTheDeserted"
         },
         {
-            "id": "SpearBuffDamage",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "id": "SpearGainRage",
+            "name": "CardEffectAddStatusEffect",
             "target_mode": "self",
-            "param_upgrade": "@SpearAttackUpgrade"
+            "target_team": "monsters",
+            "param_status_effects": [
+                {
+                    "status": "buff",
+                    "count": 5
+                }
+            ]
         }
     ],
     "sprites": [

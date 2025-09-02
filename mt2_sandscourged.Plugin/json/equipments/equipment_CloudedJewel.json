@@ -14,7 +14,7 @@
             "card_type": "equipment",
             "rarity": "rare",
             "class": "@ClassSandscourged",
-            "card_art": "@CloudedJewel",
+            "card_art": "@CloudedJewelArt",
             "targets_room": true,
             "targetless": false,
             "pools": [
@@ -35,7 +35,8 @@
             "trigger_upgrades": [
                 "@JewelSlayTrigger",
                 "@JewelCelebrateTrigger"
-            ]
+            ],
+            "icon": "@CloudedJewelArt"
         },
         {
             "id": "JewelPermaSoul",

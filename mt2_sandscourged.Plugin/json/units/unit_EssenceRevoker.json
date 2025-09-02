@@ -39,11 +39,11 @@
             "character_art": "@EssenceRevokerCharacterArt",
             "subtypes": [
                 "SubtypesData_BannerUnit",
-                "@Sub_Remembered"
+                "@Sub_Ego"
             ],
             "triggers": [
                 "@EssenceRevokerIncantTrigger",
-                "@EssenceRevokerActionTrigger"
+                "@EssenceRevokerResolveTrigger"
             ]
         }
     ],
@@ -59,11 +59,11 @@
             ]
         },
         {
-            "id": "EssenceRevokerActionTrigger",
+            "id": "EssenceRevokerResolveTrigger",
             "descriptions": {
-                "english": "Spend [soul] [effect0.status0.power_unmodified] to gain [multistrike] [effect2.status0.power]."
+                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to gain [multistrike] [effect2.status0.power]."
             },
-            "trigger": "on_turn_begin",
+            "trigger": "post_combat",
             "effects": [
                 "@EssenceRevokerCheckSouls",
                 "@EssenceRevokerRemoveSouls",

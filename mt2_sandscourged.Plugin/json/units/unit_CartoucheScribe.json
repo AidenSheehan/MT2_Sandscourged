@@ -1,89 +1,119 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "SpawnCartoucheScribe",
-        "names": {
-            "english": "Cartouche Scribe"
+    "cards": [
+        {
+            "id": "SpawnCartoucheScribe",
+            "names": {
+                "english": "Cartouche Scribe"
+            },
+            "card_art": "@CartoucheScribe",
+            "cost": 2,
+            "card_type": "monster",
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "unlock_level": 6,
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnCartoucheScribe"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ],
+            "pools": [
+                "UnitsAllBanner"
+            ]
         },
-        "card_art": "@CartoucheScribe",
-        "cost": 1,
-        "card_type": "monster",
-        "rarity": "rare",
-        "class": "@ClassSandscourged",
-        "targets_room": true,
-        "effects": [{
-            "id": "@SpawnCartoucheScribe"
-        }],
-        "lore_tooltips": [{
-            "english": "Flavour Text"
-        }],
-        "pools": [
-            "UnitsAllBanner"
-        ]
-    },
-    {
-        "id": "CartoucheScribeAbility",
-        "names": {
-            "english": "Inscribe"
-        },
-        "descriptions": {
-            "english": "Apply [meleeweakness] [effect0.status0.power] and [spellweakness] [effect1.status0.power]."
-        },
-        "card_art": "@CartoucheScribe",
-        "is_an_ability": true,
-        "cooldown": 2,
-        "targetless": false,
-        "targets_room": true,
-        "card_type": "spell",
-        "effects": ["@CartoucheScribeApplyMeleeWeakness", "@CartoucheScribeApplySpellWeakness"]
-    }],
-    "characters": [{
-        "id": "CartoucheScribe",
-        "size": 2,
-        "attack_damage": 10,
-        "health": 5,
-        "names": {
-            "english": "Cartouche Scribe"
-        },
-        "character_art": "@CartoucheScribeCharacterArt",
-        "subtypes": [
-            "SubtypesData_BannerUnit",
-            "@Sub_Remembered"
-        ],
-        "ability": "@CartoucheScribeAbility"
-    }],
-    "effects": [{
+        {
+            "id": "CartoucheScribeAbility",
+            "names": {
+                "english": "Expel"
+            },
+            "descriptions": {
+                "english": "Purge a card from your hand."
+            },
+            "card_art": "@CartoucheScribe",
+            "is_an_ability": true,
+            "cooldown": 4,
+            "targetless": true,
+            "targets_room": false,
+            "card_type": "spell",
+            "effects": [
+                "@CartoucheScribePurgeCard"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "CartoucheScribe",
+            "size": 2,
+            "attack_damage": 20,
+            "health": 25,
+            "names": {
+                "english": "Cartouche Scribe"
+            },
+            "character_art": "@CartoucheScribeCharacterArt",
+            "subtypes": [
+                "SubtypesData_BannerUnit",
+                "@Sub_Ego"
+            ],
+            "ability": "@CartoucheScribeAbility",
+            "triggers": [
+                "@CartoucheScribeConjureTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "CartoucheScribeConjureTrigger",
+            "trigger": "on_own_ability_activated",
+            "descriptions": {
+                "english": "Gain [rage] [effect0.upgrade.status0.power] permanently."
+            },
+            "effects": [
+                "@CartoucheScribeApplyUpgrade"
+            ]
+        }
+    ],
+    "effects": [
+        {
             "id": "SpawnCartoucheScribe",
             "name": "CardEffectSpawnMonster",
             "target_mode": "room",
             "param_character": "@CartoucheScribe"
         },
         {
-            "id": "CartoucheScribeApplyMeleeWeakness",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "drop_target_character",
-            "target_team": "both",
-            "param_status_effects": [
-                {
-                    "status": "melee weakness",
-                    "count": 1
-                }
-            ]
+            "id": "CartoucheScribePurgeCard",
+            "name": "@CardEffectPurgeCardFromHand",
+            "should_test": true,
+            "should_fail_to_cast_if_test_fails": true
         },
         {
-            "id": "CartoucheScribeApplySpellWeakness",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "last_targeted_characters",
-            "target_team": "both",
-            "param_status_effects": [
+            "id": "CartoucheScribeApplyUpgrade",
+            "name": "CardEffectAddCardUpgradeToUnits",
+            "target_mode": "self",
+            "param_upgrade": "@CartoucheScribeRageUpgrade",
+            "param_int": 0,
+            "param_int_2": 0,
+            "param_int_3": 2
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "CartoucheScribeRageUpgrade",
+            "status_effect_upgrades": [
                 {
-                    "status": "spell weakness",
-                    "count": 1
+                    "status": "buff",
+                    "count": 6
                 }
             ]
         }
     ],
-    "sprites": [{
+    "sprites": [
+        {
             "id": "CartoucheScribe",
             "path": "textures/CartoucheScribeCardArt.png"
         },
@@ -92,7 +122,8 @@
             "path": "textures/CartoucheScribeCharacterArt.png"
         }
     ],
-    "game_objects": [{
+    "game_objects": [
+        {
             "id": "CartoucheScribe",
             "type": "card_art",
             "extensions": {

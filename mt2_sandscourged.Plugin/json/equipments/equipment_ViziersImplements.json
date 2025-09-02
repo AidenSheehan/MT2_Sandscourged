@@ -1,0 +1,94 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "ViziersImplements",
+            "names": {
+                "english": "Vizier's Implements"
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Lore stuff."
+                }
+            ],
+            "card_type": "equipment",
+            "rarity": "common",
+            "class": "@ClassSandscourged",
+            "card_art": "@ViziersImplementsArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool",
+                "RoomAndEquipmentMerchant_EquipmentPool"
+            ],
+            "cost": 1,
+            "effects": [
+                "@Equip_ViziersImplements"
+            ]
+        },
+        {
+            "id": "ViziersImplementsAbility",
+            "names": {
+                "english": "Puncture"
+            },
+            "descriptions": {
+                "english": "Draw [effect0.power]. Discard [effect0.power]."
+            },
+            "is_an_ability": true,
+            "cooldown": 2,
+            "card_type": "spell",
+            "card_art": "@ViziersImplementsArt",
+            "targetless": true,
+            "effects": [
+                "@ViziersImplementsDraw",
+                "@ViziersImplementsDiscard"
+            ]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "upg_ViziersImplements",
+            "bonus_damage": 8,
+            "bonus_hp": 8,
+            "ability_upgrade": "@ViziersImplementsAbility",
+            "icon": "@ViziersImplementsArt"
+        }
+    ],
+    "effects": [
+        {
+            "id": "Equip_ViziersImplements",
+            "name": "CardEffectAttachEquipment",
+            "target_mode": "drop_target_character",
+            "target_team": "monsters",
+            "param_upgrade": "@upg_ViziersImplements"
+        },
+        {
+            "id": "ViziersImplementsDraw",
+            "name": "CardEffectDraw",
+            "param_int": 1,
+            "target_team": "none"
+        },
+        {
+            "id": "ViziersImplementsDiscard",
+            "name": "CardEffectChooseDiscard",
+            "target_team": "none"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "ViziersImplementsArt",
+            "path": "textures/ViziersImplementsArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "ViziersImplementsArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@ViziersImplementsArt"
+                }
+            }
+        }
+    ]
+}

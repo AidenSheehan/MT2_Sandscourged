@@ -1,0 +1,109 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "CursedPassage",
+      "names": {
+        "english": "Cursed Passage"
+      },
+      "descriptions": {
+        "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [effect0.upgrade.status0.power] and take damage equal to [effect1.power]<b>x</b> their debuff stacks after combat."
+      },
+      "lore_tooltips": [
+        {
+          "english": "Lore stuff."
+        }
+      ],
+      "card_art": "@CursedPassage",
+      "cost": 1,
+      "card_type": "room",
+      "rarity": "rare",
+      "class": "@ClassSandscourged",
+      "targets_room": true,
+      "targetless": true,
+      "effects": [
+        "@CursedPassageRoomEffect"
+      ],
+      "pools": [
+        "MegaPool",
+        "RoomAndEquipmentMerchant_RoomPool"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "CursedPassageRoomUpgrade",
+      "titles": {
+        "english": "CursedPassage"
+      },
+      "descriptions": {
+        "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [status0.power] and take damage equal to [roommodifier.effect0.power]<b>x</b> their debuff stacks after combat."
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "@hex",
+          "count": 1
+        }
+      ],
+      "room_modifier_upgrades": [
+        "@CursedPassageRoomModifier"
+      ],
+      "icon": "@CursedPassage"
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "CursedPassageRoomModifier",
+      "name": "RoomStateAddEffectPostCombatModifier",
+      "descriptions": {
+        "english": "After combat, deal damage to enemy units equal to [effect0.power]<b>x</b> their debuff stacks."
+      },
+      "param_effects": ["@CursedPassageDealDamage"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "CursedPassageRoomEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "target_ignore_bosses": false,
+      "param_upgrade": "@CursedPassageRoomUpgrade",
+      "param_bool": false,
+      "param_bool_2": false,
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "rooted",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "id": "CursedPassageDealDamage",
+      "name": "@CardEffectDamagePerTargetStatus",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [],
+      "param_bool": false,
+      "param_bool_2": true,
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "CursedPassage",
+      "path": "textures/CursedPassageArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "CursedPassage",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@CursedPassage"
+        }
+      }
+    }
+  ]
+}

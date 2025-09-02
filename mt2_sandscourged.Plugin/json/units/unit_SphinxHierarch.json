@@ -7,7 +7,7 @@
                 "english": "Sphinx Hierarch"
             },
             "card_art": "@SphinxHierarch",
-            "cost": 2,
+            "cost": 1,
             "card_type": "monster",
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
@@ -31,15 +31,15 @@
         {
             "id": "SphinxHierarch",
             "size": 2,
-            "attack_damage": 10,
-            "health": 10,
+            "attack_damage": 5,
+            "health": 15,
             "names": {
                 "english": "Sphinx Hierarch"
             },
             "character_art": "@SphinxHierarchCharacterArt",
             "subtypes": [
                 "SubtypesData_BannerUnit",
-                "@Sub_Remembered"
+                "@Sub_Ego"
             ],
             "triggers": [
                 {
@@ -58,7 +58,7 @@
         {
             "id": "SphinxHierarchTrigger",
             "descriptions": {
-                "english": "Apply [Conductor_hex] [effect0.status0.power] to the attacked unit."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to the attacked unit."
             },
             "trigger": "on_attacking",
             "effects": [
@@ -81,10 +81,7 @@
             "target_mode": "last_attacked_character",
             "param_status_effects": [
                 {
-                    "status": {
-                        "id": "@hex",
-                        "mod_reference": "Conductor"
-                    },
+                    "status": "@hex",
                     "count": 2
                 }
             ]

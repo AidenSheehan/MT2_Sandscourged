@@ -7,7 +7,7 @@
                 "english": "Priest of Lost Thoughts"
             },
             "card_art": "@PriestOfLostThoughts",
-            "cost": 1,
+            "cost": 2,
             "card_type": "monster",
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
@@ -32,7 +32,7 @@
                 "english": "Condemn"
             },
             "descriptions": {
-                "english": "Discard your hand.<br>Apply [undying] [effect1.status0.power] to the front friendly unit for every two cards discarded."
+                "english": "Apply [undying] [effect0.status0.power] to the front friendly unit for every [trait0.secondarypower] cards in your hand.<br>Discard your hand."
             },
             "card_art": "@PriestOfLostThoughts",
             "is_an_ability": true,
@@ -40,31 +40,34 @@
             "targetless": true,
             "targets_room": false,
             "card_type": "spell",
-            "traits": [{
-                "id": "@PriestOfLostThoughtsStatusTrait"
-            }],
+            "traits": [
+                {
+                    "id": "@PriestOfLostThoughtsStatusTrait"
+                }
+            ],
             "effects": [
                 {
-                    "id": "@PriestOfLostThoughtsDiscardHand"
+                    "id": "@PriestOfLostThoughtsApplyReanimate"
                 },
                 {
-                    "id": "@PriestOfLostThoughtsApplyReanimate"
+                    "id": "@PriestOfLostThoughtsDiscardHand"
                 }
             ]
         }
     ],
-    "traits": [{
-        "id": "PriestOfLostThoughtsStatusTrait",
-        "name": {
-            "id": "@CardTraitDiscardHandCount",
-            "mod_reference": "mt2_sandscourged.Plugin"
+    "traits": [
+        {
+            "id": "PriestOfLostThoughtsStatusTrait",
+            "name": "@CardTraitScalingByHandCount",
+            "param_int": 1,
+            "param_int_2": 2
         }
-    }],
+    ],
     "characters": [
         {
             "id": "PriestOfLostThoughts",
             "size": 2,
-            "attack_damage": 10,
+            "attack_damage": 20,
             "health": 10,
             "names": {
                 "english": "Priest of Lost Thoughts"
@@ -72,7 +75,7 @@
             "character_art": "@PriestOfLostThoughtsCharacterArt",
             "subtypes": [
                 "SubtypesData_BannerUnit",
-                "@Sub_Remembered"
+                "@Sub_Ego"
             ],
             "ability": "@PriestOfLostThoughtsAbility"
         }

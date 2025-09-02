@@ -1,0 +1,56 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "OblivionCrook",
+      "type": "collectable",
+      "names": {
+        "english": "Oblivion Crook"
+      },
+      "descriptions": {
+        "english": "<b>Accursed</b> triggers an additional time."
+      },
+      "lore_tooltips": [
+        {
+          "english": "Lore stuff"
+        }
+      ],
+      "disallow_in_deployment": false,
+      "lore_style": "herzal",
+      "relic_effects": [
+        "@OblivionCrookRelicEffect"
+      ],
+      "icon": "@OblivionCrookIcon",
+      "icon_small": "@OblivionCrookIcon",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassSandscourged",
+            "pools": [ "MegaRelicPool" ],
+            "rarity": "uncommon",
+            "unlock_level": 8
+          }
+        }
+      ]
+    }
+  ],
+    "relic_effects": [
+    {
+      "id": "OblivionCrookRelicEffect",
+      "name": "RelicEffectModifyTriggerCount",
+      "target_mode": "front_in_room",
+      "source_team": "monsters",
+      "param_int": 1,
+      "param_trigger": {
+        "id": "@Accursed",
+        "mod_reference": "Conductor"
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "OblivionCrookIcon",
+      "path": "textures/OblivionCrookArt.png"
+    }
+  ]
+}

@@ -11,6 +11,9 @@
             "card_type": "monster",
             "rarity": "starter",
             "class": "@ClassSandscourged",
+            "pools": [
+                "StarterCardsOnly"
+            ],
             "targets_room": true,
             "effects": [
                 {

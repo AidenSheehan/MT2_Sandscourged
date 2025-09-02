@@ -1,0 +1,140 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnSuperiorEgo",
+            "names": {
+                "english": "Superior Ego"
+            },
+            "card_art": "@SuperiorEgo",
+            "cost": 3,
+            "card_type": "monster",
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnSuperiorEgo"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ],
+            "pools": [
+                "UnitsAllBanner"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "SuperiorEgo",
+            "size": 3,
+            "attack_damage": 50,
+            "health": 50,
+            "names": {
+                "english": "Superior Ego"
+            },
+            "character_art": "@SuperiorEgoCharacterArt",
+            "subtypes": [
+                "SubtypesData_BannerUnit",
+                "@Sub_Ego"
+            ],
+            "triggers": [
+                "@SuperiorEgoAccursedTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "SuperiorEgoAccursedTrigger",
+            "descriptions": {
+                "english": "Apply this unit's [attack] and [health] to the front friendly unit. It attacks immediately, then dies."
+            },
+            "trigger": {
+                "id": "@Accursed",
+                "mod_reference": "Conductor"
+            },
+            "effects": [
+                {
+                    "id": "@SuperiorEgoApplyStatsAndStatusEffects"
+                },
+                {
+                    "id": "@SuperiorEgoAttackImmediately"
+                },
+                {
+                    "id": "@SuperiorEgoDie"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnSuperiorEgo",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@SuperiorEgo"
+        },
+        {
+            "id": "SuperiorEgoApplyStatsAndStatusEffects",
+            "name": "CardEffectAddStatsFromSelf",
+            "target_mode": "front_in_room",
+            "target_team": "monsters"
+        },
+        {
+            "id": "SuperiorEgoAttackImmediately",
+            "name": "CardEffectAttackWithUnit",
+            "target_mode": "front_in_room",
+            "target_team": "monsters"
+        },
+        {
+            "id": "SuperiorEgoDie",
+            "name": "CardEffectKill",
+            "target_mode": "front_in_room",
+            "target_team": "monsters"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "SuperiorEgo",
+            "path": "textures/SuperiorEgoCardArt.png"
+        },
+        {
+            "id": "SuperiorEgoCharacterArt",
+            "path": "textures/SuperiorEgoCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "SuperiorEgo",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@SuperiorEgo"
+                }
+            }
+        },
+        {
+            "id": "SuperiorEgoCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@SuperiorEgoCharacterArt"
+                },
+                "transform": {
+                    "position": {
+                        "x": 0,
+                        "y": 1.3,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 2,
+                        "y": 2,
+                        "z": 2
+                    }
+                }
+            }
+        }
+    ]
+}

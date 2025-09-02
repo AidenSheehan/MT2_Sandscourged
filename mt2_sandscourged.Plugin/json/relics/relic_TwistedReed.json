@@ -1,0 +1,71 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "TwistedReed",
+            "type": "collectable",
+            "names": {
+                "english": "Twisted Reed"
+            },
+            "descriptions": {
+                "english": "Bosses start with [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. [mt2_sandscourged.Plugin_hex] does not decay."
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Lore stuff"
+                }
+            ],
+            "disallow_in_deployment": false,
+            "lore_style": "herzal",
+            "relic_effects": [
+                "@TwistedReedApplyHexRelicEffect",
+                "@TwistedReedPreventDecayRelicEffect"
+            ],
+            "icon": "@TwistedReedIcon",
+            "icon_small": "@TwistedReedIcon",
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@ClassSandscourged",
+                        "pools": [
+                            "MegaRelicPool"
+                        ],
+                        "rarity": "uncommon",
+                        "unlock_level": 5
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "TwistedReedApplyHexRelicEffect",
+            "name": "RelicEffectAddStatusEffectOnSpawn",
+            "source_team": "heroes",
+            "param_subtype": "SubtypesData_BossAll",
+            "param_status_effects": [
+                {
+                    "status": "@hex",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "TwistedReedPreventDecayRelicEffect",
+            "name": "RelicEffectPreventStatusEffectDecay",
+            "source_team": "none",
+            "param_status_effects": [
+                {
+                    "status": "@hex",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "TwistedReedIcon",
+            "path": "textures/TwistedReedArt.png"
+        }
+    ]
+}

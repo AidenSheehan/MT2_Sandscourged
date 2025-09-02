@@ -7,10 +7,13 @@
                 "english": "Hex"
             },
             "descriptions": {
-                "english": "Apply [Conductor_hex] [effect0.status0.power].<br>Add a random <b>Torment</b> to your hand."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. Add a random <b>Torment</b> to your hand."
             },
             "rarity": "starter",
             "class": "@ClassSandscourged",
+            "pools": [
+                "StarterCardsOnly"
+            ],
             "card_art": "@HexArt",
             "targets_room": true,
             "targetless": false,
@@ -29,10 +32,7 @@
             "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": {
-                        "id": "@hex",
-                        "mod_reference": "Conductor"
-                    },
+                    "status": "@hex",
                     "count": 1
                 }
             ]

@@ -7,21 +7,19 @@
                 "english": "Graven Rite"
             },
             "descriptions": {
-                "english": "Apply [trait0.power][x] [undying].<br>Deal [effect1.power] damage."
+                "english": "Apply [undying] [effect0.status0.power] to friendly units, then deal [effect1.power] damage to them."
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",
             "card_art": "@GravenRiteArt",
             "targets_room": true,
-            "targetless": false,
+            "targetless": true,
             "pools": [
                 "MegaPool"
             ],
-            "cost_type": "x",
+            "cost": 3,
             "traits": [
-                {
-                    "id": "@GravenRiteScaleReanimate"
-                }
+                "@GravenRiteOffering"
             ],
             "effects": [
                 {
@@ -35,36 +33,28 @@
     ],
     "traits": [
         {
-            "id": "GravenRiteScaleReanimate",
-            "name": "CardTraitScalingAddStatusEffect",
-            "param_tracked_value": "played_cost",
-            "param_int": 1,
-            "param_status_effects": [
-                {
-                    "status": "undying",
-                    "count": 0
-                }
-            ]
+            "id": "GravenRiteOffering",
+            "name": "CardTraitTreasure"
         }
     ],
     "effects": [
         {
             "id": "GravenRiteApplyReanimate",
             "name": "CardEffectAddStatusEffect",
-            "target_mode": "drop_target_character",
-            "target_team": "both",
+            "target_mode": "room",
+            "target_team": "monsters",
             "param_status_effects": [
                 {
                     "status": "undying",
-                    "count": 0
+                    "count": 1
                 }
             ]
         },
         {
             "id": "GravenRiteDealDamage",
             "name": "CardEffectDamage",
-            "target_mode": "last_targeted_characters",
-            "target_team": "both",
+            "target_mode": "room",
+            "target_team": "monsters",
             "param_int": 5
         }
     ],

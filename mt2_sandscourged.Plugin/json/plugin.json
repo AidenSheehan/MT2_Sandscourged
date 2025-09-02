@@ -41,6 +41,27 @@
             "cards": [
                 "@SpawnReveredScarab"
             ]
+        },
+        {
+            "id": "RandomScarabPool",
+            "cards": [
+                "@SpawnReveredScarab",
+                "@SpawnReveredScarab",
+                "@SpawnReveredScarab",
+                "@SpawnReveredScarab",
+                "@SpawnReveredScarab",
+                "@SpawnReveredScarab",
+                "@SpawnReveredScarab",
+                "@SpawnGildedScarab",
+                "@SpawnGildedScarab",
+                "@SpawnGildedScarab",
+                "@SpawnGildedScarab",
+                "@SpawnGildedScarab",
+                "@SpawnCursedScarab",
+                "@SpawnCursedScarab",
+                "@SpawnCursedScarab",
+                "@SpawnScarabSwarm"
+            ]
         }
     ],
     "traits": [

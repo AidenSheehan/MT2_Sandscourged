@@ -7,11 +7,12 @@
                 "english": "Spike of the Scourged"
             },
             "descriptions": {
-                "english": "Apply [trait1.statusmultiplier][x] [Conductor_hex].<br>Add [x] random <b>Torments</b> to your hand."
+                "english": "Apply [trait1.statusmultiplier][x] [mt2_sandscourged.Plugin_hex]. Add [x] random <b>Torments</b> to your hand."
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",
             "card_art": "@SpikeOfTheScourgedArt",
+            "unlock_level": 8,
             "targets_room": true,
             "targetless": false,
             "pools": [
@@ -20,7 +21,7 @@
             "cost_type": "x",
             "traits": [
                 {
-                    "id": "@SpikeOfTheScourgedConsume"
+                    "id": "@Consume"
                 },
                 {
                     "id": "@SpikeOfTheScourgedScaleHex"
@@ -38,10 +39,6 @@
     ],
     "traits": [
         {
-            "id": "SpikeOfTheScourgedConsume",
-            "name": "CardTraitExhaustState"
-        },
-        {
             "id": "SpikeOfTheScourgedScaleHex",
             "name": "CardTraitScalingAddStatusEffect",
             "param_tracked_value": "played_cost",
@@ -49,10 +46,7 @@
             "effect_text_suppressed": true,
             "param_status_effects": [
                 {
-                    "status": {
-                        "id": "@hex",
-                        "mod_reference": "Conductor"
-                    },
+                    "status": "@hex",
                     "count": 0
                 }
             ]
@@ -74,10 +68,7 @@
             "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": {
-                        "id": "@hex",
-                        "mod_reference": "Conductor"
-                    },
+                    "status": "@hex",
                     "count": 0
                 }
             ]

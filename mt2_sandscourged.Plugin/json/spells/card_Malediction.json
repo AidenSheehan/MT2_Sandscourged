@@ -7,10 +7,11 @@
                 "english": "Malediction"
             },
             "descriptions": {
-                "english": "Apply [Conductor_hex] [effect0.status0.power] to enemy units.<br>Add a random <b>Torment</b> to your hand."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units. Add <b>2</b> random <b>Torments</b> to your hand."
             },
-            "rarity": "common",
+            "rarity": "uncommon",
             "class": "@ClassSandscourged",
+            "unlock_level": 5,
             "card_art": "@MaledictionArt",
             "targets_room": true,
             "targetless": true,
@@ -25,6 +26,7 @@
             ],
             "effects": [
                 "@MaledictionApplyHex",
+                "@AddRandomTorment",
                 "@AddRandomTorment"
             ]
         }
@@ -43,10 +45,7 @@
             "target_team": "heroes",
             "param_status_effects": [
                 {
-                    "status": {
-                        "id": "@hex",
-                        "mod_reference": "Conductor"
-                    },
+                    "status": "@hex",
                     "count": 2
                 }
             ]

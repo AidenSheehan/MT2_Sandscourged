@@ -1,58 +1,74 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "Dessicate",
-        "names": {
-            "english": "Dessicate"
-        },
-        "descriptions": {
-            "english": "Deal [effect0.power] damage to enemy units.<br>Shuffle a <b>Vexation</b> into your draw pile."
-        },
-        "rarity": "uncommon",
-        "class": "@ClassSandscourged",
-        "card_art": "@DessicateArt",
-        "targets_room": true,
-        "targetless": true,
-        "pools": [
-            "MegaPool"
-        ],
-        "cost": 2,
-        "traits": [{
-            "id": "@DessicateOffering"
-        }],
-        "effects": [
-            {
-                "id":"@DessicateDamage"
+    "cards": [
+        {
+            "id": "Dessicate",
+            "names": {
+                "english": "Dessicate"
             },
-            {
-                "id": "@ShuffleVexationSingle"
-            }
-        ]
-    }],
-    "traits": [{
-        "id": "DessicateOffering",
-        "name": "CardTraitTreasure"
-    }],
+            "descriptions": {
+                "english": "Deal [effect0.power] damage to the front enemy unit, three times."
+            },
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@DessicateArt",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 3,
+            "traits": [
+                "@DessicateOffering",
+                "@DessicatePiercing"
+            ],
+            "effects": [
+                {
+                    "id": "@DessicateDamage"
+                },
+                {
+                    "id": "@DessicateDamage"
+                },
+                {
+                    "id": "@DessicateDamage"
+                }
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "DessicateOffering",
+            "name": "CardTraitTreasure"
+        },
+        {
+            "id": "DessicatePiercing",
+            "name": "CardTraitIgnoreArmor"
+        }
+    ],
     "effects": [
         {
             "id": "DessicateDamage",
             "name": "CardEffectDamage",
-            "target_mode": "room",
+            "target_mode": "front_in_room",
             "target_team": "heroes",
-            "param_int": 20
+            "param_int": 25
         }
     ],
-    "sprites": [{
-        "id": "DessicateArt",
-        "path": "textures/DessicateArt.png"
-    }],
-    "game_objects": [{
-        "id": "DessicateArt",
-        "type": "card_art",
-        "extensions": {
-            "card_art": {
-                "sprite": "@DessicateArt"
+    "sprites": [
+        {
+            "id": "DessicateArt",
+            "path": "textures/DessicateArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "DessicateArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@DessicateArt"
+                }
             }
         }
-    }]
+    ]
 }

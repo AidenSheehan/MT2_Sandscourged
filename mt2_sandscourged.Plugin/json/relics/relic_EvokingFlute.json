@@ -1,0 +1,84 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "EvokingFlute",
+            "type": "collectable",
+            "names": {
+                "english": "Evoking Flute"
+            },
+            "descriptions": {
+                "english": "Scarabs gain [undying] [effect0.power] on [summon]."
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Lore stuff"
+                }
+            ],
+            "disallow_in_deployment": false,
+            "lore_style": "herzal",
+            "relic_effects": [
+                "@EvokingFluteRelicEffectScarab"
+            ],
+            "icon": "@EvokingFluteIcon",
+            "icon_small": "@EvokingFluteIcon",
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@ClassSandscourged",
+                        "pools": [
+                            "MegaRelicPool"
+                        ],
+                        "rarity": "uncommon",
+                        "unlock_level": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "EvokingFluteRelicEffectScarab",
+            "name": "RelicEffectAddTrigger",
+            "source_team": "monsters",
+            "target_mode": "front_in_room",
+            "param_int": 1,
+            "param_subtype": "@Sub_Scarab",
+            "param_bool": true,
+            "triggers": [
+                "@EvokingFluteSpawnTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "EvokingFluteSpawnTrigger",
+            "trigger": "on_spawn",
+            "hide_visual_and_ignore_silence": true,
+            "effects": [
+                {
+                    "id": "@EvokingFluteApplyReanimate"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "EvokingFluteApplyReanimate",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "undying",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "EvokingFluteIcon",
+            "path": "textures/EvokingFluteArt.png"
+        }
+    ]
+}

@@ -1,68 +1,83 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "Sandstorm",
-        "names": {
-            "english": "Sandstorm"
-        },
-        "descriptions": {
-            "english": "Deal [effect0.power] damage to enemy units and Apply [meleeweakness] [effect1.status0.power]."
-        },
-        "rarity": "uncommon",
-        "class": "@ClassSandscourged",
-        "card_art": "@SandstormArt",
-        "targets_room": true,
-        "targetless": true,
-        "pools": [
-            "MegaPool"
-        ],
-        "cost": 3,
-        "traits": [{
-            "id": "@SandstormOffering"
-        }],
-        "effects": [
-            {
-                "id":"@SandstormDealDamage"
+    "cards": [
+        {
+            "id": "Sandstorm",
+            "names": {
+                "english": "Sandstorm"
             },
-                        {
-                "id":"@SandstormApplyMeleeWeakness"
-            }
-        ]
-    }],
-    "traits": [{
-        "id": "SandstormOffering",
-        "name": "CardTraitTreasure"
-    }],
+            "descriptions": {
+                "english": "Deal [effect0.power] damage to enemy units and apply [corruption] [effect1.status0.power]."
+            },
+            "lore_tooltips": {
+                "english": "It is not hard to understand why no soul in Limbo ever found the Scourged and returned to tell the tale. Simply entering the Desert of Oblivion for but a moment yields corrupting scars."
+            },
+            "rarity": "common",
+            "class": "@ClassSandscourged",
+            "card_art": "@SandstormArt",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 3,
+            "traits": [
+                {
+                    "id": "@SandstormOffering"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@SandstormDealDamage"
+                },
+                {
+                    "id": "@SandstormApplyCorruption"
+                }
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "SandstormOffering",
+            "name": "CardTraitTreasure"
+        }
+    ],
     "effects": [
         {
             "id": "SandstormDealDamage",
             "name": "CardEffectDamage",
             "target_mode": "room",
             "target_team": "heroes",
-            "param_int": 5
+            "param_int": 10
         },
         {
-            "id": "SandstormApplyMeleeWeakness",
+            "id": "SandstormApplyCorruption",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
-            "param_status_effects": [{
-                "status": "melee weakness",
-                "count": 1
-            }]
+            "param_status_effects": [
+                {
+                    "status": "corruption",
+                    "count": 5
+                }
+            ]
         }
     ],
-    "sprites": [{
-        "id": "SandstormArt",
-        "path": "textures/SandstormArt.png"
-    }],
-    "game_objects": [{
-        "id": "SandstormArt",
-        "type": "card_art",
-        "extensions": {
-            "card_art": {
-                "sprite": "@SandstormArt"
+    "sprites": [
+        {
+            "id": "SandstormArt",
+            "path": "textures/SandstormArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "SandstormArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@SandstormArt"
+                }
             }
         }
-    }]
+    ]
 }

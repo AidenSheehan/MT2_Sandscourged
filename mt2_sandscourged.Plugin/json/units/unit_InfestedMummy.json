@@ -11,6 +11,7 @@
             "card_type": "monster",
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
+            "unlock_level": 0,
             "targets_room": true,
             "pools": [
                 "UnitsAllBanner"
@@ -22,7 +23,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "Forgotten vessels that are too frail to withstand tapping are instead, by the Ur-Pharaoh's mandate, used as nurseries for their divine spawn."
                 }
             ]
         }
@@ -52,7 +53,7 @@
         {
             "id": "InfestedMummyTrigger",
             "descriptions": {
-                "english": "Summon [effect0.power] <b>Revered Scarabs</b> with this unit's upgrades and stat changes."
+                "english": "Summon a <b>Revered Scarab</b> with this unit's upgrades and stat changes."
             },
             "trigger": "on_death",
             "effects": [
@@ -74,7 +75,7 @@
             "name": "CardEffectSpawnMonster",
             "target_mode": "drop_target_character",
             "param_character": "@ReveredScarab",
-            "param_int": 2,
+            "param_int": 1,
             "param_bool": false
         }
     ],

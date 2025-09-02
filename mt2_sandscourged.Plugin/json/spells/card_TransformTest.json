@@ -1,0 +1,74 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "TransformTest",
+            "names": {
+                "english": "Transform Test"
+            },
+            "descriptions": {
+                "english": "Deal [effect0.power] damage."
+            },
+            "rarity": "rare",
+            "class": "@ClassSandscourged",
+            "card_art": "@TransformTestArt",
+            "targets_room": true,
+            "targetless": false,
+            "hide_in_logbook": true,
+            "cost": 0,
+            "triggers": [
+                {
+                    "id": "@TransformTestSlayTrigger"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@TransformTestDamage"
+                }
+            ]
+        }
+    ],
+    "card_triggers": [
+        {
+            "id": "TransformTestSlayTrigger",
+            "descriptions": {
+                "english": "Draw [effect0.power]."
+            },
+            "trigger": "on_kill",
+            "effects":["@TransformTestConvert"]
+        }
+    ],
+    "effects": [
+        {
+            "id": "TransformTestDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_int": 200
+        },
+        {
+            "id": "TransformTestConvert",
+            "name": "CardEffectBalatroConvertCard",
+            "target_team": "both",
+            "param_card": "StarterTorch",
+            "param_int": 1
+        }
+    ],
+    "sprites": [
+        {
+            "id": "TransformTestArt",
+            "path": "textures/TransformTestArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "TransformTestArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@TransformTestArt"
+                }
+            }
+        }
+    ]
+}

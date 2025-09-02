@@ -3,7 +3,7 @@
         {
             "id": "ClassSandscourged",
             "titles": {
-                "english": "The Sandscourged"
+                "english": "Sandscourged"
             },
             "descriptions": {
                 "english": "Clan description."
@@ -68,6 +68,30 @@
                     ],
                     "icon": "@icon_Pharaoh",
                     "portrait": "@icon_Pharaoh"
+                },
+                {
+                    "id": "VizierChampion",
+                    "card_data": "@SpawnVizier",
+                    "starter_card": "@Hex",
+                    "upgrade_tree": [
+                        [
+                            "@upg_FirstBlessed1",
+                            "@upg_FirstBlessed2",
+                            "@upg_FirstBlessed3"
+                        ],
+                        [
+                            "@upg_EvilEye1",
+                            "@upg_EvilEye2",
+                            "@upg_EvilEye3"
+                        ],
+                        [
+                            "@upg_Curator1",
+                            "@upg_Curator2",
+                            "@upg_Curator3"
+                        ]
+                    ],
+                    "icon": "@icon_Vizier",
+                    "portrait": "@icon_Vizier"
                 }
             ],
             "is_crew": false
@@ -110,13 +134,13 @@
             "id": "SandscourgedBannerCardPool",
             "cards": [
                 "@SpawnCartoucheScribe",
-                "@SpawnEgoUltimus",
+                "@SpawnSuperiorEgo",
                 "@SpawnEssenceRevoker",
                 "@SpawnForgottenHulk",
                 "@SpawnInfestedMummy",
                 "@SpawnOverseerEternal",
                 "@SpawnPriestOfLostThoughts",
-                "@SpawnScourgedHollow",
+                "@SpawnPearlHost",
                 "@SpawnSphinxHierarch"
             ]
         }
@@ -156,9 +180,9 @@
             }
         },
         {
-            "id": "Sub_Remembered",
+            "id": "Sub_Ego",
             "names": {
-                "english": "Remembered"
+                "english": "Ego"
             }
         }
     ],
@@ -213,6 +237,10 @@
         {
             "id": "icon_Pharaoh",
             "path": "textures/icon_Pharaoh.png"
+        },
+        {
+            "id": "icon_Vizier",
+            "path": "textures/icon_Vizier.png"
         }
     ]
 }

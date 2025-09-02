@@ -7,7 +7,7 @@
                 "english": "Wretch"
             },
             "card_art": "@Wretch",
-            "cost": 1,
+            "cost": 0,
             "card_type": "monster",
             "rarity": "common",
             "class": "@ClassSandscourged",
@@ -22,7 +22,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "Perhaps the most pitiful of the Scourged. No longer useful even for tapping, they wander the sands aimlessly, without thought or conviction."
                 }
             ]
         }
@@ -53,7 +53,7 @@
             "descriptions": {
                 "english": "Add a random <b>Torment</b> to your hand."
             },
-            "trigger": "post_combat",
+            "trigger": "on_attacking",
             "effects": [
                 {
                     "id": "@AddRandomTorment"
@@ -94,7 +94,19 @@
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@WretchCharacterArt"
+                    "sprite": "@WretchCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.7,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.7,
+                            "y": 0.7,
+                            "z": 0.7
+                        }
+                    }
                 }
             }
         }

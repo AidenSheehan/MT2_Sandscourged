@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 .env
+
+# Temp Measure to avoid uploading texture which aren't mine
+mt2_sandscourged.Plugin/textures/
+
 # User-specific files
 *.rsuser
 *.suo

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "ScarabPit",
+      "names": {
+        "english": "Scarab Pit"
+      },
+      "descriptions": {
+        "english": "+1[capacity]. When a friendly unit dies, apply +3[attack] and +1[health] to friendly units."
+      },
+      "lore_tooltips": [
+        {
+          "english": "Lore stuff."
+        }
+      ],
+      "card_art": "@ScarabPitArt",
+      "cost": 1,
+      "card_type": "room",
+      "rarity": "uncommon",
+      "class": "@ClassSandscourged",
+      "targets_room": true,
+      "targetless": true,
+      "effects": [
+        "@ScarabPitRoomEffect"
+      ],
+      "pools": [
+        "MegaPool",
+        "RoomAndEquipmentMerchant_RoomPool"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ScarabPitRoomUpgrade",
+      "titles": {
+        "english": "ScarabPit"
+      },
+      "descriptions": {
+        "english": "+1[capacity]. When a friendly unit dies, apply +3[attack] and +1[health] to friendly units."
+      },
+      "trigger_upgrades": ["@ScarabPitTrigger"],
+      "room_modifier_upgrades": [{
+        "id": "@ScarabPitRoomModifier"
+      }],
+      "hide_icon_on_card": true,
+      "icon": "@ScarabPitArt"
+    },
+    {
+      "id": "ScarabPitThreeAttackOneHealth",
+      "bonus_damage": 3,
+      "bonus_hp": 1
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "ScarabPitRoomModifier",
+      "name": "RoomStateCapacityModifier",
+      "disallow_in_deployment": false,
+      "target_mode": "room",
+      "param_int": 1
+    }
+  ],
+  "character_triggers":[
+    {
+      "id": "ScarabPitTrigger",
+      "descriptions": {
+        "english": "When a friendly unit dies, apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+      },
+      "trigger": "on_death",
+      "hide_visual_and_ignore_silence": true,
+      "effects": ["@ApplyScarabUpgrade"]
+    }
+  ],
+
+  "effects": [
+    {
+      "id": "ScarabPitRoomEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@ScarabPitRoomUpgrade",
+      "param_bool": false,
+      "param_bool_2": false,
+      "target_team": "monsters"
+    },
+    {
+      "id": "ApplyScarabUpgrade",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_upgrade": "@ScarabPitThreeAttackOneHealth"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ScarabPitArt",
+      "path": "textures/ScarabPitArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ScarabPitArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ScarabPitArt"
+        }
+      }
+    }
+  ]
+}

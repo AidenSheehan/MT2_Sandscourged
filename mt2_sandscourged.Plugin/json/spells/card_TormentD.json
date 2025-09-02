@@ -1,51 +1,62 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "TormentD",
-        "names": {
-            "english": "Torment"
-        },
-        "descriptions": {
-            "english": "Apply [spellweakness] [effect0.status0.power]."
-        },
-        "rarity": "common",
-        "class": "@ClassSandscourged",
-        "card_art": "@TormentDArt",
-        "targets_room": true,
-        "targetless": false,
-        "cost": 0,
-        "traits": [{
-            "id": "@TormentEphemeralTrait"
-        }],
-        "effects": [
-            {
-                "id":"@TormentDApplySpellWeakness"
-            }
-        ]
-    }],
+    "cards": [
+        {
+            "id": "TormentD",
+            "names": {
+                "english": "Torment"
+            },
+            "descriptions": {
+                "english": "Apply [spellweakness] [effect0.status0.power]."
+            },
+            "rarity": "common",
+            "class": "@ClassSandscourged",
+            "card_art": "@TormentDArt",
+            "hide_in_logbook": true,
+            "targets_room": true,
+            "targetless": false,
+            "cost": 0,
+            "traits": [
+                {
+                    "id": "@TormentEphemeralTrait"
+                }
+            ],
+            "effects": [
+                {
+                    "id": "@TormentDApplySpellWeakness"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "id": "TormentDApplySpellWeakness",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
             "target_team": "both",
-            "param_status_effects": [{
-                "status": "spell weakness",
-                "count": 1
-            }]
+            "param_status_effects": [
+                {
+                    "status": "spell weakness",
+                    "count": 1
+                }
+            ]
         }
     ],
-    "sprites": [{
-        "id": "TormentDArt",
-        "path": "textures/TormentDArt.png"
-    }],
-    "game_objects": [{
-        "id": "TormentDArt",
-        "type": "card_art",
-        "extensions": {
-            "card_art": {
-                "sprite": "@TormentDArt"
+    "sprites": [
+        {
+            "id": "TormentDArt",
+            "path": "textures/TormentDArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "TormentDArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@TormentDArt"
+                }
             }
         }
-    }]
+    ]
 }
