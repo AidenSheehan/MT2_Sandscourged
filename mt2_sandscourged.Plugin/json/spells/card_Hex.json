@@ -11,9 +11,6 @@
             },
             "rarity": "starter",
             "class": "@ClassSandscourged",
-            "pools": [
-                "StarterCardsOnly"
-            ],
             "card_art": "@HexArt",
             "targets_room": true,
             "targetless": false,

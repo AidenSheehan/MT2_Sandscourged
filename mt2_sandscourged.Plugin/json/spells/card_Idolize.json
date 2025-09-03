@@ -9,9 +9,11 @@
             "descriptions": {
                 "english": "Apply [soul] [effect0.status0.power] to a unit. It gains [attack] and [health] equal to the amount of [soul] it has."
             },
-            "lore_tooltips": {
-                "english": "The Ur-Pharaoh demands adulation and offerings from its subjects. Gifts of names, stolen from the Forgotten, are treasured above all else."
-            },
+            "lore_tooltips": [
+                {
+                    "english": "The Ur-Pharaoh demands adulation and offerings from its subjects. Gifts of names, stolen from the Forgotten, are treasured above all else."
+                }
+            ],
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
             "unlock_level": 9,

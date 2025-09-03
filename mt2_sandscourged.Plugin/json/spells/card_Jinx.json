@@ -9,9 +9,11 @@
             "descriptions": {
                 "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. Discard a random card."
             },
-            "lore_tooltips": {
-                "english": "Strange magic seems to be vested in the very words engraved into stone cartouches the Egos recite from."
-            },
+            "lore_tooltips": [
+                {
+                    "english": "Strange magic seems to be vested in the very words engraved into stone cartouches the Egos recite from."
+                }
+            ],
             "rarity": "common",
             "class": "@ClassSandscourged",
             "card_art": "@JinxArt",

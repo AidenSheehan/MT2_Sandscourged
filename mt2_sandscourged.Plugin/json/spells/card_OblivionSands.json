@@ -9,9 +9,11 @@
             "descriptions": {
                 "english": "Apply [corruption] [effect0.status0.power] and [sap] [effect1.status0.power]."
             },
-            "lore_tooltips": {
-                "english": "Sands from the Desert of Oblivion, hidden away within Limbo, bottled by the Ur-Pharaoh's obsequious supplicants."
-            },
+            "lore_tooltips": [
+                {
+                    "english": "Sands from the Desert of Oblivion, hidden away within Limbo, bottled by the Ur-Pharaoh's obsequious supplicants."
+                }
+            ],
             "rarity": "common",
             "class": "@ClassSandscourged",
             "card_art": "@OblivionSandsArt",
@@ -27,8 +29,8 @@
                 }
             ],
             "effects": [
-               "@OblivionSandsApplyCorruption",
-               "@OblivionSandsApplySap"
+                "@OblivionSandsApplyCorruption",
+                "@OblivionSandsApplySap"
             ]
         }
     ],

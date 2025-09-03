@@ -185,7 +185,7 @@
             "status_effect_upgrades": [
                 {
                     "status": "trample",
-                    "count": "1"
+                    "count": 1
                 }
             ],
             "trigger_upgrades": [
@@ -208,7 +208,7 @@
             "status_effect_upgrades": [
                 {
                     "status": "trample",
-                    "count": "1"
+                    "count": 1
                 }
             ],
             "trigger_upgrades": [
@@ -231,7 +231,7 @@
             "status_effect_upgrades": [
                 {
                     "status": "trample",
-                    "count": "1"
+                    "count": 1
                 }
             ],
             "trigger_upgrades": [
@@ -714,7 +714,7 @@
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
-            "use_status_effect_multiplier": "true",
+            "use_status_effect_multiplier": true,
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
                 {
@@ -728,7 +728,7 @@
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
-            "use_status_effect_multiplier": "true",
+            "use_status_effect_multiplier": true,
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
                 {
@@ -742,7 +742,7 @@
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
-            "use_status_effect_multiplier": "true",
+            "use_status_effect_multiplier": true,
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
                 {
