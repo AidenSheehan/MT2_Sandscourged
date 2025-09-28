@@ -15,7 +15,7 @@
                     "english": "Lore stuff"
                 }
             ],
-            "disallow_in_deployment": false,
+            "disallow_in_deployment": true,
             "lore_style": "herzal",
             "relic_effects": [
                 "@PolishedIdolRelicEffect"

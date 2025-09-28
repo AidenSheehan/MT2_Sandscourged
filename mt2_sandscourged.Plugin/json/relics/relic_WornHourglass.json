@@ -8,7 +8,7 @@
         "english": "Worn Hourglass"
       },
       "descriptions": {
-        "english": "At the start of battle, shuffle [effect0.power] <b>Vexations</b> into your draw pile. Draw +[effect4.power] each turn."
+        "english": "Draw +[effect4.power] each turn. At the start of battle, shuffle [effect0.power] <b>Vexations</b> into your draw pile."
       },
       "lore_tooltips": [
         {

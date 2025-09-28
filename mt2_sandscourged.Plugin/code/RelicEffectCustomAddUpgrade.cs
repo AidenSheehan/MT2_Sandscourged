@@ -57,7 +57,7 @@ namespace mt2_sandscourged.Plugin
 					return false;
 				}
 
-				cardState.Upgrade(cardUpgradeState, saveManager, true, null);
+				cardState.ApplyPermanentUpgrade(cardUpgradeState, saveManager, true, null);
 				cardState.UpdateCardBodyText(null);
 				if (cardManager != null)
 				{

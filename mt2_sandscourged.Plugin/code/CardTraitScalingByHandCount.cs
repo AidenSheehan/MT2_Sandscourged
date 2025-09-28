@@ -15,7 +15,19 @@ namespace mt2_sandscourged.Plugin
             };
         }
 
-        // For Reverence upgrade
+        // TODO: Implement localisation once we have custom tracked values.
+        /*
+        public override string GetCurrentEffectText(CardStatistics? cardStatistics, SaveManager? saveManager, RelicManager? relicManager)
+        {
+            if (!(cardStatistics != null) || !cardStatistics.GetStatValueShouldDisplayOnCardNow(base.StatValueData))
+            {
+                return string.Empty;
+            }
+        }
+        */
+        
+
+        // Not used anymore
         public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)
         {
             base.OnApplyingCardUpgradeToUnit(thisCard, targetUnit, upgradeState, coreGameManagers);
@@ -26,7 +38,7 @@ namespace mt2_sandscourged.Plugin
             upgradeState.SetAdditionalHP(GetParamInt2() * numCardsInHand);
         }
 
-        // For Vizier: Curator
+        // For Vizier: StormSplitter
         public override int OnApplyingDamage(ApplyingDamageParameters damageParams, ICoreGameManagers coreGameManagers)
         {
             var cardManager = coreGameManagers.GetCardManager();
@@ -34,7 +46,7 @@ namespace mt2_sandscourged.Plugin
             return numCardsInHand * GetParamInt() / GetParamInt2();
         }
 
-        // For Priest Of Lost Thoughts
+        // For Priest Of Lost Thoughts and Rancor
         public override int OnStatusEffectApplied(CharacterState affectedCharacter, CardState thisCard, ICoreGameManagers coreGameManagers, string statusId, int sourceStacks = 0)
         {
             var cardManager = coreGameManagers.GetCardManager();

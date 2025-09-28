@@ -2,11 +2,11 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "SpawnCartoucheScribe",
+            "id": "SpawnEvermaw",
             "names": {
-                "english": "Cartouche Scribe"
+                "english": "Evermaw"
             },
-            "card_art": "@CartoucheScribe",
+            "card_art": "@Evermaw",
             "cost": 2,
             "card_type": "monster",
             "rarity": "rare",
@@ -15,7 +15,7 @@
             "targets_room": true,
             "effects": [
                 {
-                    "id": "@SpawnCartoucheScribe"
+                    "id": "@SpawnEvermaw"
                 }
             ],
             "lore_tooltips": [
@@ -28,74 +28,74 @@
             ]
         },
         {
-            "id": "CartoucheScribeAbility",
+            "id": "EvermawAbility",
             "names": {
-                "english": "Expel"
+                "english": "Guzzle"
             },
             "descriptions": {
                 "english": "Purge a card from your hand."
             },
-            "card_art": "@CartoucheScribe",
+            "card_art": "@Evermaw",
             "is_an_ability": true,
-            "cooldown": 4,
+            "cooldown": 5,
             "targetless": true,
             "targets_room": false,
             "card_type": "spell",
             "effects": [
-                "@CartoucheScribePurgeCard"
+                "@EvermawPurgeCard"
             ]
         }
     ],
     "characters": [
         {
-            "id": "CartoucheScribe",
+            "id": "Evermaw",
             "size": 2,
-            "attack_damage": 20,
-            "health": 25,
+            "attack_damage": 25,
+            "health": 20,
             "names": {
-                "english": "Cartouche Scribe"
+                "english": "Evermaw"
             },
-            "character_art": "@CartoucheScribeCharacterArt",
+            "character_art": "@EvermawCharacterArt",
             "subtypes": [
                 "SubtypesData_BannerUnit",
                 "@Sub_Ego"
             ],
-            "ability": "@CartoucheScribeAbility",
+            "ability": "@EvermawAbility",
             "triggers": [
-                "@CartoucheScribeConjureTrigger"
+                "@EvermawConjureTrigger"
             ]
         }
     ],
     "character_triggers": [
         {
-            "id": "CartoucheScribeConjureTrigger",
+            "id": "EvermawConjureTrigger",
             "trigger": "on_own_ability_activated",
             "descriptions": {
                 "english": "Gain [rage] [effect0.upgrade.status0.power] permanently."
             },
             "effects": [
-                "@CartoucheScribeApplyUpgrade"
+                "@EvermawApplyUpgrade"
             ]
         }
     ],
     "effects": [
         {
-            "id": "SpawnCartoucheScribe",
+            "id": "SpawnEvermaw",
             "name": "CardEffectSpawnMonster",
             "target_mode": "room",
-            "param_character": "@CartoucheScribe"
+            "param_character": "@Evermaw"
         },
         {
-            "id": "CartoucheScribePurgeCard",
+            "id": "EvermawPurgeCard",
             "name": "@CardEffectPurgeCardFromHand",
             "should_test": true,
             "should_fail_to_cast_if_test_fails": true
         },
         {
-            "id": "CartoucheScribeApplyUpgrade",
+            "id": "EvermawApplyUpgrade",
             "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "self",
-            "param_upgrade": "@CartoucheScribeRageUpgrade",
+            "param_upgrade": "@EvermawRageUpgrade",
             "param_int": 0,
             "param_int_2": 0,
             "param_int_3": 2
@@ -103,41 +103,54 @@
     ],
     "upgrades": [
         {
-            "id": "CartoucheScribeRageUpgrade",
+            "id": "EvermawRageUpgrade",
             "status_effect_upgrades": [
                 {
                     "status": "buff",
-                    "count": 6
+                    "count": 6,
+                    "from_permanent_upgrade": true
                 }
             ]
         }
     ],
     "sprites": [
         {
-            "id": "CartoucheScribe",
-            "path": "textures/CartoucheScribeCardArt.png"
+            "id": "Evermaw",
+            "path": "textures/EvermawCardArt.png"
         },
         {
-            "id": "CartoucheScribeCharacterArt",
-            "path": "textures/CartoucheScribeCharacterArt.png"
+            "id": "EvermawCharacterArt",
+            "path": "textures/EvermawCharacterArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "CartoucheScribe",
+            "id": "Evermaw",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@CartoucheScribe"
+                    "sprite": "@Evermaw"
                 }
             }
         },
         {
-            "id": "CartoucheScribeCharacterArt",
+            "id": "EvermawCharacterArt",
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@CartoucheScribeCharacterArt"
+                    "sprite": "@EvermawCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 1.4,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2,
+                            "y": 1.2,
+                            "z": 1
+                        }
+                    }
                 }
             }
         }

@@ -7,7 +7,7 @@
                 "english": "Jinx"
             },
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. Discard a random card."
+                "english": "Deal [effect0.power] damage."
             },
             "lore_tooltips": [
                 {
@@ -23,31 +23,46 @@
             "pools": [
                 "MegaPool"
             ],
-            "cost": 0,
+            "cost": 1,
             "effects": [
-                "@JinxApplyHex",
-                "@JinxDiscard"
+                "@JinxDealDamage"
+            ],
+            "triggers": [
+                "@JinxSlayTrigger"
             ]
         }
     ],
     "effects": [
         {
-            "id": "JinxApplyHex",
-            "name": "CardEffectAddStatusEffect",
+            "id": "JinxDealDamage",
+            "name": "CardEffectDamage",
             "target_mode": "drop_target_character",
             "target_team": "both",
+            "param_int": 5
+        },
+        {
+            "id": "JinxApplyHex",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "heroes",
             "param_status_effects": [
                 {
                     "status": "@hex",
-                    "count": 2
+                    "count": 1
                 }
             ]
-        },
+        }
+    ],
+    "card_triggers": [
         {
-            "id": "JinxDiscard",
-            "name": "CardEffectRandomDiscard",
-            "use_int_range": false,
-            "param_int": 1
+            "id": "JinxSlayTrigger",
+            "trigger": "on_kill",
+            "descriptions": {
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units."
+            },
+            "effects": [
+                "@JinxApplyHex"
+            ]
         }
     ],
     "sprites": [

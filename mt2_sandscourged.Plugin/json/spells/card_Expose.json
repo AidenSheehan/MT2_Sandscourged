@@ -2,16 +2,16 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "BlessedVenom",
+            "id": "Expose",
             "names": {
-                "english": "Blessed Venom"
+                "english": "Expose"
             },
             "descriptions": {
                 "english": "Apply [meleeweakness] [effect0.status0.power] and [spellweakness] [effect1.status0.power]."
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
-            "card_art": "@BlessedVenomArt",
+            "card_art": "@ExposeArt",
             "targets_room": true,
             "targetless": false,
             "pools": [
@@ -20,17 +20,17 @@
             "cost": 1,
             "effects": [
                 {
-                    "id": "@BlessedVenomApplyMeleeWeakness"
+                    "id": "@ExposeApplyMeleeWeakness"
                 },
                 {
-                    "id": "@BlessedVenomApplySpellWeakness"
+                    "id": "@ExposeApplySpellWeakness"
                 }
             ]
         }
     ],
     "effects": [
         {
-            "id": "BlessedVenomApplyMeleeWeakness",
+            "id": "ExposeApplyMeleeWeakness",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
             "target_team": "both",
@@ -42,7 +42,7 @@
             ]
         },
         {
-            "id": "BlessedVenomApplySpellWeakness",
+            "id": "ExposeApplySpellWeakness",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "last_targeted_characters",
             "target_team": "both",
@@ -56,17 +56,17 @@
     ],
     "sprites": [
         {
-            "id": "BlessedVenomArt",
-            "path": "textures/BlessedVenomArt.png"
+            "id": "ExposeArt",
+            "path": "textures/ExposeArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "BlessedVenomArt",
+            "id": "ExposeArt",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@BlessedVenomArt"
+                    "sprite": "@ExposeArt"
                 }
             }
         }

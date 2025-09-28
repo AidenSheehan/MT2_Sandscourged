@@ -1,0 +1,128 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnTwistedHusk",
+            "names": {
+                "english": "Twisted Husk"
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Never let it be said that the Scourged don't have backbone."
+                }
+            ],
+            "card_art": "@TwistedHusk",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "unlock_level": 0,
+            "targets_room": true,
+            "pools": [
+                "UnitsAllBanner"
+            ],
+            "effects": [
+                {
+                    "id": "@SpawnTwistedHusk"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "TwistedHusk",
+            "size": 1,
+            "attack_damage": 7,
+            "health": 3,
+            "names": {
+                "english": "Twisted Husk"
+            },
+            "character_art": "@TwistedHuskCharacterArt",
+            "subtypes": [
+                "@Sub_Lost",
+                "SubtypesData_BannerUnit"
+            ],
+            "triggers": [
+                {
+                    "id": "@TwistedHuskIncantTrigger"
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "TwistedHuskIncantTrigger",
+            "descriptions": {
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to enemy units."
+            },
+            "trigger": "card_spell_played",
+            "effects": [
+                {
+                    "id": "@TwistedHuskApplyScourge"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnTwistedHusk",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@TwistedHusk"
+        },
+        {
+            "id": "TwistedHuskApplyScourge",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_status_effects": [
+                {
+                    "status": "@scourge",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "TwistedHusk",
+            "path": "textures/TwistedHuskCardArt.png"
+        },
+        {
+            "id": "TwistedHuskCharacterArt",
+            "path": "textures/TwistedHuskCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "TwistedHusk",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@TwistedHusk"
+                }
+            }
+        },
+        {
+            "id": "TwistedHuskCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@TwistedHuskCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.9,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.85,
+                            "y": 0.85,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

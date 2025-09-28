@@ -2,34 +2,39 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "ViziersImplements",
+            "id": "ScryingEye",
             "names": {
-                "english": "Vizier's Implements"
+                "english": "Scrying Eye"
             },
             "lore_tooltips": [
                 {
-                    "english": "Lore stuff."
+                    "english": "The warped priests of the Sandscourged use eyes plucked from their lessers to glimpse through the swirling curtains of sand that surround Oblivion. Through these lenses, they have seen their path to revenge."
                 }
             ],
             "card_type": "equipment",
             "rarity": "common",
             "class": "@ClassSandscourged",
-            "card_art": "@ViziersImplementsArt",
+            "card_art": "@ScryingEyeArt",
             "targets_room": true,
             "targetless": false,
             "pools": [
                 "MegaPool",
-                "RoomAndEquipmentMerchant_EquipmentPool"
+                "RoomAndEquipmentMerchant_EquipmentPool",
+                "RoomAndEquipmentDraftPool",
+                "EquipmentPoolNonEnemy",
+                "FreeEquipmentMutatorPool",
+                "RedCrownEquipmentPool",
+                "RandomGraftedEquipmentForEvent_NoVoidArms_EquipmentPool"
             ],
             "cost": 1,
             "effects": [
-                "@Equip_ViziersImplements"
+                "@Equip_ScryingEye"
             ]
         },
         {
-            "id": "ViziersImplementsAbility",
+            "id": "ScryingEyeAbility",
             "names": {
-                "english": "Puncture"
+                "english": "Foresee"
             },
             "descriptions": {
                 "english": "Draw [effect0.power]. Discard [effect0.power]."
@@ -37,56 +42,56 @@
             "is_an_ability": true,
             "cooldown": 2,
             "card_type": "spell",
-            "card_art": "@ViziersImplementsArt",
+            "card_art": "@ScryingEyeArt",
             "targetless": true,
             "effects": [
-                "@ViziersImplementsDraw",
-                "@ViziersImplementsDiscard"
+                "@ScryingEyeDraw",
+                "@ScryingEyeDiscard"
             ]
         }
     ],
     "upgrades": [
         {
-            "id": "upg_ViziersImplements",
+            "id": "upg_ScryingEye",
             "bonus_damage": 8,
             "bonus_hp": 8,
-            "ability_upgrade": "@ViziersImplementsAbility",
-            "icon": "@ViziersImplementsArt"
+            "ability_upgrade": "@ScryingEyeAbility",
+            "icon": "@ScryingEyeArt"
         }
     ],
     "effects": [
         {
-            "id": "Equip_ViziersImplements",
+            "id": "Equip_ScryingEye",
             "name": "CardEffectAttachEquipment",
             "target_mode": "drop_target_character",
             "target_team": "monsters",
-            "param_upgrade": "@upg_ViziersImplements"
+            "param_upgrade": "@upg_ScryingEye"
         },
         {
-            "id": "ViziersImplementsDraw",
+            "id": "ScryingEyeDraw",
             "name": "CardEffectDraw",
             "param_int": 1,
             "target_team": "none"
         },
         {
-            "id": "ViziersImplementsDiscard",
+            "id": "ScryingEyeDiscard",
             "name": "CardEffectChooseDiscard",
             "target_team": "none"
         }
     ],
     "sprites": [
         {
-            "id": "ViziersImplementsArt",
-            "path": "textures/ViziersImplementsArt.png"
+            "id": "ScryingEyeArt",
+            "path": "textures/ScryingEyeArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "ViziersImplementsArt",
+            "id": "ScryingEyeArt",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@ViziersImplementsArt"
+                    "sprite": "@ScryingEyeArt"
                 }
             }
         }

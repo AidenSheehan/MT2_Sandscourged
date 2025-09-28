@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "status_effects": [
+    {
+      "id": "scourge",
+      "class_name": "@StatusEffectScourgeState",
+      "names": {
+        "english": "Warp"
+      },
+      "stackable_names": {
+        "english": "<nobr>Warp {0}</nobr>"
+      },
+      "card_tooltips": {
+        "english": "Unit takes [codeint0] damage per stack at the end of turn for each distinct [debuff] it has, including this one.<br>Decreases every turn."
+      },
+      "character_tooltips": {
+        "english": "Takes [codeint0] damage at the end of turn for each distinct [debuff].<br>Decreases every turn."
+      },
+      "replacement_texts": {
+        "english": "<b>Warp</b>"
+      },
+      "notifications": {
+        "english": "Warp"
+      },
+      "display_category": "negative",
+      "trigger_stage": "on_post_combat_poison",
+      "remove_stack_at_end_of_turn": true,
+      "is_stackable": true,
+      "is_propagatable": true,
+      "exclude_monster_propagation": true,
+      "param_int": 1,
+      "icon": "@Scourge"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Scourge",
+      "path": "textures/status_scourge.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "Scourge",
+      "path": "textures/status_scourge_tooltip.png"
+    }
+  ]
+}

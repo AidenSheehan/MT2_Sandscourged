@@ -19,7 +19,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Pearl tapping is said to be an excruciating affair for the host. As the pearl grows larger, so does the torment endured. In their agony, hosts lash out violently, quite unlike their otherwise placid nature."
+                    "english": "Pearl tapping is said to be an excruciating ordeal for the host. As the pearl grows larger, so does the torment endured. In their agony, hosts lash out violently, quite unlike their otherwise placid nature."
                 }
             ],
             "pools": [
@@ -39,7 +39,7 @@
             "character_art": "@PearlHostCharacterArt",
             "subtypes": [
                 "SubtypesData_BannerUnit",
-                "@Sub_Forgotten"
+                "@Sub_Lost"
             ],
             "triggers": [
                 "@PearlHostSummonTrigger",
@@ -119,7 +119,19 @@
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@PearlHostCharacterArt"
+                    "sprite": "@PearlHostCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0.15,
+                            "y": 1.3,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.1,
+                            "y": 1.1,
+                            "z": 1
+                        }
+                    }
                 }
             }
         }

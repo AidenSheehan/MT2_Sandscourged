@@ -30,10 +30,10 @@
         {
             "id": "SwarmLord1Ability",
             "names": {
-                "english": "Glorify"
+                "english": "Swarm"
             },
             "descriptions": {
-                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [corruption] [effect2.status0.power] per [soul] to enemy units."
+                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_scourge] [effect2.status0.power] per [soul] to enemy units."
             },
             "card_art": "@Pharaoh",
             "is_an_ability": true,
@@ -44,16 +44,16 @@
             "effects": [
                 "@SwarmLordSacrificeScarab",
                 "@SwarmLord1GiveStats",
-                "@SwarmLord1ApplyCorruption"
+                "@SwarmLord1ApplyScourge"
             ]
         },
         {
             "id": "SwarmLord2Ability",
             "names": {
-                "english": "Glorify II"
+                "english": "Swarm II"
             },
             "descriptions": {
-                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [corruption] [effect2.status0.power] per [soul] to enemy units."
+                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_scourge] [effect2.status0.power] per [soul] to enemy units."
             },
             "card_art": "@Pharaoh",
             "is_an_ability": true,
@@ -64,16 +64,16 @@
             "effects": [
                 "@SwarmLordSacrificeScarab",
                 "@SwarmLord2GiveStats",
-                "@SwarmLord2ApplyCorruption"
+                "@SwarmLord2ApplyScourge"
             ]
         },
         {
             "id": "SwarmLord3Ability",
             "names": {
-                "english": "Glorify III"
+                "english": "Swarm III"
             },
             "descriptions": {
-                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [corruption] [effect2.status0.power] per [soul] to enemy units."
+                "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_scourge] [effect2.status0.power] per [soul] to enemy units."
             },
             "card_art": "@Pharaoh",
             "is_an_ability": true,
@@ -84,7 +84,7 @@
             "effects": [
                 "@SwarmLordSacrificeScarab",
                 "@SwarmLord3GiveStats",
-                "@SwarmLord3ApplyCorruption"
+                "@SwarmLord3ApplyScourge"
             ]
         }
     ],
@@ -138,8 +138,8 @@
             "descriptions": {
                 "english": "Do I really need this"
             },
-            "bonus_damage": 5,
-            "bonus_hp": 5,
+            "bonus_damage": 0,
+            "bonus_hp": 0,
             "ability_upgrade": "@SwarmLord2Ability"
         },
         {
@@ -150,8 +150,8 @@
             "descriptions": {
                 "english": "Still not sure I need this"
             },
-            "bonus_damage": 15,
-            "bonus_hp": 15,
+            "bonus_damage": 0,
+            "bonus_hp": 0,
             "ability_upgrade": "@SwarmLord3Ability"
         },
         {
@@ -166,8 +166,8 @@
         },
         {
             "id": "SwarmLord3Buff",
-            "bonus_damage": 12,
-            "bonus_hp": 4
+            "bonus_damage": 9,
+            "bonus_hp": 3
         },
         {
             "id": "upg_Pearlescent1",
@@ -256,7 +256,7 @@
         {
             "id": "upg_SoulTender1",
             "titles": {
-                "english": "Soul Tender"
+                "english": "Soulmonger"
             },
             "descriptions": {
                 "english": "what a tender soul"
@@ -270,7 +270,7 @@
         {
             "id": "upg_SoulTender2",
             "titles": {
-                "english": "Soul Tender II"
+                "english": "Soulmonger II"
             },
             "descriptions": {
                 "english": "what a tenderer soul"
@@ -284,7 +284,7 @@
         {
             "id": "upg_SoulTender3",
             "titles": {
-                "english": "Soul Tender III"
+                "english": "Soulmonger III"
             },
             "descriptions": {
                 "english": "what a tenderist soul"
@@ -328,31 +328,31 @@
         {
             "id": "SwarmLord1Trigger",
             "descriptions": {
-                "english": "Apply [corruption] [effect0.status0.power_unmodified] per [soul] to the attacked unit."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power_unmodified] per [soul] to the attacked unit."
             },
             "trigger": "on_attacking",
             "effects": [
-                "@SwarmLord1ApplyCorruption"
+                "@SwarmLord1ApplyScourge"
             ]
         },
         {
             "id": "SwarmLord2Trigger",
             "descriptions": {
-                "english": "Apply [corruption] [effect0.status0.power_unmodified] per [soul] to the attacked unit."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power_unmodified] per [soul] to the attacked unit."
             },
             "trigger": "on_attacking",
             "effects": [
-                "@SwarmLord2ApplyCorruption"
+                "@SwarmLord2ApplyScourge"
             ]
         },
         {
             "id": "SwarmLord3Trigger",
             "descriptions": {
-                "english": "Apply [corruption] [effect0.status0.power_unmodified] per [soul] to the attacked unit."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power_unmodified] per [soul] to the attacked unit."
             },
             "trigger": "on_attacking",
             "effects": [
-                "@SwarmLord3ApplyCorruption"
+                "@SwarmLord3ApplyScourge"
             ]
         },
         {
@@ -589,7 +589,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 6
+                    "count": 5
                 }
             ]
         },
@@ -634,7 +634,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 6
+                    "count": 5
                 }
             ]
         },
@@ -710,7 +710,7 @@
             "param_upgrade": "@SwarmLord3Buff"
         },
         {
-            "id": "SwarmLord1ApplyCorruption",
+            "id": "SwarmLord1ApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
@@ -718,13 +718,13 @@
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
                 {
-                    "status": "corruption",
+                    "status": "@scourge",
                     "count": 1
                 }
             ]
         },
         {
-            "id": "SwarmLord2ApplyCorruption",
+            "id": "SwarmLord2ApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
@@ -732,13 +732,13 @@
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
                 {
-                    "status": "corruption",
+                    "status": "@scourge",
                     "count": 2
                 }
             ]
         },
         {
-            "id": "SwarmLord3ApplyCorruption",
+            "id": "SwarmLord3ApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
@@ -746,8 +746,8 @@
             "status_effect_multiplier": "captured_soul",
             "param_status_effects": [
                 {
-                    "status": "corruption",
-                    "count": 4
+                    "status": "@scourge",
+                    "count": 3
                 }
             ]
         }
@@ -781,13 +781,13 @@
                     "transform": {
                         "position": {
                             "x": 0,
-                            "y": 1.3,
+                            "y": 0.43,
                             "z": 0
                         },
                         "scale": {
-                            "x": 1.5,
-                            "y": 1.5,
-                            "z": 1.5
+                            "x": 1.3,
+                            "y": 1.3,
+                            "z": 1
                         }
                     }
                 }
@@ -800,13 +800,13 @@
             "gender": "male",
             "added_expressions": [
                 {
-                    "english": "Freedom shall be ours."
+                    "english": "You too shall worship me."
                 },
                 {
-                    "english": "As before, now again."
+                    "english": "Your souls are mine."
                 },
                 {
-                    "english": "Remember this."
+                    "english": "Tell Seraph of my return. Let him tremble."
                 }
             ],
             "idle_expressions": [
@@ -820,10 +820,13 @@
                     "english": "Why do you look so strange?"
                 },
                 {
-                    "english": "We shall reclaim what was taken from us."
+                    "english": "My followers pray for revenge."
                 },
                 {
                     "english": "The pearl will grow grander still."
+                },
+                {
+                    "english": "Where is the child?"
                 }
             ]
         }

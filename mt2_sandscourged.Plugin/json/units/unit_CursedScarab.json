@@ -22,7 +22,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "When a Scarab emerges from its nursery, it can on rare occasion be afflicted with the curses laid upon their Forgotten host."
+                    "english": "When a Scarab emerges from its nursery, it can on rare occasion be afflicted with the curses laid upon their Lost host."
                 }
             ]
         }
@@ -116,7 +116,19 @@
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@CursedScarabCharacterArt"
+                    "sprite": "@CursedScarabCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.3,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.8,
+                            "y": 0.8,
+                            "z": 1
+                        }
+                    }
                 }
             }
         }

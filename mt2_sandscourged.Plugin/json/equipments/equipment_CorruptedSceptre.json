@@ -20,7 +20,13 @@
             "targetless": false,
             "pools": [
                 "MegaPool",
-                "RoomAndEquipmentMerchant_EquipmentPool"
+                "RoomAndEquipmentMerchant_EquipmentPool",
+                "RoomAndEquipmentDraftPool",
+                "RoomAndEquipmentMerchant_RoomAndEquipmentPool",
+                "EquipmentPoolNonEnemy",
+                "FreeEquipmentMutatorPool",
+                "RedCrownEquipmentPool",
+                "RandomGraftedEquipmentForEvent_NoVoidArms_EquipmentPool"
             ],
             "cost": 3,
             "effects": [
@@ -31,24 +37,24 @@
     "upgrades": [
         {
             "id": "upg_CorruptedSceptre",
-            "bonus_damage": 0,
-            "bonus_hp": 15,
+            "bonus_damage": 5,
+            "bonus_hp": 0,
             "trigger_upgrades": [
-                "@CorruptedSceptreHarvestTrigger"
+                "@CorruptedSceptreStrikeTrigger"
             ],
             "icon": "@CorruptedSceptreArt"
         }
     ],
     "character_triggers": [
         {
-            "id": "CorruptedSceptreHarvestTrigger",
+            "id": "CorruptedSceptreStrikeTrigger",
             "descriptions": {
-                "english": "Apply [corruption] [effect0.status0.power] to enemy units, then double the amount of [corruption] they have."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to the attacked unit, then double the amount of [mt2_sandscourged.Plugin_scourge] on all units."
             },
-            "trigger": "on_any_unit_death_on_floor",
+            "trigger": "on_attacking",
             "effects": [
-                "@CorruptedSceptreApplyCorruption",
-                "@CorruptedSceptreDoubleCorruption"
+                "@CorruptedSceptreApplyScourge",
+                "@CorruptedSceptreDoubleScourge"
             ]
         }
     ],
@@ -61,25 +67,25 @@
             "param_upgrade": "@upg_CorruptedSceptre"
         },
         {
-            "id": "CorruptedSceptreApplyCorruption",
+            "id": "CorruptedSceptreApplyScourge",
             "name": "CardEffectAddStatusEffect",
-            "target_mode": "room",
-            "target_team": "heroes",
+            "target_mode": "last_attacked_character",
+            "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": "corruption",
-                    "count": 1
+                    "status": "@scourge",
+                    "count": 15
                 }
             ]
         },
         {
-            "id": "CorruptedSceptreDoubleCorruption",
+            "id": "CorruptedSceptreDoubleScourge",
             "name": "CardEffectMultiplyStatusEffect",
             "target_mode": "room",
-            "target_team": "heroes",
+            "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": "corruption",
+                    "status": "@scourge",
                     "count": 2
                 }
             ]

@@ -7,7 +7,7 @@
                 "english": "Selective Memory"
             },
             "descriptions": {
-                "english": "Discard your hand. Draw [effect1.power] card of each type."
+                "english": "Discard your hand. Draw [effect1.power] card of each type.<br>Increase [ember] by [effect7.upgrade.costreductionabs]."
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",
@@ -19,11 +19,6 @@
                 "MegaPool"
             ],
             "cost": 1,
-            "traits": [
-                {
-                    "id": "@Consume"
-                }
-            ],
             "effects": [
                 "@SelectiveMemoryDiscardHand",
                 "@SelectiveMemoryDrawSpell",
@@ -31,7 +26,8 @@
                 "@SelectiveMemoryDrawBlight",
                 "@SelectiveMemoryDrawScourge",
                 "@SelectiveMemoryDrawEquipment",
-                "@SelectiveMemoryDrawRoom"
+                "@SelectiveMemoryDrawRoom",
+                "@SelectiveMemoryIncreaseCost"
             ]
         }
     ],
@@ -81,6 +77,17 @@
             "target_mode": "draw_pile",
             "target_card_type": "room",
             "param_int": 1
+        },
+        {
+            "id": "SelectiveMemoryIncreaseCost",
+            "name": "@CardEffectAddTempUpgradeToCurrentCard",
+            "param_upgrade": "@SelectiveMemoryCostUpgrade"
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "SelectiveMemoryCostUpgrade",
+            "cost_reduction": -1
         }
     ],
     "sprites": [

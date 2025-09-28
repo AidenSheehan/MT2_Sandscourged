@@ -19,7 +19,12 @@
             "targetless": false,
             "pools": [
                 "MegaPool",
-                "RoomAndEquipmentMerchant_EquipmentPool"
+                "RoomAndEquipmentMerchant_EquipmentPool",
+                "RoomAndEquipmentDraftPool",
+                "EquipmentPoolNonEnemy",
+                "FreeEquipmentMutatorPool",
+                "RedCrownEquipmentPool",
+                "RandomGraftedEquipmentForEvent_NoVoidArms_EquipmentPool"
             ],
             "cost": 2,
             "effects": [
@@ -48,7 +53,9 @@
                 "id": "@Accursed",
                 "mod_reference": "Conductor"
             },
-            "effects": ["@SpearGainRage"]
+            "effects": [
+                "@SpearGainRage"
+            ]
         }
     ],
     "effects": [

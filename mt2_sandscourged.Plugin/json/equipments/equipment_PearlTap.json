@@ -8,7 +8,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "The Sandscourged have invented a process known as \"pearl tapping\". Dark pearls are embedded into an unfortunate host. When the host inhales the sands of Limbo, they are somehow disolved into the body and eventually secreted into the dark pearl, enlarging the pearl. The process seems a needlessly tortuous ordeal."
+                    "english": "The Ur-Pharaoh has instructed the Scourged in a process known as \"pearl tapping\". Dark pearls are embedded into an unfortunate host. When the host inhales the sands of Limbo, they are somehow absorbed into the body and eventually secreted onto the dark pearl, enlarging it. The process seems a needlessly tortuous ordeal."
                 }
             ],
             "card_type": "equipment",
@@ -20,7 +20,10 @@
             "targetless": false,
             "pools": [
                 "MegaPool",
-                "RoomAndEquipmentMerchant_EquipmentPool"
+                "RoomAndEquipmentMerchant_EquipmentPool",
+                "RoomAndEquipmentDraftPool",
+                "EquipmentPoolNonEnemy",
+                "FreeEquipmentMutatorPool"
             ],
             "cost": 1,
             "effects": [
@@ -37,13 +40,22 @@
                 {
                     "status": "undying",
                     "count": 3
-                },
-                {
-                    "status": "corruption",
-                    "count": 15
                 }
             ],
+            "trigger_upgrades": [
+                "@PearlTapResolveTrigger"
+            ],
             "icon": "@PearlTapArt"
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "PearlTapResolveTrigger",
+            "trigger": "post_combat",
+            "descriptions": {
+                "english": "Die."
+            },
+            "effects": ["@PearlTapDie"]
         }
     ],
     "effects": [
@@ -53,6 +65,11 @@
             "target_mode": "drop_target_character",
             "target_team": "monsters",
             "param_upgrade": "@upg_PearlTap"
+        },
+        {
+            "id": "PearlTapDie",
+            "name": "CardEffectKill",
+            "target_mode": "self"
         }
     ],
     "sprites": [

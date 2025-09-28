@@ -2,19 +2,19 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "SpawnEssenceRevoker",
+            "id": "SpawnRevenant",
             "names": {
-                "english": "Essence Revoker"
+                "english": "Revenant"
             },
-            "card_art": "@EssenceRevoker",
-            "cost": 2,
+            "card_art": "@Revenant",
+            "cost": 3,
             "card_type": "monster",
             "rarity": "rare",
             "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
                 {
-                    "id": "@SpawnEssenceRevoker"
+                    "id": "@SpawnRevenant"
                 }
             ],
             "lore_tooltips": [
@@ -29,57 +29,57 @@
     ],
     "characters": [
         {
-            "id": "EssenceRevoker",
+            "id": "Revenant",
             "size": 2,
-            "attack_damage": 30,
-            "health": 10,
+            "attack_damage": 35,
+            "health": 25,
             "names": {
                 "english": "Essence Revoker"
             },
-            "character_art": "@EssenceRevokerCharacterArt",
+            "character_art": "@RevenantCharacterArt",
             "subtypes": [
                 "SubtypesData_BannerUnit",
                 "@Sub_Ego"
             ],
             "triggers": [
-                "@EssenceRevokerIncantTrigger",
-                "@EssenceRevokerResolveTrigger"
+                "@RevenantHarvestTrigger",
+                "@RevenantResolveTrigger"
             ]
         }
     ],
     "character_triggers": [
         {
-            "id": "EssenceRevokerIncantTrigger",
+            "id": "RevenantHarvestTrigger",
             "descriptions": {
                 "english": "Gain [soul] [effect0.status0.power]."
             },
-            "trigger": "card_spell_played",
+            "trigger": "on_any_unit_death_on_floor",
             "effects": [
-                "@EssenceRevokerGainSoul"
+                "@RevenantGainSoul"
             ]
         },
         {
-            "id": "EssenceRevokerResolveTrigger",
+            "id": "RevenantResolveTrigger",
             "descriptions": {
                 "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to gain [multistrike] [effect2.status0.power]."
             },
             "trigger": "post_combat",
             "effects": [
-                "@EssenceRevokerCheckSouls",
-                "@EssenceRevokerRemoveSouls",
-                "@EssenceRevokerGainMultistrike"
+                "@RevenantCheckSouls",
+                "@RevenantRemoveSouls",
+                "@RevenantGainMultistrike"
             ]
         }
     ],
     "effects": [
         {
-            "id": "SpawnEssenceRevoker",
+            "id": "SpawnRevenant",
             "name": "CardEffectSpawnMonster",
             "target_mode": "room",
-            "param_character": "@EssenceRevoker"
+            "param_character": "@Revenant"
         },
         {
-            "id": "EssenceRevokerGainSoul",
+            "id": "RevenantGainSoul",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "self",
             "param_status_effects": [
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "id": "EssenceRevokerCheckSouls",
+            "id": "RevenantCheckSouls",
             "name": {
                 "id": "@CardEffectRequireStatusThreshold",
                 "mod_reference": "Conductor"
@@ -107,7 +107,7 @@
             ]
         },
         {
-            "id": "EssenceRevokerRemoveSouls",
+            "id": "RevenantRemoveSouls",
             "name": "CardEffectRemoveStatusEffect",
             "target_mode": "self",
             "param_status_effects": [
@@ -118,7 +118,7 @@
             ]
         },
         {
-            "id": "EssenceRevokerGainMultistrike",
+            "id": "RevenantGainMultistrike",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "self",
             "param_status_effects": [
@@ -131,30 +131,42 @@
     ],
     "sprites": [
         {
-            "id": "EssenceRevoker",
-            "path": "textures/EssenceRevokerCardArt.png"
+            "id": "Revenant",
+            "path": "textures/RevenantCardArt.png"
         },
         {
-            "id": "EssenceRevokerCharacterArt",
-            "path": "textures/EssenceRevokerCharacterArt.png"
+            "id": "RevenantCharacterArt",
+            "path": "textures/RevenantCharacterArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "EssenceRevoker",
+            "id": "Revenant",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@EssenceRevoker"
+                    "sprite": "@Revenant"
                 }
             }
         },
         {
-            "id": "EssenceRevokerCharacterArt",
+            "id": "RevenantCharacterArt",
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@EssenceRevokerCharacterArt"
+                    "sprite": "@RevenantCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.82,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.1,
+                            "y": 1.1,
+                            "z": 1
+                        }
+                    }
                 }
             }
         }

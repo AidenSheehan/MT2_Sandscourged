@@ -7,7 +7,7 @@
                 "english": "Malediction"
             },
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units. Add <b>2</b> random <b>Torments</b> to your hand."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units. Add [effect1.secondarypower] random <b>Torments</b> to your hand."
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
@@ -26,8 +26,7 @@
             ],
             "effects": [
                 "@MaledictionApplyHex",
-                "@AddRandomTorment",
-                "@AddRandomTorment"
+                "@MaledictionAddTorments"
             ]
         }
     ],
@@ -46,9 +45,17 @@
             "param_status_effects": [
                 {
                     "status": "@hex",
-                    "count": 2
+                    "count": 1
                 }
             ]
+        },
+        {
+            "id": "MaledictionAddTorments",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "param_int": 3,
+            "param_int_2": 2,
+            "param_card_pool": "@TormentPool"
         }
     ],
     "sprites": [

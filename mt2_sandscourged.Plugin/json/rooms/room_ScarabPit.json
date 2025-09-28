@@ -7,7 +7,7 @@
         "english": "Scarab Pit"
       },
       "descriptions": {
-        "english": "+1[capacity]. When a friendly unit dies, apply +3[attack] and +1[health] to friendly units."
+        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. When a friendly unit dies, apply +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
       },
       "lore_tooltips": [
         {
@@ -26,7 +26,9 @@
       ],
       "pools": [
         "MegaPool",
-        "RoomAndEquipmentMerchant_RoomPool"
+        "RoomAndEquipmentMerchant_RoomPool",
+        "RoomAndEquipmentDraftPool",
+        "TrainRoomPool"
       ]
     }
   ],
@@ -37,12 +39,14 @@
         "english": "ScarabPit"
       },
       "descriptions": {
-        "english": "+1[capacity]. When a friendly unit dies, apply +3[attack] and +1[health] to friendly units."
+        "english": "+[roommodifier0.power][capacity]. When a friendly unit dies, apply +[charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
       },
-      "trigger_upgrades": ["@ScarabPitTrigger"],
-      "room_modifier_upgrades": [{
-        "id": "@ScarabPitRoomModifier"
-      }],
+      "trigger_upgrades": [
+        "@ScarabPitTrigger"
+      ],
+      "room_modifier_upgrades": [
+        "@ScarabPitRoomModifier"
+      ],
       "hide_icon_on_card": true,
       "icon": "@ScarabPitArt"
     },
@@ -61,7 +65,7 @@
       "param_int": 1
     }
   ],
-  "character_triggers":[
+  "character_triggers": [
     {
       "id": "ScarabPitTrigger",
       "descriptions": {
@@ -69,10 +73,11 @@
       },
       "trigger": "on_death",
       "hide_visual_and_ignore_silence": true,
-      "effects": ["@ApplyScarabUpgrade"]
+      "effects": [
+        "@ApplyScarabUpgrade"
+      ]
     }
   ],
-
   "effects": [
     {
       "id": "ScarabPitRoomEffect",

@@ -29,7 +29,7 @@
         {
             "id": "PriestOfLostThoughtsAbility",
             "names": {
-                "english": "Condemn"
+                "english": "Eternalize"
             },
             "descriptions": {
                 "english": "Apply [undying] [effect0.status0.power] to the front friendly unit for every [trait0.secondarypower] cards in your hand.<br>Discard your hand."
@@ -129,7 +129,19 @@
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@PriestOfLostThoughtsCharacterArt"
+                    "sprite": "@PriestOfLostThoughtsCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 1.15,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    }
                 }
             }
         }

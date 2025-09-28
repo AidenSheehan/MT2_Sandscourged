@@ -7,11 +7,11 @@
                 "english": "Sandstorm"
             },
             "descriptions": {
-                "english": "Deal [effect0.power] damage to enemy units and apply [corruption] [effect1.status0.power]."
+                "english": "Deal [effect0.power] damage to enemy units and apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power]."
             },
             "lore_tooltips": [
                 {
-                    "english": "It is not hard to understand why no soul in Limbo ever found the Scourged and returned to tell the tale. Simply entering the Desert of Oblivion for but a moment yields corrupting scars."
+                    "english": "For the aeons the Scourged were bound by Oblivion's storm, not one soul in Limbo ever found them. Now they wield the same sands that veiled and warped them as a terrifying weapon."
                 }
             ],
             "rarity": "common",
@@ -33,7 +33,7 @@
                     "id": "@SandstormDealDamage"
                 },
                 {
-                    "id": "@SandstormApplyCorruption"
+                    "id": "@SandstormApplyScourge"
                 }
             ]
         }
@@ -53,14 +53,14 @@
             "param_int": 10
         },
         {
-            "id": "SandstormApplyCorruption",
+            "id": "SandstormApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
             "param_status_effects": [
                 {
-                    "status": "corruption",
-                    "count": 5
+                    "status": "@scourge",
+                    "count": 3
                 }
             ]
         }

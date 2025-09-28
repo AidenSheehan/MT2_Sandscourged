@@ -7,7 +7,7 @@
                 "english": "Torment"
             },
             "descriptions": {
-                "english": "Apply [corruption] [effect0.status0.power]."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power]."
             },
             "rarity": "common",
             "class": "@ClassSandscourged",
@@ -23,21 +23,21 @@
             ],
             "effects": [
                 {
-                    "id": "@TormentAApplyCorruption"
+                    "id": "@TormentAApplyScourge"
                 }
             ]
         }
     ],
     "effects": [
         {
-            "id": "TormentAApplyCorruption",
+            "id": "TormentAApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
             "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": "corruption",
-                    "count": 5
+                    "status": "@scourge",
+                    "count": 3
                 }
             ]
         }

@@ -77,7 +77,7 @@ namespace mt2_sandscourged.Plugin
 					for (int i = 0; i < mult; i++)
 					{
 						Console.Write(cardState.GetDebugName() + " is attempting upgrade.");
-						if (CardUpgradeHelper.TryApplyUpgradeToCard(cardState, cardEffectState.GetParamCardUpgradeData(), isTemporary, cardEffectParams.isFromHiddenTrigger, coreGameManagers, out CardUpgradeState cardUpgradeState))
+						if (CardUpgradeHelper.TryApplyUpgradeToCard(cardState, null, cardEffectState.GetParamCardUpgradeData(), isTemporary, cardEffectParams.isFromHiddenTrigger, coreGameManagers, out CardUpgradeState cardUpgradeState))
 						{
 							Console.Write(cardState.GetDebugName() + $" {i}: Success!");
 							cardState.UpdateCardBodyText(null);

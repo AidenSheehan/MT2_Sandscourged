@@ -9,9 +9,12 @@
             "card_art": "@ReveredScarab",
             "cost": 1,
             "card_type": "monster",
-            "rarity": "starter",
+            "rarity": "common",
             "class": "@ClassSandscourged",
             "targets_room": true,
+            "pools": [
+                "StarterCardsOnly"
+            ],
             "effects": [
                 {
                     "id": "@SpawnReveredScarab"
@@ -98,7 +101,19 @@
             "type": "character_art",
             "extensions": {
                 "character_art": {
-                    "sprite": "@ReveredScarabCharacterArt"
+                    "sprite": "@ReveredScarabCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.3,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.8,
+                            "y": 0.8,
+                            "z": 1
+                        }
+                    }
                 }
             }
         }

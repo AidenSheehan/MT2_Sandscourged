@@ -12,17 +12,9 @@ namespace mt2_sandscourged.Plugin
         {
             // This patch is used to copy the exhausted pile to a static list for later use.
             // We do this before ShowKillCam, because it clears cards before celebrate.
-            // The second clear cards in OnScenatioComplete seems to be redundant.
+            // The second clear cards in OnScenarioComplete seems to be redundant.
             // This patch is necessary for the CardEffectAddUpgradeToDeadUnits to function correctly.
-            if (CardEffectAddUpgradeToDeadUnits.consumedCards == null)
-            {
-                CardEffectAddUpgradeToDeadUnits.consumedCards = ___cardManager.GetExhaustedPile(true);
-                Console.WriteLine($"AddUpgradeToDeadUnitsPatch: {CardEffectAddUpgradeToDeadUnits.consumedCards.Count} cards copied to consumedCards.");
-            }
-            else
-            {
-                Console.WriteLine("AddUpgradeToDeadUnitsPatch: consumedCards already set, skipping copy.");
-            }
+            CardEffectAddUpgradeToDeadUnits.consumedCards ??= ___cardManager.GetExhaustedPile(true);
         }
     }
 
@@ -32,7 +24,6 @@ namespace mt2_sandscourged.Plugin
         public static void Postfix(CombatManager __instance)
         {
             CardEffectAddUpgradeToDeadUnits.consumedCards = null;
-            Console.WriteLine("ClearListOnStartOfBattlePatch: consumedCards cleared.");
         }
     }
 }

@@ -11,16 +11,10 @@ namespace mt2_sandscourged.Plugin
             return [];
         }
 
-        public override IEnumerator OnCardDiscarded(CardManager.DiscardCardParams discardCardParams, ICoreGameManagers coreGameManagers)
+        public override IEnumerator OnCardPlayed(CardState thisCard, ICoreGameManagers coreGameManagers)
         {
-            if (!discardCardParams.wasPlayed || discardCardParams.discardCard == null)
-            {
-                yield break;
-            }
-
             int maxCount = GetAdditionalCards(coreGameManagers.GetCardStatistics());
             CardManager cardManager = coreGameManagers.GetCardManager();
-            SaveManager saveManager = coreGameManagers.GetSaveManager();
 
             int count = maxCount;
             int maxAdd = cardManager.GetMaxHandSize() - cardManager.GetNumCardsInHand();

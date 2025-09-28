@@ -8,7 +8,7 @@
         "english": "Broken Seal"
       },
       "descriptions": {
-        "english": "Your Pyre applies [meleeweakness] [effect0.power] to the front enemy unit on all floors on [revenge]."
+        "english": "[mt2_sandscourged.Plugin_scourge] deals twice as much damage."
       },
       "lore_tooltips": [
         {
@@ -35,63 +35,23 @@
             "pools": [
               "MegaRelicPool"
             ],
-            "rarity": "common",
+            "rarity": "uncommon",
             "unlock_level": 0
           }
         }
       ]
     }
   ],
-  "additional_tooltips": [
-    {
-      "id": "TestTooltip",
-      "titles": "TestTitle",
-      "descriptions": {
-        "english": "TestDescription"
-      },
-      "trigger": "on_hit",
-      "style": "trigger"
-    }
-  ],
   "relic_effects": [
     {
       "id": "BrokenSealRelicEffect",
-      "name": "RelicEffectAddTrigger",
-      "param_subtype": "SubtypesData_Pyre",
-      "target_mode": "room",
-      "source_team": "both",
-      "param_bool": true,
+      "name": "RelicEffectModifyStatusMagnitude",
+      "source_team": "none",
       "param_int": 1,
-      "triggers": [
-        "@BrokenSealRevengeTrigger"
-      ]
-    }
-  ],
-  "character_triggers": [
-    {
-      "id": "BrokenSealRevengeTrigger",
-      "trigger": "on_hit",
-      "descriptions": {
-        "english": "Is there a point to this description?"
-      },
-      "hide_visual_and_ignore_silence": true,
-      "effects": [
-        {
-          "id": "@BrokenSealApplyMeleeWeakness"
-        }
-      ]
-    }
-  ],
-  "effects": [
-    {
-      "id": "BrokenSealApplyMeleeWeakness",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "front_in_all_rooms",
-      "target_team": "heroes",
       "param_status_effects": [
         {
-          "status": "melee weakness",
-          "count": 1
+          "status": "@scourge",
+          "count": 0
         }
       ]
     }

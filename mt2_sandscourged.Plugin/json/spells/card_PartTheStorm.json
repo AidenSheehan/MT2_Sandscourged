@@ -2,16 +2,21 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "Ruination",
+            "id": "PartTheStorm",
             "names": {
-                "english": "Ruination"
+                "english": "Part the Storm"
             },
             "descriptions": {
                 "english": "Costs -[trait0.power][ember] for each friendly unit death this battle.<br>Deal [effect0.power] damage."
             },
+            "lore_tooltips": [
+                {
+                    "english": "With great power fueled by immeasurable sacrifice, Izketri split the swirling sandstorm that bound the Scourged. And there ahead - the warpath."
+                }
+            ],
             "rarity": "rare",
             "class": "@ClassSandscourged",
-            "card_art": "@RuinationArt",
+            "card_art": "@PartTheStormArt",
             "targets_room": true,
             "targetless": false,
             "pools": [
@@ -19,18 +24,18 @@
             ],
             "cost": 6,
             "traits": [
-                "@RuinationReduceCostTrait"
+                "@PartTheStormReduceCostTrait"
             ],
             "effects": [
                 {
-                    "id": "@RuinationDamage"
+                    "id": "@PartTheStormDamage"
                 }
             ]
         }
     ],
     "traits": [
         {
-            "id": "RuinationReduceCostTrait",
+            "id": "PartTheStormReduceCostTrait",
             "name": "CardTraitScalingReduceCost",
             "param_tracked_value": "any_monster_death",
             "param_entry_duration": "this_battle",
@@ -40,7 +45,7 @@
     ],
     "effects": [
         {
-            "id": "RuinationDamage",
+            "id": "PartTheStormDamage",
             "name": "CardEffectDamage",
             "target_mode": "drop_target_character",
             "target_team": "both",
@@ -49,17 +54,17 @@
     ],
     "sprites": [
         {
-            "id": "RuinationArt",
-            "path": "textures/RuinationArt.png"
+            "id": "PartTheStormArt",
+            "path": "textures/PartTheStormArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "RuinationArt",
+            "id": "PartTheStormArt",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@RuinationArt"
+                    "sprite": "@PartTheStormArt"
                 }
             }
         }

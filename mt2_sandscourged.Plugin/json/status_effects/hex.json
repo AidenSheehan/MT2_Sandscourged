@@ -14,7 +14,7 @@
         "english": "When a [debuff] is applied to this unit, it gains additional stacks equal to the stacks of [mt2_sandscourged.Plugin_hex].<br>[mt2_sandscourged.Plugin_hex] and [dazed] are excluded.<br>Decreases every turn and does not [propagate]."
       },
       "character_tooltips": {
-        "english": "When a [debuff] is applied to this unit, it gains an additional +[codeint0] stacks.<br>[mt2_sandscourged.Plugin_hex] and [dazed] are excluded.<br>Decreases turn and does not [propagate]."
+        "english": "When a [debuff] is applied to this unit, it gains an additional +[codeint0] stacks.<br>[mt2_sandscourged.Plugin_hex] and [dazed] are excluded.<br>Decreases every turn and does not [propagate]."
       },
       "notifications": {
         "english": "Hexed"

@@ -8,10 +8,8 @@ namespace mt2_sandscourged.Plugin
 	{
 		private Team.Type sourceTeam;
 		private TargetMode targetMode;
-		private SubtypeData? requiredSubtype;
-		private SubtypeData[]? excludedSubtypes;
 		private StatusEffectStackData[] statusEffectsToApply = [];
-		private CharacterState.AddStatusEffectParams addStatusEffectParams = new();
+		private readonly CharacterState.AddStatusEffectParams addStatusEffectParams = new();
 		public override PropDescriptions CreateEditorInspectorDescriptions()
 		{
 			PropDescriptions propDescriptions = [];
@@ -31,8 +29,6 @@ namespace mt2_sandscourged.Plugin
 			base.Initialize(relicState, relicData, relicEffectData);
 			this.sourceTeam = relicEffectData.GetParamSourceTeam();
 			this.targetMode = relicEffectData.GetTargetMode();
-			this.requiredSubtype = relicEffectData.GetParamCharacterSubtype();
-			this.excludedSubtypes = relicEffectData.GetParamExcludeCharacterSubtypes();
 			this.statusEffectsToApply = relicEffectData.GetParamStatusEffects();
 			this.addStatusEffectParams.sourceRelicState = base.SourceRelicState;
 		}

@@ -7,11 +7,11 @@
                 "english": "Oblivion Sands"
             },
             "descriptions": {
-                "english": "Apply [corruption] [effect0.status0.power] and [sap] [effect1.status0.power]."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] and [sap] [effect1.status0.power]."
             },
             "lore_tooltips": [
                 {
-                    "english": "Sands from the Desert of Oblivion, hidden away within Limbo, bottled by the Ur-Pharaoh's obsequious supplicants."
+                    "english": "Sands from Oblivion, a desert hidden away within Limbo, bottled by the Ur-Pharaoh's obsequious supplicants."
                 }
             ],
             "rarity": "common",
@@ -29,21 +29,21 @@
                 }
             ],
             "effects": [
-                "@OblivionSandsApplyCorruption",
+                "@OblivionSandsApplyScourge",
                 "@OblivionSandsApplySap"
             ]
         }
     ],
     "effects": [
         {
-            "id": "OblivionSandsApplyCorruption",
+            "id": "OblivionSandsApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
             "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": "corruption",
-                    "count": 12
+                    "status": "@scourge",
+                    "count": 8
                 }
             ]
         },

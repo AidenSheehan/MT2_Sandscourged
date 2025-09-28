@@ -24,12 +24,12 @@
             ]
         },
         {
-            "id": "Curator1Ability",
+            "id": "StormSplitter1Ability",
             "names": {
                 "english": "Obliterate"
             },
             "descriptions": {
-                "english": "Deal damage equal to [trait0.power] times the number of cards in your hand.<br>Discard your hand."
+                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand."
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -38,20 +38,20 @@
             "targets_room": true,
             "card_type": "spell",
             "traits": [
-                "@Curator1AbilityTrait"
+                "@StormSplitter1AbilityTrait"
             ],
             "effects": [
-                "@CuratorDealDamage",
-                "@CuratorDiscardHand"
+                "@StormSplitterDealDamage",
+                "@StormSplitterDiscardHand"
             ]
         },
         {
-            "id": "Curator2Ability",
+            "id": "StormSplitter2Ability",
             "names": {
                 "english": "Obliterate II"
             },
             "descriptions": {
-                "english": "Deal damage equal to [trait0.power] times the number of cards in your hand.<br>Discard your hand."
+                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand."
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -60,20 +60,20 @@
             "targets_room": true,
             "card_type": "spell",
             "traits": [
-                "@Curator2AbilityTrait"
+                "@StormSplitter2AbilityTrait"
             ],
             "effects": [
-                "@CuratorDealDamage",
-                "@CuratorDiscardHand"
+                "@StormSplitterDealDamage",
+                "@StormSplitterDiscardHand"
             ]
         },
         {
-            "id": "Curator3Ability",
+            "id": "StormSplitter3Ability",
             "names": {
                 "english": "Obliterate III"
             },
             "descriptions": {
-                "english": "Deal damage equal to [trait0.power] times the number of cards in your hand.<br>Discard your hand."
+                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand."
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -82,11 +82,11 @@
             "targets_room": true,
             "card_type": "spell",
             "traits": [
-                "@Curator3AbilityTrait"
+                "@StormSplitter3AbilityTrait"
             ],
             "effects": [
-                "@CuratorDealDamage",
-                "@CuratorDiscardHand"
+                "@StormSplitterDealDamage",
+                "@StormSplitterDiscardHand"
             ]
         }
     ],
@@ -179,7 +179,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 0,
-            "bonus_hp": 5,
+            "bonus_hp": 0,
             "trigger_upgrades": [
                 "@EvilEyeResolveTrigger"
             ]
@@ -193,7 +193,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 0,
-            "bonus_hp": 10,
+            "bonus_hp": 5,
             "trigger_upgrades": [
                 "@EvilEyeResolveTrigger",
                 "@EvilEye2EnchantTrigger"
@@ -208,70 +208,70 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 10,
-            "bonus_hp": 30,
+            "bonus_hp": 20,
             "trigger_upgrades": [
                 "@EvilEyeResolveTrigger",
                 "@EvilEye3EnchantTrigger"
             ]
         },
         {
-            "id": "upg_Curator1",
+            "id": "upg_StormSplitter1",
             "titles": {
-                "english": "Curator"
+                "english": "Storm Splitter"
             },
             "descriptions": {
                 "english": "Why do i need this"
             },
             "bonus_damage": 10,
             "bonus_hp": 10,
-            "ability_upgrade": "@Curator1Ability"
+            "ability_upgrade": "@StormSplitter1Ability"
         },
         {
-            "id": "upg_Curator2",
+            "id": "upg_StormSplitter2",
             "titles": {
-                "english": "Curator"
+                "english": "Storm Splitter II"
             },
             "descriptions": {
                 "english": "Why do i need this"
             },
             "bonus_damage": 10,
             "bonus_hp": 10,
-            "ability_upgrade": "@Curator2Ability",
+            "ability_upgrade": "@StormSplitter2Ability",
             "trigger_upgrades": [
-                "@Curator2SlayTrigger"
+                "@StormSplitter2SlayTrigger"
             ]
         },
         {
-            "id": "upg_Curator3",
+            "id": "upg_StormSplitter3",
             "titles": {
-                "english": "Curator"
+                "english": "Storm Splitter III"
             },
             "descriptions": {
                 "english": "Why do i need this"
             },
             "bonus_damage": 30,
             "bonus_hp": 30,
-            "ability_upgrade": "@Curator3Ability",
+            "ability_upgrade": "@StormSplitter3Ability",
             "trigger_upgrades": [
-                "@Curator3SlayTrigger"
+                "@StormSplitter3SlayTrigger"
             ]
         }
     ],
     "traits": [
         {
-            "id": "Curator1AbilityTrait",
+            "id": "StormSplitter1AbilityTrait",
             "name": "@CardTraitScalingByHandCount",
             "param_int": 10,
             "param_int_2": 1
         },
         {
-            "id": "Curator2AbilityTrait",
+            "id": "StormSplitter2AbilityTrait",
             "name": "@CardTraitScalingByHandCount",
             "param_int": 20,
             "param_int_2": 1
         },
         {
-            "id": "Curator3AbilityTrait",
+            "id": "StormSplitter3AbilityTrait",
             "name": "@CardTraitScalingByHandCount",
             "param_int": 40,
             "param_int_2": 1
@@ -378,23 +378,23 @@
             ]
         },
         {
-            "id": "Curator2SlayTrigger",
+            "id": "StormSplitter2SlayTrigger",
             "trigger": "on_kill",
             "descriptions": {
                 "english": "Draw +[effect0.power] next turn."
             },
             "effects": [
-                "@Curator2Draw"
+                "@StormSplitter2Draw"
             ]
         },
         {
-            "id": "Curator3SlayTrigger",
+            "id": "StormSplitter3SlayTrigger",
             "trigger": "on_kill",
             "descriptions": {
                 "english": "Draw +[effect0.power] next turn."
             },
             "effects": [
-                "@Curator3Draw"
+                "@StormSplitter3Draw"
             ]
         }
     ],
@@ -496,23 +496,23 @@
             ]
         },
         {
-            "id": "CuratorDiscardHand",
+            "id": "StormSplitterDiscardHand",
             "name": "CardEffectDiscardHand"
         },
         {
-            "id": "CuratorDealDamage",
+            "id": "StormSplitterDealDamage",
             "name": "CardEffectDamage",
             "target_mode": "drop_target_character",
             "target_team": "both",
             "param_int": 0
         },
         {
-            "id": "Curator2Draw",
+            "id": "StormSplitter2Draw",
             "name": "CardEffectDrawAdditionalNextTurn",
             "param_int": 1
         },
         {
-            "id": "Curator3Draw",
+            "id": "StormSplitter3Draw",
             "name": "CardEffectDrawAdditionalNextTurn",
             "param_int": 2
         }
@@ -550,9 +550,9 @@
                             "z": 0
                         },
                         "scale": {
-                            "x": 1.5,
-                            "y": 1.5,
-                            "z": 1.5
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1
                         }
                     }
                 }
@@ -565,13 +565,13 @@
             "gender": "female",
             "added_expressions": [
                 {
-                    "english": "For the Scourged!."
+                    "english": "For the Scourged!"
                 },
                 {
                     "english": "Our revenge will be cruel and enduring."
                 },
                 {
-                    "english": "This \"train\" is fascinating. I must study when we're done with here."
+                    "english": "This \"train\" is fascinating. Who made it?"
                 }
             ],
             "idle_expressions": [
@@ -589,6 +589,9 @@
                 },
                 {
                     "english": "What do you mean I'm not allowed to curse? That's my job!"
+                },
+                {
+                    "english": "I'll split you in half!"
                 }
             ]
         }

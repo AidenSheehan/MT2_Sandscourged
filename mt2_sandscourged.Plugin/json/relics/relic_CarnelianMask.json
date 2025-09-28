@@ -8,7 +8,7 @@
         "english": "Carnelian Mask"
       },
       "descriptions": {
-        "english": "The first time each turn you discard a card before the end of turn, friendly units on the floor by gain [rage] [effect0.status0.power]."
+        "english": "The first time each turn you discard a card before the end of turn, friendly units on the floor gain [rage] [effect0.status0.power]."
       },
       "lore_tooltips": [
         {

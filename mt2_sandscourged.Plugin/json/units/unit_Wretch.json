@@ -22,8 +22,27 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Perhaps the most pitiful of the Scourged. No longer useful even for tapping, they wander the sands aimlessly, without thought or conviction."
+                    "english": "Perhaps the most pitiful of the Scourged. No longer useful even for tapping, they wander Oblivion aimlessly, without thought or conviction."
                 }
+            ]
+        },
+        {
+            "id": "WretchAbility",
+            "names": {
+                "english": "Wail"
+            },
+            "descriptions": {
+                "english": "Add [effect0.secondarypower] random <b>Torments</b> to your hand. Take [effect1.power] damage."
+            },
+            "card_art": "@Wretch",
+            "is_an_ability": true,
+            "cooldown": 2,
+            "targetless": true,
+            "targets_room": true,
+            "card_type": "spell",
+            "effects": [
+                "@WretchAddTorments",
+                "@WretchSelfDamage"
             ]
         }
     ],
@@ -38,27 +57,9 @@
             },
             "character_art": "@WretchCharacterArt",
             "subtypes": [
-                "@Sub_Forgotten"
+                "@Sub_Lost"
             ],
-            "triggers": [
-                {
-                    "id": "@WretchTrigger"
-                }
-            ]
-        }
-    ],
-    "character_triggers": [
-        {
-            "id": "WretchTrigger",
-            "descriptions": {
-                "english": "Add a random <b>Torment</b> to your hand."
-            },
-            "trigger": "on_attacking",
-            "effects": [
-                {
-                    "id": "@AddRandomTorment"
-                }
-            ]
+            "ability": "@WretchAbility"
         }
     ],
     "effects": [
@@ -67,6 +68,21 @@
             "name": "CardEffectSpawnMonster",
             "target_mode": "room",
             "param_character": "@Wretch"
+        },
+        {
+            "id": "WretchAddTorments",
+            "name": "CardEffectAddBattleCard",
+            "target_mode": "room",
+            "param_int": 3,
+            "param_int_2": 2,
+            "param_card_pool": "@TormentPool"
+        },
+        {
+            "id": "WretchSelfDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "self",
+            "target_team": "monsters",
+            "param_int": 10
         }
     ],
     "sprites": [
@@ -97,14 +113,14 @@
                     "sprite": "@WretchCharacterArt",
                     "transform": {
                         "position": {
-                            "x": 0,
-                            "y": 0.7,
+                            "x": 0.1,
+                            "y": 0.75,
                             "z": 0
                         },
                         "scale": {
-                            "x": 0.7,
-                            "y": 0.7,
-                            "z": 0.7
+                            "x": 0.9,
+                            "y": 0.9,
+                            "z": 1
                         }
                     }
                 }

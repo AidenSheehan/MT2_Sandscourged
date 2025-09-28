@@ -2,16 +2,16 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "PlagueOfWoe",
+            "id": "PlagueOfBlood",
             "names": {
-                "english": "Plague of Woe"
+                "english": "Plague of Blood"
             },
             "descriptions": {
                 "english": "Draw a spell and apply -[effect1.upgrade.costreduction][ember] and +[effect1.upgrade.bonusdamage] [magicpower]."
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
-            "card_art": "@PlagueOfWoeArt",
+            "card_art": "@PlagueOfBloodArt",
             "card_type": "blight",
             "targets_room": true,
             "targetless": false,
@@ -21,13 +21,13 @@
             "cost": 0,
             "effects": [
                 {
-                    "id": "@PlagueOfWoeSacrifice"
+                    "id": "@PlagueOfBloodSacrifice"
                 },
                 {
-                    "id": "@PlagueOfWoeBuffSpell"
+                    "id": "@PlagueOfBloodBuffSpell"
                 },
                 {
-                    "id": "@PlagueOfWoeDrawSpell"
+                    "id": "@PlagueOfBloodDrawSpell"
                 }
             ],
             "triggers": ["@VexationDamageOnUnplayed"]
@@ -35,26 +35,26 @@
     ],
     "traits": [
         {
-            "id": "PlagueOfWoeShowTargets",
+            "id": "PlagueOfBloodShowTargets",
             "name": "CardTraitShowCardTargets"
         }
     ],
     "effects": [
         {
-            "id": "PlagueOfWoeSacrifice",
+            "id": "PlagueOfBloodSacrifice",
             "name": "CardEffectSacrifice",
             "target_mode": "drop_target_character",
             "target_team": "monsters",
             "param_int": 1
         },
         {
-            "id": "PlagueOfWoeBuffSpell",
+            "id": "PlagueOfBloodBuffSpell",
             "name": "CardEffectAddTempCardUpgradeToNextDrawnCard",
             "target_card_type": "spell",
-            "param_upgrade": "@PlagueOfWoeSpellUpgrade"
+            "param_upgrade": "@PlagueOfBloodSpellUpgrade"
         },
         {
-            "id": "PlagueOfWoeDrawSpell",
+            "id": "PlagueOfBloodDrawSpell",
             "name": "CardEffectDrawType",
             "target_mode": "draw_pile",
             "target_team": "none",
@@ -64,25 +64,25 @@
     ],
     "upgrades": [
         {
-            "id": "PlagueOfWoeSpellUpgrade",
+            "id": "PlagueOfBloodSpellUpgrade",
             "bonus_damage": 20,
             "bonus_heal": 20,
-            "cost_reduction": 2
+            "cost_reduction": 1
         }
     ],
     "sprites": [
         {
-            "id": "PlagueOfWoeArt",
-            "path": "textures/PlagueOfWoeArt.png"
+            "id": "PlagueOfBloodArt",
+            "path": "textures/PlagueOfBloodArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "PlagueOfWoeArt",
+            "id": "PlagueOfBloodArt",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@PlagueOfWoeArt"
+                    "sprite": "@PlagueOfBloodArt"
                 }
             }
         }

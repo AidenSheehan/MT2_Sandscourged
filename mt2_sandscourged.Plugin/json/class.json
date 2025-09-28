@@ -6,27 +6,27 @@
                 "english": "Sandscourged"
             },
             "descriptions": {
-                "english": "Clan description."
+                "english": "Lead the warriors of Limbo, revenants serving an ancient power, as they call upon the warping sands of Oblivion."
             },
             "subclass_descriptions": {
                 "english": "Subclass description"
             },
             "icons": {
-                "small": "@ClanLogo_32",
-                "medium": "@ClanLogo_56",
-                "large": "@ClanLogo_92_Stroke1",
+                "small": "@ClanLogo_48",
+                "medium": "@ClanLogo_92_Outline",
+                "large": "@ClanLogo_128",
                 "silhouette": "@ClanLogo_Silhouette"
             },
             "card_style": "pyreborne",
             "ui_color": {
-                "r": 0.5,
-                "g": 0.5,
-                "b": 0.5
+                "r": 0.91,
+                "g": 0.76,
+                "b": 0.24
             },
             "ui_color_dark": {
-                "r": 0.4,
-                "g": 0.4,
-                "b": 0.4
+                "r": 0.50,
+                "g": 0.42,
+                "b": 0.15
             },
             "ui_gradient": [
                 {
@@ -38,9 +38,9 @@
                 {
                     "time": 1.0,
                     "color": {
-                        "r": 0.5,
-                        "g": 0.5,
-                        "b": 0.5
+                        "r": 0.91,
+                        "g": 0.76,
+                        "b": 0.24
                     }
                 }
             ],
@@ -85,24 +85,28 @@
                             "@upg_EvilEye3"
                         ],
                         [
-                            "@upg_Curator1",
-                            "@upg_Curator2",
-                            "@upg_Curator3"
+                            "@upg_StormSplitter1",
+                            "@upg_StormSplitter2",
+                            "@upg_StormSplitter3"
                         ]
                     ],
                     "icon": "@icon_Vizier",
                     "portrait": "@icon_Vizier"
                 }
             ],
-            "is_crew": false
+            "is_crew": false,
+            "class_select_character_displays": [
+                "@PharaohClassDisplayCharacterArt",
+                "@VizierClassDisplayCharacterArt"
+            ]
         }
     ],
     "map_nodes": [
         {
             "id": "RewardNodeUnitPackSandscourged",
             "type": "reward",
-            "map_icon": "@ClanLogo_32",
-            "minimap_icon": "@ClanLogo_32",
+            "map_icon": "@ClanLogo_48",
+            "minimap_icon": "@ClanLogo_48",
             "prefab": "@SandscourgedMapIcon",
             "titles": {
                 "english": "Sandscourged Banner"
@@ -133,11 +137,11 @@
         {
             "id": "SandscourgedBannerCardPool",
             "cards": [
-                "@SpawnCartoucheScribe",
+                "@SpawnEvermaw",
                 "@SpawnSuperiorEgo",
-                "@SpawnEssenceRevoker",
+                "@SpawnRevenant",
                 "@SpawnForgottenHulk",
-                "@SpawnInfestedMummy",
+                "@SpawnTwistedHusk",
                 "@SpawnOverseerEternal",
                 "@SpawnPriestOfLostThoughts",
                 "@SpawnPearlHost",
@@ -174,9 +178,9 @@
             }
         },
         {
-            "id": "Sub_Forgotten",
+            "id": "Sub_Lost",
             "names": {
-                "english": "Forgotten"
+                "english": "Lost"
             }
         },
         {
@@ -196,7 +200,49 @@
                     "enabled_sprite": "@Sandscourged_Enabled",
                     "frozen_sprite": "@Sandscourged_Frozen",
                     "visited_sprite_disabled": "@Sandscourged_VisitedDisabled",
-                    "visited_sprite_enabled": "@Sandscourged_VisitedDisabled"
+                    "visited_sprite_enabled": "@Sandscourged_VisitedEnabled"
+                }
+            }
+        },
+        {
+            "id": "PharaohClassDisplayCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@PharaohCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 1.7,
+                            "y": 0.9,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 2.7,
+                            "y": 2.7,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": "VizierClassDisplayCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@VizierCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 2.1,
+                            "y": 0.8,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 2.5,
+                            "y": 2.5,
+                            "z": 1
+                        }
+                    }
                 }
             }
         }
@@ -212,23 +258,31 @@
         },
         {
             "id": "Sandscourged_Frozen",
-            "path": "textures/ClanAssets/Sandscourged_Frozen.png"
+            "path": "textures/ClanAssets/Sandscourged_Disabled.png"
         },
         {
             "id": "Sandscourged_VisitedDisabled",
             "path": "textures/ClanAssets/Sandscourged_VisitedDisabled.png"
         },
         {
-            "id": "ClanLogo_32",
-            "path": "textures/ClanAssets/ClanLogo_32.png"
+            "id": "Sandscourged_VisitedEnabled",
+            "path": "textures/ClanAssets/Sandscourged_VisitedEnabled.png"
         },
         {
-            "id": "ClanLogo_56",
-            "path": "textures/ClanAssets/ClanLogo_56.png"
+            "id": "ClanLogo_48",
+            "path": "textures/ClanAssets/ClanLogo_48.png"
         },
         {
-            "id": "ClanLogo_92_Stroke1",
-            "path": "textures/ClanAssets/ClanLogo_92_Stroke1.png"
+            "id": "ClanLogo_92",
+            "path": "textures/ClanAssets/ClanLogo_92.png"
+        },
+        {
+            "id": "ClanLogo_92_Outline",
+            "path": "textures/ClanAssets/ClanLogo_92_Outline.png"
+        },
+        {
+            "id": "ClanLogo_128",
+            "path": "textures/ClanAssets/ClanLogo_128.png"
         },
         {
             "id": "ClanLogo_Silhouette",
@@ -236,11 +290,11 @@
         },
         {
             "id": "icon_Pharaoh",
-            "path": "textures/icon_Pharaoh.png"
+            "path": "textures/ClanAssets/icon_Pharaoh.png"
         },
         {
             "id": "icon_Vizier",
-            "path": "textures/icon_Vizier.png"
+            "path": "textures/ClanAssets/icon_Vizier.png"
         }
     ]
 }

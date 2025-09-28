@@ -62,12 +62,12 @@ namespace mt2_sandscourged.Plugin
                         "json/units/unit_Wretch.json",
                         "json/units/unit_PearlHost.json",
                         "json/units/unit_SphinxHierarch.json",
-                        "json/units/unit_InfestedMummy.json",
+                        "json/units/unit_TwistedHusk.json",
                         "json/units/unit_ForgottenHulk.json",
                         "json/units/unit_PriestOfLostThoughts.json",
-                        "json/units/unit_EssenceRevoker.json",
+                        "json/units/unit_Revenant.json",
                         "json/units/unit_SuperiorEgo.json",
-                        "json/units/unit_CartoucheScribe.json",
+                        "json/units/unit_Evermaw.json",
 
                         // Spells
                         "json/spells/card_Pitfall.json",
@@ -87,26 +87,27 @@ namespace mt2_sandscourged.Plugin
                         "json/spells/card_Malediction.json",
                         "json/spells/card_SpikeOfTheScourged.json",
                         "json/spells/card_Idolize.json",
-                        "json/spells/card_BlessedVenom.json",
-                        "json/spells/card_Ruination.json",
+                        "json/spells/card_Expose.json",
+                        "json/spells/card_PartTheStorm.json",
                         "json/spells/card_GravenRite.json",
                         "json/spells/card_ForgottenTome.json",
                         "json/spells/card_SelectiveMemory.json",
                         "json/spells/card_PainfulMemories.json",
 
                         // Equipment
-                        "json/equipments/equipment_ViziersImplements.json",
+                        "json/equipments/equipment_ScryingEye.json",
                         "json/equipments/equipment_PearlTap.json",
                         "json/equipments/equipment_SpearOfTheDeserted.json",
                         "json/equipments/equipment_CorruptedSceptre.json",
 
                         // Rooms
-                        "json/rooms/room_CursedPassage.json",
+                        "json/rooms/room_OblivionChamber.json",
                         "json/rooms/room_ScarabPit.json",
 
                         //Blights
                         "json/blights/card_PlagueOfScarabs.json",
-                        "json/blights/card_PlagueOfWoe.json",
+                        "json/blights/card_PlagueOfBlood.json",
+                        "json/blights/card_PlagueOfGnarling.json",
 
                         // Scourges
                         "json/scourges/card_Vexation.json",
@@ -129,6 +130,7 @@ namespace mt2_sandscourged.Plugin
 
                         // Status Effects
                         "json/status_effects/hex.json",
+                        "json/status_effects/scourge.json",
 
                         // Card Effects
                         "json/card_effects/PurgeCardFromHand.json"
@@ -138,6 +140,7 @@ namespace mt2_sandscourged.Plugin
 
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
+            // This is here just to make Spike of the Scourged work.
             Railend.ConfigurePostAction(
   c =>
   {

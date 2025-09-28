@@ -30,8 +30,8 @@
                         "pools": [
                             "MegaRelicPool"
                         ],
-                        "rarity": "uncommon",
-                        "unlock_level": 5
+                        "rarity": "common",
+                        "unlock_level": 0
                     }
                 }
             ]

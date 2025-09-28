@@ -8,7 +8,7 @@
         "english": "Sand Bowl"
       },
       "descriptions": {
-        "english": "Egos apply [corruption] [effect0.power] on [strike]."
+        "english": "Egos apply [mt2_sandscourged.Plugin_scourge] [effect0.power] on [strike]."
       },
       "lore_tooltips": [
         {
@@ -42,7 +42,7 @@
       "target_mode": "room",
       "source_team": "monsters",
       "param_bool": true,
-      "param_int": 6,
+      "param_int": 3,
       "triggers": ["@SandBowlStrikeTrigger"]
     }
   ],
@@ -56,21 +56,21 @@
         "hide_visual_and_ignore_silence": true,
         "effects": [
             {
-                "id": "@SandBowlApplyCorruption"
+                "id": "@SandBowlApplyScourge"
             }
         ]
     }
   ],
   "effects": [
     {
-      "id": "SandBowlApplyCorruption",
+      "id": "SandBowlApplyScourge",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "last_attacked_character",
       "target_team": "heroes",
       "param_status_effects": [
         {
-          "status": "corruption",
-          "count": 6
+          "status": "@scourge",
+          "count": 3
         }
       ]
     }

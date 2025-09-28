@@ -7,7 +7,7 @@
                 "english": "In Memoriam"
             },
             "descriptions": {
-                "english": "Apply [corruption] [effect1.status0.power] and [mute] [effect2.status0.power] to enemy units."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power] and [mute] [effect2.status0.power] to enemy units.<br>Draw +[effect3.power] next turn."
             },
             "rarity": "common",
             "class": "@ClassSandscourged",
@@ -24,10 +24,13 @@
                     "id": "@InMemoriamSacrifice"
                 },
                 {
-                    "id": "@InMemoriamApplyCorruption"
+                    "id": "@InMemoriamApplyScourge"
                 },
                 {
                     "id": "@InMemoriamApplyMute"
+                },
+                {
+                    "id": "@InMemoriamDraw"
                 }
             ]
         }
@@ -40,14 +43,14 @@
             "target_team": "monsters"
         },
         {
-            "id": "InMemoriamApplyCorruption",
+            "id": "InMemoriamApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "room",
             "target_team": "heroes",
             "param_status_effects": [
                 {
-                    "status": "corruption",
-                    "count": 8
+                    "status": "@scourge",
+                    "count": 5
                 }
             ]
         },
@@ -62,6 +65,11 @@
                     "count": 1
                 }
             ]
+        },
+        {
+            "id": "InMemoriamDraw",
+            "name": "CardEffectDrawAdditionalNextTurn",
+            "param_int": 1
         }
     ],
     "sprites": [
