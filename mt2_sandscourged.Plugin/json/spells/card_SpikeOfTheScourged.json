@@ -71,7 +71,8 @@
                     "status": "@hex",
                     "count": 0
                 }
-            ]
+            ],
+            "additional_tooltips": ["@TormentTooltip"]
         }
     ],
     "sprites": [

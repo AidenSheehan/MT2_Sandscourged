@@ -9,6 +9,9 @@
             "descriptions": {
                 "english": "Apply [mt2_sandscourged.Plugin_scourge] equal to [trait0.power]x the number of <b>Blights</b> and <b>Scourges</b> in your deck."
             },
+            "lore_tooltips": {
+                "english": "The storms of Oblivion churn with malevolent energy, corrupting the flesh of the Lost, twisting them into grotesque abominations. But where the Lost suffered, the Egos saw unclaimed power, and seized it for their own."
+            },
             "rarity": "rare",
             "class": "@ClassSandscourged",
             "card_art": "@PlagueOfGnarlingArt",

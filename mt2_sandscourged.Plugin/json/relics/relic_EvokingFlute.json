@@ -8,7 +8,7 @@
                 "english": "Evoking Flute"
             },
             "descriptions": {
-                "english": "Scarabs gain [undying] [effect0.power] on [summon]."
+                "english": "Scarabs enter with [undying] [effect0.power]."
             },
             "lore_tooltips": [
                 {

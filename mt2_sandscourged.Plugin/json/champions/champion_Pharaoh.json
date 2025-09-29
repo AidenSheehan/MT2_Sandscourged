@@ -23,7 +23,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Lore stuff"
+                    "english": "Deep within Limbo, hidden away within Oblivion, the Ur-Pharaoh rules over the Sandsourged, as both king and god. None know why the Ur-Pharaoh was confined to Oblivion, but the creature seems to predate even Heaven itself."
                 }
             ]
         },
@@ -138,8 +138,8 @@
             "descriptions": {
                 "english": "Do I really need this"
             },
-            "bonus_damage": 0,
-            "bonus_hp": 0,
+            "bonus_damage": 5,
+            "bonus_hp": 5,
             "ability_upgrade": "@SwarmLord2Ability"
         },
         {
@@ -150,8 +150,8 @@
             "descriptions": {
                 "english": "Still not sure I need this"
             },
-            "bonus_damage": 0,
-            "bonus_hp": 0,
+            "bonus_damage": 15,
+            "bonus_hp": 15,
             "ability_upgrade": "@SwarmLord3Ability"
         },
         {
@@ -180,8 +180,9 @@
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
-            "bonus_damage": 5,
-            "bonus_hp": 5,
+            "bonus_damage": 10,
+            "bonus_hp": 10,
+            "bonus_size": 1,
             "status_effect_upgrades": [
                 {
                     "status": "trample",
@@ -203,8 +204,9 @@
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
-            "bonus_damage": 20,
-            "bonus_hp": 20,
+            "bonus_damage": 30,
+            "bonus_hp": 30,
+            "bonus_size": 1,
             "status_effect_upgrades": [
                 {
                     "status": "trample",
@@ -226,8 +228,9 @@
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
-            "bonus_damage": 45,
-            "bonus_hp": 45,
+            "bonus_damage": 65,
+            "bonus_hp": 65,
+            "bonus_size": 1,
             "status_effect_upgrades": [
                 {
                     "status": "trample",
@@ -240,18 +243,18 @@
         },
         {
             "id": "Pearlescent1Bonus",
-            "bonus_damage": 20,
-            "bonus_hp": 20
+            "bonus_damage": 25,
+            "bonus_hp": 25
         },
         {
             "id": "Pearlescent2Bonus",
-            "bonus_damage": 35,
-            "bonus_hp": 35
+            "bonus_damage": 45,
+            "bonus_hp": 45
         },
         {
             "id": "Pearlescent3Bonus",
-            "bonus_damage": 60,
-            "bonus_hp": 60
+            "bonus_damage": 80,
+            "bonus_hp": 80
         },
         {
             "id": "upg_SoulTender1",

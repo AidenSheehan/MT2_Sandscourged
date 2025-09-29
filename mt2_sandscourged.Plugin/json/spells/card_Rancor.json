@@ -15,7 +15,7 @@
                 "english": "Rancor"
             },
             "descriptions": {
-                "english": "Apply [rage] [effect0.status0.power] to friendly units for each card in your hand. Discard your hand."
+                "english": "Apply [rage] [effect0.status0.power] to friendly units for each card in your hand except this one.<br>Discard your hand."
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",

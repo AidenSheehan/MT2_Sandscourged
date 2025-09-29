@@ -7,7 +7,7 @@
                 "english": "Selective Memory"
             },
             "descriptions": {
-                "english": "Discard your hand. Draw [effect1.power] card of each type.<br>Increase [ember] by [effect7.upgrade.costreductionabs]."
+                "english": "Discard your hand.<br>Draw [effect1.power] card of each type.<br>Increase this card's [ember] by [effect7.upgrade.costreductionabs]."
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",
