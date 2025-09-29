@@ -3,10 +3,10 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "MT2_Sandscourged"
-name = "Sandscourged"
+name = "The Sandscourged"
 versionNumber = "0.0.1"
 description = "Adds the Sandscourged clan to Monster Train 2"
-websiteUrl = "https://thunderstore.io"
+websiteUrl = "https://github.com/AidenSheehan/MT2_Sandscourged"
 containsNsfwContent = false
 
 [package.dependencies]
