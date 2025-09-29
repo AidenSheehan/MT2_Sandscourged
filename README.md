@@ -29,6 +29,8 @@ It introduces two new Debuffs; Hex and Warp, and a new trigger; Accursed. Many t
 
 **Note: This mod is in Beta. There's missing art and lore text, but all the gameplay is implemented. All existing art has been manually created by me, I intend to touch up some of the rougher art later <3.**
 
+**IMPORTANT: This is a non-cosmetic mod. Do not play Daily Challenges with this mod installed, you'll get banned. Also, F8 bug reports are disabled, they won't go anywhere.**
+
 ## Exerts
 Here are some sample cards from the mod, to showcase what the clan's all about!
 
@@ -66,5 +68,6 @@ Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.
 * Technical assistance: brandonandzeus
 
 * Icons: (<a href="https://www.flaticon.com/free-icons/twister" title="twister icons">Twister icons created by Freepik - Flaticon</a>)
+
 
 
