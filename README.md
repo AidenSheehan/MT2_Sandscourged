@@ -64,3 +64,6 @@ Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.
 * Mod Author: Aiden Sheehan / All_Outta_Bubblegum
 
 * Technical assistance: brandonandzeus
+
+* Icons: [Freepik](<a href="https://www.flaticon.com/free-icons/twister" title="twister icons">Twister icons created by Freepik - Flaticon</a>)
+
