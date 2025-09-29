@@ -62,4 +62,5 @@ Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.
 
 ## Credits
 * Mod Author: Aiden Sheehan / All_Outta_Bubblegum
-* Technical assistnace: brandonandzeus
+
+* Technical assistance: brandonandzeus
