@@ -27,7 +27,7 @@ The Sandscourged are a clan with a focus on:
 
 It introduces two new Debuffs; Hex and Warp, and a new trigger; Accursed. Many thanks to [Brandon](https://github.com/TricksterGuy) from the [Conductor](https://github.com/Monster-Train-2-Modding-Group/Conductor) project for their help with developing these new additions!
 
-**Note: This mod is in Beta. There's missing art and lore text, but all the gameplay is implemented. All existing art has been manually created by me.**
+**Note: This mod is in Beta. There's missing art and lore text, but all the gameplay is implemented. All existing art has been manually created by me, I intend to touch up some of the rougher art later <3.**
 
 ## Exerts
 Here are some sample cards from the mod, to showcase what the clan's all about!
