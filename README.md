@@ -65,5 +65,6 @@ Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.
 
 * Technical assistance: brandonandzeus
 
-* Icons: [Freepik](<a href="https://www.flaticon.com/free-icons/twister" title="twister icons">Twister icons created by Freepik - Flaticon</a>)
+* Icons: (<a href="https://www.flaticon.com/free-icons/twister" title="twister icons">Twister icons created by Freepik - Flaticon</a>)
+
 
