@@ -14,7 +14,7 @@ permissions:
 env:
   base_version: '0.1.0'
   mod_namespace: 'MT2_Sandscourged'
-  mod_name: 'mt2_sandscourged'
+  mod_name: 'The_Sandscourged'
   release_name: 'mt2_sandscourged.Plugin'
 
 jobs:
