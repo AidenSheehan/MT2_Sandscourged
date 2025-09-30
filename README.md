@@ -34,11 +34,10 @@ It introduces two new Debuffs; Hex and Warp, and a new trigger; Accursed. Many t
 ## Exerts
 Here are some sample cards from the mod, to showcase what the clan's all about!
 
-|    |            |
-|:----------|:-------------:|
-| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Soulmonger.png" alt="Soulmonger" width="200"/> |  <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Plague of Gnarling.png" alt="Plague of Gnarling" width="200"/> |
-| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Revenant.png" alt="Revenant" width="200"/> |    <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Hex_card.png" alt="Hex" width="200"/>   |
-| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Rancor.png" alt="Rancor" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Part the Storm.png" alt="Part the Storm" width="200"/> |
+|    |            |      |
+|:----------|:-------------:|------------:|
+| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Soulmonger.png" alt="Soulmonger" width="200"/> |  <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Plague of Gnarling.png" alt="Plague of Gnarling" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Revenant.png" alt="Revenant" width="200"/>
+|    <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Hex_card.png" alt="Hex" width="200"/>   | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Rancor.png" alt="Rancor" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Part the Storm.png" alt="Part the Storm" width="200"/> |
 
 ## Installation
 Using a mod manager is recommended. Alternatively, you can perform a manual installation by following the instructions below.
