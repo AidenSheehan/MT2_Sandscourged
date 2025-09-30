@@ -34,7 +34,7 @@
             "attack_damage": 35,
             "health": 25,
             "names": {
-                "english": "Essence Revoker"
+                "english": "Revenant"
             },
             "character_art": "@RevenantCharacterArt",
             "subtypes": [

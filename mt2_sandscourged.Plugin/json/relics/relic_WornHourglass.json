@@ -54,7 +54,8 @@
       "source_team": "none",
       "param_bool": false,
       "param_bool_2": false,
-      "param_card_pool": "@VexationOnlyPool"
+      "param_card_pool": "@VexationOnlyPool",
+      "additional_tooltips": ["@TormentTooltip"]
     },
     {
       "id": "WornHourglassRelicEffectDraw",

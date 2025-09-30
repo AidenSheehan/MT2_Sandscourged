@@ -10,6 +10,11 @@
                 "english": "Draw a spell and apply -[effect1.upgrade.costreduction][ember] and +[effect1.upgrade.bonusdamage] [magicpower].",
                 "chinese": "抽一张法术牌，并使其获得 +[effect1.upgrade.bonusdamage] [magicpower]和 -[effect1.upgrade.costreduction][ember]。"
             },
+            "lore_tooltips": [
+                {
+                    "english": "The zealous fervor of the Egos has manifested in bloody ritual, empowering their spells at the expense of the Lost."
+                }
+            ],
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
             "card_art": "@PlagueOfBloodArt",
@@ -31,7 +36,9 @@
                     "id": "@PlagueOfBloodDrawSpell"
                 }
             ],
-            "triggers": ["@VexationDamageOnUnplayed"]
+            "triggers": [
+                "@VexationDamageOnUnplayed"
+            ]
         }
     ],
     "traits": [

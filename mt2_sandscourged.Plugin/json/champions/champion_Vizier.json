@@ -19,7 +19,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Lore stuff"
+                    "english": "Once a simple merchant, she struck a pact with the Ur-Pharaoh, becoming the \"First Blessed\" of the Scourged and High Vizier. Now she leads the Scourged in their struggle for vengeance against Seraph, and conducts profane rituals in the Ur-Pharaoh's name."
                 }
             ]
         },
@@ -427,7 +427,8 @@
             "target_team": "none",
             "param_card_pool": "@VexationOnlyPool",
             "param_int": 7,
-            "param_int_2": 2
+            "param_int_2": 2,
+            "additional_tooltips": ["@TormentTooltip"]
         },
         {
             "id": "FirstBlessed2AddVexations",
@@ -436,7 +437,8 @@
             "target_team": "none",
             "param_card_pool": "@VexationOnlyPool",
             "param_int": 7,
-            "param_int_2": 3
+            "param_int_2": 3,
+            "additional_tooltips": ["@TormentTooltip"]
         },
         {
             "id": "FirstBlessed3AddVexations",
@@ -445,7 +447,8 @@
             "target_team": "none",
             "param_card_pool": "@VexationOnlyPool",
             "param_int": 7,
-            "param_int_2": 4
+            "param_int_2": 4,
+            "additional_tooltips": ["@TormentTooltip"]
         },
         {
             "id": "FirstBlessed1GainStats",
@@ -483,7 +486,8 @@
             "target_mode": "room",
             "param_int": 3,
             "param_int_2": 2,
-            "param_card_pool": "@TormentPool"
+            "param_card_pool": "@TormentPool",
+            "additional_tooltips": ["@TormentTooltip"]
         },
         {
             "id": "EvilEye2EnchantEffect",

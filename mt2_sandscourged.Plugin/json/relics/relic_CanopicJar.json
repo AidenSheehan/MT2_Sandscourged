@@ -44,7 +44,8 @@
             "target_mode": "room",
             "source_team": "monsters",
             "param_bool": false,
-            "param_upgrade": "@CanopicJarDoublestackUpgrade"
+            "param_upgrade": "@CanopicJarDoublestackUpgrade",
+            "additional_tooltips": ["@TormentTooltip"]
         }
     ],
     "upgrades": [
