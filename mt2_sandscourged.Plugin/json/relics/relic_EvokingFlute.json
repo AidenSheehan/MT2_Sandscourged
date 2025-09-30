@@ -8,7 +8,8 @@
                 "english": "Evoking Flute"
             },
             "descriptions": {
-                "english": "Scarabs enter with [undying] [effect0.power]."
+                "english": "Scarabs enter with [undying] [effect0.power].",
+                "chinese": "Scarab单位在[summon]时获得[undying] [effect0.power]。"
             },
             "lore_tooltips": [
                 {

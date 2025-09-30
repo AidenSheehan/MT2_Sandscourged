@@ -6,7 +6,8 @@
             "english": "Efface"
         },
         "descriptions": {
-            "english": "Deal [effect0.power] damage. Shuffle a <b>Vexation</b> into your draw pile."
+            "english": "Deal [effect0.power] damage. Shuffle a <b>Vexation</b> into your draw pile.",
+            "chinese": "造成 [effect0.power] 点伤害。将一张<b>Vexation</b>卡牌加入你的抽牌堆。"
         },
         "rarity": "common",
         "class": "@ClassSandscourged",

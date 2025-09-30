@@ -8,7 +8,8 @@
         "english": "Sand Bowl"
       },
       "descriptions": {
-        "english": "Egos apply [mt2_sandscourged.Plugin_scourge] [effect0.power] on [strike]."
+        "english": "Egos apply [mt2_sandscourged.Plugin_scourge] [effect0.power] on [strike].",
+        "chinese": "Ego单位在[strike]时施加[mt2_sandscourged.Plugin_scourge] [effect0.power]。"
       },
       "lore_tooltips": [
         {

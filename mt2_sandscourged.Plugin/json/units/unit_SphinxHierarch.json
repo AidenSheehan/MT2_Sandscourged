@@ -58,7 +58,8 @@
         {
             "id": "SphinxHierarchTrigger",
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to the attacked unit."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to the attacked unit.",
+                "chinese": "对被攻击的单位施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。"
             },
             "trigger": "on_attacking",
             "effects": [

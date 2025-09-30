@@ -53,7 +53,8 @@
         {
             "id": "TwistedHuskIncantTrigger",
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to enemy units."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to enemy units.",
+                "chinese": "对所有敌方单位施加[mt2_sandscourged.Plugin_scourge] [effect0.status0.power]。"
             },
             "trigger": "card_spell_played",
             "effects": [

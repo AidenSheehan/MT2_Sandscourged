@@ -51,7 +51,8 @@
         {
             "id": "ReveredScarabTrigger",
             "descriptions": {
-                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units.",
+                "chinese": "友方单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
             },
             "trigger": "on_death",
             "effects": [

@@ -52,7 +52,8 @@
         {
             "id": "OverseerEternalTrigger",
             "descriptions": {
-                "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+                "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power].",
+                "chinese": "获得 +[effect0.upgrade.bonusdamage][attack] 和[lifesteal] [effect1.status0.power]。"
             },
             "trigger": "on_any_unit_death_on_floor",
             "effects": [

@@ -53,7 +53,8 @@
             "id": "PearlTapResolveTrigger",
             "trigger": "post_combat",
             "descriptions": {
-                "english": "Die."
+                "english": "Die.",
+                "chinese": "死亡。"
             },
             "effects": ["@PearlTapDie"]
         }

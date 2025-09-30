@@ -51,7 +51,8 @@
         {
             "id": "CursedScarabTrigger",
             "descriptions": {
-                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_hex] [effect1.status0.power] to enemy units."
+                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_hex] [effect1.status0.power] to enemy units.",
+                "chinese": "友方单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。对敌方单位施加[mt2_sandscourged.Plugin_hex] [effect1.status0.power]。"
             },
             "trigger": "on_death",
             "effects": [

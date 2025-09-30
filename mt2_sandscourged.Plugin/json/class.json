@@ -109,10 +109,12 @@
             "minimap_icon": "@ClanLogo_48",
             "prefab": "@SandscourgedMapIcon",
             "titles": {
-                "english": "Sandscourged Banner"
+                "english": "Sandscourged Banner",
+                "chinese": "Sandscourged战旗"
             },
             "descriptions": {
-                "english": "Hire a Sandscourged Unit"
+                "english": "Hire a Sandscourged Unit",
+                "chinese": "获得一个Sandscourged单位。"
             },
             "pools": [
                 "RandomChosenMainClassUnit",

@@ -33,7 +33,8 @@
                 "english": "Guzzle"
             },
             "descriptions": {
-                "english": "Purge a card from your hand."
+                "english": "Purge a card from your hand.",
+                "chinese": "从你的手牌里移除一张卡牌。"
             },
             "card_art": "@Evermaw",
             "is_an_ability": true,
@@ -71,7 +72,8 @@
             "id": "EvermawConjureTrigger",
             "trigger": "on_own_ability_activated",
             "descriptions": {
-                "english": "Gain [rage] [effect0.upgrade.status0.power] permanently."
+                "english": "Gain [rage] [effect0.upgrade.status0.power] permanently.",
+                "chinese": "永久获得[rage] [effect0.upgrade.status0.power]。"
             },
             "effects": [
                 "@EvermawApplyUpgrade"

@@ -7,7 +7,8 @@
         "english": "Scarab Pit"
       },
       "descriptions": {
-        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. When a friendly unit dies, apply +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. When a friendly unit dies, apply +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health] to friendly units.",
+        "chinese": "+[effect0.upgrade.roommodifier0.power][capacity]。每当一个友方单位在[extinguish]时，所有友方单位获得 +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health]。"
       },
       "lore_tooltips": [
         {
@@ -39,7 +40,8 @@
         "english": "ScarabPit"
       },
       "descriptions": {
-        "english": "+[roommodifier0.power][capacity]. When a friendly unit dies, apply +[charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+        "english": "+[roommodifier0.power][capacity]. When a friendly unit dies, apply +[charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[charactertrigger0.effect0.upgrade.bonushp][health] to friendly units.",
+        "chinese": "+[roommodifier0.power][capacity]。每当一个友方单位在[extinguish]时，所有友方单位获得 +[charactertrigger0.effect0.upgrade.bonusdamage][attack]，+[charactertrigger0.effect0.upgrade.bonushp][health]。"
       },
       "trigger_upgrades": [
         "@ScarabPitTrigger"
@@ -69,7 +71,8 @@
     {
       "id": "ScarabPitTrigger",
       "descriptions": {
-        "english": "When a friendly unit dies, apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+        "english": "When a friendly unit dies, apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units.",
+        "chinese": "每当一个友方单位在[extinguish]时，所有友方单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_death",
       "hide_visual_and_ignore_silence": true,

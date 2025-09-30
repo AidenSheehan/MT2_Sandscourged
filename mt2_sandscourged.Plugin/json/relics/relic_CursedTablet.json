@@ -8,7 +8,8 @@
         "english": "Cursed Tablet"
       },
       "descriptions": {
-        "english": "When a unit gains [mt2_sandscourged.Plugin_hex], it gains +[effect0.power] stacks."
+        "english": "When a unit gains [mt2_sandscourged.Plugin_hex], it gains +[effect0.power] stacks.",
+        "chinese": "当一个单位获得[mt2_sandscourged.Plugin_hex]时，获得的层数 +[effect0.power]。"
       },
       "lore_tooltips": [
         {

@@ -8,7 +8,8 @@
         "english": "Oblivion Crook"
       },
       "descriptions": {
-        "english": "<b>Accursed</b> triggers an additional time."
+        "english": "<b>Accursed</b> triggers an additional time.",
+        "chinese": "<b>被咒</b>额外触发一次。"
       },
       "lore_tooltips": [
         {

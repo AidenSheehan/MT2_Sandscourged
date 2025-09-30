@@ -56,7 +56,8 @@
         {
             "id": "ForgottenHulkRevengeTrigger",
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to the attacker."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to the attacker.",
+                "chinese": "对攻击者施加[mt2_sandscourged.Plugin_scourge] [effect0.status0.power]。"
             },
             "trigger": "on_hit",
             "effects": [
@@ -68,7 +69,8 @@
         {
             "id": "ForgottenHulkAccursedTrigger",
             "descriptions": {
-                "english": "Gain [undying] [effect0.status0.power]."
+                "english": "Gain [undying] [effect0.status0.power].",
+                "chinese": "获得[undying] [effect0.status0.power]。"
             },
             "trigger": {
                 "id": "@Accursed",

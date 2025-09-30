@@ -7,7 +7,8 @@
                 "english": "In Memoriam"
             },
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power] and [mute] [effect2.status0.power] to enemy units.<br>Draw +[effect3.power] next turn."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power] and [mute] [effect2.status0.power] to enemy units.<br>Draw +[effect3.power] next turn.",
+                "chinese": "对所有敌方单位施加[mt2_sandscourged.Plugin_scourge] [effect1.status0.power] 和[mute] [effect2.status0.power]。<br>下个回合抽 +[effect3.power] 张牌。"
             },
             "rarity": "common",
             "class": "@ClassSandscourged",

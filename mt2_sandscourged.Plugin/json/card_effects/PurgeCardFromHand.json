@@ -4,13 +4,15 @@
         {
             "key": "PurgeCardFromHandKey",
             "texts": {
-                "english": "Choose a card to purge."
+                "english": "Choose a card to purge.",
+                "chinese": "选择一张卡牌进行移除。"
             }
         },
         {
             "key": "PurgeCardFromHandActionKey",
             "texts": {
-                "english": "Purge"
+                "english": "Purge",
+                "chinese": "移除"
             }
         }
     ]

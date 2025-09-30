@@ -8,7 +8,8 @@
                 "english": "Shining Pearl"
             },
             "descriptions": {
-                "english": "Gain [effect0.power][ember] when a friendly unit dies."
+                "english": "Gain [effect0.power][ember] when a friendly unit dies.",
+                "chinese": "每当一个友方单位死亡时，获得 [effect0.power][ember]。"
             },
             "lore_tooltips": [
                 {

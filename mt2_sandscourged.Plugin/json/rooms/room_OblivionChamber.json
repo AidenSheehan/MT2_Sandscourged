@@ -7,7 +7,8 @@
         "english": "Oblivion Chamber"
       },
       "descriptions": {
-        "english": "When a [debuff] is applied to an enemy unit, also apply [mt2_sandscourged.Plugin_scourge] [effect0.upgrade.roommodifier0.status0.power]."
+        "english": "When a [debuff] is applied to an enemy unit, also apply [mt2_sandscourged.Plugin_scourge] [effect0.upgrade.roommodifier0.status0.power].",
+        "chinese": "当敌方单位获得[debuff]时，额外获得[mt2_sandscourged.Plugin_scourge] [effect0.upgrade.roommodifier0.status0.power]。"
       },
       "lore_tooltips": [
         {
@@ -40,7 +41,8 @@
         "english": "OblivionChamber"
       },
       "descriptions": {
-        "english": "When a [debuff] is applied to an enemy unit, also apply [mt2_sandscourged.Plugin_scourge] [roommodifier0.status0.power]."
+        "english": "When a [debuff] is applied to an enemy unit, also apply [mt2_sandscourged.Plugin_scourge] [roommodifier0.status0.power].",
+        "chinese": "当敌方单位获得[debuff]时，额外获得[mt2_sandscourged.Plugin_scourge] [roommodifier0.status0.power]。"
       },
       "room_modifier_upgrades": [
         "@OblivionChamberRoomModifier"
@@ -53,7 +55,8 @@
       "id": "OblivionChamberRoomModifier",
       "name": "@RoomStateAddStatusEffectOnAnyStatusApplied",
       "descriptions": {
-        "english": "When a [debuff] is applied to an enemy unit, also apply [mt2_sandscourged.Plugin_scourge] [status0.power]."
+        "english": "When a [debuff] is applied to an enemy unit, also apply [mt2_sandscourged.Plugin_scourge] [status0.power].",
+        "chinese": "当敌方单位获得[debuff]时，额外获得[mt2_sandscourged.Plugin_scourge] [status0.power]。"
       },
       "param_status_effects": [
         {

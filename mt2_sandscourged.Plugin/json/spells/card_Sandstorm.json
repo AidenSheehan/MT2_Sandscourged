@@ -7,7 +7,8 @@
                 "english": "Sandstorm"
             },
             "descriptions": {
-                "english": "Deal [effect0.power] damage to enemy units and apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power]."
+                "english": "Deal [effect0.power] damage to enemy units and apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power].",
+                "chinese": "对所有敌方单位造成 [effect0.power] 点伤害，并施加[mt2_sandscourged.Plugin_scourge] [effect1.status0.power]。"
             },
             "lore_tooltips": [
                 {
