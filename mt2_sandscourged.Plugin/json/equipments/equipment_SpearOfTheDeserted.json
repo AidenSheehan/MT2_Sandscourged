@@ -47,7 +47,8 @@
         {
             "id": "SpearAccursedTrigger",
             "descriptions": {
-                "english": "Gain [rage] [effect0.status0.power]."
+                "english": "Gain [rage] [effect0.status0.power].",
+                "chinese": "获得[rage] [effect0.status0.power]。"
             },
             "trigger": {
                 "id": "@Accursed",

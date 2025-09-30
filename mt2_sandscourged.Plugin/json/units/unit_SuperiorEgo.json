@@ -50,7 +50,8 @@
         {
             "id": "SuperiorEgoAccursedTrigger",
             "descriptions": {
-                "english": "Apply this unit's [attack] and [health] to the front friendly unit. It attacks immediately, then dies."
+                "english": "Apply this unit's [attack] and [health] to the front friendly unit. It attacks immediately, then dies.",
+                "chinese": "使前排友方单位获得此单位的[attack]和[health]，然后使其立即发动攻击，之后使其死亡。"
             },
             "trigger": {
                 "id": "@Accursed",

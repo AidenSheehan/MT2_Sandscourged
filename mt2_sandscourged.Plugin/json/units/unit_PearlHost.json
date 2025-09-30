@@ -51,7 +51,8 @@
         {
             "id": "PearlHostSummonTrigger",
             "descriptions": {
-                "english": "Shuffle a <b>Vexation</b> into your draw pile."
+                "english": "Shuffle a <b>Vexation</b> into your draw pile.",
+                "chinese": "将一张<b>Vexation</b>卡牌加入你的抽牌堆。"
             },
             "trigger": "on_spawn",
             "effects": [
@@ -61,7 +62,8 @@
         {
             "id": "PearlHostAccursedTrigger",
             "descriptions": {
-                "english": "Gain [rage] [effect0.status0.power]."
+                "english": "Gain [rage] [effect0.status0.power].",
+                "chinese": "获得[rage] [effect0.status0.power]。"
             },
             "trigger": {
                 "id": "@Accursed",

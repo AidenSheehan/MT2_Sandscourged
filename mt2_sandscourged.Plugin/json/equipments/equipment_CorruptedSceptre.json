@@ -49,7 +49,8 @@
         {
             "id": "CorruptedSceptreStrikeTrigger",
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to the attacked unit, then double the amount of [mt2_sandscourged.Plugin_scourge] on all units."
+                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to the attacked unit, then double the amount of [mt2_sandscourged.Plugin_scourge] on all units.",
+                "chinese": "对被攻击的单位施加[mt2_sandscourged.Plugin_scourge] [effect0.status0.power]，之后将所有单位的[mt2_sandscourged.Plugin_scourge]数量加倍。"
             },
             "trigger": "on_attacking",
             "effects": [

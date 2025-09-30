@@ -51,7 +51,8 @@
         {
             "id": "RevenantHarvestTrigger",
             "descriptions": {
-                "english": "Gain [soul] [effect0.status0.power]."
+                "english": "Gain [soul] [effect0.status0.power].",
+                "chinese": "获得[soul] [effect0.status0.power]。"
             },
             "trigger": "on_any_unit_death_on_floor",
             "effects": [
@@ -61,7 +62,8 @@
         {
             "id": "RevenantResolveTrigger",
             "descriptions": {
-                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to gain [multistrike] [effect2.status0.power]."
+                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to gain [multistrike] [effect2.status0.power].",
+                "chinese": "花费[soul] [effect0.status0.power_unmodified] 并获得[multistrike] [effect2.status0.power]。"
             },
             "trigger": "post_combat",
             "effects": [

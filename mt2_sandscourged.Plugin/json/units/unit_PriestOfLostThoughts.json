@@ -32,7 +32,8 @@
                 "english": "Eternalize"
             },
             "descriptions": {
-                "english": "Apply [undying] [effect0.status0.power] to the front friendly unit for every [trait0.secondarypower] cards in your hand.<br>Discard your hand."
+                "english": "Apply [undying] [effect0.status0.power] to the front friendly unit for every [trait0.secondarypower] cards in your hand.<br>Discard your hand.",
+                "chinese": "使前排友方单位获得[undying]，层数相当于手牌数量的 [effect0.status0.power]/[trait0.secondarypower]。<br>舍弃全部手牌。"
             },
             "card_art": "@PriestOfLostThoughts",
             "is_an_ability": true,

@@ -7,7 +7,8 @@
                 "english": "Jinx"
             },
             "descriptions": {
-                "english": "Deal [effect0.power] damage."
+                "english": "Deal [effect0.power] damage.",
+                "chinese": "造成 [effect0.power] 点伤害。"
             },
             "lore_tooltips": [
                 {
@@ -58,7 +59,8 @@
             "id": "JinxSlayTrigger",
             "trigger": "on_kill",
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units.",
+                "chinese": "对所有敌方单位施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。"
             },
             "effects": [
                 "@JinxApplyHex"

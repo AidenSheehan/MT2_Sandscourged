@@ -8,7 +8,8 @@
                 "english": "Twisted Reed"
             },
             "descriptions": {
-                "english": "Bosses start with [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. [mt2_sandscourged.Plugin_hex] does not decay."
+                "english": "Bosses start with [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. [mt2_sandscourged.Plugin_hex] does not decay.",
+                "chinese": "首领开局获得[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。[mt2_sandscourged.Plugin_hex]效果不会减弱。"
             },
             "lore_tooltips": [
                 {

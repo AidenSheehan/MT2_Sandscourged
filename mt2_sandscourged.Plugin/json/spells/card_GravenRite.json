@@ -7,7 +7,8 @@
                 "english": "Graven Rite"
             },
             "descriptions": {
-                "english": "Apply [undying] [effect0.status0.power] to friendly units, then deal [effect1.power] damage to them."
+                "english": "Apply [undying] [effect0.status0.power] to friendly units, then deal [effect1.power] damage to them.",
+                "chinese": "所有友方单位获得[undying] [effect0.status0.power]，然后受到 [effect1.power] 点伤害。"
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",

@@ -8,7 +8,8 @@
                 "english": "Polished Idol"
             },
             "descriptions": {
-                "english": "At the start of turn, add a random Scarab unit with [ephemeral] to hand."
+                "english": "At the start of turn, add a random Scarab unit with [ephemeral] to hand.",
+                "chinese": "回合开始时，随机将一个带有[ephemeral]的Scarab单位加入你的手牌。"
             },
             "lore_tooltips": [
                 {

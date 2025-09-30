@@ -8,7 +8,8 @@
         "english": "Broken Seal"
       },
       "descriptions": {
-        "english": "[mt2_sandscourged.Plugin_scourge] deals twice as much damage."
+        "english": "[mt2_sandscourged.Plugin_scourge] deals twice as much damage.",
+        "chinese": "[mt2_sandscourged.Plugin_scourge]造成两倍伤害。"
       },
       "lore_tooltips": [
         {

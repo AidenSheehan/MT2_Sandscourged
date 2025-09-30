@@ -37,7 +37,8 @@
                 "english": "Foresee"
             },
             "descriptions": {
-                "english": "Draw [effect0.power]. Discard [effect0.power]."
+                "english": "Draw [effect0.power]. Discard [effect0.power].",
+                "chinese": "抽 [effect0.power] 张牌。舍弃 [effect0.power] 张牌。"
             },
             "is_an_ability": true,
             "cooldown": 2,

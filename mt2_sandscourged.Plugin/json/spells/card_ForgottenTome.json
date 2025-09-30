@@ -7,7 +7,8 @@
                 "english": "Forgotten Tome"
             },
             "descriptions": {
-                "english": "Apply [duality] to a non-Champion unit."
+                "english": "Apply [duality] to a non-Champion unit.",
+                "chinese": "使一个非勇者单位获得[duality]。"
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",

@@ -52,7 +52,8 @@
         {
             "id": "ScarabSwarmTrigger",
             "descriptions": {
-                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units. Add two [ephemeral] copies of this card to your hand."
+                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units. Add two [ephemeral] copies of this card to your hand.",
+                "chinese": "友方单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。添加两张该单位带有[ephemeral]的复制体到你的手牌。"
             },
             "trigger": "on_death",
             "effects": [

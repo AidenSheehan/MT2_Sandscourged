@@ -7,7 +7,8 @@
                 "english": "Dessicate"
             },
             "descriptions": {
-                "english": "Deal [effect0.power] damage to the front enemy unit, three times."
+                "english": "Deal [effect0.power] damage to the front enemy unit, three times.",
+                "chinese": "对前排敌方单位造成 [effect0.power] 点伤害，重复三次。"
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",

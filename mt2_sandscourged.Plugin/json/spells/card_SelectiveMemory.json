@@ -7,7 +7,8 @@
                 "english": "Selective Memory"
             },
             "descriptions": {
-                "english": "Discard your hand. Draw [effect1.power] card of each type.<br>Increase [ember] by [effect7.upgrade.costreductionabs]."
+                "english": "Discard your hand. Draw [effect1.power] card of each type.<br>Increase [ember] by [effect7.upgrade.costreductionabs].",
+                "chinese": "舍弃全部手牌。<br>抽取每种类型的卡牌各 [effect1.power] 张。<br>这张牌费用 +[effect7.upgrade.costreductionabs][ember]。"
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",

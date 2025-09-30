@@ -8,7 +8,8 @@
                 "english": "Canopic Jar"
             },
             "descriptions": {
-                "english": "<b>Torments</b> have [juice]."
+                "english": "<b>Torments</b> have [juice].",
+                "chinese": "<b>Torment</b>卡牌获得[juice]。"
             },
             "lore_tooltips": [
                 {

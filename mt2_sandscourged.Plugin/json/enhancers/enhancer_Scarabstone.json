@@ -8,7 +8,8 @@
                 "english": "Scarabstone"
             },
             "descriptions": {
-                "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and \"[extinguish]: Summon a <b>Revered Scarab</b>.\""
+                "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and \"[extinguish]: Summon a <b>Revered Scarab</b>.\"",
+                "chinese": "升级一个单位，使其获得 +[effect0.upgrade0.bonusdamage][attack]，'[extinguish]: 召唤一只<b>Revered Scarab</b>。'"
             },
             "relic_effects": [
                 "@ScarabstoneEnhancer"
@@ -42,7 +43,8 @@
                 "english": "Scarabstone"
             },
             "descriptions": {
-                "english": "Gain +[bonusdamage][attack] and \"[extinguish]: Summon a <b>Revered Scarab</b>.\""
+                "english": "Gain +[bonusdamage][attack] and \"[extinguish]: Summon a <b>Revered Scarab</b>.\"",
+                "chinese": "获得 +[bonusdamage][attack]，'[extinguish]: 召唤一只<b>Revered Scarab</b>。'"
             },
             "bonus_damage": 5,
             "icon": "@ScarabstoneIcon",
@@ -56,7 +58,8 @@
         {
             "id": "ScarabstoneExtinguishTrigger",
             "descriptions": {
-                "english": "Summon a <b>Revered Scarab</b>."
+                "english": "Summon a <b>Revered Scarab</b>.",
+                "chinese": "召唤一只<b>Revered Scarab</b>。"
             },
             "trigger": "on_death",
             "effects": ["@ScarabstoneSummonScarab"]

@@ -29,7 +29,8 @@
                 "english": "Obliterate"
             },
             "descriptions": {
-                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand."
+                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
+                "chinese": "造成伤害，伤害量等同于手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -51,7 +52,8 @@
                 "english": "Obliterate II"
             },
             "descriptions": {
-                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand."
+                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
+                "chinese": "造成伤害，伤害量等同于手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -73,7 +75,8 @@
                 "english": "Obliterate III"
             },
             "descriptions": {
-                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand."
+                "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
+                "chinese": "造成伤害，伤害量等同于手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -282,7 +285,8 @@
             "id": "FirstBlessed1SummonTrigger",
             "trigger": "on_spawn",
             "descriptions": {
-                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile."
+                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile.",
+                "chinese": "将 [effect0.secondarypower] 张<b>Vexation</b>卡牌加入你的抽牌堆。"
             },
             "effects": [
                 "@FirstBlessed1AddVexations"
@@ -292,7 +296,8 @@
             "id": "FirstBlessed2SummonTrigger",
             "trigger": "on_spawn",
             "descriptions": {
-                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile."
+                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile.",
+                "chinese": "将 [effect0.secondarypower] 张<b>Vexation</b>卡牌加入你的抽牌堆。"
             },
             "effects": [
                 "@FirstBlessed2AddVexations"
@@ -302,7 +307,8 @@
             "id": "FirstBlessed3SummonTrigger",
             "trigger": "on_spawn",
             "descriptions": {
-                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile."
+                "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile.",
+                "chinese": "将 [effect0.secondarypower] 张<b>Vexation</b>卡牌加入你的抽牌堆。"
             },
             "effects": [
                 "@FirstBlessed3AddVexations"
@@ -315,7 +321,8 @@
                 "mod_reference": "Conductor"
             },
             "descriptions": {
-                "english": "+[effect0.upgrade.bonusdamage][attack] permanently."
+                "english": "+[effect0.upgrade.bonusdamage][attack] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade.bonusdamage][attack]。"
             },
             "effects": [
                 "@FirstBlessed1GainStats"
@@ -328,7 +335,8 @@
                 "mod_reference": "Conductor"
             },
             "descriptions": {
-                "english": "+[effect0.upgrade.bonusdamage][attack] permanently."
+                "english": "+[effect0.upgrade.bonusdamage][attack] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade.bonusdamage][attack]。"
             },
             "effects": [
                 "@FirstBlessed2GainStats"
@@ -341,7 +349,8 @@
                 "mod_reference": "Conductor"
             },
             "descriptions": {
-                "english": "+[effect0.upgrade.bonusdamage][attack] permanently."
+                "english": "+[effect0.upgrade.bonusdamage][attack] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade.bonusdamage][attack]。"
             },
             "effects": [
                 "@FirstBlessed3GainStats"
@@ -351,7 +360,8 @@
             "id": "EvilEyeResolveTrigger",
             "trigger": "post_combat",
             "descriptions": {
-                "english": "Add [effect0.secondarypower] random <b>Torments</b> to your hand."
+                "english": "Add [effect0.secondarypower] random <b>Torments</b> to your hand.",
+                "chinese": "将 [effect0.secondarypower] 张随机<b>Torment</b>卡牌加入你的手牌。"
             },
             "effects": [
                 "@EvilEyeAddTorments"
@@ -361,7 +371,8 @@
             "id": "EvilEye2EnchantTrigger",
             "trigger": "after_spawn_enchant",
             "descriptions": {
-                "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [effect0.status0.power]."
+                "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [effect0.status0.power].",
+                "chinese": "对敌方单位施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。"
             },
             "effects": [
                 "@EvilEye2EnchantEffect"
@@ -371,7 +382,8 @@
             "id": "EvilEye3EnchantTrigger",
             "trigger": "after_spawn_enchant",
             "descriptions": {
-                "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [effect0.status0.power]."
+                "english": "Enemy units have [mt2_sandscourged.Plugin_hex] [effect0.status0.power].",
+                "chinese": "对敌方单位施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。"
             },
             "effects": [
                 "@EvilEye3EnchantEffect"
@@ -381,7 +393,8 @@
             "id": "StormSplitter2SlayTrigger",
             "trigger": "on_kill",
             "descriptions": {
-                "english": "Draw +[effect0.power] next turn."
+                "english": "Draw +[effect0.power] next turn.",
+                "chinese": "下个回合抽 +[effect0.power] 张牌。"
             },
             "effects": [
                 "@StormSplitter2Draw"
@@ -391,7 +404,8 @@
             "id": "StormSplitter3SlayTrigger",
             "trigger": "on_kill",
             "descriptions": {
-                "english": "Draw +[effect0.power] next turn."
+                "english": "Draw +[effect0.power] next turn.",
+                "chinese": "下个回合抽 +[effect0.power] 张牌。"
             },
             "effects": [
                 "@StormSplitter3Draw"

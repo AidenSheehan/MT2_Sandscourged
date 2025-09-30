@@ -7,7 +7,8 @@
                 "english": "Painful Memories"
             },
             "descriptions": {
-                "english": "Shuffle [effect2.power] <b>Vexations</b> into your draw pile. Draw [effect2.power]."
+                "english": "Shuffle [effect2.power] <b>Vexations</b> into your draw pile. Draw [effect2.power].",
+                "chinese": "将 [effect2.power] 张<b>Vexation</b>卡牌加入你的抽牌堆。抽 [effect2.power] 张牌。"
             },
             "lore_tooltips": [
                 {

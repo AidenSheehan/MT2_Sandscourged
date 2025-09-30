@@ -6,7 +6,8 @@
             "english": "Pitfall"
         },
         "descriptions": {
-            "english": "[descend]. Deal [effect1.power] damage."
+            "english": "[descend]. Deal [effect1.power] damage.",
+            "chinese": "[descend]。造成 [effect1.power] 点伤害。"
         },
         "rarity": "uncommon",
         "class": "@ClassSandscourged",
