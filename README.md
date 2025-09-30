@@ -1,6 +1,6 @@
 # The Sandscourged
 
-![The Sandscourged](icon.png)
+![The Sandscourged](https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/icon.png)
 
 Adds a whole new clan to Monster Train 2!
 
@@ -36,9 +36,9 @@ Here are some sample cards from the mod, to showcase what the clan's all about!
 
 |    |            |
 |:----------|:-------------:|
-| <img src="./.img/Soulmonger.png" alt="Soulmonger" width="200"/> |  <img src="./.img/Plague of Gnarling.png" alt="Plague of Gnarling" width="200"/> |
-| <img src="./.img/Revenant.png" alt="Revenant" width="200"/> |    <img src="./.img/Hex_card.png" alt="Hex" width="200"/>   |
-| <img src="./.img/Rancor.png" alt="Rancor" width="200"/> | <img src="./.img/Part the Storm.png" alt="Part the Storm" width="200"/> |
+| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Soulmonger.png" alt="Soulmonger" width="200"/> |  <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Plague of Gnarling.png" alt="Plague of Gnarling" width="200"/> |
+| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Revenant.png" alt="Revenant" width="200"/> |    <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Hex_card.png" alt="Hex" width="200"/>   |
+| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Rancor.png" alt="Rancor" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Part the Storm.png" alt="Part the Storm" width="200"/> |
 
 ## Installation
 Using a mod manager is recommended. Alternatively, you can perform a manual installation by following the instructions below.
@@ -66,6 +66,9 @@ Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.
 * Mod Author: Aiden Sheehan / All_Outta_Bubblegum
 
 * Technical assistance: brandonandzeus
+
+* Translation -
+    * (Chinese - Simplified): Lostone
 
 * Icons: (<a href="https://www.flaticon.com/free-icons/twister" title="twister icons">Twister icons created by Freepik - Flaticon</a>)
 
