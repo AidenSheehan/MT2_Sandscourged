@@ -57,7 +57,7 @@ Once you've installed all the dependencies, copy this mod into your plugins dire
 ## Bugs and Feedback
 This mod is in beta. As such, you may come across bugs. If you do, [please report them here](https://github.com/AidenSheehan/MT2_Sandscourged/issues).
 
-If you would like to give feedback on the mod (please do!), fill in this google form. [TODO].
+If you would like to give feedback on the mod (please do!), fill in [this google form](https://forms.gle/fL7YDzpHRxnQ9mtA8).
 
 Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.gg/jfbTdktH) (@All_Outta_Bubblegum).
 
