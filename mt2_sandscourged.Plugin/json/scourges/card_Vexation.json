@@ -45,7 +45,8 @@
             "name": "CardEffectDamage",
             "target_mode": "pyre",
             "target_team": "both",
-            "param_int": 1
+            "param_int": 1,
+            "supress_pyre_room_focus": true
         }
     ],
     "sprites": [
