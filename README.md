@@ -52,7 +52,7 @@ Make sure you've installed all the dependencies before using the mod. This mod r
 For each dependency, follow the installation instructions listed there.
 
 ### This Mod
-Once you've installed all the dependencies, copy this mod into your plugins directory. The file path should look something like `C:\Program Files (x86)\Steam\steamapps\common\Monster Train 2\BepInEx\plugins`.
+Once you've installed all the dependencies, copy this mod (unzipped) into your plugins directory. The file path should look something like `C:\Program Files (x86)\Steam\steamapps\common\Monster Train 2\BepInEx\plugins`.
 
 ## Bugs and Feedback
 This mod is in beta. As such, you may come across bugs. If you do, [please report them here](https://github.com/AidenSheehan/MT2_Sandscourged/issues).
