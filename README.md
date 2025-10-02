@@ -61,6 +61,12 @@ If you would like to give feedback on the mod (please do!), fill in [this google
 
 Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.gg/jfbTdktH) (@All_Outta_Bubblegum).
 
+### Known Issues
+* The clan completion is offscreen in the logbook. This isn't going to be fixed until the new clan is added in the official DLC.
+* Character art appears too dark in battle. This is an issue with the modding framework, not this mod per se.
+* When a spell with Offering that creates other cards (Beseech, Malediction) is cast via a selective discard (Offering Token, Scrying Eye) on a floor with multiple friendly characters that have Incant triggers, only the triggers of the first played unit will fire. This is actually a bug in the base game, there's just no scenario where it could occur.
+* On rare occasion, opening the logbook may cause a softlock. Root cause of this issue is unknown, so if it happens to you, please send me a message with the log file.
+
 ## Credits
 * Mod Author: Aiden Sheehan / All_Outta_Bubblegum
 
