@@ -7,8 +7,7 @@
                 "english": "Oblivion Sands"
             },
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] and [sap] [effect1.status0.power].",
-                "chinese": "施加[mt2_sandscourged.Plugin_scourge] [effect0.status0.power] 和[sap] [effect1.status0.power]。"
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power], then apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power]."
             },
             "lore_tooltips": [
                 {
@@ -30,33 +29,34 @@
                 }
             ],
             "effects": [
-                "@OblivionSandsApplyScourge",
-                "@OblivionSandsApplySap"
+                "@OblivionSandsApplyHex",
+                "@OblivionSandsApplyScourge"
             ]
         }
     ],
     "effects": [
         {
-            "id": "OblivionSandsApplyScourge",
+            "id": "OblivionSandsApplyHex",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
             "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": "@scourge",
-                    "count": 8
+                    "status": "@hex",
+                    "count": 1
                 }
             ]
+
         },
         {
-            "id": "OblivionSandsApplySap",
+            "id": "OblivionSandsApplyScourge",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "last_targeted_characters",
             "target_team": "both",
             "param_status_effects": [
                 {
-                    "status": "debuff",
-                    "count": 1
+                    "status": "@scourge",
+                    "count": 7
                 }
             ]
         }

@@ -7,7 +7,7 @@
                 "english": "Malediction"
             },
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units. Add [effect1.secondarypower] random <b>Torments</b> to your hand.",
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units. Add [trait1.power] random <b>Torments</b> to your hand.",
                 "chinese": "对所有敌方单位施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。将 [effect1.secondarypower] 张随机<b>Torment</b>卡牌加入你的手牌。"
             },
             "rarity": "uncommon",
@@ -21,13 +21,11 @@
             ],
             "cost": 2,
             "traits": [
-                {
-                    "id": "@MaledictionOffering"
-                }
+                "@MaledictionOffering",
+                "@MaledictionAddTorments"
             ],
             "effects": [
-                "@MaledictionApplyHex",
-                "@MaledictionAddTorments"
+                "@MaledictionApplyHex"
             ]
         }
     ],
@@ -35,6 +33,13 @@
         {
             "id": "MaledictionOffering",
             "name": "CardTraitTreasure"
+        },
+        {
+            "id": "MaledictionAddTorments",
+            "name": "@CardTraitScalingAddBattleCardToHandFromPool",
+            "param_card_pool": "@TormentPool",
+            "param_use_scaling_params": false,
+            "param_int": 2
         }
     ],
     "effects": [
@@ -48,16 +53,10 @@
                     "status": "@hex",
                     "count": 1
                 }
+            ],
+            "additional_tooltips": [
+                "@TormentTooltip"
             ]
-        },
-        {
-            "id": "MaledictionAddTorments",
-            "name": "CardEffectAddBattleCard",
-            "target_mode": "room",
-            "param_int": 3,
-            "param_int_2": 2,
-            "param_card_pool": "@TormentPool",
-            "additional_tooltips": ["@TormentTooltip"]
         }
     ],
     "sprites": [

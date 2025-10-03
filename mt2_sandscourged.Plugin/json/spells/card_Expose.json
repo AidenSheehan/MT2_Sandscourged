@@ -7,8 +7,7 @@
                 "english": "Expose"
             },
             "descriptions": {
-                "english": "Apply [meleeweakness] [effect0.status0.power] and [spellweakness] [effect1.status0.power].",
-                "chinese": "施加[meleeweakness] [effect0.status0.power] 和[spellweakness] [effect1.status0.power]。"
+                "english": "Apply [sap] [effect0.status0.power], [meleeweakness] [effect1.status0.power], and [spellweakness] [effect2.status0.power]."
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
@@ -21,6 +20,9 @@
             "cost": 1,
             "effects": [
                 {
+                    "id": "@ExposeApplySap"
+                },
+                {
                     "id": "@ExposeApplyMeleeWeakness"
                 },
                 {
@@ -31,9 +33,21 @@
     ],
     "effects": [
         {
-            "id": "ExposeApplyMeleeWeakness",
+            "id": "ExposeApplySap",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_status_effects": [
+                {
+                    "status": "debuff",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "ExposeApplyMeleeWeakness",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "last_targeted_characters",
             "target_team": "both",
             "param_status_effects": [
                 {

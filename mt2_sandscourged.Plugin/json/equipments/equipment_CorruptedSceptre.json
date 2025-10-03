@@ -28,7 +28,10 @@
                 "RedCrownEquipmentPool",
                 "RandomGraftedEquipmentForEvent_NoVoidArms_EquipmentPool"
             ],
-            "cost": 3,
+            "cost": 2,
+            "descriptions": {
+                "english": "+[effect0.upgrade0.roommodifier0.power][attack] for each distinct [debuff] among enemy units."
+            },
             "effects": [
                 "@Equip_CorruptedSceptre"
             ]
@@ -37,26 +40,41 @@
     "upgrades": [
         {
             "id": "upg_CorruptedSceptre",
-            "bonus_damage": 5,
+            "bonus_damage": 20,
             "bonus_hp": 0,
-            "trigger_upgrades": [
-                "@CorruptedSceptreStrikeTrigger"
+            "room_modifier_upgrades": [
+                "@CorruptedSceptreRoomModifier"
             ],
             "icon": "@CorruptedSceptreArt"
         }
     ],
-    "character_triggers": [
+    "localization_terms": [
         {
-            "id": "CorruptedSceptreStrikeTrigger",
-            "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect0.status0.power] to the attacked unit, then double the amount of [mt2_sandscourged.Plugin_scourge] on all units.",
-                "chinese": "对被攻击的单位施加[mt2_sandscourged.Plugin_scourge] [effect0.status0.power]，之后将所有单位的[mt2_sandscourged.Plugin_scourge]数量加倍。"
+            "key": "RoomStateAttackPerDebuffOnTeam",
+            "texts": {
+                "english": "<nobr>Bonus [attack] per distinct [debuff]</nobr>"
+            }
+        }
+    ],
+    "room_modifiers": [
+        {
+            "id": "CorruptedSceptreRoomModifier",
+            "name": "@RoomStateAttackPerDebuffOnTeam",
+            "descriptions": [
+                {
+                    "english": "+[power][attack] for each distinct [debuff] among enemy units."
+                }
+            ],
+            "in_play_descriptions": [
+                {
+                    "english": "+[power][attack] for each distinct [debuff] among enemy units."
+                }
+            ],
+            "extra_body_tooltips": {
+                "english": "+[power][attack] for each distinct [debuff] among enemy units."
             },
-            "trigger": "on_attacking",
-            "effects": [
-                "@CorruptedSceptreApplyScourge",
-                "@CorruptedSceptreDoubleScourge"
-            ]
+            "param_int": 20,
+            "param_int_2": 2
         }
     ],
     "effects": [
@@ -66,30 +84,6 @@
             "target_mode": "drop_target_character",
             "target_team": "monsters",
             "param_upgrade": "@upg_CorruptedSceptre"
-        },
-        {
-            "id": "CorruptedSceptreApplyScourge",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "last_attacked_character",
-            "target_team": "both",
-            "param_status_effects": [
-                {
-                    "status": "@scourge",
-                    "count": 15
-                }
-            ]
-        },
-        {
-            "id": "CorruptedSceptreDoubleScourge",
-            "name": "CardEffectMultiplyStatusEffect",
-            "target_mode": "room",
-            "target_team": "both",
-            "param_status_effects": [
-                {
-                    "status": "@scourge",
-                    "count": 2
-                }
-            ]
         }
     ],
     "sprites": [

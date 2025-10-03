@@ -55,6 +55,10 @@ namespace mt2_sandscourged.Plugin
 
         private int GetAdditionalCards(CardStatistics cardStatistics)
         {
+            if (!GetUseScalingParams())
+            {
+                return GetParamInt();
+            }
             CardStatistics.StatValueData statValueData = new()
             {
                 cardState = GetCard(),

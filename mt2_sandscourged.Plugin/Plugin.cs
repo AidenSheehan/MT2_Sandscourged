@@ -82,7 +82,7 @@ namespace mt2_sandscourged.Plugin
                         "json/spells/card_TormentE.json",
                         "json/spells/card_Dessicate.json",
                         "json/spells/card_Efface.json",
-                        "json/spells/card_Hex.json",
+                        "json/spells/card_Beseech.json",
                         "json/spells/card_Jinx.json",
                         "json/spells/card_Malediction.json",
                         "json/spells/card_SpikeOfTheScourged.json",

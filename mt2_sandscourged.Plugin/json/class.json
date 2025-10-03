@@ -72,7 +72,7 @@
                 {
                     "id": "VizierChampion",
                     "card_data": "@SpawnVizier",
-                    "starter_card": "@Hex",
+                    "starter_card": "@Beseech",
                     "upgrade_tree": [
                         [
                             "@upg_FirstBlessed1",
