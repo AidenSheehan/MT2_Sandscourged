@@ -6,7 +6,7 @@ Adds a whole new clan to Monster Train 2!
 
 ## Table of Contents
 * [Overview](#overview)
-* [Exerts](#exerts)
+* [Excerpts](#excerpts)
 * [Installation](#installation)
 * [Bugs and Feedback](#bugs-and-feedback)
 * [Credits](#credits)
@@ -31,13 +31,13 @@ It introduces two new Debuffs; Hex and Warp, and a new trigger; Accursed. Many t
 
 **IMPORTANT: This is a non-cosmetic mod. Do not play Daily Challenges with this mod installed, you'll get banned. Also, F8 bug reports are disabled, they won't go anywhere.**
 
-## Exerts
+## Excerpts
 Here are some sample cards from the mod, to showcase what the clan's all about!
 
 |    |            |      |
 |:----------|:-------------:|------------:|
 | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Soulmonger.png" alt="Soulmonger" width="200"/> |  <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Plague of Gnarling.png" alt="Plague of Gnarling" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Revenant.png" alt="Revenant" width="200"/>
-|    <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Hex_card.png" alt="Hex" width="200"/>   | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Rancor.png" alt="Rancor" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Part the Storm.png" alt="Part the Storm" width="200"/> |
+|    <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Malediction.png" alt="Malediction" width="200"/>   | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Rancor.png" alt="Rancor" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Part the Storm.png" alt="Part the Storm" width="200"/> |
 
 ## Installation
 Using a mod manager is recommended. Alternatively, you can perform a manual installation by following the instructions below.
@@ -64,8 +64,8 @@ Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.
 ### Known Issues
 * The clan completion is offscreen in the logbook. This isn't going to be fixed until the new clan is added in the official DLC.
 * Character art appears too dark in battle. This is an issue with the modding framework, not this mod per se.
-* When a spell with Offering that creates other cards (Beseech, Malediction) is cast via a selective discard (Offering Token, Scrying Eye) on a floor with multiple friendly characters that have Incant triggers, only the triggers of the first played unit will fire. This is actually a bug in the base game, there's just no scenario where it could occur.
 * On rare occasion, opening the logbook may cause a softlock. Root cause of this issue is unknown, so if it happens to you, please send me a message with the log file.
+* Corrupted Sceptre's room modifier tooltip is missing its description.
 
 ## Credits
 * Mod Author: Aiden Sheehan / All_Outta_Bubblegum
@@ -73,7 +73,7 @@ Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.
 * Technical assistance: brandonandzeus
 
 * Translation -
-    * (Chinese - Simplified): Lostone
+    * (Chinese - Simplified): lostone
 
 * Icons: (<a href="https://www.flaticon.com/free-icons/twister" title="twister icons">Twister icons created by Freepik - Flaticon</a>)
 
