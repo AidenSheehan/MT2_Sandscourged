@@ -7,7 +7,8 @@
                 "english": "Oblivion Sands"
             },
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power], then apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power]."
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power], then apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power].",
+                "chinese": "施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]，然后施加[mt2_sandscourged.Plugin_scourge] [effect1.status0.power]。"
             },
             "lore_tooltips": [
                 {

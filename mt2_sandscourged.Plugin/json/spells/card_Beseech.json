@@ -7,7 +7,8 @@
                 "english": "Beseech"
             },
             "descriptions": {
-                "english": "Add a random <b>Torment</b> to your hand."
+                "english": "Add a random <b>Torment</b> to your hand.",
+                "chinese": "将一张随机<b>Torment</b>卡牌加入你的手牌。"
             },
             "rarity": "common",
             "class": "@ClassSandscourged",

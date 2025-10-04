@@ -30,7 +30,8 @@
             ],
             "cost": 2,
             "descriptions": {
-                "english": "+[effect0.upgrade0.roommodifier0.power][attack] for each distinct [debuff] among enemy units."
+                "english": "+[effect0.upgrade0.roommodifier0.power][attack] for each distinct [debuff] among enemy units.",
+                "chinese": "敌方单位之中每有一种[debuff]，获得 +[effect0.upgrade0.roommodifier0.power][attack]。"
             },
             "effects": [
                 "@Equip_CorruptedSceptre"
@@ -52,7 +53,8 @@
         {
             "key": "RoomStateAttackPerDebuffOnTeam",
             "texts": {
-                "english": "<nobr>Bonus [attack] per distinct [debuff]</nobr>"
+                "english": "<nobr>Bonus [attack] per distinct [debuff]</nobr>",
+                "chinese": "<nobr>根据敌方单位之中的[debuff]种类数量，获得[attack]。<nobr>"
             }
         }
     ],
@@ -62,16 +64,19 @@
             "name": "@RoomStateAttackPerDebuffOnTeam",
             "descriptions": [
                 {
-                    "english": "+[power][attack] for each distinct [debuff] among enemy units."
+                    "english": "+[power][attack] for each distinct [debuff] among enemy units.",
+                    "chinese": "敌方单位之中每有一种[debuff]，获得 +[power][attack]。"
                 }
             ],
             "in_play_descriptions": [
                 {
-                    "english": "+[power][attack] for each distinct [debuff] among enemy units."
+                    "english": "+[power][attack] for each distinct [debuff] among enemy units.",
+                    "chinese": "敌方单位之中每有一种[debuff]，获得 +[power][attack]。"
                 }
             ],
             "extra_body_tooltips": {
-                "english": "+[power][attack] for each distinct [debuff] among enemy units."
+                "english": "+[power][attack] for each distinct [debuff] among enemy units.",
+                "chinese": "敌方单位之中每有一种[debuff]，获得 +[power][attack]。"
             },
             "param_int": 20,
             "param_int_2": 2
