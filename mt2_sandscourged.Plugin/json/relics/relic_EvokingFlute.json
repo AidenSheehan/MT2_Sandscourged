@@ -40,34 +40,10 @@
     "relic_effects": [
         {
             "id": "EvokingFluteRelicEffectScarab",
-            "name": "RelicEffectAddTrigger",
+            "name": "RelicEffectAddStatusEffectOnSpawn",
             "source_team": "monsters",
-            "target_mode": "front_in_room",
-            "param_int": 1,
             "param_subtype": "@Sub_Scarab",
-            "param_bool": true,
-            "triggers": [
-                "@EvokingFluteSpawnTrigger"
-            ]
-        }
-    ],
-    "character_triggers": [
-        {
-            "id": "EvokingFluteSpawnTrigger",
-            "trigger": "on_spawn",
-            "hide_visual_and_ignore_silence": true,
-            "effects": [
-                {
-                    "id": "@EvokingFluteApplyReanimate"
-                }
-            ]
-        }
-    ],
-    "effects": [
-        {
-            "id": "EvokingFluteApplyReanimate",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "self",
+            "param_bool": false,
             "param_status_effects": [
                 {
                     "status": "undying",
