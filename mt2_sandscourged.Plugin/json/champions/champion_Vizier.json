@@ -237,8 +237,8 @@
             "descriptions": {
                 "english": "Why do i need this"
             },
-            "bonus_damage": 0,
-            "bonus_hp": 0,
+            "bonus_damage": 10,
+            "bonus_hp": 10,
             "ability_upgrade": "@StormSplitter2Ability",
             "trigger_upgrades": [
                 "@StormSplitter2SlayTrigger"
