@@ -58,6 +58,7 @@
             "param_card_pool": "@TormentPool",
             "param_tracked_value": "played_cost",
             "param_entry_duration": "this_turn",
+            "param_use_scaling_params": true,
             "param_int": 1
         }
     ],
