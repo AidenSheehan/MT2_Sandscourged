@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "localization_terms": [
+        {
+            "key": "CardTraitScalingByHandCount_TooltipTitle",
+            "texts": {
+                "english": "Hand Count ({0})"
+            }
+        },
+        {
+            "key": "CardTraitScalingByHandCount_TooltipText",
+            "texts": {
+                "english": "The effect is magnified by the number of cards in your hand. You currently have {0} cards in your hand."
+            }
+        }
+    ]
+}

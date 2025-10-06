@@ -25,7 +25,16 @@ namespace mt2_sandscourged.Plugin
             }
         }
         */
-        
+
+        public override string GetCardTooltipTitle()
+        {
+            return string.Format("CardTraitScalingByHandCount_TooltipTitle".Localize(null), AllGameManagers.Instance?.GetCardManager()?.GetHand().Count() ?? 0);
+        }
+
+        public override string GetCardTooltipText()
+        {
+            return string.Format("CardTraitScalingByHandCount_TooltipText".Localize(null), AllGameManagers.Instance?.GetCardManager()?.GetHand().Count() ?? 0);
+        }  
 
         // Not used anymore
         public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)

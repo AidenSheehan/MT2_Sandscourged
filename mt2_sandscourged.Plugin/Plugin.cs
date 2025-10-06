@@ -23,6 +23,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using TrainworksReloaded.Base.Extensions;
 using static BalanceData;
+using System.Reflection;
 
 namespace mt2_sandscourged.Plugin
 {
@@ -134,7 +135,10 @@ namespace mt2_sandscourged.Plugin
                         "json/status_effects/scourge.json",
 
                         // Card Effects
-                        "json/card_effects/PurgeCardFromHand.json"
+                        "json/card_effects/PurgeCardFromHand.json",
+
+                        // Card Traits
+                        "json/card_traits/ScalingByHandCount.json"
                     );
                 }
             );
@@ -180,6 +184,8 @@ namespace mt2_sandscourged.Plugin
 
   }
 );
+            Plugin.SetupTraitTooltips(this.GetType().Assembly);
+            Plugin.SetupCardEffectTooltips(this.GetType().Assembly);
 
             // Uncomment if you need harmony patches, if you are writing your own custom effects.
             var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
@@ -235,6 +241,57 @@ namespace mt2_sandscourged.Plugin
                 Logger.LogError($"Could not get BalanceData field {field} because of an exception {ex.Message}");
             }
             return null;
+        }
+
+        /// <summary>
+        /// CardTraits have to be whitelisted to display a tooltip.
+        /// </summary>
+        /// <param name="assembly">Optional assembly to pass in. If not specified the caller's assesmbly is assumed</param>
+        public static void SetupTraitTooltips(Assembly? assembly)
+        {
+            assembly = assembly ?? Assembly.GetCallingAssembly();
+            List<string> cardTraitNames = [];
+            foreach (var type in assembly.GetTypes())
+            {
+                // CardTraits that have a tooltip.
+                if (type.IsSubclassOf(typeof(CardTraitState)))
+                {
+                    bool needsATooltip = type.GetMethod("GetCardTooltipText").DeclaringType == type;
+                    if (needsATooltip)
+                    {
+                        cardTraitNames.Add(type.Name);
+                        cardTraitNames.Add(type.AssemblyQualifiedName);
+                    }
+
+                }
+            }
+            var traits = (HashSet<string>)AccessTools.Field(typeof(TooltipContainer), "TraitsSupportedInTooltips").GetValue(null);
+            traits.UnionWith(cardTraitNames);
+        }
+
+        /// <summary>
+        /// CardEffects have to be whitelisted to display a tooltip.
+        /// 
+        /// </summary>
+        /// <param name="assembly">Optional assembly to pass in. If not specified the caller's assesmbly is assumed</param>
+        public static void SetupCardEffectTooltips(Assembly? assembly = null)
+        {
+            assembly = assembly ?? Assembly.GetCallingAssembly();
+            List<string> cardTraitNames = [];
+            foreach (var type in assembly.GetTypes())
+            {
+                // CardEffects that have a tooltip.
+                if (type.IsSubclassOf(typeof(CardEffectBase)))
+                {
+                    bool needsATooltip = type.GetMethod("CreateAdditionalTooltips").DeclaringType == type;
+                    if (needsATooltip)
+                    {
+                        cardTraitNames.Add(type.AssemblyQualifiedName);
+                    }
+                }
+            }
+            var states = (List<string>)AccessTools.Field(typeof(TooltipContainer), "StatesSupportedInTooltips").GetValue(null);
+            states.AddRange(cardTraitNames);
         }
     }
 }
