@@ -28,13 +28,31 @@ namespace mt2_sandscourged.Plugin
 
         public override string GetCardTooltipTitle()
         {
-            return string.Format("CardTraitScalingByHandCount_TooltipTitle".Localize(null), AllGameManagers.Instance?.GetCardManager()?.GetHand().Count() ?? 0);
+            var combatManager = AllGameManagers.Instance?.GetCombatManager();
+            var cardManager = AllGameManagers.Instance?.GetCardManager();
+            if (combatManager != null && combatManager.GetIsRunningCombat() && cardManager != null)
+            {
+                return string.Format("CardTraitScalingByHandCount_TooltipTitleInBattle".Localize(null), cardManager.GetHand().Count);
+            }
+            else
+            {
+                return string.Format("CardTraitScalingByHandCount_TooltipTitleOutOfBattle".Localize(null));
+            }
         }
 
         public override string GetCardTooltipText()
         {
-            return string.Format("CardTraitScalingByHandCount_TooltipText".Localize(null), AllGameManagers.Instance?.GetCardManager()?.GetHand().Count() ?? 0);
-        }  
+            var combatManager = AllGameManagers.Instance?.GetCombatManager();
+            var cardManager = AllGameManagers.Instance?.GetCardManager();
+            if (combatManager != null && combatManager.GetIsRunningCombat() && cardManager != null)
+            {
+                return string.Format("CardTraitScalingByHandCount_TooltipTextInBattle".Localize(null), cardManager.GetHand().Count);
+            }
+            else
+            {
+                return string.Format("CardTraitScalingByHandCount_TooltipTextOutOfBattle".Localize(null));
+            }
+        }
 
         // Not used anymore
         public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)

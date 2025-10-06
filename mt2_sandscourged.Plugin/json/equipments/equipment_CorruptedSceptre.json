@@ -60,17 +60,7 @@
         {
             "id": "CorruptedSceptreRoomModifier",
             "name": "@RoomStateAttackPerDebuffOnTeam",
-            "descriptions": [
-                {
-                    "english": "+[power][attack] for each distinct [debuff] among enemy units."
-                }
-            ],
-            "in_play_descriptions": [
-                {
-                    "english": "+[power][attack] for each distinct [debuff] among enemy units."
-                }
-            ],
-            "extra_body_tooltips": {
+            "in_play_descriptions": {
                 "english": "+[power][attack] for each distinct [debuff] among enemy units."
             },
             "param_int": 20,
