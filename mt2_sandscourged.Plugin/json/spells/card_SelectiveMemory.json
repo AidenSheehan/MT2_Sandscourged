@@ -7,8 +7,7 @@
                 "english": "Selective Memory"
             },
             "descriptions": {
-                "english": "Discard your hand.<br>Draw [effect1.power] card of each type.<br>Increase this card's [ember] by [effect7.upgrade.costreductionabs].",
-                "chinese": "舍弃全部手牌。<br>抽取每种类型的卡牌各 [effect1.power] 张。<br>这张牌费用 +[effect7.upgrade.costreductionabs][ember]。"
+                "english": "Discard your hand.<br>Draw [effect1.power] card of each type and increase this card's [ember] by [effect7.upgrade.costreductionabs]."
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",
@@ -39,42 +38,42 @@
         },
         {
             "id": "SelectiveMemoryDrawSpell",
-            "name": "CardEffectDrawType",
+            "name": "@CardEffectDrawTypeWithDiscardFix",
             "target_mode": "draw_pile",
             "target_card_type": "spell",
             "param_int": 1
         },
         {
             "id": "SelectiveMemoryDrawUnit",
-            "name": "CardEffectDrawType",
+            "name": "@CardEffectDrawTypeWithDiscardFix",
             "target_mode": "draw_pile",
             "target_card_type": "monster",
             "param_int": 1
         },
         {
             "id": "SelectiveMemoryDrawBlight",
-            "name": "CardEffectDrawType",
+            "name": "@CardEffectDrawTypeWithDiscardFix",
             "target_mode": "draw_pile",
             "target_card_type": "blight",
             "param_int": 1
         },
         {
             "id": "SelectiveMemoryDrawScourge",
-            "name": "CardEffectDrawType",
+            "name": "@CardEffectDrawTypeWithDiscardFix",
             "target_mode": "draw_pile",
             "target_card_type": "junk",
             "param_int": 1
         },
         {
             "id": "SelectiveMemoryDrawEquipment",
-            "name": "CardEffectDrawType",
+            "name": "@CardEffectDrawTypeWithDiscardFix",
             "target_mode": "draw_pile",
             "target_card_type": "equipment",
             "param_int": 1
         },
         {
             "id": "SelectiveMemoryDrawRoom",
-            "name": "CardEffectDrawType",
+            "name": "@CardEffectDrawTypeWithDiscardFix",
             "target_mode": "draw_pile",
             "target_card_type": "room",
             "param_int": 1
