@@ -602,7 +602,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 5
+                    "count": 4
                 }
             ]
         },
@@ -619,7 +619,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 10
+                    "count": 8
                 }
             ]
         },
@@ -636,7 +636,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 15
+                    "count": 12
                 }
             ]
         },
@@ -647,7 +647,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 5
+                    "count": 4
                 }
             ]
         },
@@ -658,7 +658,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 10
+                    "count": 8
                 }
             ]
         },
@@ -669,7 +669,7 @@
             "param_status_effects": [
                 {
                     "status": "captured_soul",
-                    "count": 15
+                    "count": 12
                 }
             ]
         },
@@ -819,12 +819,12 @@
                     "english": "Your souls are mine."
                 },
                 {
-                    "english": "Tell Seraph of my return. Let him tremble."
+                    "english": "Tell the Father of my return. Let him tremble."
                 }
             ],
             "idle_expressions": [
                 {
-                    "english": "Everything is unfamiliar."
+                    "english": "What is this place?"
                 },
                 {
                     "english": "*Chittering*"
@@ -839,7 +839,7 @@
                     "english": "The pearl will grow grander still."
                 },
                 {
-                    "english": "Where is the child?"
+                    "english": "Where is the Child?"
                 }
             ]
         }

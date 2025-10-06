@@ -62,17 +62,15 @@
         {
             "id": "PearlHostAccursedTrigger",
             "descriptions": {
-                "english": "Gain [rage] [effect0.status0.power].",
-                "chinese": "获得[rage] [effect0.status0.power]。"
+                "english": "Gain [effect1.power][ember] and [rage] [effect0.status0.power]."
             },
             "trigger": {
                 "id": "@Accursed",
                 "mod_reference": "Conductor"
             },
             "effects": [
-                {
-                    "id": "@PearlHostGainRage"
-                }
+                "@PearlHostGainRage",
+                "@PearlHostGainEmber"
             ]
         }
     ],
@@ -91,9 +89,14 @@
             "param_status_effects": [
                 {
                     "status": "buff",
-                    "count": 4
+                    "count": 3
                 }
             ]
+        },
+        {
+            "id": "PearlHostGainEmber",
+            "name": "CardEffectGainEnergy",
+            "param_int": 1
         }
     ],
     "sprites": [

@@ -7,8 +7,7 @@
                 "english": "Painful Memories"
             },
             "descriptions": {
-                "english": "Shuffle [effect2.power] <b>Vexations</b> into your draw pile. Draw [effect2.power].",
-                "chinese": "将 [effect2.power] 张<b>Vexation</b>卡牌加入你的抽牌堆。抽 [effect2.power] 张牌。"
+                "english": "Shuffle [effect2.power] <b>Vexations</b> into your draw pile. Gain [effect3.power][ember] and draw [effect2.power]."
             },
             "lore_tooltips": [
                 {
@@ -31,15 +30,10 @@
                 }
             ],
             "effects": [
-                {
-                    "id": "@ShuffleVexationSingle"
-                },
-                {
-                    "id": "@ShuffleVexationSingle"
-                },
-                {
-                    "id": "@PainfulMemoriesDraw"
-                }
+                "@ShuffleVexationSingle",
+                "@ShuffleVexationSingle",
+                "@PainfulMemoriesDraw",
+                "@PainfulMemoriesGainEmber"
             ]
         }
     ],
@@ -48,6 +42,11 @@
             "id": "PainfulMemoriesDraw",
             "name": "CardEffectDraw",
             "param_int": 2
+        },
+        {
+            "id": "PainfulMemoriesGainEmber",
+            "name": "CardEffectGainEnergy",
+            "param_int": 1
         }
     ],
     "sprites": [

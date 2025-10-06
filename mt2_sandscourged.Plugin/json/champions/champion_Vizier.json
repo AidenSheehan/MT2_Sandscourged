@@ -19,7 +19,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Once a simple merchant, she struck a pact with the Ur-Pharaoh, becoming the \"First Blessed\" of the Scourged and High Vizier. Now she leads the Scourged in their struggle for vengeance against Seraph, and conducts profane rituals in the Ur-Pharaoh's name."
+                    "english": "Once a simple merchant, now High Vizier of the Sandscourgd. She struck a terrible pact with the Ur-Pharaoh, thereby becoming the \"First Blessed\". She leads the Scourged in their struggle for vengeance against Seraph, and conducts profane rituals in the Ur-Pharaoh's name."
                 }
             ]
         },
@@ -119,7 +119,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 15,
-            "bonus_hp": 0,
+            "bonus_hp": 5,
             "trigger_upgrades": [
                 "@FirstBlessed1SummonTrigger",
                 "@FirstBlessed1AccursedTrigger"
@@ -134,7 +134,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 15,
-            "bonus_hp": 20,
+            "bonus_hp": 25,
             "trigger_upgrades": [
                 "@FirstBlessed2SummonTrigger",
                 "@FirstBlessed2AccursedTrigger"
@@ -149,7 +149,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 15,
-            "bonus_hp": 20,
+            "bonus_hp": 25,
             "status_effect_upgrades": [
                 {
                     "status": "multistrike",
@@ -182,7 +182,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 5,
-            "bonus_hp": 10,
+            "bonus_hp": 15,
             "trigger_upgrades": [
                 "@EvilEyeResolveTrigger"
             ]
@@ -196,7 +196,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 10,
-            "bonus_hp": 20,
+            "bonus_hp": 25,
             "trigger_upgrades": [
                 "@EvilEyeResolveTrigger",
                 "@EvilEye2EnchantTrigger"
@@ -211,7 +211,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 15,
-            "bonus_hp": 30,
+            "bonus_hp": 35,
             "trigger_upgrades": [
                 "@EvilEyeResolveTrigger",
                 "@EvilEye3EnchantTrigger"
@@ -428,7 +428,9 @@
             "param_card_pool": "@VexationOnlyPool",
             "param_int": 7,
             "param_int_2": 2,
-            "additional_tooltips": ["@TormentTooltip"]
+            "additional_tooltips": [
+                "@TormentTooltip"
+            ]
         },
         {
             "id": "FirstBlessed2AddVexations",
@@ -438,7 +440,9 @@
             "param_card_pool": "@VexationOnlyPool",
             "param_int": 7,
             "param_int_2": 3,
-            "additional_tooltips": ["@TormentTooltip"]
+            "additional_tooltips": [
+                "@TormentTooltip"
+            ]
         },
         {
             "id": "FirstBlessed3AddVexations",
@@ -448,7 +452,9 @@
             "param_card_pool": "@VexationOnlyPool",
             "param_int": 7,
             "param_int_2": 4,
-            "additional_tooltips": ["@TormentTooltip"]
+            "additional_tooltips": [
+                "@TormentTooltip"
+            ]
         },
         {
             "id": "FirstBlessed1GainStats",
@@ -487,7 +493,9 @@
             "param_int": 3,
             "param_int_2": 2,
             "param_card_pool": "@TormentPool",
-            "additional_tooltips": ["@TormentTooltip"]
+            "additional_tooltips": [
+                "@TormentTooltip"
+            ]
         },
         {
             "id": "EvilEye2EnchantEffect",
@@ -610,6 +618,9 @@
                 },
                 {
                     "english": "I'll split you in half!"
+                },
+                {
+                    "english": "Let's make a deal."
                 }
             ]
         }

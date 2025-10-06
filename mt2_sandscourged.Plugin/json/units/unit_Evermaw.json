@@ -51,7 +51,7 @@
         {
             "id": "Evermaw",
             "size": 2,
-            "attack_damage": 25,
+            "attack_damage": 15,
             "health": 20,
             "names": {
                 "english": "Evermaw"
@@ -109,7 +109,7 @@
             "status_effect_upgrades": [
                 {
                     "status": "buff",
-                    "count": 6,
+                    "count": 5,
                     "from_permanent_upgrade": true
                 }
             ]
