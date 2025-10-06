@@ -95,6 +95,10 @@
         {
             "id": "TormentEphemeralTrait",
             "name": "CardTraitEphemeral"
+        },
+        {
+            "id": "Consume",
+            "name": "CardTraitExhaustState"
         }
     ],
     "upgrades": [

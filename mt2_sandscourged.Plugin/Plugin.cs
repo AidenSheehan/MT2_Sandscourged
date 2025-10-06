@@ -46,7 +46,6 @@ namespace mt2_sandscourged.Plugin
                     //   the project only copies json files in the json folder and not in subdirectories.
                     c.AddMergedJsonFile(
                         "json/plugin.json",
-                        "json/global.json",
 
                         // Class stuff
                         "json/class.json",
