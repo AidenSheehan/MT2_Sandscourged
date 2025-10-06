@@ -22,6 +22,7 @@ using TrainworksReloaded.Core.Extensions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using TrainworksReloaded.Base.Extensions;
+using static BalanceData;
 
 namespace mt2_sandscourged.Plugin
 {
@@ -147,12 +148,93 @@ namespace mt2_sandscourged.Plugin
       var cardPoolManager = c.GetInstance<IRegister<CardPool>>();
       var id = MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.CardPool, "TormentPool");
       CardTraitScalingAddBattleCardToHandFromPool.paramCardPool = cardPoolManager.GetValueOrDefault(id);
+
+      // This is all just how we make the Scourges/Blights play their animations at the same time.
+      // GameDataClient has all of the relevant Provider Objects, We get the instance from the SimpleInjector Container object.
+      var client = c.GetInstance<GameDataClient>();
+
+      // Get a provider (SaveManager) from GameDataClient.
+      if (!client.TryGetProvider<SaveManager>(out var saveManager))
+      {
+          Logger.LogError("Failed to get SaveManager instance please report this https://github.com/Monster-Train-2-Modding-Group/Balance-Configurator/issues");
+          return;
+      }
+      var allGameData = saveManager.GetAllGameData();
+      List<CardData?> cardsToAdd = [
+        allGameData.FindCardDataByName("mt2_sandscourged.Plugin-Card-Vexation"),
+        allGameData.FindCardDataByName("mt2_sandscourged.Plugin-Card-PlagueOfBlood"),
+        allGameData.FindCardDataByName("mt2_sandscourged.Plugin-Card-PlagueOfScarabs"),
+        allGameData.FindCardDataByName("mt2_sandscourged.Plugin-Card-PlagueOfGnarling")
+      ];
+      var balanceData = allGameData.GetBalanceData();
+
+      if (SafeGetField(balanceData, "cardsThatResolveSimultaneouslyOnUnplayed") is not List<CardData> simultaneousReserveCards)
+      {
+          Logger.LogError("Couldn't find simultaneous reserve cards");
+          return;
+      }
+      cardsToAdd.ForEach(c => simultaneousReserveCards.AddIfNotNull(c));
+      Logger.LogInfo($"{simultaneousReserveCards.Count} cards now in the set");
+      SafeSetField(balanceData, "cardsThatResolveSimultaneouslyOnUnplayed", simultaneousReserveCards);
+
+
   }
 );
 
             // Uncomment if you need harmony patches, if you are writing your own custom effects.
             var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();
+        }
+
+
+        /// <summary>
+        /// Function to use reflection to set a field on BalanceData without throwing an exception if it fails.
+        /// Taken from Balance Configurator: https://github.com/Monster-Train-2-Modding-Group/Balance-Configurator/blob/main/BalanceConfigurator.Plugin/Plugin.cs
+        /// </summary>
+        /// <param name="balanceData"></param>
+        /// <param name="field"></param>
+        /// <param name="obj"></param>
+        private void SafeSetField<T>(T? data, string field, object? obj)
+        {
+            if (data == null)
+            {
+                Logger.LogError($"Internal Error data is null");
+                throw new ArgumentNullException(nameof(data));
+            }
+            else if (obj == null)
+            {
+                Logger.LogWarning($"Not setting {typeof(T).Name} field {field} because the value to set is null (value specified may be invalid or field not present)");
+                return;
+            }
+            try
+            {
+                Logger.LogDebug($"Setting {typeof(T).Name} field {field} to {obj}");
+                AccessTools.Field(data.GetType(), field).SetValue(data, obj);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Could not set {typeof(T).Name} field {field} because of an exception {ex.Message}");
+            }
+        }
+
+        /// Function to use reflection to set a field on BalanceData without throwing an exception if it fails.
+        /// Taken from Balance Configurator: https://github.com/Monster-Train-2-Modding-Group/Balance-Configurator/blob/main/BalanceConfigurator.Plugin/Plugin.cs
+        /// </summary>
+        /// <param name="balanceData"></param>
+        /// <param name="field"></param>
+        /// <param name="obj"></param>
+        private object? SafeGetField(BalanceData balanceData, string field)
+        {
+            try
+            {
+                Logger.LogDebug($"Getting BalanceData field {field}");
+                return AccessTools.Field(balanceData.GetType(), field).GetValue(balanceData);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Could not get BalanceData field {field} because of an exception {ex.Message}");
+            }
+            return null;
         }
     }
 }
