@@ -1,5 +1,18 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "card_triggers": [
+        {
+            "id": "PlagueDamageOnUnplayed",
+            "trigger": "on_unplayed_negative",
+            "descriptions": {
+                "english": "Your Pyre takes [effect0.power] damage.",
+                "chinese": "薪火受到 [effect0.power] 点伤害。"
+            },
+            "effects": [
+                "@PlagueDamage"
+            ]
+        }
+    ],
     "effects": [
         {
             "id": "AddRandomTorment",
@@ -8,7 +21,9 @@
             "param_int": 3,
             "param_int_2": 1,
             "param_card_pool": "@TormentPool",
-            "additional_tooltips": ["@TormentTooltip"]
+            "additional_tooltips": [
+                "@TormentTooltip"
+            ]
         },
         {
             "id": "ShuffleVexationSingle",
@@ -18,7 +33,17 @@
             "param_card_pool": "@VexationOnlyPool",
             "param_int": 7,
             "param_int_2": 1,
-            "additional_tooltips": ["@TormentTooltip"]
+            "additional_tooltips": [
+                "@TormentTooltip"
+            ]
+        },
+        {
+            "id": "PlagueDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "pyre",
+            "target_team": "both",
+            "param_int": 3,
+            "supress_pyre_room_focus": true
         }
     ],
     "card_pools": [

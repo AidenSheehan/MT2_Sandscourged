@@ -25,7 +25,9 @@
                     "id": "@PlagueOfScarabsAddCards"
                 }
             ],
-            "triggers": ["@VexationDamageOnUnplayed"]
+            "triggers": [
+                "@PlagueDamageOnUnplayed"
+            ]
         }
     ],
     "effects": [
@@ -44,7 +46,9 @@
         {
             "id": "ScarabCostReductionAndEphemeral",
             "cost_reduction": 99,
-            "trait_upgrades": ["@ScarabEphemeral"]
+            "trait_upgrades": [
+                "@ScarabEphemeral"
+            ]
         }
     ],
     "traits": [
