@@ -4,7 +4,8 @@
         {
             "id": "ScryingEye",
             "names": {
-                "english": "Scrying Eye"
+                "english": "Scrying Eye",
+                "chinese": "探知之眼"
             },
             "lore_tooltips": [
                 {
@@ -34,7 +35,8 @@
         {
             "id": "ScryingEyeAbility",
             "names": {
-                "english": "Foresee"
+                "english": "Foresee",
+                "chinese": "预见"
             },
             "descriptions": {
                 "english": "Draw [effect0.power]. Discard [effect0.power].",

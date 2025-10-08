@@ -4,7 +4,8 @@
         {
             "id": "SpawnPriestOfLostThoughts",
             "names": {
-                "english": "Priest of Lost Thoughts"
+                "english": "Priest of Lost Thoughts",
+                "chinese": "失落思想的祭司"
             },
             "card_art": "@PriestOfLostThoughts",
             "cost": 2,
@@ -29,7 +30,8 @@
         {
             "id": "PriestOfLostThoughtsAbility",
             "names": {
-                "english": "Eternalize"
+                "english": "Eternalize",
+                "chinese": "永恒化"
             },
             "descriptions": {
                 "english": "Apply [undying] [effect0.status0.power] to the front friendly unit for every [trait0.secondarypower] cards in your hand.<br>Discard your hand.",
@@ -71,7 +73,8 @@
             "attack_damage": 20,
             "health": 10,
             "names": {
-                "english": "Priest of Lost Thoughts"
+                "english": "Priest of Lost Thoughts",
+                "chinese": "失落思想的祭司"
             },
             "character_art": "@PriestOfLostThoughtsCharacterArt",
             "subtypes": [

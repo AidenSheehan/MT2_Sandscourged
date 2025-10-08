@@ -5,11 +5,12 @@
             "id": "EvokingFlute",
             "type": "collectable",
             "names": {
-                "english": "Evoking Flute"
+                "english": "Evoking Flute",
+                "chinese": "回忆长笛"
             },
             "descriptions": {
                 "english": "Scarabs enter with [undying] [effect0.power].",
-                "chinese": "Scarab单位在[summon]时获得[undying] [effect0.power]。"
+                "chinese": "圣甲虫单位在[summon]时获得[undying] [effect0.power]。"
             },
             "lore_tooltips": [
                 {

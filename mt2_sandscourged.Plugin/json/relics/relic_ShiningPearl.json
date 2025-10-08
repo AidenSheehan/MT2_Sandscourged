@@ -5,7 +5,8 @@
             "id": "ShiningPearl",
             "type": "collectable",
             "names": {
-                "english": "Shining Pearl"
+                "english": "Shining Pearl",
+                "chinese": "明亮珍珠"
             },
             "descriptions": {
                 "english": "Gain [effect0.power][ember] when a friendly unit dies.",

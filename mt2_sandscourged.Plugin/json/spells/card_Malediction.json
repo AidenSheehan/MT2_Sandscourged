@@ -4,11 +4,12 @@
         {
             "id": "Malediction",
             "names": {
-                "english": "Malediction"
+                "english": "Malediction",
+                "chinese": "邪咒"
             },
             "descriptions": {
                 "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to enemy units. Add [trait1.power] random <b>Torments</b> to your hand.",
-                "chinese": "对所有敌方单位施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。将 [trait1.power] 张随机<b>Torment</b>卡牌加入你的手牌。"
+                "chinese": "对所有敌方单位施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。将 [trait1.power] 张随机<b>折磨</b>卡牌加入你的手牌。"
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",

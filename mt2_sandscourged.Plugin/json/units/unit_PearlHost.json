@@ -4,7 +4,8 @@
         {
             "id": "SpawnPearlHost",
             "names": {
-                "english": "Pearl Host"
+                "english": "Pearl Host",
+                "chinese": "珍珠宿主"
             },
             "card_art": "@PearlHost",
             "cost": 1,
@@ -34,7 +35,8 @@
             "attack_damage": 20,
             "health": 20,
             "names": {
-                "english": "Pearl Host"
+                "english": "Pearl Host",
+                "chinese": "珍珠宿主"
             },
             "character_art": "@PearlHostCharacterArt",
             "subtypes": [
@@ -52,7 +54,7 @@
             "id": "PearlHostSummonTrigger",
             "descriptions": {
                 "english": "Shuffle a <b>Vexation</b> into your draw pile.",
-                "chinese": "将一张<b>Vexation</b>卡牌加入你的抽牌堆。"
+                "chinese": "将一张<b>苦恼</b>卡牌加入你的抽牌堆。"
             },
             "trigger": "on_spawn",
             "effects": [

@@ -4,7 +4,8 @@
     {
       "id": "OblivionChamber",
       "names": {
-        "english": "Oblivion Chamber"
+        "english": "Oblivion Chamber",
+        "chinese": "湮灭之室"
       },
       "descriptions": {
         "english": "When a [debuff] is applied to an enemy unit, also apply [mt2_sandscourged.Plugin_scourge] [effect0.upgrade.roommodifier0.status0.power].",

@@ -4,7 +4,8 @@
         {
             "id": "SpawnPharaoh",
             "names": {
-                "english": "Ur-Pharaoh"
+                "english": "Ur-Pharaoh",
+                "chinese": "乌尔法老"
             },
             "card_art": "@Pharaoh",
             "cost": 0,
@@ -30,7 +31,8 @@
         {
             "id": "SwarmLord1Ability",
             "names": {
-                "english": "Swarm"
+                "english": "Swarm",
+                "chinese": "虫群之力"
             },
             "descriptions": {
                 "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_scourge] [effect2.status0.power] per [soul] to enemy units.",
@@ -51,7 +53,8 @@
         {
             "id": "SwarmLord2Ability",
             "names": {
-                "english": "Swarm II"
+                "english": "Swarm II",
+                "chinese": "虫群之力 II"
             },
             "descriptions": {
                 "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_scourge] [effect2.status0.power] per [soul] to enemy units.",
@@ -72,7 +75,8 @@
         {
             "id": "SwarmLord3Ability",
             "names": {
-                "english": "Swarm III"
+                "english": "Swarm III",
+                "chinese": "虫群之力 III"
             },
             "descriptions": {
                 "english": "Apply +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] to friendly units and [mt2_sandscourged.Plugin_scourge] [effect2.status0.power] per [soul] to enemy units.",
@@ -95,7 +99,8 @@
         {
             "id": "Pharaoh",
             "names": {
-                "english": "Ur-Pharaoh"
+                "english": "Ur-Pharaoh",
+                "chinese": "乌尔法老"
             },
             "character_art": "@PharaohCharacterArt",
             "chatter": "@CTR_Pharaoh",
@@ -124,7 +129,8 @@
         {
             "id": "upg_SwarmLord1",
             "titles": {
-                "english": "Swarm Lord"
+                "english": "Swarm Lord",
+                "chinese": "虫群领主"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -136,7 +142,8 @@
         {
             "id": "upg_SwarmLord2",
             "titles": {
-                "english": "Swarm Lord II"
+                "english": "Swarm Lord II",
+                "chinese": "虫群领主 II"
             },
             "descriptions": {
                 "english": "Do I really need this"
@@ -148,7 +155,8 @@
         {
             "id": "upg_SwarmLord3",
             "titles": {
-                "english": "Swarm Lord III"
+                "english": "Swarm Lord III",
+                "chinese": "虫群领主 III"
             },
             "descriptions": {
                 "english": "Still not sure I need this"
@@ -175,7 +183,8 @@
         {
             "id": "upg_Pearlescent1",
             "titles": {
-                "english": "Pearlescent"
+                "english": "Pearlescent",
+                "chinese": "珍珠光泽"
             },
             "descriptions": {
                 "english": "wow its pearls"
@@ -199,7 +208,8 @@
         {
             "id": "upg_Pearlescent2",
             "titles": {
-                "english": "Pearlescent II"
+                "english": "Pearlescent II",
+                "chinese": "珍珠光泽 II"
             },
             "descriptions": {
                 "english": "wow its still pearls"
@@ -223,7 +233,8 @@
         {
             "id": "upg_Pearlescent3",
             "titles": {
-                "english": "Pearlescent III"
+                "english": "Pearlescent III",
+                "chinese": "珍珠光泽 III"
             },
             "descriptions": {
                 "english": "I guess we doing pearls now"
@@ -262,7 +273,8 @@
         {
             "id": "upg_SoulTender1",
             "titles": {
-                "english": "Soulmonger"
+                "english": "Soulmonger",
+                "chinese": "灵魂商贩"
             },
             "descriptions": {
                 "english": "what a tender soul"
@@ -276,7 +288,8 @@
         {
             "id": "upg_SoulTender2",
             "titles": {
-                "english": "Soulmonger II"
+                "english": "Soulmonger II",
+                "chinese": "灵魂商贩 II"
             },
             "descriptions": {
                 "english": "what a tenderer soul"
@@ -290,7 +303,8 @@
         {
             "id": "upg_SoulTender3",
             "titles": {
-                "english": "Soulmonger III"
+                "english": "Soulmonger III",
+                "chinese": "灵魂商贩 III"
             },
             "descriptions": {
                 "english": "what a tenderist soul"

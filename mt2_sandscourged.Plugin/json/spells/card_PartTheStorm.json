@@ -4,7 +4,8 @@
         {
             "id": "PartTheStorm",
             "names": {
-                "english": "Part the Storm"
+                "english": "Part the Storm",
+                "chinese": "劈开风暴"
             },
             "descriptions": {
                 "english": "Costs -[trait0.power][ember] for each friendly unit death this battle.<br>Deal [effect0.power] damage.",

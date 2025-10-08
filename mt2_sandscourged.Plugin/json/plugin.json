@@ -83,11 +83,12 @@
         {
             "id": "TormentTooltip",
             "titles": {
-                "english": "Torments"
+                "english": "Torments",
+                "chinese": "折磨"
             },
             "descriptions": {
                 "english": "<b>Torments</b> are 0[ember] spells with [ephemeral] that apply various [debuff]<b>s</b>.",
-                "chinese": "<b>Torments</b>是一些 0[ember] 且具有[ephemeral]的法术牌，它们会施加各种各样的[debuff]。"
+                "chinese": "<b>折磨</b>是一些 0[ember] 且具有[ephemeral]的法术牌，它们会施加各种各样的[debuff]。"
             },
             "style": "keyword",
             "allow_secondary_placement": true

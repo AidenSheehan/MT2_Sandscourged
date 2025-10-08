@@ -4,7 +4,8 @@
         {
             "id": "OblivionSands",
             "names": {
-                "english": "Oblivion Sands"
+                "english": "Oblivion Sands",
+                "chinese": "湮灭之沙"
             },
             "descriptions": {
                 "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power], then apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power].",
