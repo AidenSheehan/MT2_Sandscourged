@@ -183,8 +183,8 @@ namespace mt2_sandscourged.Plugin
 
   }
 );
-            Plugin.SetupTraitTooltips(this.GetType().Assembly);
-            Plugin.SetupCardEffectTooltips(this.GetType().Assembly);
+            SetupTraitTooltips(this.GetType().Assembly);
+            SetupCardEffectTooltips(this.GetType().Assembly);
 
             // Uncomment if you need harmony patches, if you are writing your own custom effects.
             var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
@@ -246,9 +246,9 @@ namespace mt2_sandscourged.Plugin
         /// CardTraits have to be whitelisted to display a tooltip.
         /// </summary>
         /// <param name="assembly">Optional assembly to pass in. If not specified the caller's assesmbly is assumed</param>
-        public static void SetupTraitTooltips(Assembly? assembly)
+        private void SetupTraitTooltips(Assembly? assembly)
         {
-            assembly = assembly ?? Assembly.GetCallingAssembly();
+            assembly ??= Assembly.GetCallingAssembly();
             List<string> cardTraitNames = [];
             foreach (var type in assembly.GetTypes())
             {
@@ -273,16 +273,21 @@ namespace mt2_sandscourged.Plugin
         /// 
         /// </summary>
         /// <param name="assembly">Optional assembly to pass in. If not specified the caller's assesmbly is assumed</param>
-        public static void SetupCardEffectTooltips(Assembly? assembly = null)
+        private void SetupCardEffectTooltips(Assembly? assembly = null)
         {
-            assembly = assembly ?? Assembly.GetCallingAssembly();
+            assembly ??= Assembly.GetCallingAssembly();
             List<string> cardTraitNames = [];
             foreach (var type in assembly.GetTypes())
             {
                 // CardEffects that have a tooltip.
                 if (type.IsSubclassOf(typeof(CardEffectBase)))
                 {
-                    bool needsATooltip = type.GetMethod("CreateAdditionalTooltips").DeclaringType == type;
+                    var methodA = type.GetMethod("CreateAdditionalTooltips", BindingFlags.Public | BindingFlags.Instance, null, [typeof(CardEffectState), typeof(TooltipContainer), typeof(SaveManager)], null);
+                    var methodB = type.GetMethod("CreateAdditionalTooltips", BindingFlags.Public | BindingFlags.Instance, null, [typeof(CardEffectState), typeof(TooltipContainer), typeof(SaveManager), typeof(CardState)], null);
+                    Logger.LogError($"methodA: {(methodA != null ? methodA.Name : "None")}");
+                    Logger.LogError($"methodB: {(methodB != null ? methodB.Name : "None")}");
+                    var methods = new[] { methodA, methodB };
+                    bool needsATooltip = methods.Any(m => m?.DeclaringType == type);
                     if (needsATooltip)
                     {
                         cardTraitNames.Add(type.AssemblyQualifiedName);

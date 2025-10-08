@@ -8,7 +8,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "The warped priests of the Sandscourged use eyes plucked from their lessers to glimpse through the swirling curtains of sand that surround Oblivion. Through these lenses, they have seen their path to revenge."
+                    "english": "The warped priests of the Sandscourged use eyes plucked from the Lost to glimpse through the swirling curtains of sand that surround Oblivion. Through these lenses, they have seen their path to revenge."
                 }
             ],
             "card_type": "equipment",
@@ -34,7 +34,7 @@
         {
             "id": "ScryingEyeAbility",
             "names": {
-                "english": "Foresee"
+                "english": "Glimpse"
             },
             "descriptions": {
                 "english": "Draw [effect0.power]. Discard [effect0.power].",

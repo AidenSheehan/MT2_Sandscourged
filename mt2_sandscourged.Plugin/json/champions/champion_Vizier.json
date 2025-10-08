@@ -19,7 +19,7 @@
             ],
             "lore_tooltips": [
                 {
-                    "english": "Once a simple merchant, now High Vizier of the Sandscourgd. She struck a terrible pact with the Ur-Pharaoh, thereby becoming the \"First Blessed\". She leads the Scourged in their struggle for vengeance against Seraph, and conducts profane rituals in the Ur-Pharaoh's name."
+                    "english": "Once a simple merchant, now High Vizier of the Sandscourged. She struck a terrible pact with the Ur-Pharaoh, thereby becoming the \"First Blessed\". She leads the Scourged in their struggle for vengeance against Seraph, and conducts profane rituals in the Ur-Pharaoh's name."
                 }
             ]
         },
@@ -225,7 +225,7 @@
             "descriptions": {
                 "english": "Why do i need this"
             },
-            "bonus_damage": 10,
+            "bonus_damage": 5,
             "bonus_hp": 10,
             "ability_upgrade": "@StormSplitter1Ability"
         },
@@ -237,8 +237,8 @@
             "descriptions": {
                 "english": "Why do i need this"
             },
-            "bonus_damage": 10,
-            "bonus_hp": 10,
+            "bonus_damage": 15,
+            "bonus_hp": 15,
             "ability_upgrade": "@StormSplitter2Ability",
             "trigger_upgrades": [
                 "@StormSplitter2SlayTrigger"
@@ -252,8 +252,8 @@
             "descriptions": {
                 "english": "Why do i need this"
             },
-            "bonus_damage": 30,
-            "bonus_hp": 30,
+            "bonus_damage": 40,
+            "bonus_hp": 20,
             "ability_upgrade": "@StormSplitter3Ability",
             "trigger_upgrades": [
                 "@StormSplitter3SlayTrigger"
@@ -264,19 +264,19 @@
         {
             "id": "StormSplitter1AbilityTrait",
             "name": "@CardTraitScalingByHandCount",
-            "param_int": 10,
+            "param_int": 15,
             "param_int_2": 1
         },
         {
             "id": "StormSplitter2AbilityTrait",
             "name": "@CardTraitScalingByHandCount",
-            "param_int": 20,
+            "param_int": 25,
             "param_int_2": 1
         },
         {
             "id": "StormSplitter3AbilityTrait",
             "name": "@CardTraitScalingByHandCount",
-            "param_int": 40,
+            "param_int": 50,
             "param_int_2": 1
         }
     ],

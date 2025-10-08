@@ -46,6 +46,7 @@
             "name": "CardEffectNULL",
             "target_mode": "room",
             "target_team": "both",
+            "param_bool_2": true,
             "additional_tooltips": ["@TormentTooltip"]
         }
     ],

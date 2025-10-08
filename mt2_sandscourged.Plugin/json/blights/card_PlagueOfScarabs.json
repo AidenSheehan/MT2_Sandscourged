@@ -7,8 +7,8 @@
                 "english": "Plague of Scarabs"
             },
             "descriptions": {
-                "english": "Add [effect0.secondarypower] <b>Revered Scarab</b> cards to your hand and apply <b>0</b>[ember] and [ephemeral].",
-                "chinese": "将 [effect0.secondarypower] 张<b>Revered Scarab</b>单位加入你的手牌，并使其获得[ephemeral]和 <b>0</b>[ember]。"
+                "english": "Add [effect1.secondarypower] <b>Revered Scarab</b> cards to your hand and apply <b>0</b>[ember] and [ephemeral].",
+                "chinese": "将 [effect1.secondarypower] 张<b>Revered Scarab</b>单位加入你的手牌，并使其获得[ephemeral]和 <b>0</b>[ember]。"
             },
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
@@ -21,9 +21,8 @@
             ],
             "cost": 1,
             "effects": [
-                {
-                    "id": "@PlagueOfScarabsAddCards"
-                }
+                "@EphemeralTooltipEffect",
+                "@PlagueOfScarabsAddCards"
             ],
             "triggers": [
                 "@PlagueDamageOnUnplayed"

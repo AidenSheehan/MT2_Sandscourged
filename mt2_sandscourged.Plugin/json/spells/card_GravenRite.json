@@ -20,7 +20,8 @@
             ],
             "cost": 3,
             "traits": [
-                "@GravenRiteOffering"
+                "@GravenRiteOffering",
+                "@Consume"
             ],
             "effects": [
                 {

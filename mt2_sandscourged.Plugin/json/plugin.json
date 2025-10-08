@@ -44,6 +44,16 @@
             "target_team": "both",
             "param_int": 3,
             "supress_pyre_room_focus": true
+        },
+        {
+            "id": "EphemeralTooltipEffect",
+            "name": "CardEffectNULL",
+            "param_status_effects": [
+                {
+                    "status": "ephemeral",
+                    "count": 0
+                }
+            ]
         }
     ],
     "card_pools": [
