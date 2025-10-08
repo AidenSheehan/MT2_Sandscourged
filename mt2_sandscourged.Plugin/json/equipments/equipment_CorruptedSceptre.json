@@ -63,18 +63,14 @@
         {
             "id": "CorruptedSceptreRoomModifier",
             "name": "@RoomStateAttackPerDebuffOnTeam",
-            "descriptions": [
-                {
+            "descriptions": {
                     "english": "+[power][attack] for each distinct [debuff] among enemy units.",
                     "chinese": "敌方单位之中每有一种[debuff]，获得 +[power][attack]。"
-                }
-            ],
-            "in_play_descriptions": [
-                {
+            },
+            "in_play_descriptions": {
                     "english": "+[power][attack] for each distinct [debuff] among enemy units.",
                     "chinese": "敌方单位之中每有一种[debuff]，获得 +[power][attack]。"
-                }
-            ],
+            },
             "extra_body_tooltips": {
                 "english": "+[power][attack] for each distinct [debuff] among enemy units.",
                 "chinese": "敌方单位之中每有一种[debuff]，获得 +[power][attack]。"
