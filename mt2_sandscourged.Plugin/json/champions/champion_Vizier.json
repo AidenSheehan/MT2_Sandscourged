@@ -4,7 +4,8 @@
         {
             "id": "SpawnVizier",
             "names": {
-                "english": "Vizier Izketri"
+                "english": "Vizier Izketri",
+                "chinese": "伊兹克大臣"
             },
             "card_art": "@Vizier",
             "cost": 0,
@@ -26,7 +27,8 @@
         {
             "id": "StormSplitter1Ability",
             "names": {
-                "english": "Obliterate"
+                "english": "Obliterate",
+                "chinese": "抹杀"
             },
             "descriptions": {
                 "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
@@ -49,7 +51,8 @@
         {
             "id": "StormSplitter2Ability",
             "names": {
-                "english": "Obliterate II"
+                "english": "Obliterate II",
+                "chinese": "抹杀 II"
             },
             "descriptions": {
                 "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
@@ -72,7 +75,8 @@
         {
             "id": "StormSplitter3Ability",
             "names": {
-                "english": "Obliterate III"
+                "english": "Obliterate III",
+                "chinese": "抹杀 III"
             },
             "descriptions": {
                 "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
@@ -97,7 +101,8 @@
         {
             "id": "Vizier",
             "names": {
-                "english": "Vizier Izketri"
+                "english": "Vizier Izketri",
+                "chinese": "伊兹克大臣"
             },
             "character_art": "@VizierCharacterArt",
             "chatter": "@CTR_Vizier",
@@ -113,7 +118,8 @@
         {
             "id": "upg_FirstBlessed1",
             "titles": {
-                "english": "First Blessed"
+                "english": "First Blessed",
+                "chinese": "第一恩泽"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -128,7 +134,8 @@
         {
             "id": "upg_FirstBlessed2",
             "titles": {
-                "english": "First Blessed II"
+                "english": "First Blessed II",
+                "chinese": "第一恩泽 II"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -143,7 +150,8 @@
         {
             "id": "upg_FirstBlessed3",
             "titles": {
-                "english": "First Blessed III"
+                "english": "First Blessed III",
+                "chinese": "第一恩泽 III"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -176,7 +184,8 @@
         {
             "id": "upg_EvilEye1",
             "titles": {
-                "english": "Evil Eye"
+                "english": "Evil Eye",
+                "chinese": "邪眼"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -190,7 +199,8 @@
         {
             "id": "upg_EvilEye2",
             "titles": {
-                "english": "Evil Eye II"
+                "english": "Evil Eye II",
+                "chinese": "邪眼 II"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -205,7 +215,8 @@
         {
             "id": "upg_EvilEye3",
             "titles": {
-                "english": "Evil Eye III"
+                "english": "Evil Eye III",
+                "chinese": "邪眼 III"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -220,7 +231,8 @@
         {
             "id": "upg_StormSplitter1",
             "titles": {
-                "english": "Storm Splitter"
+                "english": "Storm Splitter",
+                "chinese": "风暴分流"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -232,7 +244,8 @@
         {
             "id": "upg_StormSplitter2",
             "titles": {
-                "english": "Storm Splitter II"
+                "english": "Storm Splitter II",
+                "chinese": "风暴分流 II"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -247,7 +260,8 @@
         {
             "id": "upg_StormSplitter3",
             "titles": {
-                "english": "Storm Splitter III"
+                "english": "Storm Splitter III",
+                "chinese": "风暴分流 III"
             },
             "descriptions": {
                 "english": "Why do i need this"
@@ -286,7 +300,7 @@
             "trigger": "on_spawn",
             "descriptions": {
                 "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile.",
-                "chinese": "将 [effect0.secondarypower] 张<b>Vexation</b>卡牌加入你的抽牌堆。"
+                "chinese": "将 [effect0.secondarypower] 张<b>苦恼</b>卡牌加入你的抽牌堆。"
             },
             "effects": [
                 "@FirstBlessed1AddVexations"
@@ -297,7 +311,7 @@
             "trigger": "on_spawn",
             "descriptions": {
                 "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile.",
-                "chinese": "将 [effect0.secondarypower] 张<b>Vexation</b>卡牌加入你的抽牌堆。"
+                "chinese": "将 [effect0.secondarypower] 张<b>苦恼</b>卡牌加入你的抽牌堆。"
             },
             "effects": [
                 "@FirstBlessed2AddVexations"
@@ -308,7 +322,7 @@
             "trigger": "on_spawn",
             "descriptions": {
                 "english": "Shuffle [effect0.secondarypower] <b>Vexations</b> into your draw pile.",
-                "chinese": "将 [effect0.secondarypower] 张<b>Vexation</b>卡牌加入你的抽牌堆。"
+                "chinese": "将 [effect0.secondarypower] 张<b>苦恼</b>卡牌加入你的抽牌堆。"
             },
             "effects": [
                 "@FirstBlessed3AddVexations"
@@ -361,7 +375,7 @@
             "trigger": "post_combat",
             "descriptions": {
                 "english": "Add [effect0.secondarypower] random <b>Torments</b> to your hand.",
-                "chinese": "将 [effect0.secondarypower] 张随机<b>Torment</b>卡牌加入你的手牌。"
+                "chinese": "将 [effect0.secondarypower] 张随机<b>折磨</b>卡牌加入你的手牌。"
             },
             "effects": [
                 "@EvilEyeAddTorments"

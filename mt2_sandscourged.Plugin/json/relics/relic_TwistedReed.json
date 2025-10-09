@@ -5,7 +5,8 @@
             "id": "TwistedReed",
             "type": "collectable",
             "names": {
-                "english": "Twisted Reed"
+                "english": "Twisted Reed",
+                "chinese": "扭曲芦苇"
             },
             "descriptions": {
                 "english": "Bosses start with [mt2_sandscourged.Plugin_hex] [effect0.status0.power]. [mt2_sandscourged.Plugin_hex] does not decay.",

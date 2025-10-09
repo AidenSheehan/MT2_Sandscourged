@@ -4,7 +4,8 @@
         {
             "id": "SelectiveMemory",
             "names": {
-                "english": "Selective Memory"
+                "english": "Selective Memory",
+                "chinese": "选择性记忆"
             },
             "descriptions": {
                 "english": "Discard your hand.<br>Draw [effect1.power] card of each type.<br>Increase this card's [ember] by [effect7.upgrade.costreductionabs].",

@@ -4,7 +4,8 @@
         {
             "id": "SpawnRevenant",
             "names": {
-                "english": "Revenant"
+                "english": "Revenant",
+                "chinese": "亡魂战士"
             },
             "card_art": "@Revenant",
             "cost": 3,
@@ -34,7 +35,8 @@
             "attack_damage": 35,
             "health": 25,
             "names": {
-                "english": "Revenant"
+                "english": "Revenant",
+                "chinese": "亡魂战士"
             },
             "character_art": "@RevenantCharacterArt",
             "subtypes": [

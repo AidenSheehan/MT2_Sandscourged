@@ -4,7 +4,8 @@
         {
             "id": "Idolize",
             "names": {
-                "english": "Idolize"
+                "english": "Idolize",
+                "chinese": "盲目崇拜"
             },
             "descriptions": {
                 "english": "Apply [soul] [effect0.status0.power] to a unit. It gains [attack] and [health] equal to the amount of [soul] it has.",

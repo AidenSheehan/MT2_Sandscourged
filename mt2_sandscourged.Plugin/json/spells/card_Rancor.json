@@ -12,7 +12,8 @@
         {
             "id": "Rancor",
             "names": {
-                "english": "Rancor"
+                "english": "Rancor",
+                "chinese": "怨恨"
             },
             "descriptions": {
                 "english": "Apply [rage] [effect0.status0.power] to friendly units for each card in your hand except this one.<br>Discard your hand.",

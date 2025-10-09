@@ -4,7 +4,8 @@
         {
             "id": "SpawnEvermaw",
             "names": {
-                "english": "Evermaw"
+                "english": "Evermaw",
+                "chinese": "巨鳄"
             },
             "card_art": "@Evermaw",
             "cost": 2,
@@ -30,7 +31,8 @@
         {
             "id": "EvermawAbility",
             "names": {
-                "english": "Guzzle"
+                "english": "Guzzle",
+                "chinese": "豪饮"
             },
             "descriptions": {
                 "english": "Purge a card from your hand.",
@@ -54,7 +56,8 @@
             "attack_damage": 25,
             "health": 20,
             "names": {
-                "english": "Evermaw"
+                "english": "Evermaw",
+                "chinese": "巨鳄"
             },
             "character_art": "@EvermawCharacterArt",
             "subtypes": [

@@ -4,7 +4,8 @@
         {
             "id": "SpawnReveredScarab",
             "names": {
-                "english": "Revered Scarab"
+                "english": "Revered Scarab",
+                "chinese": "崇敬圣甲虫"
             },
             "card_art": "@ReveredScarab",
             "cost": 1,
@@ -34,7 +35,8 @@
             "attack_damage": 3,
             "health": 1,
             "names": {
-                "english": "Revered Scarab"
+                "english": "Revered Scarab",
+                "chinese": "崇敬圣甲虫"
             },
             "character_art": "@ReveredScarabCharacterArt",
             "subtypes": [

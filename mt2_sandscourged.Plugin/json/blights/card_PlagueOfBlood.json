@@ -4,7 +4,8 @@
         {
             "id": "PlagueOfBlood",
             "names": {
-                "english": "Plague of Blood"
+                "english": "Plague of Blood",
+                "chinese": "鲜血瘟疫"
             },
             "descriptions": {
                 "english": "Draw a spell and apply -[effect1.upgrade.costreduction][ember] and +[effect1.upgrade.bonusdamage] [magicpower].",

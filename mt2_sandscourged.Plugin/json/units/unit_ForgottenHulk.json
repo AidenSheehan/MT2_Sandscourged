@@ -4,7 +4,8 @@
         {
             "id": "SpawnForgottenHulk",
             "names": {
-                "english": "Forgotten Hulk"
+                "english": "Forgotten Hulk",
+                "chinese": "遗忘巨人"
             },
             "lore_tooltips": [
                 {
@@ -35,7 +36,8 @@
             "attack_damage": 0,
             "health": 45,
             "names": {
-                "english": "Forgotten Hulk"
+                "english": "Forgotten Hulk",
+                "chinese": "遗忘巨人"
             },
             "character_art": "@ForgottenHulkCharacterArt",
             "subtypes": [

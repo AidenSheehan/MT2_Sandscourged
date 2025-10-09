@@ -5,7 +5,8 @@
       "id": "CursedTablet",
       "type": "collectable",
       "names": {
-        "english": "Cursed Tablet"
+        "english": "Cursed Tablet",
+        "chinese": "诅咒石板"
       },
       "descriptions": {
         "english": "When a unit gains [mt2_sandscourged.Plugin_hex], it gains +[effect0.power] stacks.",

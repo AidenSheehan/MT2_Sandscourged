@@ -3,10 +3,12 @@
         {
             "id": "ClassSandscourged",
             "titles": {
-                "english": "Sandscourged"
+                "english": "Sandscourged",
+                "chinese": "沙蚀"
             },
             "descriptions": {
-                "english": "Lead the warriors of Limbo, revenants serving an ancient power, as they call upon the warping sands of Oblivion."
+                "english": "Lead the warriors of Limbo, revenants serving an ancient power, as they call upon the warping sands of Oblivion.",
+                "chinese": "率领来自地狱边缘的侍奉远古之力的亡魂战士们，使用湮灭之地的扭曲之沙。"
             },
             "subclass_descriptions": {
                 "english": "Subclass description"
@@ -110,11 +112,11 @@
             "prefab": "@SandscourgedMapIcon",
             "titles": {
                 "english": "Sandscourged Banner",
-                "chinese": "Sandscourged战旗"
+                "chinese": "沙蚀战旗"
             },
             "descriptions": {
                 "english": "Hire a Sandscourged Unit",
-                "chinese": "获得一个Sandscourged单位。"
+                "chinese": "获得一个沙蚀单位。"
             },
             "pools": [
                 "RandomChosenMainClassUnit",
@@ -176,19 +178,22 @@
         {
             "id": "Sub_Scarab",
             "names": {
-                "english": "Scarab"
+                "english": "Scarab",
+                "chinese": "圣甲虫"
             }
         },
         {
             "id": "Sub_Lost",
             "names": {
-                "english": "Lost"
+                "english": "Lost",
+                "chinese": "失魂者"
             }
         },
         {
             "id": "Sub_Ego",
             "names": {
-                "english": "Ego"
+                "english": "Ego",
+                "chinese": "本源"
             }
         }
     ],

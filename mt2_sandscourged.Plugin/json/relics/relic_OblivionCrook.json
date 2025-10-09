@@ -5,7 +5,8 @@
       "id": "OblivionCrook",
       "type": "collectable",
       "names": {
-        "english": "Oblivion Crook"
+        "english": "Oblivion Crook",
+        "chinese": "湮没之杖"
       },
       "descriptions": {
         "english": "<b>Accursed</b> triggers an additional time.",

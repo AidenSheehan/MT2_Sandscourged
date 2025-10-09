@@ -4,7 +4,8 @@
         {
             "id": "ForgottenTome",
             "names": {
-                "english": "Forgotten Tome"
+                "english": "Forgotten Tome",
+                "chinese": "遗忘之书"
             },
             "descriptions": {
                 "english": "Apply [duality] to a non-Champion unit.",

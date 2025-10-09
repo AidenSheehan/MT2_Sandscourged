@@ -4,7 +4,8 @@
         {
             "id": "SpawnTwistedHusk",
             "names": {
-                "english": "Twisted Husk"
+                "english": "Twisted Husk",
+                "chinese": "扭曲躯壳"
             },
             "lore_tooltips": [
                 {
@@ -35,7 +36,8 @@
             "attack_damage": 7,
             "health": 3,
             "names": {
-                "english": "Twisted Husk"
+                "english": "Twisted Husk",
+                "chinese": "扭曲躯壳"
             },
             "character_art": "@TwistedHuskCharacterArt",
             "subtypes": [
