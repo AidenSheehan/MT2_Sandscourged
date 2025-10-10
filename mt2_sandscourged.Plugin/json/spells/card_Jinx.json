@@ -4,7 +4,8 @@
         {
             "id": "Jinx",
             "names": {
-                "english": "Jinx"
+                "english": "Jinx",
+                "chinese": "厄运"
             },
             "descriptions": {
                 "english": "Deal [effect0.power] damage.",

@@ -4,7 +4,8 @@
         {
             "id": "SpawnWretch",
             "names": {
-                "english": "Wretch"
+                "english": "Wretch",
+                "chinese": "可怜虫"
             },
             "card_art": "@Wretch",
             "cost": 0,
@@ -29,11 +30,12 @@
         {
             "id": "WretchAbility",
             "names": {
-                "english": "Wail"
+                "english": "Wail",
+                "chinese": "哀嚎"
             },
             "descriptions": {
                 "english": "Add [effect0.secondarypower] random <b>Torments</b> to your hand. Take [effect1.power] damage.",
-                "chinese": "将 [effect0.secondarypower] 张随机<b>Torment</b>卡牌加入你的手牌。受到 [effect1.power] 点伤害。"
+                "chinese": "将 [effect0.secondarypower] 张随机<b>折磨</b>卡牌加入你的手牌。受到 [effect1.power] 点伤害。"
             },
             "card_art": "@Wretch",
             "is_an_ability": true,
@@ -54,7 +56,8 @@
             "attack_damage": 5,
             "health": 5,
             "names": {
-                "english": "Wretch"
+                "english": "Wretch",
+                "chinese": "可怜虫"
             },
             "character_art": "@WretchCharacterArt",
             "subtypes": [

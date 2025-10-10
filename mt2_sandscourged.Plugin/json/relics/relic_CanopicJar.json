@@ -5,11 +5,12 @@
             "id": "CanopicJar",
             "type": "collectable",
             "names": {
-                "english": "Canopic Jar"
+                "english": "Canopic Jar",
+                "chinese": "卡诺匹斯罐"
             },
             "descriptions": {
                 "english": "<b>Torments</b> have [juice].",
-                "chinese": "<b>Torment</b>卡牌获得[juice]。"
+                "chinese": "<b>折磨</b>卡牌获得[juice]。"
             },
             "lore_tooltips": [
                 {

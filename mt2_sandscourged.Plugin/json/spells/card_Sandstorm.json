@@ -4,7 +4,8 @@
         {
             "id": "Sandstorm",
             "names": {
-                "english": "Sandstorm"
+                "english": "Sandstorm",
+                "chinese": "沙尘暴"
             },
             "descriptions": {
                 "english": "Deal [effect0.power] damage to enemy units and apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power].",

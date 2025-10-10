@@ -5,7 +5,8 @@
       "id": "BrokenSeal",
       "type": "collectable",
       "names": {
-        "english": "Broken Seal"
+        "english": "Broken Seal",
+        "chinese": "破碎印记"
       },
       "descriptions": {
         "english": "[mt2_sandscourged.Plugin_scourge] deals twice as much damage.",

@@ -4,7 +4,8 @@
         {
             "id": "Dessicate",
             "names": {
-                "english": "Dessicate"
+                "english": "Dessicate",
+                "chinese": "枯竭"
             },
             "descriptions": {
                 "english": "Deal [effect0.power] damage to the front enemy unit, three times.",

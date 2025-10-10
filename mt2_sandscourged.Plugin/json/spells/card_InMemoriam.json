@@ -4,7 +4,8 @@
         {
             "id": "InMemoriam",
             "names": {
-                "english": "In Memoriam"
+                "english": "In Memoriam",
+                "chinese": "悼念"
             },
             "descriptions": {
                 "english": "Apply [mt2_sandscourged.Plugin_scourge] [effect1.status0.power] and [mute] [effect2.status0.power] to enemy units.<br>Draw +[effect3.power] next turn.",

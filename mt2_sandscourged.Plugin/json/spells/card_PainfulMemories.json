@@ -4,7 +4,8 @@
         {
             "id": "PainfulMemories",
             "names": {
-                "english": "Painful Memories"
+                "english": "Painful Memories",
+                "chinese": "痛苦的记忆"
             },
             "descriptions": {
                 "english": "Shuffle [effect2.power] <b>Vexations</b> into your draw pile. Gain [effect3.power][ember] and draw [effect2.power]."

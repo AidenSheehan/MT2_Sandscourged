@@ -4,7 +4,8 @@
         {
             "id": "SpawnOverseerEternal",
             "names": {
-                "english": "Overseer Eternal"
+                "english": "Overseer Eternal",
+                "chinese": "不朽监督者"
             },
             "card_art": "@OverseerEternal",
             "cost": 1,
@@ -34,7 +35,8 @@
             "attack_damage": 5,
             "health": 25,
             "names": {
-                "english": "Overseer Eternal"
+                "english": "Overseer Eternal",
+                "chinese": "不朽监督者"
             },
             "character_art": "@OverseerEternalCharacterArt",
             "subtypes": [

@@ -4,7 +4,8 @@
         {
             "id": "SpawnCursedScarab",
             "names": {
-                "english": "Cursed Scarab"
+                "english": "Cursed Scarab",
+                "chinese": "诅咒圣甲虫"
             },
             "card_art": "@CursedScarab",
             "cost": 1,
@@ -34,7 +35,8 @@
             "attack_damage": 3,
             "health": 1,
             "names": {
-                "english": "Cursed Scarab"
+                "english": "Cursed Scarab",
+                "chinese": "诅咒圣甲虫"
             },
             "character_art": "@CursedScarabCharacterArt",
             "subtypes": [

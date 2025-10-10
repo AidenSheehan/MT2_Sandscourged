@@ -4,7 +4,8 @@
         {
             "id": "PlagueOfScarabs",
             "names": {
-                "english": "Plague of Scarabs"
+                "english": "Plague of Scarabs",
+                "chinese": "圣甲虫瘟疫"
             },
             "descriptions": {
                 "english": "Add [effect1.secondarypower] <b>Revered Scarab</b> cards to your hand and apply <b>0</b>[ember] and [ephemeral].",

@@ -4,7 +4,8 @@
         {
             "id": "SpawnScarabSwarm",
             "names": {
-                "english": "Scarab Swarm"
+                "english": "Scarab Swarm",
+                "chinese": "圣甲虫群"
             },
             "card_art": "@ScarabSwarm",
             "cost": 1,
@@ -35,7 +36,8 @@
             "attack_damage": 3,
             "health": 1,
             "names": {
-                "english": "Scarab Swarm"
+                "english": "Scarab Swarm",
+                "chinese": "圣甲虫群"
             },
             "character_art": "@ScarabSwarmCharacterArt",
             "subtypes": [

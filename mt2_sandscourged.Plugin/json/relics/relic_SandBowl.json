@@ -5,11 +5,12 @@
       "id": "SandBowl",
       "type": "collectable",
       "names": {
-        "english": "Sand Bowl"
+        "english": "Sand Bowl",
+        "chinese": "沙碗"
       },
       "descriptions": {
         "english": "Egos apply [mt2_sandscourged.Plugin_scourge] [effect0.power] on [strike].",
-        "chinese": "Ego单位在[strike]时施加[mt2_sandscourged.Plugin_scourge] [effect0.power]。"
+        "chinese": "本源单位在[strike]时施加[mt2_sandscourged.Plugin_scourge] [effect0.power]。"
       },
       "lore_tooltips": [
         {

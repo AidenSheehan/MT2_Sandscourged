@@ -1,5 +1,6 @@
 
 
+using Conductor.Interfaces;
 using System.Runtime.CompilerServices;
 
 namespace mt2_sandscourged.Plugin

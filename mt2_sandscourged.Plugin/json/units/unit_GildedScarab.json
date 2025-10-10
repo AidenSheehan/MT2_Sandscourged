@@ -4,7 +4,8 @@
         {
             "id": "SpawnGildedScarab",
             "names": {
-                "english": "Gilded Scarab"
+                "english": "Gilded Scarab",
+                "chinese": "镀金圣甲虫"
             },
             "card_art": "@GildedScarab",
             "cost": 1,
@@ -34,7 +35,8 @@
             "attack_damage": 3,
             "health": 1,
             "names": {
-                "english": "Gilded Scarab"
+                "english": "Gilded Scarab",
+                "chinese": "镀金圣甲虫"
             },
             "character_art": "@GildedScarabCharacterArt",
             "subtypes": [

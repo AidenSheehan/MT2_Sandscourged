@@ -4,11 +4,12 @@
         {
             "id": "SpikeOfTheScourged",
             "names": {
-                "english": "Spike of the Scourged"
+                "english": "Spike of the Scourged",
+                "chinese": "沙蚀道钉"
             },
             "descriptions": {
                 "english": "Apply [trait1.statusmultiplier][x] [mt2_sandscourged.Plugin_hex]. Add [x] random <b>Torments</b> to your hand.",
-                "chinese": "施加 [trait1.statusmultiplier][x] [mt2_sandscourged.Plugin_hex]。将 [x] 张随机<b>Torment</b>卡牌加入你的手牌。"
+                "chinese": "施加 [trait1.statusmultiplier][x] [mt2_sandscourged.Plugin_hex]。将 [x] 张随机<b>折磨</b>卡牌加入你的手牌。"
             },
             "rarity": "rare",
             "class": "@ClassSandscourged",

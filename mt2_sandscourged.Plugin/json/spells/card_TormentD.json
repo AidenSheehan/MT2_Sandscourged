@@ -4,7 +4,8 @@
         {
             "id": "TormentD",
             "names": {
-                "english": "Torment"
+                "english": "Torment",
+                "chinese": "折磨：[spellweakness]"
             },
             "descriptions": {
                 "english": "Apply [spellweakness] [effect0.status0.power].",

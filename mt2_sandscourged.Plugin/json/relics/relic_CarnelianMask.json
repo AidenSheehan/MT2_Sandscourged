@@ -5,7 +5,8 @@
       "id": "CarnelianMask",
       "type": "collectable",
       "names": {
-        "english": "Carnelian Mask"
+        "english": "Carnelian Mask",
+        "chinese": "玛瑙面具"
       },
       "descriptions": {
         "english": "The first time each turn you discard a card before the end of turn, friendly units on the floor gain [rage] [effect0.status0.power].",

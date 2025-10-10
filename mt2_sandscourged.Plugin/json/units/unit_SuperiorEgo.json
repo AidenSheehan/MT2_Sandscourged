@@ -4,7 +4,8 @@
         {
             "id": "SpawnSuperiorEgo",
             "names": {
-                "english": "Superior Ego"
+                "english": "Superior Ego",
+                "chinese": "超我"
             },
             "card_art": "@SuperiorEgo",
             "cost": 3,
@@ -34,7 +35,8 @@
             "attack_damage": 50,
             "health": 50,
             "names": {
-                "english": "Superior Ego"
+                "english": "Superior Ego",
+                "chinese": "超我"
             },
             "character_art": "@SuperiorEgoCharacterArt",
             "subtypes": [

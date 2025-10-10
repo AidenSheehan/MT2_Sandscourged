@@ -5,11 +5,12 @@
       "id": "WornHourglass",
       "type": "collectable",
       "names": {
-        "english": "Worn Hourglass"
+        "english": "Worn Hourglass",
+        "chinese": "磨损沙漏"
       },
       "descriptions": {
         "english": "Draw +[effect4.power] each turn. At the start of battle, shuffle [effect0.power] <b>Vexations</b> into your draw pile.",
-        "chinese": "每回合抽 +[effect4.power] 张牌。在战斗开始时，将 [effect0.power] 张<b>Vexation</b>卡牌加入你的抽牌堆。"
+        "chinese": "每回合抽 +[effect4.power] 张牌。在战斗开始时，将 [effect0.power] 张<b>苦恼</b>卡牌加入你的抽牌堆。"
       },
       "lore_tooltips": [
         {

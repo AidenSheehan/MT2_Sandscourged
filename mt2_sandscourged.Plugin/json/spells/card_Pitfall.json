@@ -3,7 +3,8 @@
     "cards": [{
         "id": "Pitfall",
         "names": {
-            "english": "Pitfall"
+            "english": "Pitfall",
+            "chinese": "陷阱"
         },
         "descriptions": {
             "english": "[descend]. Deal [effect1.power] damage.",
