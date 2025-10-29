@@ -32,7 +32,7 @@
             },
             "descriptions": {
                 "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
-                "chinese": "造成伤害，伤害量等同于手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
+                "chinese": "造成伤害，伤害值为手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -56,7 +56,7 @@
             },
             "descriptions": {
                 "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
-                "chinese": "造成伤害，伤害量等同于手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
+                "chinese": "造成伤害，伤害值为手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
@@ -80,7 +80,7 @@
             },
             "descriptions": {
                 "english": "Deal damage equal to [trait0.power]x the number of cards in your hand.<br>Discard your hand.",
-                "chinese": "造成伤害，伤害量等同于手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
+                "chinese": "造成伤害，伤害值为手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
             },
             "card_art": "@Vizier",
             "is_an_ability": true,
