@@ -9,7 +9,7 @@
             },
             "descriptions": {
                 "english": "Deal [effect0.power] damage, twice.",
-                "chinese": "造成 [effect0.power] 点伤害。"
+                "chinese": "造成[effect0.power] 点伤害，重复两次。"
             },
             "lore_tooltips": [
                 {
