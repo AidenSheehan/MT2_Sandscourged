@@ -12,7 +12,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "Long long ago, Seraph quelled an uprising that had the potential to destroy his dominion. To make sure it would never happen again, he exiled the dissidents from Heaven, erased all record of their existence, and forbade mention of their name. Now they have returned, warped and vengeful."
+                    "english": "Long ago, Seraph quelled an uprising that had the potential to end his reign. To make sure it would never happen again, he exiled the dissidents from Heaven, erased all record of their existence, and forbade mention of their name. Now they have returned, warped and vengeful."
                 }
             ],
             "rarity": "uncommon",
@@ -26,9 +26,7 @@
             ],
             "cost": 0,
             "traits": [
-                {
-                    "id": "@Consume"
-                }
+                "@Consume"
             ],
             "effects": [
                 "@ShuffleVexationSingle",

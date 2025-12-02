@@ -6,6 +6,7 @@ namespace mt2_sandscourged.Plugin
 {
     public sealed class CardTraitScalingByHandCount : CardTraitState
     {
+        // This trait is no longer used, but kept for reference.
         public override PropDescriptions CreateEditorInspectorDescriptions()
         {
             return new PropDescriptions
@@ -14,17 +15,6 @@ namespace mt2_sandscourged.Plugin
                 [CardTraitFieldNames.ParamInt2.GetFieldName()] = new PropDescription("Divider per card in hand"),
             };
         }
-
-        // TODO: Implement localisation once we have custom tracked values.
-        /*
-        public override string GetCurrentEffectText(CardStatistics? cardStatistics, SaveManager? saveManager, RelicManager? relicManager)
-        {
-            if (!(cardStatistics != null) || !cardStatistics.GetStatValueShouldDisplayOnCardNow(base.StatValueData))
-            {
-                return string.Empty;
-            }
-        }
-        */
 
         public override string GetCardTooltipTitle()
         {

@@ -17,13 +17,11 @@
                 "StarterCardsOnly"
             ],
             "effects": [
-                {
-                    "id": "@SpawnReveredScarab"
-                }
+                "@SpawnReveredScarab"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "The spawn of the Ur-Pharaoh. They gnaw through flesh and bone alike, embodying of the god-king's insatiable hunger. Zealous worshippers offer up their own bodies to the creatures in fervent devotion."
                 }
             ]
         }
@@ -43,9 +41,7 @@
                 "@Sub_Scarab"
             ],
             "triggers": [
-                {
-                    "id": "@ReveredScarabTrigger"
-                }
+                "@ReveredScarabTrigger"
             ]
         }
     ],
@@ -58,9 +54,7 @@
             },
             "trigger": "on_death",
             "effects": [
-                {
-                    "id": "@ReveredScarabGiveStats"
-                }
+                "@ReveredScarabGiveStats"
             ]
         }
     ],

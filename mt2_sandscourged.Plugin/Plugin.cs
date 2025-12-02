@@ -22,6 +22,7 @@ using TrainworksReloaded.Core.Extensions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using TrainworksReloaded.Base.Extensions;
+using Conductor.Extensions;
 using static BalanceData;
 using System.Reflection;
 
@@ -35,6 +36,7 @@ namespace mt2_sandscourged.Plugin
         {
             // Plugin startup logic
             Logger = base.Logger;
+            //StreamWriter writer = new("localisation.csv", false);
 
             var builder = Railhead.GetBuilder();
             builder.Configure(
@@ -81,7 +83,7 @@ namespace mt2_sandscourged.Plugin
                         "json/spells/card_TormentC.json",
                         "json/spells/card_TormentD.json",
                         "json/spells/card_TormentE.json",
-                        "json/spells/card_Dessicate.json",
+                        "json/spells/card_Desiccate.json",
                         "json/spells/card_Efface.json",
                         "json/spells/card_Beseech.json",
                         "json/spells/card_Jinx.json",
@@ -137,7 +139,10 @@ namespace mt2_sandscourged.Plugin
                         "json/card_effects/PurgeCardFromHand.json",
 
                         // Card Traits
-                        "json/card_traits/ScalingByHandCount.json"
+                        "json/card_traits/ScalingByHandCount.json",
+
+                        // Tracked Values
+                        "json/tracked_values/tracked_values.json"
                     );
                 }
             );
@@ -177,14 +182,30 @@ namespace mt2_sandscourged.Plugin
           return;
       }
       cardsToAdd.ForEach(c => simultaneousReserveCards.AddIfNotNull(c));
-      Logger.LogInfo($"{simultaneousReserveCards.Count} cards now in the set");
       SafeSetField(balanceData, "cardsThatResolveSimultaneouslyOnUnplayed", simultaneousReserveCards);
 
+      // TrackedValue implementation wiring.
+      var trackedValueRegister = c.GetInstance<IRegister<CardStatistics.TrackedValueType>>();
+      CardStatistics.TrackedValueType GetTrackedValueType(string id)
+      {
+          return trackedValueRegister.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.TrackedValueTypeEnum, id));
+      }
+      GetTrackedValueType("CardsInHand").SetTrackedValueGetter(TrackedValueFunctions.CountCardsInHand);
+      GetTrackedValueType("HalfCardsInHand").SetTrackedValueGetter(TrackedValueFunctions.HalfCountCardsInHand);
 
+      //var localisation = c.GetInstance<CustomLocalizationTermRegistry>()!;
+      //foreach (var l in localisation)
+      //{
+      //    Logger.LogInfo($"{l.Key}: {l.Value.English}");
+      //    var escapedValue = l.Value.English.Replace("\"", "\"\""); // Double up any quotes
+      //    writer.WriteLine($"{l.Key},\"{escapedValue}\"");
+      //}
   }
 );
-            SetupTraitTooltips(this.GetType().Assembly);
-            SetupCardEffectTooltips(this.GetType().Assembly);
+            Conductor.Utilities.SetupTraitTooltips(this.GetType().Assembly);
+            Conductor.Utilities.SetupCardEffectTooltips(this.GetType().Assembly);
+            //SetupTraitTooltips(this.GetType().Assembly);
+            //SetupCardEffectTooltips(this.GetType().Assembly);
 
             // Uncomment if you need harmony patches, if you are writing your own custom effects.
             var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
@@ -240,62 +261,6 @@ namespace mt2_sandscourged.Plugin
                 Logger.LogError($"Could not get BalanceData field {field} because of an exception {ex.Message}");
             }
             return null;
-        }
-
-        /// <summary>
-        /// CardTraits have to be whitelisted to display a tooltip.
-        /// </summary>
-        /// <param name="assembly">Optional assembly to pass in. If not specified the caller's assesmbly is assumed</param>
-        private void SetupTraitTooltips(Assembly? assembly)
-        {
-            assembly ??= Assembly.GetCallingAssembly();
-            List<string> cardTraitNames = [];
-            foreach (var type in assembly.GetTypes())
-            {
-                // CardTraits that have a tooltip.
-                if (type.IsSubclassOf(typeof(CardTraitState)))
-                {
-                    bool needsATooltip = type.GetMethod("GetCardTooltipText").DeclaringType == type;
-                    if (needsATooltip)
-                    {
-                        cardTraitNames.Add(type.Name);
-                        cardTraitNames.Add(type.AssemblyQualifiedName);
-                    }
-
-                }
-            }
-            var traits = (HashSet<string>)AccessTools.Field(typeof(TooltipContainer), "TraitsSupportedInTooltips").GetValue(null);
-            traits.UnionWith(cardTraitNames);
-        }
-
-        /// <summary>
-        /// CardEffects have to be whitelisted to display a tooltip.
-        /// 
-        /// </summary>
-        /// <param name="assembly">Optional assembly to pass in. If not specified the caller's assesmbly is assumed</param>
-        private void SetupCardEffectTooltips(Assembly? assembly = null)
-        {
-            assembly ??= Assembly.GetCallingAssembly();
-            List<string> cardTraitNames = [];
-            foreach (var type in assembly.GetTypes())
-            {
-                // CardEffects that have a tooltip.
-                if (type.IsSubclassOf(typeof(CardEffectBase)))
-                {
-                    var methodA = type.GetMethod("CreateAdditionalTooltips", BindingFlags.Public | BindingFlags.Instance, null, [typeof(CardEffectState), typeof(TooltipContainer), typeof(SaveManager)], null);
-                    var methodB = type.GetMethod("CreateAdditionalTooltips", BindingFlags.Public | BindingFlags.Instance, null, [typeof(CardEffectState), typeof(TooltipContainer), typeof(SaveManager), typeof(CardState)], null);
-                    Logger.LogError($"methodA: {(methodA != null ? methodA.Name : "None")}");
-                    Logger.LogError($"methodB: {(methodB != null ? methodB.Name : "None")}");
-                    var methods = new[] { methodA, methodB };
-                    bool needsATooltip = methods.Any(m => m?.DeclaringType == type);
-                    if (needsATooltip)
-                    {
-                        cardTraitNames.Add(type.AssemblyQualifiedName);
-                    }
-                }
-            }
-            var states = (List<string>)AccessTools.Field(typeof(TooltipContainer), "StatesSupportedInTooltips").GetValue(null);
-            states.AddRange(cardTraitNames);
         }
     }
 }

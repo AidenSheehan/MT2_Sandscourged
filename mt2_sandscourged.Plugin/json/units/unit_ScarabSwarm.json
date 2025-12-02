@@ -18,13 +18,11 @@
                 "MegaPool"
             ],
             "effects": [
-                {
-                    "id": "@SpawnScarabSwarm"
-                }
+                "@SpawnScarabSwarm"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "Where the Egos collect many minds in one body, the swarm divides one mind across many bodies, a manifestation of the Ur-Pharaoh's gluttony."
                 }
             ]
         }
@@ -44,9 +42,7 @@
                 "@Sub_Scarab"
             ],
             "triggers": [
-                {
-                    "id": "@ScarabSwarmTrigger"
-                }
+                "@ScarabSwarmTrigger"
             ]
         }
     ],
@@ -59,15 +55,9 @@
             },
             "trigger": "on_death",
             "effects": [
-                {
-                    "id": "@ScarabSwarmGiveStats"
-                },
-                {
-                    "id": "@ScarabSwarmAddCopy1"
-                },
-                {
-                    "id": "@ScarabSwarmAddCopy2"
-                }
+                "@ScarabSwarmGiveStats",
+                "@ScarabSwarmAddCopy",
+                "@ScarabSwarmAddCopy"
             ]
         }
     ],
@@ -86,15 +76,7 @@
             "param_upgrade": "@ScarabThreeAttackOneHealth"
         },
         {
-            "id": "ScarabSwarmAddCopy1",
-            "name": "CardEffectAddUpgradedCopy",
-            "param_int": 3,
-            "copy_modifiers_from_source": true,
-            "ignore_temporary_modifiers_from_source": false,
-            "param_upgrade": "@ScarabSwarmEphemeralUpgrade"
-        },
-        {
-            "id": "ScarabSwarmAddCopy2",
+            "id": "ScarabSwarmAddCopy",
             "name": "CardEffectAddUpgradedCopy",
             "param_int": 3,
             "copy_modifiers_from_source": true,

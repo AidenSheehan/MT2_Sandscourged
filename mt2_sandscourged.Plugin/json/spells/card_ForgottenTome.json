@@ -11,6 +11,11 @@
                 "english": "Apply [duality] to a non-Champion unit.",
                 "chinese": "使一个非勇者单位获得[duality]。"
             },
+            "lore_tooltips": [
+                {
+                    "english": "The Scourged were struck from the history books by Serpah's tyrannical command. Their names left unspoken, their emblems burned, until no-one in Heaven remembered they had ever existed at all."
+                }
+            ],
             "rarity": "rare",
             "class": "@ClassSandscourged",
             "card_art": "@ForgottenTomeArt",
@@ -22,17 +27,11 @@
             ],
             "cost": 1,
             "traits": [
-                {
-                    "id": "@Consume"
-                }
+                "@Consume"
             ],
             "effects": [
-                {
-                    "id": "@ForgottenTomeCheckNotChampion"
-                },
-                {
-                    "id": "@ForgottenTomeAddUpgrade"
-                }
+                "@ForgottenTomeCheckNotChampion",
+                "@ForgottenTomeAddUpgrade"
             ]
         }
     ],

@@ -10,6 +10,11 @@
             "descriptions": {
                 "english": "Discard your hand.<br>Draw [effect1.power] card of each type.<br>Increase this card's [ember] by [effect7.upgrade.costreductionabs]."
             },
+            "lore_tooltips": [
+                {
+                    "english": "Unwelcome thoughts disquiet the mind, and so the Scourged have learned to cast them away. In the harsh sands of Oblivion, tenderness is a liability best forgotten."
+                }
+            ],
             "rarity": "rare",
             "class": "@ClassSandscourged",
             "unlock_level": 0,

@@ -17,13 +17,11 @@
             ],
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnCursedScarab"
-                }
+                "@SpawnCursedScarab"
             ],
             "lore_tooltips": [
                 {
-                    "english": "When a Scarab emerges from its bodily nursery, it can on rare occasion be afflicted with the curses laid upon the Lost host."
+                    "english": "The Ur-Pharaoh permits some of his scions to be used as instruments in the rituals of the Scourged. Their intrinsic malevolence acts as a catalyst to inflict even greater torment."
                 }
             ]
         }
@@ -43,9 +41,7 @@
                 "@Sub_Scarab"
             ],
             "triggers": [
-                {
-                    "id": "@CursedScarabTrigger"
-                }
+                "@CursedScarabTrigger"
             ]
         }
     ],
@@ -58,12 +54,8 @@
             },
             "trigger": "on_death",
             "effects": [
-                {
-                    "id": "@CursedScarabGiveStats"
-                },
-                {
-                    "id": "@CursedScarabApplyHex"
-                }
+                "@CursedScarabGiveStats",
+                "@CursedScarabApplyHex"
             ]
         }
     ],

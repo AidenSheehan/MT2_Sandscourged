@@ -13,7 +13,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "The storms of Oblivion churn with malevolent energy, corrupting the flesh of the Lost, twisting them into grotesque abominations. But where the Lost suffered, the Egos saw unclaimed power, and seized it for their own."
+                    "english": "The third and last plague afflicted upon the Scourged. The storms of Oblivion churned with malevolence, and corrupted the flesh of all that had yet survived."
                 }
             ],
             "rarity": "rare",
@@ -27,13 +27,11 @@
             ],
             "cost": 2,
             "traits": [
-                "@PlagueOfGnarlingScaleByBlight",
-                "@PlagueOfGnarlingScaleByJunk",
-                "@PlagueOfGnarlingDummyTrait"
+                "@PlagueOfGnarlingScaleWarp"
             ],
             "effects": [
                 {
-                    "id": "@PlagueOfGnarlingApplyWoe"
+                    "id": "@PlagueOfGnarlingApplyWarp"
                 }
             ],
             "triggers": [
@@ -43,43 +41,24 @@
     ],
     "traits": [
         {
-            "id": "PlagueOfGnarlingScaleByBlight",
+            "id": "PlagueOfGnarlingScaleWarp",
             "name": "CardTraitScalingAddStatusEffect",
-            "param_tracked_value": "type_in_deck",
-            "param_card_type": "blight",
+            "param_tracked_value": {
+                "id": "@BlightsAndScourgesInDeck",
+                "mod_reference": "Conductor"
+            },
             "param_int": 10,
-            "effect_text_suppressed": true,
             "param_status_effects": [
                 {
                     "status": "@scourge",
                     "count": 0
                 }
             ]
-        },
-        {
-            "id": "PlagueOfGnarlingScaleByJunk",
-            "name": "CardTraitScalingAddStatusEffect",
-            "param_tracked_value": "type_in_deck",
-            "param_card_type": "junk",
-            "param_int": 10,
-            "effect_text_suppressed": true,
-            "param_status_effects": [
-                {
-                    "status": "@scourge",
-                    "count": 0
-                }
-            ]
-        },
-        {
-            "id": "PlagueOfGnarlingDummyTrait",
-            "name": "@CardTraitDummyBlightAndJunkCount",
-            "param_int": 10,
-            "effect_text_suppressed": false
         }
     ],
     "effects": [
         {
-            "id": "PlagueOfGnarlingApplyWoe",
+            "id": "PlagueOfGnarlingApplyWarp",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "drop_target_character",
             "target_team": "both",

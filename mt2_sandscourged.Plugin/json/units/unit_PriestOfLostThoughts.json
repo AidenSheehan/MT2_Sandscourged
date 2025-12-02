@@ -14,13 +14,11 @@
             "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnPriestOfLostThoughts"
-                }
+                "@SpawnPriestOfLostThoughts"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "Every Ego has the thoughts and memories of countless Lost melded with their own, to eternalize those that could not be saved. When the time comes, every Lost mind shall be placed into a new body, albeit one lacking a soul."
                 }
             ],
             "pools": [
@@ -44,17 +42,11 @@
             "targets_room": false,
             "card_type": "spell",
             "traits": [
-                {
-                    "id": "@PriestOfLostThoughtsStatusTrait"
-                }
+                "@PriestOfLostThoughtsStatusTrait"
             ],
             "effects": [
-                {
-                    "id": "@PriestOfLostThoughtsApplyReanimate"
-                },
-                {
-                    "id": "@PriestOfLostThoughtsDiscardHand"
-                }
+                "@PriestOfLostThoughtsApplyReanimate",
+                "@PriestOfLostThoughtsDiscardHand"
             ]
         }
     ],

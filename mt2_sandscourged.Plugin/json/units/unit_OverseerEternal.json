@@ -14,13 +14,11 @@
             "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnOverseerEternal"
-                }
+                "@SpawnOverseerEternal"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "Eternals are a class of Ego with myriad Lost minds bound to their own. They are forbidden from dying, and are permitted to use any means necessary to ensure their survival, for the sake of preserving the Lost within them."
                 }
             ],
             "pools": [
@@ -44,9 +42,7 @@
                 "@Sub_Ego"
             ],
             "triggers": [
-                {
-                    "id": "@OverseerEternalTrigger"
-                }
+                "@OverseerEternalTrigger"
             ]
         }
     ],
@@ -59,12 +55,8 @@
             },
             "trigger": "on_any_unit_death_on_floor",
             "effects": [
-                {
-                    "id": "@OverseerEternalGainAttack"
-                },
-                {
-                    "id": "@OverseerEternalGainLifesteal"
-                }
+                "@OverseerEternalGainAttack",
+                "@OverseerEternalGainLifesteal"
             ]
         }
     ],
@@ -79,14 +71,12 @@
             "id": "OverseerEternalGainAttack",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "self",
-            "target_team": "none",
             "param_upgrade": "@OverseerEternalOneAttack"
         },
         {
             "id": "OverseerEternalGainLifesteal",
             "name": "CardEffectAddStatusEffect",
             "target_mode": "self",
-            "target_team": "none",
             "param_status_effects": [
                 {
                     "status": "lifesteal",

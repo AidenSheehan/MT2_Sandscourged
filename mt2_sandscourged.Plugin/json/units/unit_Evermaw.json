@@ -15,13 +15,11 @@
             "unlock_level": 6,
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnEvermaw"
-                }
+                "@SpawnEvermaw"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "The Ur-Pharaoh has blessed select Egos with it's endless hunger. Forces of destruction - they devour everything in their path, their gaping maws never closing, forever yearning for more."
                 }
             ],
             "pools": [

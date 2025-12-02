@@ -8,12 +8,12 @@
                 "chinese": "厄运"
             },
             "descriptions": {
-                "english": "Deal [effect0.power] damage.",
+                "english": "Deal [effect0.power] damage, twice.",
                 "chinese": "造成 [effect0.power] 点伤害。"
             },
             "lore_tooltips": [
                 {
-                    "english": "Strange magic seems to be vested in the very words engraved into stone cartouches the Egos recite from."
+                    "english": "Priests of the Scourged recite spells from incantations carved into stone cartouches. The stones crack from the strain of the magic, but their power endures."
                 }
             ],
             "rarity": "common",
@@ -27,7 +27,8 @@
             ],
             "cost": 1,
             "effects": [
-                "@JinxDealDamage"
+                "@JinxDealDamage",
+                "@JinxRepeatDamage"
             ],
             "triggers": [
                 "@JinxSlayTrigger"
@@ -40,7 +41,14 @@
             "name": "CardEffectDamage",
             "target_mode": "drop_target_character",
             "target_team": "both",
-            "param_int": 8
+            "param_int": 5
+        },
+        {
+            "id": "JinxRepeatDamage",
+            "name": "CardEffectDamage",
+            "target_mode": "last_targeted_characters",
+            "target_team": "both",
+            "param_int": 5
         },
         {
             "id": "JinxApplyHex",

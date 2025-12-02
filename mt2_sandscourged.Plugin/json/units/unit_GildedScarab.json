@@ -17,13 +17,11 @@
                 "MegaPool"
             ],
             "effects": [
-                {
-                    "id": "@SpawnGildedScarab"
-                }
+                "@SpawnGildedScarab"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "The Ur-Pharaoh revels in greed and opulence. Some of his spawn are adorned in precious metals and gems, taken from what little the Scourged have to give."
                 }
             ]
         }
@@ -49,9 +47,7 @@
                 }
             ],
             "triggers": [
-                {
-                    "id": "@GildedScarabTrigger"
-                }
+                "@GildedScarabTrigger"
             ]
         }
     ],
@@ -64,9 +60,7 @@
             },
             "trigger": "on_death",
             "effects": [
-                {
-                    "id": "@GildedScarabGiveStats"
-                }
+                "@GildedScarabGiveStats"
             ]
         }
     ],

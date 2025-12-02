@@ -26,9 +26,7 @@
             ],
             "cost": 1,
             "traits": [
-                {
-                    "id": "@Consume"
-                }
+                "@Consume"
             ],
             "effects": [
                 "@OblivionSandsApplyHex",
@@ -48,7 +46,6 @@
                     "count": 1
                 }
             ]
-
         },
         {
             "id": "OblivionSandsApplyScourge",

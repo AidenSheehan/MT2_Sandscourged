@@ -45,7 +45,7 @@ namespace mt2_sandscourged.Plugin
                 {
                     int index = RandomManager.Range(0, toProcessCards.Count, RngId.Battle);
                     CardData cardData = toProcessCards[index];
-                    cardManager.AddCard(cardData, CardPile.HandPile, i, count, fromRelic: false, permanent: false, addCardUpgradingInfo);
+                    cardManager.AddCard(cardData, CardPile.HandPile, i, count, fromRelic: false, permanent: false, false, addCardUpgradingInfo);
                 }
 
             }

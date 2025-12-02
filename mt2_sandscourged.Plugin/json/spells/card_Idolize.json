@@ -27,27 +27,18 @@
             ],
             "cost": 1,
             "traits": [
-                {
-                    "id": "@TraitIdolize"
-                }
+                "@TraitIdolize"
             ],
             "effects": [
-                {
-                    "id": "@IdolizeApplySoul"
-                },
-                {
-                    "id": "@IdolizeApplyStats"
-                }
+                "@IdolizeApplySoul",
+                "@IdolizeApplyStats"
             ]
         }
     ],
     "traits": [
         {
             "id": "TraitIdolize",
-            "name": {
-                "id": "@CardTraitStatusEffectUpgradeMultiplier",
-                "mod_reference": "mt2_sandscourged.Plugin"
-            },
+            "name": "@CardTraitStatusEffectUpgradeMultiplier",
             "param_status_effects": [
                 {
                     "status": "captured_soul",

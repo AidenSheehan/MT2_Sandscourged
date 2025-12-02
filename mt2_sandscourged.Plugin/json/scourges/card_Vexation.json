@@ -11,6 +11,11 @@
                 "english": "Add a random <b>Torment</b> to your hand.",
                 "chinese": "将一张随机<b>折磨</b>卡牌加入你的手牌。"
             },
+            "lore_tooltips": [
+                {
+                    "english": "Cruelty begets cruelty. Strife begets strife. Power begets power."
+                }
+            ],
             "rarity": "common",
             "card_type": "junk",
             "card_art": "@VexationArt",
@@ -18,11 +23,11 @@
             "targetless": true,
             "cost": 1,
             "effects": [
-                {
-                    "id": "@AddRandomTorment"
-                }
+                "@AddRandomTorment"
             ],
-            "triggers": ["@VexationDamageOnUnplayed"]
+            "triggers": [
+                "@VexationDamageOnUnplayed"
+            ]
         }
     ],
     "card_triggers": [
@@ -34,9 +39,7 @@
                 "chinese": "薪火受到 [effect0.power] 点伤害。"
             },
             "effects": [
-                {
-                    "id": "@VexationDamage"
-                }
+                "@VexationDamage"
             ]
         }
     ],

@@ -9,7 +9,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "Never let it be said that the Scourged don't have backbone."
+                    "english": "Absent of mind, but whole of body and soul, the Lost suffer in their masses. Their flesh warps and tears, and yet they cannot even think to scream."
                 }
             ],
             "card_art": "@TwistedHusk",
@@ -23,9 +23,7 @@
                 "UnitsAllBanner"
             ],
             "effects": [
-                {
-                    "id": "@SpawnTwistedHusk"
-                }
+                "@SpawnTwistedHusk"
             ]
         }
     ],
@@ -45,9 +43,7 @@
                 "SubtypesData_BannerUnit"
             ],
             "triggers": [
-                {
-                    "id": "@TwistedHuskIncantTrigger"
-                }
+                "@TwistedHuskIncantTrigger"
             ]
         }
     ],
@@ -60,9 +56,7 @@
             },
             "trigger": "card_spell_played",
             "effects": [
-                {
-                    "id": "@TwistedHuskApplyScourge"
-                }
+                "@TwistedHuskApplyScourge"
             ]
         }
     ],

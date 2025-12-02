@@ -29,9 +29,7 @@
                 "@PartTheStormReduceCostTrait"
             ],
             "effects": [
-                {
-                    "id": "@PartTheStormDamage"
-                }
+                "@PartTheStormDamage"
             ]
         }
     ],
