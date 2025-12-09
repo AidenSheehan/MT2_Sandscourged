@@ -14,13 +14,11 @@
             "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnSphinxHierarch"
-                }
+                "@SpawnSphinxHierarch"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "Exalted sages - they recount the histories and grievances of the Scourged and instruct their bretherin in magic both old and new."
                 }
             ],
             "pools": [
@@ -44,9 +42,7 @@
                 "@Sub_Ego"
             ],
             "triggers": [
-                {
-                    "id": "@SphinxHierarchTrigger"
-                }
+                "@SphinxHierarchTrigger"
             ],
             "starting_status_effects": [
                 {
@@ -60,14 +56,12 @@
         {
             "id": "SphinxHierarchTrigger",
             "descriptions": {
-                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power] to the attacked unit.",
+                "english": "Apply [mt2_sandscourged.Plugin_hex] [effect0.status0.power].",
                 "chinese": "施加[mt2_sandscourged.Plugin_hex] [effect0.status0.power]。"
             },
             "trigger": "on_attacking",
             "effects": [
-                {
-                    "id": "@SphinxHierarchApplyHex"
-                }
+                "@SphinxHierarchApplyHex"
             ]
         }
     ],

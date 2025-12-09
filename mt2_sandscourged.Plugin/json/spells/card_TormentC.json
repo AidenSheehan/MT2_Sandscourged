@@ -19,14 +19,10 @@
             "targetless": false,
             "cost": 0,
             "traits": [
-                {
-                    "id": "@TormentEphemeralTrait"
-                }
+                "@TormentEphemeralTrait"
             ],
             "effects": [
-                {
-                    "id": "@TormentCApplySap"
-                }
+                "@TormentCApplySap"
             ]
         }
     ],

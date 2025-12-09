@@ -2,18 +2,23 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "cards": [
         {
-            "id": "Dessicate",
+            "id": "Desiccate",
             "names": {
-                "english": "Dessicate",
+                "english": "Desiccate",
                 "chinese": "枯竭"
             },
             "descriptions": {
                 "english": "Deal [effect0.power] damage to the front enemy unit, three times.",
                 "chinese": "对前排敌方单位造成 [effect0.power] 点伤害，重复三次。"
             },
+            "lore_tooltips": [
+                {
+                    "english": "In Oblivion, oases are illusions, mere tricks of the light. True salvation lies in freeing oneself from the yoke of water and instead drinking of the Ur-Pharaoh's glory."
+                }
+            ],
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
-            "card_art": "@DessicateArt",
+            "card_art": "@DesiccateArt",
             "targets_room": true,
             "targetless": true,
             "pools": [
@@ -21,54 +26,48 @@
             ],
             "cost": 3,
             "traits": [
-                "@DessicateOffering",
-                "@DessicatePiercing"
+                "@DesiccateOffering",
+                "@DesiccatePiercing"
             ],
             "effects": [
-                {
-                    "id": "@DessicateDamage"
-                },
-                {
-                    "id": "@DessicateDamage"
-                },
-                {
-                    "id": "@DessicateDamage"
-                }
+                "@DesiccateDamage",
+                "@DesiccateDamage",
+                "@DesiccateDamage"
             ]
         }
     ],
     "traits": [
         {
-            "id": "DessicateOffering",
+            "id": "DesiccateOffering",
             "name": "CardTraitTreasure"
         },
         {
-            "id": "DessicatePiercing",
+            "id": "DesiccatePiercing",
             "name": "CardTraitIgnoreArmor"
         }
     ],
     "effects": [
         {
-            "id": "DessicateDamage",
+            "id": "DesiccateDamage",
             "name": "CardEffectDamage",
             "target_mode": "front_in_room",
             "target_team": "heroes",
-            "param_int": 25
+            "param_int": 30
         }
     ],
     "sprites": [
         {
-            "id": "DessicateArt",
-            "path": "textures/DessicateArt.png"
+            "id": "DesiccateArt",
+            "path": "textures/DesiccateArt.png"
         }
     ],
     "game_objects": [
         {
-            "id": "DessicateArt",
+            "id": "DesiccateArt",
             "type": "card_art",
             "extensions": {
                 "card_art": {
-                    "sprite": "@DessicateArt"
+                    "sprite": "@DesiccateArt"
                 }
             }
         }

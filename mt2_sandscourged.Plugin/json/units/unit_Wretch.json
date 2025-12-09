@@ -17,13 +17,11 @@
                 "MegaPool"
             ],
             "effects": [
-                {
-                    "id": "@SpawnWretch"
-                }
+                "@SpawnWretch"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Perhaps the most pitiful of the Scourged. No longer useful even for tapping, they wander Oblivion aimlessly, without thought or conviction."
+                    "english": "Perhaps the most pitiful of the Scourged. No longer useful even for tapping, they wander Oblivion aimlessly, without thought or conviction. The soul however, lingers on."
                 }
             ]
         },
@@ -80,7 +78,9 @@
             "param_int": 3,
             "param_int_2": 2,
             "param_card_pool": "@TormentPool",
-            "additional_tooltips": ["@TormentTooltip"]
+            "additional_tooltips": [
+                "@TormentTooltip"
+            ]
         },
         {
             "id": "WretchSelfDamage",

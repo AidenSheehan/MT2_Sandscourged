@@ -23,9 +23,7 @@
                 "UnitsAllBanner"
             ],
             "effects": [
-                {
-                    "id": "@SpawnForgottenHulk"
-                }
+                "@SpawnForgottenHulk"
             ]
         }
     ],
@@ -45,12 +43,8 @@
                 "SubtypesData_BannerUnit"
             ],
             "triggers": [
-                {
-                    "id": "@ForgottenHulkRevengeTrigger"
-                },
-                {
-                    "id": "@ForgottenHulkAccursedTrigger"
-                }
+                "@ForgottenHulkRevengeTrigger",
+                "@ForgottenHulkAccursedTrigger"
             ]
         }
     ],
@@ -63,9 +57,7 @@
             },
             "trigger": "on_hit",
             "effects": [
-                {
-                    "id": "@ForgottenHulkApplyScourge"
-                }
+                "@ForgottenHulkApplyScourge"
             ]
         },
         {
@@ -79,9 +71,7 @@
                 "mod_reference": "Conductor"
             },
             "effects": [
-                {
-                    "id": "@ForgottenHulkGainReanimate"
-                }
+                "@ForgottenHulkGainReanimate"
             ]
         }
     ],

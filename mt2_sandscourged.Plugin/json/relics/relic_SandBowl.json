@@ -14,7 +14,7 @@
       },
       "lore_tooltips": [
         {
-          "english": "Lore stuff"
+          "english": "\"May your bowl never run dry.\" - A sarcastic farewell among the Scourged."
         }
       ],
       "disallow_in_deployment": false,
@@ -44,7 +44,7 @@
       "target_mode": "room",
       "source_team": "monsters",
       "param_bool": true,
-      "param_int": 3,
+      "param_int": 5,
       "triggers": ["@SandBowlStrikeTrigger"]
     }
   ],
@@ -72,7 +72,7 @@
       "param_status_effects": [
         {
           "status": "@scourge",
-          "count": 3
+          "count": 5
         }
       ]
     }

@@ -14,7 +14,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "Lore stuff"
+                    "english": "Sculpted from a single piece of onyx, this idol has been polished to a mirror sheen by the fervent worshippers of the Ur-Pharaoh. Its reflections never seem quite right."
                 }
             ],
             "disallow_in_deployment": true,

@@ -13,7 +13,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "The zealous fervor of the Egos has manifested in bloody ritual, empowering their spells at the expense of the Lost."
+                    "english": "The first plague to afflict the Scourged and one of their own making. In their first days of exile, tribulation led to disagreement, disagreement to anger, and anger to violence. The bloody aftermath; a dire portent of things to come."
                 }
             ],
             "rarity": "uncommon",
@@ -75,7 +75,8 @@
             "id": "PlagueOfBloodSpellUpgrade",
             "bonus_damage": 20,
             "bonus_heal": 20,
-            "cost_reduction": 1
+            "cost_reduction": 1,
+            "x_cost_reduction": 1
         }
     ],
     "sprites": [

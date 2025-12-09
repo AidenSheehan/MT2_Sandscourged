@@ -14,9 +14,7 @@
             "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnPearlHost"
-                }
+                "@SpawnPearlHost"
             ],
             "lore_tooltips": [
                 {

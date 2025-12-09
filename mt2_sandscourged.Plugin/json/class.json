@@ -20,7 +20,8 @@
                 "large": "@ClanLogo_128",
                 "silhouette": "@ClanLogo_Silhouette"
             },
-            "card_style": "pyreborne",
+            "card_draft_icon": "@ClanCardDraftIcon",
+            "card_style": "@SandscourgedClanCardStyle",
             "ui_color": {
                 "r": 0.91,
                 "g": 0.76,
@@ -116,7 +117,7 @@
                 "chinese": "沙蚀战旗"
             },
             "descriptions": {
-                "english": "Hire a Sandscourged Unit",
+                "english": "Gain a Sandscourged Unit",
                 "chinese": "获得一个沙蚀单位。"
             },
             "pools": [
@@ -129,9 +130,7 @@
                     "reward": {
                         "class": "@ClassSandscourged",
                         "rewards": [
-                            {
-                                "id": "@SandscourgedBannerReward"
-                            }
+                            "@SandscourgedBannerReward"
                         ]
                     }
                 }
@@ -206,7 +205,7 @@
                 "map_node_icon": {
                     "disabled_sprite": "@Sandscourged_Disabled",
                     "enabled_sprite": "@Sandscourged_Enabled",
-                    "frozen_sprite": "@Sandscourged_Frozen",
+                    "frozen_sprite": "@Sandscourged_Enabled",
                     "visited_sprite_disabled": "@Sandscourged_VisitedDisabled",
                     "visited_sprite_enabled": "@Sandscourged_VisitedEnabled"
                 }
@@ -255,6 +254,15 @@
             }
         }
     ],
+    "class_card_styles": [
+        {
+            "id": "SandscourgedClanCardStyle",
+            "equipment_card_frame_sprite": "@ClanCardBorderEquipment",
+            "unit_card_frame_sprite": "@ClanCardBorderUnit",
+            "room_card_frame_sprite": "@ClanCardBorderRoom",
+            "spell_card_frame_sprite": "@ClanCardBorderSpell"
+        }
+    ],
     "sprites": [
         {
             "id": "Sandscourged_Disabled",
@@ -266,7 +274,7 @@
         },
         {
             "id": "Sandscourged_Frozen",
-            "path": "textures/ClanAssets/Sandscourged_Disabled.png"
+            "path": "textures/ClanAssets/Sandscourged_Frozen.png"
         },
         {
             "id": "Sandscourged_VisitedDisabled",
@@ -274,7 +282,7 @@
         },
         {
             "id": "Sandscourged_VisitedEnabled",
-            "path": "textures/ClanAssets/Sandscourged_VisitedEnabled.png"
+            "path": "textures/ClanAssets/Sandscourged_VisitedDisabled.png"
         },
         {
             "id": "ClanLogo_48",
@@ -295,6 +303,26 @@
         {
             "id": "ClanLogo_Silhouette",
             "path": "textures/ClanAssets/ClanLogo_Silhouette.png"
+        },
+        {
+            "id": "ClanCardDraftIcon",
+            "path": "textures/ClanAssets/ClanCardDraftIcon.png"
+        },
+        {
+            "id": "ClanCardBorderEquipment",
+            "path": "textures/ClanAssets/ClanBorderEquipment.png"
+        },
+        {
+            "id": "ClanCardBorderUnit",
+            "path": "textures/ClanAssets/ClanBorderUnit.png"
+        },
+        {
+            "id": "ClanCardBorderRoom",
+            "path": "textures/ClanAssets/ClanBorderRoom.png"
+        },
+        {
+            "id": "ClanCardBorderSpell",
+            "path": "textures/ClanAssets/ClanBorderSpell.png"
         },
         {
             "id": "icon_Pharaoh",

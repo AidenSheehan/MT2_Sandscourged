@@ -14,13 +14,11 @@
             "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnSuperiorEgo"
-                }
+                "@SpawnSuperiorEgo"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "The commanders of the Scourged, Superiors are given charge of droves of Lost, enforcing their will by might and magic. On their command, hordes of the mindless attack with reckless abandon."
                 }
             ],
             "pools": [
@@ -60,15 +58,9 @@
                 "mod_reference": "Conductor"
             },
             "effects": [
-                {
-                    "id": "@SuperiorEgoApplyStatsAndStatusEffects"
-                },
-                {
-                    "id": "@SuperiorEgoAttackImmediately"
-                },
-                {
-                    "id": "@SuperiorEgoDie"
-                }
+                "@SuperiorEgoApplyStatsAndStatusEffects",
+                "@SuperiorEgoAttackImmediately",
+                "@SuperiorEgoDie"
             ]
         }
     ],

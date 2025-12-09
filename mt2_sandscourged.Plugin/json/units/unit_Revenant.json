@@ -14,13 +14,11 @@
             "class": "@ClassSandscourged",
             "targets_room": true,
             "effects": [
-                {
-                    "id": "@SpawnRevenant"
-                }
+                "@SpawnRevenant"
             ],
             "lore_tooltips": [
                 {
-                    "english": "Flavour Text"
+                    "english": "The toughest and most fearsome of the Scourged warriors. Revenants are sworn to beat Seraph until he admits his treason, and only then to let him die."
                 }
             ],
             "pools": [

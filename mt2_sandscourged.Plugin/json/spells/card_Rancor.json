@@ -16,9 +16,14 @@
                 "chinese": "怨恨"
             },
             "descriptions": {
-                "english": "Apply [rage] [effect0.status0.power] to friendly units for each card in your hand except this one.<br>Discard your hand.",
-                "chinese": "使所有友方单位获得[rage]，数值等同于其他手牌数量的 [effect0.status0.power] 倍。<br>舍弃全部手牌。"
+                "english": "Apply [rage] [trait0.power] to friendly units for each card in your hand other than this one. Discard your hand.",
+                "chinese": "使所有友方单位获得[rage]，数值等同于其他手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
             },
+            "lore_tooltips": [
+                {
+                    "english": "The Scourged do not forgive, and they most certainly do not forget."
+                }
+            ],
             "rarity": "uncommon",
             "class": "@ClassSandscourged",
             "card_art": "@RancorArt",
@@ -29,25 +34,19 @@
             ],
             "cost": 2,
             "traits": [
-                {
-                    "id": "@RancorTrait"
-                }
+                "@RancorScaleRage"
             ],
             "effects": [
-                {
-                    "id": "@RancorApplyRage"
-                },
-                {
-                    "id": "@RancorDiscardHand"
-                }
+                "@RancorApplyRage",
+                "@RancorDiscardHand"
             ]
         }
     ],
     "traits": [
         {
-            "id": "RancorTrait",
+            "id": "RancorScaleRage",
             "name": "@CardTraitScalingByHandCount",
-            "param_int": 1,
+            "param_int": 2,
             "param_int_2": 1
         }
     ],
@@ -60,7 +59,7 @@
             "param_status_effects": [
                 {
                     "status": "buff",
-                    "count": 2
+                    "count": 1
                 }
             ]
         },

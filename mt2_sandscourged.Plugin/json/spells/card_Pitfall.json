@@ -1,33 +1,36 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "Pitfall",
-        "names": {
-            "english": "Pitfall",
-            "chinese": "陷阱"
-        },
-        "descriptions": {
-            "english": "[descend]. Deal [effect1.power] damage.",
-            "chinese": "[descend]。造成 [effect1.power] 点伤害。"
-        },
-        "rarity": "uncommon",
-        "class": "@ClassSandscourged",
-        "card_art": "@PitfallArt",
-        "targets_room": true,
-        "targetless": false,
-        "pools": [
-            "MegaPool"
-        ],
-        "cost": 1,
-        "effects": [
-            {
-                "id":"@PitfallDescend"
+    "cards": [
+        {
+            "id": "Pitfall",
+            "names": {
+                "english": "Pitfall",
+                "chinese": "陷阱"
             },
-            {
-                "id": "@PitfallDamage"
-            }
-        ]
-    }],
+            "descriptions": {
+                "english": "[descend]. Deal [effect1.power] damage.",
+                "chinese": "[descend]。造成 [effect1.power] 点伤害。"
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Caught between Heaven and Hell, the Scourged's descent was entirely their own."
+                }
+            ],
+            "rarity": "uncommon",
+            "class": "@ClassSandscourged",
+            "card_art": "@PitfallArt",
+            "targets_room": true,
+            "targetless": false,
+            "pools": [
+                "MegaPool"
+            ],
+            "cost": 1,
+            "effects": [
+                "@PitfallDescend",
+                "@PitfallDamage"
+            ]
+        }
+    ],
     "effects": [
         {
             "id": "PitfallDescend",
@@ -44,17 +47,21 @@
             "param_int": 5
         }
     ],
-    "sprites": [{
-        "id": "PitfallArt",
-        "path": "textures/PitfallArt.png"
-    }],
-    "game_objects": [{
-        "id": "PitfallArt",
-        "type": "card_art",
-        "extensions": {
-            "card_art": {
-                "sprite": "@PitfallArt"
+    "sprites": [
+        {
+            "id": "PitfallArt",
+            "path": "textures/PitfallArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "PitfallArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@PitfallArt"
+                }
             }
         }
-    }]
+    ]
 }

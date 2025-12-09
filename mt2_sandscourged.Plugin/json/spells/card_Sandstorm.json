@@ -13,7 +13,7 @@
             },
             "lore_tooltips": [
                 {
-                    "english": "For the aeons the Scourged were bound by Oblivion's storm, not one soul in Limbo ever found them. Now they wield the same sands that veiled and warped them as a terrifying weapon."
+                    "english": "For the aeons the Scourged were bound by Oblivion's storm, not one soul in Limbo ever found them. Now they wield the same sands that once veiled and warped them as a terrifying weapon."
                 }
             ],
             "rarity": "common",
@@ -26,17 +26,11 @@
             ],
             "cost": 3,
             "traits": [
-                {
-                    "id": "@SandstormOffering"
-                }
+                "@SandstormOffering"
             ],
             "effects": [
-                {
-                    "id": "@SandstormDealDamage"
-                },
-                {
-                    "id": "@SandstormApplyScourge"
-                }
+                "@SandstormDealDamage",
+                "@SandstormApplyScourge"
             ]
         }
     ],
