@@ -17,7 +17,7 @@
             },
             "descriptions": {
                 "english": "Apply [rage] [trait0.power] to friendly units for each card in your hand other than this one. Discard your hand.",
-                "chinese": "使所有友方单位获得[rage]，数值等同于其他手牌数量的 [trait0.power] 倍。<br>舍弃全部手牌。"
+                "chinese": "使所有友方单位获得[rage]，数值等同于其他手牌数量的 [trait0.power] 倍。舍弃全部手牌。"
             },
             "lore_tooltips": [
                 {
