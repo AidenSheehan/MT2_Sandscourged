@@ -2,6 +2,8 @@
 
 ![The Sandscourged](https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/icon.png)
 
+Support language: English | [简体中文](https://github.com/AidenSheehan/MT2_Sandscourged/blob/main/README_zh.md)
+
 Adds a whole new clan to Monster Train 2!
 
 ## Table of Contents
