@@ -31,7 +31,7 @@
 
 |    |            |      |   
 |:----------|:-------------:|------------:|
-| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Hex.png" alt="Hex" width="200"/>| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Warp.png" alt="Warp" width="200"/>| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Accursed.png" alt="Accursed" width="200"/> |
+| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Hex_zh.png" alt="Hex" width="200"/>| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Warp_zh.png" alt="Warp" width="200"/>| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Accursed_zh.png" alt="Accursed" width="200"/> |
 
 **注意：本模组仍然在测试中，有一些贴图尚未完成，但是玩法和剧情文本均已做完。目前所有图片均由我自己绘制，之后会润色部分潦草的图片。**
 
@@ -42,8 +42,8 @@
 
 |    |            |      |   |
 |:----------|:-------------:|:-------------:|------------:|
-| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Soulmonger.png" alt="Soulmonger" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Plague of Gnarling.png" alt="Plague of Gnarling" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Revenant.png" alt="Revenant" width="200" /> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Oblivion Chamber.png" alt="Oblivion Chamber" width="200"/>
-|   <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/First Blessed.png" alt="First Blessed" width="200"/>| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Malediction.png" alt="Malediction" width="200"/>   | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Rancor.png" alt="Rancor" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Part the Storm.png" alt="Part the Storm" width="200"/> |
+| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Soulmonger_zh.png" alt="Soulmonger" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Plague of Gnarling_zh.png" alt="Plague of Gnarling" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Revenant_zh.png" alt="Revenant" width="200" /> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Oblivion Chamber_zh.png" alt="Oblivion Chamber" width="200"/>
+|   <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/First Blessed_zh.png" alt="First Blessed" width="200"/>| <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Malediction_zh.png" alt="Malediction" width="200"/>   | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Rancor_zh.png" alt="Rancor" width="200"/> | <img src="https://raw.githubusercontent.com/AidenSheehan/MT2_Sandscourged/main/.img/Part the Storm_zh.png" alt="Part the Storm" width="200"/> |
 
 ## 安装
 建议使用模组管理器来安装本模组，因为它会自动安装好所有前置。或者，执行下面的手动安装说明。
