@@ -5,7 +5,7 @@
             "id": "PlagueOfGnarling",
             "names": {
                 "english": "Plague of Gnarling",
-                "chinese": "木瘤瘟疫"
+                "chinese": "扭曲灾祸"
             },
             "descriptions": {
                 "english": "Apply [mt2_sandscourged.Plugin_scourge] equal to [trait0.power]x the number of <b>Blights</b> and <b>Scourges</b> in your deck.",

@@ -5,7 +5,7 @@
             "id": "SpawnPriestOfLostThoughts",
             "names": {
                 "english": "Priest of Lost Thoughts",
-                "chinese": "失落思想的祭司"
+                "chinese": "失魂思想的祭司"
             },
             "card_art": "@PriestOfLostThoughts",
             "cost": 2,
@@ -66,7 +66,7 @@
             "health": 10,
             "names": {
                 "english": "Priest of Lost Thoughts",
-                "chinese": "失落思想的祭司"
+                "chinese": "失魂思想的祭司"
             },
             "character_art": "@PriestOfLostThoughtsCharacterArt",
             "subtypes": [

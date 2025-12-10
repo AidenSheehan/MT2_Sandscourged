@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and \"[extinguish]: Summon a <b>Revered Scarab</b>.\"",
-                "chinese": "升级一个单位，使其获得 +[effect0.upgrade0.bonusdamage][attack]，'[extinguish]: 召唤一只<b>崇敬圣甲虫</b>。'"
+                "chinese": "升级一个单位，使其获得 +[effect0.upgrade0.bonusdamage][attack]，'[extinguish]：召唤一只<b>崇敬圣甲虫</b>。'"
             },
             "relic_effects": [
                 "@ScarabstoneEnhancer"
@@ -46,7 +46,7 @@
             },
             "descriptions": {
                 "english": "Gain +[bonusdamage][attack] and \"[extinguish]: Summon a <b>Revered Scarab</b>.\"",
-                "chinese": "获得 +[bonusdamage][attack]，'[extinguish]: 召唤一只<b>崇敬圣甲虫</b>。'"
+                "chinese": "获得 +[bonusdamage][attack]，'[extinguish]：召唤一只<b>崇敬圣甲虫</b>。'"
             },
             "bonus_damage": 5,
             "icon": "@ScarabstoneIcon",
