@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
+using HarmonyLib;
 using ShinyShoe;
 public sealed class RoomStateAttackPerDebuffOnTeam : RoomStateModifierBase, IRoomStateDamageModifier, IRoomStateModifier, ILocalizationParamInt, ILocalizationParameterContext
 {
-    public override void Initialize(RoomModifierData roomModifierData, ICoreGameManagers coreGameManagers)
+    public override void Initialize(RoomModifierData roomModifierData, SaveManager saveManager)
     {
-        base.Initialize(roomModifierData, coreGameManagers);
+        base.Initialize(roomModifierData, saveManager   );
+        // Temporary solution until this field gets added to Trainworks
+        AccessTools.Field(typeof(RoomStateAttackPerDebuffOnTeam), "overrideTitleKey").SetValue(this, "RoomStateAttackPerDebuffOnTeam");
         this.additionalDamagePerStack = roomModifierData.GetParamInt();
         int teamsCode = roomModifierData.GetParamInt2();
         if ((teamsCode & 1) > 0)

@@ -24,9 +24,9 @@ namespace mt2_sandscourged.Plugin
             * @param upgradeState The state of the upgrade being applied.
             * @param coreGameManagers The core game managers instance.
             */
-        public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)
+        public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CharacterTriggerState? characterTriggerState, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)
         {
-            base.OnApplyingCardUpgradeToUnit(thisCard, targetUnit, upgradeState, coreGameManagers);
+            base.OnApplyingCardUpgradeToUnit(thisCard, targetUnit, characterTriggerState, upgradeState, coreGameManagers);
             string statusId = GetParamStatusEffects().First().statusId;
             int stackCount = targetUnit.GetStatusEffectStacks(statusId);
             upgradeState.SetAttackDamage(upgradeState.GetAttackDamage() * stackCount);

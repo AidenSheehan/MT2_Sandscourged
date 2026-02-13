@@ -45,9 +45,9 @@ namespace mt2_sandscourged.Plugin
         }
 
         // Not used anymore
-        public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)
+        public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CharacterTriggerState? characterTriggerState, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)
         {
-            base.OnApplyingCardUpgradeToUnit(thisCard, targetUnit, upgradeState, coreGameManagers);
+            base.OnApplyingCardUpgradeToUnit(thisCard, targetUnit, characterTriggerState, upgradeState, coreGameManagers);
             var cardManager = coreGameManagers.GetCardManager();
             int numCardsInHand = cardManager.GetHand().Count(c => c != thisCard);
 

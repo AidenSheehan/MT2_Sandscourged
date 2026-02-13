@@ -5,9 +5,9 @@ using System.Runtime.CompilerServices;
 
 public sealed class RoomStateAddStatusEffectOnAnyStatusApplied : RoomStateModifierBase, IRoomStateOnStatusEffectAppliedModifier, IRoomStateModifier, ILocalizationParamInt, ILocalizationParameterContext, IRoomStateOnCharacterTriggerModifier
 {
-    public override void Initialize(RoomModifierData roomModifierData, ICoreGameManagers coreGameManagers)
+    public override void Initialize(RoomModifierData roomModifierData, SaveManager saveManager)
     {
-        base.Initialize(roomModifierData, coreGameManagers);
+        base.Initialize(roomModifierData, saveManager);
         this.thisInstTrackingId = ++trackingIdCounter;
         foreach (StatusEffectStackData statusEffectStackData in roomModifierData.GetParamStatusEffects())
         {
