@@ -7,8 +7,6 @@ public sealed class RoomStateAttackPerDebuffOnTeam : RoomStateModifierBase, IRoo
     public override void Initialize(RoomModifierData roomModifierData, SaveManager saveManager)
     {
         base.Initialize(roomModifierData, saveManager   );
-        // Temporary solution until this field gets added to Trainworks
-        AccessTools.Field(typeof(RoomStateAttackPerDebuffOnTeam), "overrideTitleKey").SetValue(this, "RoomStateAttackPerDebuffOnTeam");
         this.additionalDamagePerStack = roomModifierData.GetParamInt();
         int teamsCode = roomModifierData.GetParamInt2();
         if ((teamsCode & 1) > 0)
@@ -19,6 +17,11 @@ public sealed class RoomStateAttackPerDebuffOnTeam : RoomStateModifierBase, IRoo
         {
             this.teamsAllowed.Add(Team.Type.Heroes);
         }
+    }
+
+    public override string GetTitleKey()
+    {
+        return GetType().Name;
     }
 
     public int GetModifiedMagicPowerDamage(ICoreGameManagers coreGameManagers)
