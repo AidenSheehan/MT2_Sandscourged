@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
+using HarmonyLib;
 using ShinyShoe;
 public sealed class RoomStateAttackPerDebuffOnTeam : RoomStateModifierBase, IRoomStateDamageModifier, IRoomStateModifier, ILocalizationParamInt, ILocalizationParameterContext
 {
-    public override void Initialize(RoomModifierData roomModifierData, ICoreGameManagers coreGameManagers)
+    public override void Initialize(RoomModifierData roomModifierData, SaveManager saveManager)
     {
-        base.Initialize(roomModifierData, coreGameManagers);
+        base.Initialize(roomModifierData, saveManager   );
         this.additionalDamagePerStack = roomModifierData.GetParamInt();
         int teamsCode = roomModifierData.GetParamInt2();
         if ((teamsCode & 1) > 0)
@@ -16,6 +17,11 @@ public sealed class RoomStateAttackPerDebuffOnTeam : RoomStateModifierBase, IRoo
         {
             this.teamsAllowed.Add(Team.Type.Heroes);
         }
+    }
+
+    public override string GetTitleKey()
+    {
+        return GetType().Name;
     }
 
     public int GetModifiedMagicPowerDamage(ICoreGameManagers coreGameManagers)

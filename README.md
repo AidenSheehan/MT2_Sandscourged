@@ -18,7 +18,7 @@ Adds a whole new clan to Monster Train 2!
 
 ***Deep within Limbo, a strange force is emerging, unlike anything Heaven has ever seen...***
 
-The Sandscourged are a fully featured clan with two champions, a complete set of cards and artifacts, and several brand new mechanics! It's designed to feel like a natural extension of the vanilla game.
+The Sandscourged are a fully featured clan with two champions, a complete set of cards and artifacts, and several brand new mechanics! They're designed to feel like a natural extension of the vanilla game and to play well with other clans.
 
 The Sandscourged are a clan with a focus on:
 
@@ -68,9 +68,8 @@ If you would like to give feedback on the mod (please do!), fill in [this google
 Any issues, contact me on the [Monster Train 2 Discord channel](https://discord.gg/jfbTdktH) (@All_Outta_Bubblegum).
 
 ### Known Issues
-* The clan completion is offscreen in the logbook. This isn't going to be fixed until the new clan is added in the official DLC.
-* Character art appears too dark in battle, and can clip between floors. This is an issue with the modding framework, not this mod per se.
-* The unit banners don't update their sprite. Again, this is actually an issue with the framework. Art has been created for each banner state, they just aren't loaded correctly.
+* The clan completion is offscreen in the logbook. The modding community is still looking into logbook issues.
+* Character art can clip between floors. This is an issue with the modding framework, not this mod per se.
 * On rare occasion, opening the logbook may cause a softlock. Root cause of this issue is unknown, so if it happens to you, please send me a message with the log file.
 
 ## Credits

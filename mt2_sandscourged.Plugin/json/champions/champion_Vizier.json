@@ -222,7 +222,7 @@
                 "english": "Why do i need this"
             },
             "bonus_damage": 15,
-            "bonus_hp": 35,
+            "bonus_hp": 40,
             "trigger_upgrades": [
                 "@EvilEyeResolveTrigger",
                 "@EvilEye3EnchantTrigger"
