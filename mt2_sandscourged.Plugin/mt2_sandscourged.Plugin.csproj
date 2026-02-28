@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <RootNamespace>mt2_sandscourged.Plugin</RootNamespace>
     <LangVersion>latest</LangVersion>
-    <Version>0.5.3</Version>
+    <Version>0.5.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,3 +29,4 @@
     </None>
   </ItemGroup>
 </Project>
+
