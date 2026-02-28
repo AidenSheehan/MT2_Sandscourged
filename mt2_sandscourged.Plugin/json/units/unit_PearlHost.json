@@ -62,7 +62,7 @@
         {
             "id": "PearlHostAccursedTrigger",
             "descriptions": {
-                "english": "Gain [effect1.power][ember] and [rage] [effect0.status0.power].",
+                "english": "Gain [rage] [effect0.status0.power]. Draw +[effect1.power] next turn.",
                 "chinese": "获得 [effect1.power][ember] 和[rage] [effect0.status0.power]。"
             },
             "trigger": {
@@ -71,7 +71,7 @@
             },
             "effects": [
                 "@PearlHostGainRage",
-                "@PearlHostGainEmber"
+                "@PearlHostDraw"
             ]
         }
     ],
@@ -95,8 +95,8 @@
             ]
         },
         {
-            "id": "PearlHostGainEmber",
-            "name": "CardEffectGainEnergy",
+            "id": "PearlHostDraw",
+            "name": "CardEffectDrawAdditionalNextTurn",
             "param_int": 1
         }
     ],
