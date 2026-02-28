@@ -122,9 +122,6 @@
             "titles": {
                 "english": "Pharaoh"
             },
-            "descriptions": {
-                "english": "initial upgrade yo"
-            },
             "trigger_upgrades": [
                 "@PharaohHarvest"
             ]
@@ -134,9 +131,6 @@
             "titles": {
                 "english": "Swarm Lord",
                 "chinese": "虫群领主"
-            },
-            "descriptions": {
-                "english": "Why do i need this"
             },
             "bonus_damage": 0,
             "bonus_hp": 0,
@@ -148,9 +142,6 @@
                 "english": "Swarm Lord II",
                 "chinese": "虫群领主 II"
             },
-            "descriptions": {
-                "english": "Do I really need this"
-            },
             "bonus_damage": 5,
             "bonus_hp": 5,
             "ability_upgrade": "@SwarmLord2Ability"
@@ -160,9 +151,6 @@
             "titles": {
                 "english": "Swarm Lord III",
                 "chinese": "虫群领主 III"
-            },
-            "descriptions": {
-                "english": "Still not sure I need this"
             },
             "bonus_damage": 15,
             "bonus_hp": 15,
@@ -189,9 +177,6 @@
                 "english": "Pearlescent",
                 "chinese": "珍珠光泽"
             },
-            "descriptions": {
-                "english": "wow its pearls"
-            },
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
@@ -214,9 +199,6 @@
                 "english": "Pearlescent II",
                 "chinese": "珍珠光泽 II"
             },
-            "descriptions": {
-                "english": "wow its still pearls"
-            },
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
             ],
@@ -238,9 +220,6 @@
             "titles": {
                 "english": "Pearlescent III",
                 "chinese": "珍珠光泽 III"
-            },
-            "descriptions": {
-                "english": "I guess we doing pearls now"
             },
             "remove_upgrades": [
                 "@PharaohInitialUpgrade"
@@ -279,11 +258,8 @@
                 "english": "Soulmonger",
                 "chinese": "灵魂商贩"
             },
-            "descriptions": {
-                "english": "what a tender soul"
-            },
-            "bonus_damage": 0,
-            "bonus_hp": 15,
+            "bonus_damage": 20,
+            "bonus_hp": 5,
             "trigger_upgrades": [
                 "@SoulTender1Trigger"
             ]
@@ -294,11 +270,8 @@
                 "english": "Soulmonger II",
                 "chinese": "灵魂商贩 II"
             },
-            "descriptions": {
-                "english": "what a tenderer soul"
-            },
-            "bonus_damage": 15,
-            "bonus_hp": 15,
+            "bonus_damage": 35,
+            "bonus_hp": 5,
             "trigger_upgrades": [
                 "@SoulTender2Trigger"
             ]
@@ -309,32 +282,23 @@
                 "english": "Soulmonger III",
                 "chinese": "灵魂商贩 III"
             },
-            "descriptions": {
-                "english": "what a tenderist soul"
-            },
-            "bonus_damage": 30,
-            "bonus_hp": 30,
+            "bonus_damage": 60,
+            "bonus_hp": 5,
             "trigger_upgrades": [
                 "@SoulTender3Trigger"
             ]
         },
         {
             "id": "SoulTender1DeadUpgrade",
-            "bonus_damage": 12
+            "bonus_damage": 1
         },
         {
             "id": "SoulTender2DeadUpgrade",
-            "bonus_damage": 25
+            "bonus_damage": 2
         },
         {
             "id": "SoulTender3DeadUpgrade",
-            "bonus_damage": 25,
-            "status_effect_upgrades": [
-                {
-                    "status": "undying",
-                    "count": 1
-                }
-            ]
+            "bonus_damage": 3
         }
     ],
     "character_triggers": [
@@ -426,40 +390,34 @@
         {
             "id": "SoulTender1Trigger",
             "descriptions": {
-                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to give dead friendly units +[effect2.upgrade.bonusdamage][attack] permanently.",
-                "chinese": "如果有[soul] [effect0.status0.power_unmodified]，则将其花费并使阵亡友方单位永久获得 +[effect2.upgrade.bonusdamage][attack]。"
+                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently."
             },
-            "trigger": "on_encounter_complete",
+            "trigger": "on_death",
             "effects": [
-                "@SoulTender1CheckSouls",
-                "@SoulTender1RemoveSouls",
-                "@SoulTender1AddUpgrade"
+                "@SoulTender1AddUpgrade",
+                "@SoulTenderRemoveSoul"
             ]
         },
         {
             "id": "SoulTender2Trigger",
             "descriptions": {
-                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to give dead friendly units +[effect2.upgrade.bonusdamage][attack] permanently.",
-                "chinese": "如果有[soul] [effect0.status0.power_unmodified]，则将其花费并使阵亡友方单位永久获得 +[effect2.upgrade.bonusdamage][attack]。"
+                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently."
             },
-            "trigger": "on_encounter_complete",
+            "trigger": "on_death",
             "effects": [
-                "@SoulTender2CheckSouls",
-                "@SoulTender2RemoveSouls",
-                "@SoulTender2AddUpgrade"
+                "@SoulTender2AddUpgrade",
+                "@SoulTenderRemoveSoul"
             ]
         },
         {
             "id": "SoulTender3Trigger",
             "descriptions": {
-                "english": "Spend [effect0.status0.power_unmodified] [soul] stacks to give dead friendly units +[effect2.upgrade.bonusdamage][attack] and [undying] [effect2.upgrade.status0.power] permanently.",
-                "chinese": "如果有[soul] [effect0.status0.power_unmodified]，则将其花费并使阵亡友方单位永久获得 +[effect2.upgrade.bonusdamage][attack] 和[undying] [effect2.upgrade.status0.power]。"
+                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently."
             },
-            "trigger": "on_encounter_complete",
+            "trigger": "on_death",
             "effects": [
-                "@SoulTender3CheckSouls",
-                "@SoulTender3RemoveSouls",
-                "@SoulTender3AddUpgrade"
+                "@SoulTender3AddUpgrade",
+                "@SoulTenderRemoveSoul"
             ]
         }
     ],
@@ -607,109 +565,60 @@
             ]
         },
         {
-            "id": "SoulTender1CheckSouls",
-            "name": {
-                "id": "@CardEffectRequireStatusThreshold",
-                "mod_reference": "Conductor"
-            },
-            "target_mode": "self",
-            "should_test": true,
-            "should_cancel_subsequent_effects_if_test_fails": true,
-            "param_bool": true,
-            "param_status_effects": [
-                {
-                    "status": "captured_soul",
-                    "count": 4
-                }
-            ]
-        },
-        {
-            "id": "SoulTender2CheckSouls",
-            "name": {
-                "id": "@CardEffectRequireStatusThreshold",
-                "mod_reference": "Conductor"
-            },
-            "target_mode": "self",
-            "should_test": true,
-            "should_cancel_subsequent_effects_if_test_fails": true,
-            "param_bool": true,
-            "param_status_effects": [
-                {
-                    "status": "captured_soul",
-                    "count": 8
-                }
-            ]
-        },
-        {
-            "id": "SoulTender3CheckSouls",
-            "name": {
-                "id": "@CardEffectRequireStatusThreshold",
-                "mod_reference": "Conductor"
-            },
-            "target_mode": "self",
-            "should_test": true,
-            "should_cancel_subsequent_effects_if_test_fails": true,
-            "param_bool": true,
-            "param_status_effects": [
-                {
-                    "status": "captured_soul",
-                    "count": 12
-                }
-            ]
-        },
-        {
-            "id": "SoulTender1RemoveSouls",
-            "name": "CardEffectRemoveStatusEffect",
-            "target_mode": "self",
-            "param_status_effects": [
-                {
-                    "status": "captured_soul",
-                    "count": 4
-                }
-            ]
-        },
-        {
-            "id": "SoulTender2RemoveSouls",
-            "name": "CardEffectRemoveStatusEffect",
-            "target_mode": "self",
-            "param_status_effects": [
-                {
-                    "status": "captured_soul",
-                    "count": 8
-                }
-            ]
-        },
-        {
-            "id": "SoulTender3RemoveSouls",
-            "name": "CardEffectRemoveStatusEffect",
-            "target_mode": "self",
-            "param_status_effects": [
-                {
-                    "status": "captured_soul",
-                    "count": 12
-                }
-            ]
-        },
-        {
             "id": "SoulTender1AddUpgrade",
             "name": "@CardEffectAddUpgradeToDeadUnits",
             "target_team": "monsters",
             "param_upgrade": "@SoulTender1DeadUpgrade",
-            "param_int": 2
+            "param_int": 2,
+            "param_bool": false,
+            "use_status_effect_multiplier": true,
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 1
+                }
+            ]
         },
         {
             "id": "SoulTender2AddUpgrade",
             "name": "@CardEffectAddUpgradeToDeadUnits",
             "target_team": "monsters",
             "param_upgrade": "@SoulTender2DeadUpgrade",
-            "param_int": 2
+            "param_int": 2,
+            "param_bool": false,
+            "use_status_effect_multiplier": true,
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 1
+                }
+            ]
         },
         {
             "id": "SoulTender3AddUpgrade",
             "name": "@CardEffectAddUpgradeToDeadUnits",
             "target_team": "monsters",
             "param_upgrade": "@SoulTender3DeadUpgrade",
-            "param_int": 2
+            "param_int": 2,
+            "param_bool": false,
+            "use_status_effect_multiplier": true,
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "SoulTenderRemoveSoul",
+            "name": "CardEffectRemoveStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "captured_soul",
+                    "count": -1
+                }
+            ]
         },
         {
             "id": "SwarmLordSacrificeScarab",

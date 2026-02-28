@@ -37,29 +37,37 @@ namespace mt2_sandscourged.Plugin
 			propDescriptions[fieldName3] = new PropDescription("Use Status Effect Stack Multiplier", "", typeof(bool), false);
 			string fieldName4 = CardEffectFieldNames.ParamStatusEffects.GetFieldName();
 			propDescriptions[fieldName4] = new PropDescription("Status Effects to multiply by", "", null, false);
+			string fieldName5 = CardEffectFieldNames.ParamBool.GetFieldName();
+			propDescriptions[fieldName5] = new PropDescription("Is From Celeberate", "", typeof(bool), false);
 			return propDescriptions;
 		}
 
 
 		public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)
 		{
+			bool isFromCelebrate = cardEffectState.GetParamBool();
 			// This implementation will only work with Celebrate, and ONLY if the AddUpgradeToDeadUnitsPatch is applied.
-			if (consumedCards.IsNullOrEmpty())
+			if (isFromCelebrate && consumedCards.IsNullOrEmpty())
 			{
 				Console.Write("No consumed cards found, skipping upgrade application.");
 				yield break;
 			}
 			else
 			{
-				var deadUnits = consumedCards.Where(c => c.IsSpawnerCard());
+				var deadUnits = new List<CardState>();
+				// This can only happen post the boss dying, either via celebrate, or werid timing with extinguish.
+				if (consumedCards != null)
+					deadUnits = [.. consumedCards.Where(c => c.IsSpawnerCard())];
+				else
+					deadUnits = [.. coreGameManagers.GetCardManager().GetExhaustedPile().Where(c => c.IsSpawnerCard())];
 				Console.Write(deadUnits.Count() + " dead units found for upgrade application.");
-				bool flag = false;
 				bool isTemporary = cardEffectState.GetParamInt() != (int)UnitUpgradeLifetime.Permanent;
 				int mult = 1;
 				if (cardEffectState.GetUseStatusEffectStackMultiplier())
 				{
 					if (cardEffectParams.selfTarget == null)
 					{
+						Console.Write("No self target found, cannot apply status effect stack multiplier.");
 						yield break;
 					}
 
@@ -67,29 +75,24 @@ namespace mt2_sandscourged.Plugin
 					string? statusId = cardEffectState.GetParamStatusEffectStackData().FirstOrDefault()?.statusId;
 					if (statusId == null)
 					{
+						Console.Write("No status effect found in upgrade data, cannot apply status effect stack multiplier.");
 						yield break;
 					}
 					mult = cardEffectParams.selfTarget.GetStatusEffectStacks(statusId);
+					Console.Write("Status effect stack multiplier: " + mult);
 				}
+
+				var upg = cardEffectState.GetParamCardUpgradeData();
+				int dmg = mult * (upg?.GetBonusDamage() ?? 0);
+				int hp = mult * (upg?.GetBonusHP() ?? 0);
 
 				foreach (CardState cardState in deadUnits)
 				{
-					for (int i = 0; i < mult; i++)
-					{
-						Console.Write(cardState.GetDebugName() + " is attempting upgrade.");
-						if (CardUpgradeHelper.TryApplyUpgradeToCard(cardState, null, cardEffectState.GetParamCardUpgradeData(), isTemporary, cardEffectParams.isFromHiddenTrigger, coreGameManagers, out CardUpgradeState cardUpgradeState))
-						{
-							Console.Write(cardState.GetDebugName() + $" {i}: Success!");
-							cardState.UpdateCardBodyText(null);
-							flag = true;
-						}
-					}
+					Console.Write(cardState.GetDebugName() + " is attempting upgrade.");
+					cardState.GetCardStateModifiers().IncrementAdditionalDamage(dmg);
+					cardState.GetCardStateModifiers().IncrementAdditionalHP(hp);
 				}
 
-				if (flag)
-				{
-					base.ShowPyreNotification(cardEffectState, coreGameManagers.GetSaveManager(), sysManagers.GetPopupNotificationManager(), null);
-				}
 			}
 			consumedCards = null; // Clear the consumed cards after processing
 			yield break;
