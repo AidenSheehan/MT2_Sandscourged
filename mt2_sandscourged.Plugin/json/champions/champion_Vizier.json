@@ -124,9 +124,6 @@
                 "english": "First Blessed",
                 "chinese": "第一恩泽"
             },
-            "descriptions": {
-                "english": "Why do i need this"
-            },
             "bonus_damage": 15,
             "bonus_hp": 5,
             "trigger_upgrades": [
@@ -140,9 +137,6 @@
                 "english": "First Blessed II",
                 "chinese": "第一恩泽 II"
             },
-            "descriptions": {
-                "english": "Why do i need this"
-            },
             "bonus_damage": 15,
             "bonus_hp": 25,
             "trigger_upgrades": [
@@ -155,9 +149,6 @@
             "titles": {
                 "english": "First Blessed III",
                 "chinese": "第一恩泽 III"
-            },
-            "descriptions": {
-                "english": "Why do i need this"
             },
             "bonus_damage": 15,
             "bonus_hp": 25,
@@ -190,9 +181,6 @@
                 "english": "Evil Eye",
                 "chinese": "邪眼"
             },
-            "descriptions": {
-                "english": "Why do i need this"
-            },
             "bonus_damage": 5,
             "bonus_hp": 15,
             "trigger_upgrades": [
@@ -204,9 +192,6 @@
             "titles": {
                 "english": "Evil Eye II",
                 "chinese": "邪眼 II"
-            },
-            "descriptions": {
-                "english": "Why do i need this"
             },
             "bonus_damage": 10,
             "bonus_hp": 25,
@@ -221,9 +206,6 @@
                 "english": "Evil Eye III",
                 "chinese": "邪眼 III"
             },
-            "descriptions": {
-                "english": "Why do i need this"
-            },
             "bonus_damage": 15,
             "bonus_hp": 40,
             "trigger_upgrades": [
@@ -237,9 +219,6 @@
                 "english": "Storm Splitter",
                 "chinese": "风暴分流"
             },
-            "descriptions": {
-                "english": "Why do i need this"
-            },
             "bonus_damage": 5,
             "bonus_hp": 10,
             "ability_upgrade": "@StormSplitter1Ability"
@@ -249,9 +228,6 @@
             "titles": {
                 "english": "Storm Splitter II",
                 "chinese": "风暴分流 II"
-            },
-            "descriptions": {
-                "english": "Why do i need this"
             },
             "bonus_damage": 15,
             "bonus_hp": 15,
@@ -265,9 +241,6 @@
             "titles": {
                 "english": "Storm Splitter III",
                 "chinese": "风暴分流 III"
-            },
-            "descriptions": {
-                "english": "Why do i need this"
             },
             "bonus_damage": 40,
             "bonus_hp": 20,
