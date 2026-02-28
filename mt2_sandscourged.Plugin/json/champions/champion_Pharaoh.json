@@ -390,7 +390,8 @@
         {
             "id": "SoulTender1Trigger",
             "descriptions": {
-                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently."
+                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently.",
+                "chinese": "花费所有[soul]。使阵亡友方单位永久获得[attack]，数值等同于花费[soul]层数的 [effect0.upgrade.bonusdamage] 倍。"
             },
             "trigger": "on_death",
             "effects": [
@@ -401,7 +402,8 @@
         {
             "id": "SoulTender2Trigger",
             "descriptions": {
-                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently."
+                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently.",
+                "chinese": "花费所有[soul]。使阵亡友方单位永久获得[attack]，数值等同于花费[soul]层数的 [effect0.upgrade.bonusdamage] 倍。"
             },
             "trigger": "on_death",
             "effects": [
@@ -412,7 +414,8 @@
         {
             "id": "SoulTender3Trigger",
             "descriptions": {
-                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently."
+                "english": "Spend all [soul] stacks to apply +[effect0.upgrade.bonusdamage][attack] per [soul] to dead friendly units permanently.",
+                "chinese": "花费所有[soul]。使阵亡友方单位永久获得[attack]，数值等同于花费[soul]层数的 [effect0.upgrade.bonusdamage] 倍。"
             },
             "trigger": "on_death",
             "effects": [

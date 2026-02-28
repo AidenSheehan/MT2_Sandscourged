@@ -63,7 +63,7 @@
             "id": "PearlHostAccursedTrigger",
             "descriptions": {
                 "english": "Gain [rage] [effect0.status0.power]. Draw +[effect1.power] next turn.",
-                "chinese": "获得 [effect1.power][ember] 和[rage] [effect0.status0.power]。"
+                "chinese": "获得[rage] [effect0.status0.power]。下个回合抽 +[effect1.power] 张牌。"
             },
             "trigger": {
                 "id": "@Accursed",

@@ -9,7 +9,7 @@
             },
             "descriptions": {
                 "english": "Draw a non-starter spell and apply -[effect1.upgrade.costreduction][ember] and +[effect1.upgrade.bonusdamage] [magicpower].",
-                "chinese": "抽一张法术牌，并使其获得 +[effect1.upgrade.bonusdamage] [magicpower]和 -[effect1.upgrade.costreduction][ember]。"
+                "chinese": "抽一张非初始法术牌，并使其获得 +[effect1.upgrade.bonusdamage] [magicpower]和 -[effect1.upgrade.costreduction][ember]。"
             },
             "lore_tooltips": [
                 {
