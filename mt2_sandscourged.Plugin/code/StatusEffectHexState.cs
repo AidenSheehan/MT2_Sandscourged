@@ -1,19 +1,14 @@
-
-
 using Conductor.Interfaces;
-using System.Runtime.CompilerServices;
 
 namespace mt2_sandscourged.Plugin
 {
-    // Taken from Conductor
+    // Forked from Conductor
     // https://github.com/Monster-Train-2-Modding-Group/Conductor/blob/main/Conductor/StatusEffects/StatusEffectHexState.cs
-    class StatusEffectHexState : StatusEffectState, IOnOtherStatusEffectAdded
+    class StatusEffectHexState : StatusEffectState, IStatusEffectModifyOtherStatusEffect
     {
-        public const string StatusId = "hex";
-
         public int OnOtherStatusEffectBeingAdded(int myStacks, string statusId, int numStacks)
         {
-            if (statusId == StatusId)
+            if (statusId == GetStatusId())
             {
                 return numStacks;
             }
